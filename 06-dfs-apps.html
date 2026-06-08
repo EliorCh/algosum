@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פרק 9 · מסלולים קלים ביותר ב׳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/styles/atom-one-dark.min.css">
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js"></script>
+<script>
+  window.addEventListener('load', () => {
+    if (window.renderMathInElement) {
+      try { renderMathInElement(document.body, { delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\(',right:'\\)',display:false}], throwOnError: false, strict: false }); } catch(e){}
+    }
+    if (window.hljs) { try { document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el)); } catch(e){} }
+    document.body.classList.add('ready');
+  });
+</script>
+<style>
+  :root {
+    --bg: #fbf9f3; --bg-paper: #fffefa; --ink: #1c1917; --ink-soft: #44403c; --ink-mute: #78716c;
+    --rule: #e7e5e0; --rule-soft: #f1efe9;
+    --indigo-9: #312e81; --indigo-7: #4f46e5; --indigo-3: #c7d2fe; --indigo-1: #eef2ff;
+    --c-theory-h: #1d4ed8; --c-theory-bg: #eff6ff; --c-theory-edge: #bfdbfe;
+    --c-formula-h: #b45309; --c-formula-bg: #fef9e7; --c-formula-edge: #fcd34d;
+    --c-example-h: #047857; --c-example-bg: #ecfdf5; --c-example-edge: #a7f3d0;
+    --c-warn-h: #be123c; --c-warn-bg: #fff1f2; --c-warn-edge: #fecdd3;
+    --c-exercise-h: #6d28d9; --c-exercise-bg: #f5f3ff; --c-exercise-edge: #ddd6fe;
+    --c-summary-h: #334155; --c-summary-bg: #f1f5f9; --c-summary-edge: #cbd5e1;
+    --code-bg: #0f172a; --code-bg-2: #1e293b; --code-ink: #e2e8f0;
+    --shadow-sm: 0 1px 2px rgba(28,25,23,.04), 0 1px 3px rgba(28,25,23,.06);
+    --shadow: 0 4px 12px rgba(28,25,23,.05), 0 1px 3px rgba(28,25,23,.04);
+    --serif: 'Frank Ruhl Libre', Georgia, serif;
+    --sans: 'Assistant', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.75; font-size: 17px; -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 20% 0%, rgba(99,102,241,.035), transparent 40%), radial-gradient(circle at 80% 100%, rgba(245,158,11,.035), transparent 40%);
+    background-attachment: fixed; opacity: 0; transition: opacity .2s ease; }
+  body.ready { opacity: 1; }
+  .app { display: grid; grid-template-columns: 320px 1fr; min-height: 100vh; max-width: 1480px; margin: 0 auto; }
+  .sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%); color: #e0e7ff; padding: 32px 24px; border-left: 1px solid rgba(255,255,255,.06); }
+  .sidebar::-webkit-scrollbar { width: 6px; } .sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 3px; }
+  .brand { font-family: var(--serif); font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -.01em; line-height: 1.2; }
+  .brand a { color: #fff; text-decoration: none; } .brand a:hover { color: #fbbf24; }
+  .brand-sub { font-size: 13px; color: #c7d2fe; margin-bottom: 28px; font-weight: 500; }
+  .brand-meta { font-size: 11px; color: #a5b4fc; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .nav-label { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: #818cf8; font-weight: 700; margin: 24px 0 12px; padding-right: 8px; }
+  .nav-list { list-style: none; } .nav-list li { margin-bottom: 2px; }
+  .nav-list a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; color: #c7d2fe; text-decoration: none; border-radius: 8px; font-size: 14.5px; font-weight: 500; transition: all .15s ease; }
+  .nav-list a:hover { background: rgba(255,255,255,.06); color: #fff; }
+  .nav-list a.active { background: rgba(255,255,255,.1); color: #fff; box-shadow: inset 3px 0 0 #fbbf24; }
+  .nav-list a.pending { opacity: .5; }
+  .nav-num { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; background: rgba(255,255,255,.08); border-radius: 6px; font-size: 11px; font-weight: 700; font-family: var(--mono); }
+  .nav-list a.active .nav-num { background: #fbbf24; color: #1e1b4b; }
+  main { padding: 56px 64px 120px; max-width: 960px; }
+  .page-eyebrow { display: inline-block; font-size: 12px; font-weight: 700; color: var(--indigo-7); letter-spacing: .15em; text-transform: uppercase; background: var(--indigo-1); padding: 6px 12px; border-radius: 99px; margin-bottom: 16px; }
+  h1.page-title { font-family: var(--serif); font-size: 48px; font-weight: 700; line-height: 1.15; letter-spacing: -.02em; color: var(--ink); margin-bottom: 14px; }
+  .page-subtitle { font-size: 19px; color: var(--ink-soft); margin-bottom: 48px; font-weight: 400; line-height: 1.55; }
+  h2 { font-family: var(--serif); font-size: 32px; font-weight: 700; letter-spacing: -.015em; margin: 56px 0 20px; color: var(--ink); position: relative; padding-right: 20px; }
+  h2::before { content: ''; position: absolute; right: 0; top: 14px; bottom: 14px; width: 4px; background: var(--indigo-7); border-radius: 2px; }
+  h3 { font-family: var(--sans); font-size: 22px; font-weight: 700; margin: 32px 0 12px; color: var(--ink); letter-spacing: -.005em; }
+  h4 { font-size: 17px; font-weight: 700; margin: 18px 0 8px; color: var(--ink-soft); }
+  p { margin-bottom: 14px; color: var(--ink-soft); } p strong { color: var(--ink); font-weight: 700; }
+  ul, ol { margin: 12px 24px 18px; color: var(--ink-soft); } li { margin-bottom: 8px; }
+  .term { font-family: var(--mono); direction: ltr; display: inline-block; font-size: .88em; background: #f5f5f4; padding: 1px 8px; border-radius: 5px; color: #be185d; border: 1px solid #e7e5e4; vertical-align: baseline; unicode-bidi: isolate; }
+  .term.blue { color: var(--c-theory-h); background: var(--c-theory-bg); border-color: var(--c-theory-edge); }
+  .term.green { color: var(--c-example-h); background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .term.amber { color: var(--c-formula-h); background: var(--c-formula-bg); border-color: var(--c-formula-edge); }
+  .katex-display { margin: 18px 0 !important; direction: ltr !important; text-align: center !important; unicode-bidi: isolate; } .katex { direction: ltr !important; unicode-bidi: isolate; }
+  .box { border-radius: 14px; margin: 24px 0; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); background: var(--bg-paper); }
+  .box-head { display: flex; align-items: center; gap: 10px; padding: 14px 20px; font-weight: 700; font-size: 15px; border-bottom: 1px solid var(--rule); }
+  .box-head .icon { width: 28px; height: 28px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 16px; }
+  .box-body { padding: 18px 22px; }
+  .box.theory { border-color: var(--c-theory-edge); } .box.theory .box-head { background: var(--c-theory-bg); color: var(--c-theory-h); } .box.theory .box-head .icon { background: var(--c-theory-h); color: #fff; }
+  .box.formula { border-color: var(--c-formula-edge); background: var(--c-formula-bg); } .box.formula .box-head { background: transparent; color: var(--c-formula-h); border-bottom-color: rgba(180,83,9,.18); } .box.formula .box-head .icon { background: var(--c-formula-h); color: #fff; } .box.formula .box-body { background: var(--c-formula-bg); } .box.formula p { color: #78350f; }
+  .box.example { border-color: var(--c-example-edge); } .box.example .box-head { background: var(--c-example-bg); color: var(--c-example-h); } .box.example .box-head .icon { background: var(--c-example-h); color: #fff; }
+  .box.warn { border-color: var(--c-warn-edge); } .box.warn .box-head { background: var(--c-warn-bg); color: var(--c-warn-h); } .box.warn .box-head .icon { background: var(--c-warn-h); color: #fff; }
+  .box.exercise { border-color: var(--c-exercise-edge); } .box.exercise .box-head { background: var(--c-exercise-bg); color: var(--c-exercise-h); } .box.exercise .box-head .icon { background: var(--c-exercise-h); color: #fff; }
+  .box.summary { border-color: var(--c-summary-edge); } .box.summary .box-head { background: var(--c-summary-bg); color: var(--c-summary-h); } .box.summary .box-head .icon { background: var(--c-summary-h); color: #fff; }
+  pre { background: var(--code-bg) !important; border-radius: 0 0 12px 12px; padding: 18px 22px !important; margin: 0 0 16px 0; overflow-x: auto; direction: ltr; font-size: 14px; line-height: 1.7; box-shadow: var(--shadow); border: 1px solid var(--code-bg-2); border-top: none; }
+  pre code { font-family: var(--mono) !important; background: transparent !important; padding: 0 !important; border: none !important; color: var(--code-ink) !important; }
+  .code-label { display: flex; align-items: center; gap: 8px; background: var(--code-bg-2); color: #94a3b8; font-family: var(--mono); font-size: 12px; padding: 10px 16px; border-radius: 12px 12px 0 0; direction: ltr; border: 1px solid var(--code-bg-2); border-bottom: 1px solid #334155; margin-top: 18px; }
+  .code-label .dot { width: 8px; height: 8px; border-radius: 50%; background: #475569; }
+  .code-label .dot.red { background: #ef4444; } .code-label .dot.amber { background: #f59e0b; } .code-label .dot.green { background: #22c55e; }
+  .code-label .name { margin-right: auto; opacity: .9; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm); font-size: 15px; }
+  th, td { padding: 11px 14px; text-align: right; border-bottom: 1px solid var(--rule-soft); border-left: 1px solid var(--rule-soft); }
+  th { background: var(--c-summary-bg); font-weight: 700; color: var(--c-summary-h); }
+  tr:last-child td { border-bottom: none; }
+  td.num, th.num { font-family: var(--mono); direction: ltr; text-align: center; font-size: 14px; }
+  td.highlight { background: var(--c-formula-bg); font-weight: 700; color: var(--c-formula-h); }
+  td.updated { background: #dcfce7; font-weight: 700; color: #166534; }
+  .exercise-card { background: #fff; border-radius: 10px; margin: 14px 0; border: 1px solid var(--c-exercise-edge); overflow: hidden; }
+  .exercise-tag { display: inline-block; font-size: 11px; font-weight: 700; background: var(--c-exercise-h); color: #fff; padding: 3px 10px; border-radius: 99px; margin-bottom: 10px; font-family: var(--mono); letter-spacing: .05em; direction: ltr; }
+  .exercise-q { padding: 20px 24px; background: #fafaf9; border-bottom: 1px solid var(--rule-soft); }
+  .exercise-q p:last-child { margin-bottom: 0; }
+  .reveal-btn { display: block; width: 100%; background: var(--c-exercise-bg); border: none; border-top: 1px solid var(--c-exercise-edge); padding: 13px; font-family: var(--sans); font-size: 14px; font-weight: 700; color: var(--c-exercise-h); cursor: pointer; transition: background .15s ease; }
+  .reveal-btn:hover { background: #ede9fe; } .reveal-btn::before { content: '▼ '; font-size: 10px; margin-left: 6px; transition: transform .2s ease; }
+  .exercise-card.open .reveal-btn::before { content: '▲ '; }
+  .solution { padding: 22px 26px; background: var(--c-example-bg); border-top: 1px solid var(--c-example-edge); display: none; }
+  .exercise-card.open .solution { display: block; }
+  .solution .step { background: #fff; border-radius: 8px; padding: 14px 18px; margin: 12px 0; border-right: 3px solid var(--c-example-h); }
+  .solution .step-label { font-size: 11px; font-weight: 700; color: var(--c-example-h); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; font-family: var(--mono); }
+  .solution .final-answer { background: #fff; border: 2px solid var(--c-example-h); border-radius: 10px; padding: 14px 20px; margin-top: 16px; font-weight: 600; }
+  .solution .final-answer::before { content: '✓ '; color: var(--c-example-h); font-weight: 900; }
+  .lead { font-size: 19px; color: var(--ink-soft); border-right: 3px solid var(--indigo-7); padding-right: 20px; margin: 24px 0 32px; font-weight: 400; line-height: 1.6; }
+  .keypoint { background: linear-gradient(90deg, var(--c-formula-bg) 0%, transparent 100%); padding: 14px 18px; border-radius: 8px; margin: 16px 0; border-right: 3px solid var(--c-formula-h); }
+  .keypoint::before { content: '💡 '; font-size: 18px; margin-left: 4px; }
+  .figure { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 18px; margin: 18px 0; text-align: center; box-shadow: var(--shadow-sm); }
+  .figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .figure .cap { font-size: 13px; color: var(--ink-mute); margin-top: 12px; font-style: italic; }
+  .mc-list { list-style: none; margin: 12px 0; padding: 0; }
+  .mc-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; background: #fff; border: 1px solid var(--rule); border-radius: 8px; margin-bottom: 8px; transition: all .15s ease; }
+  .mc-list li .mc-marker { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--rule); flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--ink-mute); background: #fff; }
+  .mc-list li.correct { background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .mc-list li.correct .mc-marker { background: var(--c-example-h); color: #fff; border-color: var(--c-example-h); }
+  .mc-list li.correct .mc-marker::after { content: '✓'; }
+  .mc-list li.wrong { background: var(--c-warn-bg); border-color: var(--c-warn-edge); }
+  .mc-list li.wrong .mc-marker { background: var(--c-warn-h); color: #fff; border-color: var(--c-warn-h); }
+  .mc-list li.wrong .mc-marker::after { content: '✗'; }
+  .mc-list li .mc-text { flex: 1; line-height: 1.55; color: var(--ink-soft); }
+  .mc-list li .mc-text .why { display: block; margin-top: 6px; font-size: 13.5px; color: var(--ink-mute); font-style: italic; }
+  .algo-compare { background: #fff; border-radius: 12px; padding: 0; margin: 18px 0; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); overflow: hidden; }
+  .algo-compare table { margin: 0; border-radius: 0; box-shadow: none; }
+  @media (max-width: 900px) { .app { grid-template-columns: 1fr; } .sidebar { position: static; height: auto; } main { padding: 32px 24px 80px; } h1.page-title { font-size: 36px; } h2 { font-size: 26px; } }
+</style>
+</head>
+<body>
+<div class="app">
+
+<aside class="sidebar">
+  <div class="brand"><a href="index.html">אלגוריתמים</a></div>
+  <div class="brand-sub">ד״ר אלעזר גולדנברג · הגב׳ שלומית אריאן</div>
+  <div class="brand-meta">MTA · קיץ 2026</div>
+
+  <div class="nav-label">יסודות</div>
+  <ul class="nav-list">
+    <li><a href="01-intro.html" class="pending"><span class="nav-num">1</span>מושג האלגוריתם</a></li>
+    <li><a href="02-numbers.html" class="pending"><span class="nav-num">2</span>ייצוג מספרים</a></li>
+  </ul>
+
+  <div class="nav-label">גרפים בסיסיים</div>
+  <ul class="nav-list">
+    <li><a href="03-graph-basics.html" class="pending"><span class="nav-num">3</span>מושגי יסוד</a></li>
+    <li><a href="04-toposort.html" class="pending"><span class="nav-num">4</span>מיון טופולוגי</a></li>
+  </ul>
+
+  <div class="nav-label">סריקות</div>
+  <ul class="nav-list">
+    <li><a href="05-dfs.html" class="pending"><span class="nav-num">5</span>DFS</a></li>
+    <li><a href="06-dfs-apps.html" class="active" class="pending"><span class="nav-num">6</span>יישומי DFS</a></li>
+    <li><a href="07-bfs.html" class="pending"><span class="nav-num">7</span>BFS</a></li>
+  </ul>
+
+  <div class="nav-label">מסלולים קלים ביותר</div>
+  <ul class="nav-list">
+    <li><a href="08-shortest-paths-1.html" class="pending"><span class="nav-num">8</span>מק״בים א׳</a></li>
+    <li><a href="09-shortest-paths-2.html"><span class="nav-num">9</span>מק״בים ב׳</a></li>
+  </ul>
+
+  <div class="nav-label">אופטימיזציה ורשתות</div>
+  <ul class="nav-list">
+    <li><a href="10-mst.html" class="pending"><span class="nav-num">10</span>עצים פורשים</a></li>
+    <li><a href="11-dp.html" class="pending"><span class="nav-num">11</span>תכנות דינמי</a></li>
+    <li><a href="12-flow.html" class="pending"><span class="nav-num">12</span>זרימה</a></li>
+  </ul>
+</aside>
+
+
+<main>
+<span class="page-eyebrow">פרק 6 · סריקות גרף</span>
+  <h1 class="page-title">יישומי DFS</h1>
+  <p class="page-subtitle">בדיקת מעגלים, רכיבי קשירות חזקה, וגרף-העל — שלושה אלגוריתמים שבונים ישירות על DFS.</p>
+
+  <p class="lead">
+    אחרי שהבנו <em>איך</em> DFS עובד (פרק 5), אפשר להוציא ממנו ערך עצום: לזהות מעגלים, לחלק גרף מכוון ל<strong>רכיבי קשירות חזקה</strong> (SCC), ולבנות "גרף-על" של רכיבים שתמיד DAG.
+    כל זה ב-<span class="term">Θ(n+m)</span>. זה הקטע היפה ביותר בפרק הסריקה.
+  </p>
+
+  <div class="keypoint">
+    <strong>על המבחן:</strong> רכיבי קשירות חזקה (SCC) הם שאלת מבחן קלאסית. אלגוריתם Kosaraju (שני DFS) חוזר. שאלות "מה הסיבוכיות של בדיקת מעגל בגרף מכוון" — תמיד <span class="term">Θ(n+m)</span> דרך DFS.
+  </div>
+
+  <h2>יישום 1 — בדיקת מעגל בגרף</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הטענה והאלגוריתם</div>
+    <div class="box-body">
+      <p><strong>טענה:</strong> בגרף יש מעגל ⇔ DFS חושף לפחות קשת Back אחת.</p>
+      <p><strong>אלגוריתם:</strong> הרץ DFS על הגרף ובדוק אם נחשפה קשת Back כלשהי. אם כן — יש מעגל; אחרת — אין.</p>
+      <p><strong>סיבוכיות:</strong> <span class="term">Θ(n+m)</span>.</p>
+    </div>
+  </div>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הוכחה</div>
+    <div class="box-body">
+      <p><strong>כיוון 1 — קשת Back גוררת מעגל:</strong> נניח שיש קשת Back <span class="term">(u,v)</span>. אז <span class="term">v</span> אב קדמון של <span class="term">u</span> בעץ DFS, כלומר יש מסלול <span class="term">v → ... → u</span> דרך קשתות עץ. ביחד עם הקשת <span class="term">(u,v)</span> זה מעגל.</p>
+      <p><strong>כיוון 2 — מעגל גורר קשת Back:</strong> נניח שיש מעגל <span class="term">v₁ → v₂ → ... → vₖ → v₁</span>. בריצת DFS, נסתכל על הקודקוד הראשון שמתגלה במעגל — נניח <span class="term">vᵢ</span>. מעקרון המסלול הלבן: כיוון שכל שאר קודקודי המעגל לבנים בעת הגילוי שלו, הם יהיו צאצאים של <span class="term">vᵢ</span> בעץ DFS. בפרט הקודקוד <span class="term">vᵢ₋₁</span> שיש לו קשת ל-<span class="term">vᵢ</span>: זו קשת Back. ∎</p>
+    </div>
+  </div>
+
+  <h2>יישום 2 — רכיבי קשירות חזקה (SCC)</h2>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>הגדרות</div>
+    <div class="box-body">
+      <p><strong>קשירות חזקה:</strong> שני קודקודים <span class="term">u, v</span> בגרף מכוון נקראים <em>קשירים-חזק</em> אם קיים מסלול מ-<span class="term">u</span> ל-<span class="term">v</span> וגם מ-<span class="term">v</span> ל-<span class="term">u</span>.</p>
+      <p><strong>רכיב קשירות חזקה (SCC):</strong> תת-קבוצה מקסימלית של קודקודים שכל זוג בהם קשירים-חזק.</p>
+      <p><strong>גרף-העל</strong> <span class="term">G^SCC</span>: גרף שצמתיו הם רכיבי הקשירות החזקה של <span class="term">G</span>, וקשתות בין רכיבים אם״ם יש קשת בין קודקוד שלהם ב-<span class="term">G</span>. <strong>טענה חשובה:</strong> <span class="term">G^SCC</span> תמיד DAG.</p>
+    </div>
+  </div>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>דוגמה — גרף עם 3 רק"חים וגרף-העל שלו</div>
+    <div class="box-body">
+
+      <div style="text-align:center; margin: 12px 0;">
+        <svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;">
+          <defs>
+            <marker id="arrow-scc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+            </marker>
+          </defs>
+
+          <!-- LEFT SIDE: Original graph G with 6 vertices and 3 SCCs -->
+          <text x="120" y="20" text-anchor="middle" font-family="Assistant" font-size="13" font-weight="700" fill="#374151">הגרף G</text>
+
+          <!-- SCC1: {a, b} - top-left -->
+          <ellipse cx="80" cy="80" rx="60" ry="35" fill="#fef9e7" stroke="#b45309" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <circle cx="50" cy="80" r="18" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="50" y="86" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700">a</text>
+          <circle cx="110" cy="80" r="18" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="110" y="86" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700">b</text>
+          <text x="80" y="135" text-anchor="middle" font-family="Assistant" font-size="11" fill="#b45309" font-weight="700">SCC₁</text>
+
+          <!-- SCC2: {c, d, e} - middle -->
+          <ellipse cx="170" cy="200" rx="80" ry="40" fill="#ecfdf5" stroke="#047857" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <circle cx="120" cy="200" r="18" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="120" y="206" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700">c</text>
+          <circle cx="170" cy="200" r="18" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="170" y="206" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700">d</text>
+          <circle cx="220" cy="200" r="18" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="220" y="206" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700">e</text>
+          <text x="170" y="255" text-anchor="middle" font-family="Assistant" font-size="11" fill="#047857" font-weight="700">SCC₂</text>
+
+          <!-- SCC3: {f} - top-right -->
+          <ellipse cx="260" cy="80" rx="35" ry="32" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <circle cx="260" cy="80" r="18" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="260" y="86" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700">f</text>
+          <text x="260" y="130" text-anchor="middle" font-family="Assistant" font-size="11" fill="#1d4ed8" font-weight="700">SCC₃</text>
+
+          <!-- Edges in SCC1 (a-b cycle) -->
+          <path d="M 65 70 Q 80 60 95 70" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#arrow-scc)"/>
+          <path d="M 95 90 Q 80 100 65 90" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#arrow-scc)"/>
+
+          <!-- Edges in SCC2 (c→d→e→c cycle) -->
+          <line x1="138" y1="200" x2="152" y2="200" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow-scc)"/>
+          <line x1="188" y1="200" x2="202" y2="200" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow-scc)"/>
+          <path d="M 210 185 Q 170 165 130 185" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#arrow-scc)"/>
+
+          <!-- Inter-SCC edges -->
+          <!-- b → d -->
+          <line x1="110" y1="98" x2="160" y2="184" stroke="#be123c" stroke-width="2" marker-end="url(#arrow-scc)"/>
+          <!-- e → f -->
+          <line x1="232" y1="190" x2="252" y2="98" stroke="#be123c" stroke-width="2" marker-end="url(#arrow-scc)"/>
+          <!-- b → f (top) -->
+          <line x1="128" y1="80" x2="242" y2="80" stroke="#be123c" stroke-width="2" marker-end="url(#arrow-scc)"/>
+
+          <!-- Divider line -->
+          <line x1="350" y1="20" x2="350" y2="260" stroke="#e7e5e0" stroke-width="2"/>
+
+          <!-- RIGHT SIDE: Super-graph G^SCC -->
+          <text x="480" y="20" text-anchor="middle" font-family="Assistant" font-size="13" font-weight="700" fill="#374151">גרף-העל G^SCC</text>
+
+          <circle cx="420" cy="90" r="28" fill="#fef9e7" stroke="#b45309" stroke-width="2.5"/>
+          <text x="420" y="96" text-anchor="middle" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#b45309">SCC₁</text>
+
+          <circle cx="480" cy="200" r="28" fill="#ecfdf5" stroke="#047857" stroke-width="2.5"/>
+          <text x="480" y="206" text-anchor="middle" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#047857">SCC₂</text>
+
+          <circle cx="540" cy="90" r="28" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2.5"/>
+          <text x="540" y="96" text-anchor="middle" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#1d4ed8">SCC₃</text>
+
+          <!-- Super-edges -->
+          <line x1="445" y1="105" x2="465" y2="180" stroke="#be123c" stroke-width="2.5" marker-end="url(#arrow-scc)"/>
+          <line x1="498" y1="180" x2="525" y2="110" stroke="#be123c" stroke-width="2.5" marker-end="url(#arrow-scc)"/>
+          <line x1="448" y1="90" x2="512" y2="90" stroke="#be123c" stroke-width="2.5" marker-end="url(#arrow-scc)"/>
+        </svg>
+      </div>
+
+      <p><strong>הגרף המקורי:</strong> 6 קודקודים, 9 קשתות. הקשתות הצבעוניות (אדומות) בין רק"חים שונים, הקשתות האפורות בתוך רק"חים.</p>
+      <ul>
+        <li><strong>SCC₁ = {a, b}:</strong> מעגל <span class="term">a → b → a</span></li>
+        <li><strong>SCC₂ = {c, d, e}:</strong> מעגל <span class="term">c → d → e → c</span></li>
+        <li><strong>SCC₃ = {f}:</strong> קודקוד בודד (אין מעגל)</li>
+      </ul>
+      <p><strong>גרף-העל</strong> מכיל 3 קודקודים (אחד לכל רק"ח) ו-3 קשתות (b→d מ-SCC₁ ל-SCC₂; e→f מ-SCC₂ ל-SCC₃; b→f מ-SCC₁ ל-SCC₃). <strong>אין מעגלים בגרף-העל</strong> — תכונה כללית של <span class="term">G^SCC</span>.</p>
+    </div>
+  </div>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>אלגוריתם Kosaraju (שני DFS)</div>
+    <div class="box-body">
+      <ol>
+        <li>הרץ DFS על <span class="term">G</span>. שמור את הקודקודים בסטאק לפי <em>סדר הסיום</em> (האחרון שמסיים — מעל הסטאק).</li>
+        <li>בנה את הגרף ההפוך <span class="term">G^T</span> (היפוך כל הקשתות).</li>
+        <li>הרץ DFS על <span class="term">G^T</span>, אבל עבור על הקודקודים <strong>לפי הסטאק</strong> (החל מהמסיים-האחרון). כל עץ DFS שמתקבל = SCC נפרד.</li>
+      </ol>
+      <p><strong>סיבוכיות:</strong> <span class="term">Θ(n+m)</span> — שני DFS + בניית <span class="term">G^T</span>.</p>
+    </div>
+  </div>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>למה זה עובד?</div>
+    <div class="box-body">
+      <p><strong>הטענה המרכזית:</strong> הקודקוד <span class="term">v</span> עם זמן הסיום המקסימלי ב-DFS על <span class="term">G</span> שייך ל-SCC שהוא "מקור" בגרף-העל (אין לו קשתות נכנסות מ-SCC אחרים).</p>
+      <p><strong>אינטואיציה:</strong> כשהופכים את הקשתות, ה-SCC שהוא מקור הופך לבור — נורא קל למצוא אותו, כי DFS שמתחיל מהקודקוד עם <span class="term">f</span> הגבוה ביותר לא יוכל לצאת מה-SCC הזה (כל הקשתות שלו ב-<span class="term">G^T</span> פנימיות).</p>
+      <p>אחרי שזיהינו SCC אחד, מסירים אותו ועוברים לקודקוד הבא ברשימה — שיש לו את ה-<span class="term">f</span> הגבוה ביותר מבין הנותרים. וכן הלאה.</p>
+    </div>
+  </div>
+
+  <h2>יישום 3 — גשרים בגרף לא-מכוון</h2>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>הגדרה</div>
+    <div class="box-body">
+      <p><strong>גשר</strong> (Bridge): קשת בגרף לא-מכוון שהסרתה <em>מנתקת</em> את הגרף (יוצרת רכיב קשירות נוסף).</p>
+      <p><strong>אלגוריתם:</strong> הרץ DFS על הגרף. קשת <span class="term">{u,v}</span> (כאשר <span class="term">u</span> הוא אבא של <span class="term">v</span> בעץ) היא גשר ⇔ אין קשת Back מ-<span class="term">v</span> או צאצאיו לאחור מעבר ל-<span class="term">u</span>.</p>
+      <p>פורמלית: ל-<span class="term">{u,v}</span> להיות גשר, נדרש <span class="term">low[v] = d[v]</span>, כאשר <span class="term">low[v]</span> הוא הזמן המינימלי שאפשר להגיע אליו מ-<span class="term">v</span> דרך תת-העץ + קשת Back אחת בכל היותר.</p>
+      <p><strong>סיבוכיות:</strong> <span class="term">Θ(n+m)</span>.</p>
+    </div>
+  </div>
+
+  <h2>יישום 3 — מיון טופולוגי דרך DFS</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>אלטרנטיבה לאלגוריתם של פרק 4</div>
+    <div class="box-body">
+      <p>בפרק 4 בנינו מיון טופולוגי דרך "איתור מקור והסרה" (Kahn). יש דרך שנייה דרך DFS:</p>
+      <ol>
+        <li>הרץ DFS על הגרף, רושם את <span class="term">f[v]</span> לכל קודקוד.</li>
+        <li>החזר את הקודקודים <strong>בסדר יורד</strong> של <span class="term">f[v]</span> (הגדול קודם).</li>
+      </ol>
+      <p><strong>סיבוכיות:</strong> <span class="term">Θ(n+m)</span> (DFS + מיון לפי <span class="term">f</span>, אבל המיון אינו צריך להיות אקטיבי — אפשר פשוט להוסיף קודקוד לראש רשימה ברגע שהוא הופך שחור).</p>
+    </div>
+  </div>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>למה זה עובד?</div>
+    <div class="box-body">
+      <p><strong>טענה:</strong> בגרף DAG, אם <span class="term">(u,v) ∈ E</span> אז <span class="term">f[u] &gt; f[v]</span>.</p>
+      <p><strong>הוכחה:</strong> כשהקשת <span class="term">(u,v)</span> נסרקת מ-<span class="term">u</span>, יש שלוש אפשרויות לצבע של <span class="term">v</span>:</p>
+      <ul>
+        <li><span class="term">v</span> לבן ← נכנסים אליו רקורסיבית, <span class="term">v</span> מסיים לפני <span class="term">u</span> (קינון). <span class="term">f[v] &lt; f[u]</span>. ✓</li>
+        <li><span class="term">v</span> אפור ← קשת Back, כלומר יש מעגל. סתירה ל-DAG.</li>
+        <li><span class="term">v</span> שחור ← <span class="term">v</span> כבר סיים, <span class="term">f[v] &lt; d[u] &lt; f[u]</span>. ✓</li>
+      </ul>
+      <p>בכל מקרה תקף (לא Back), <span class="term">f[u] &gt; f[v]</span>. לכן סידור לפי <span class="term">f</span> יורד הוא מיון טופולוגי. ∎</p>
+    </div>
+  </div>
+
+  <h2>תרגיל מהפרקטיקה</h2>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 1 · practice3 שאלה 1 — מעגל בגרף לא-מכוון ב-O(n)</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">DFS · O(n) algorithm</span>
+          <p>יהי <span class="term">G</span> גרף לא-מכוון עם <span class="term">n</span> קודקודים. כתוב אלגוריתם הבודק האם קיים מעגל ב-<span class="term">G</span>, ביעילות <span class="term">O(n)</span> (לא <span class="term">O(n+m)</span>!). הוכח את נכונות האלגוריתם.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">שלב 1 · התובנה</div>
+            <p><strong>טענה:</strong> בגרף לא-מכוון, אם <span class="term">m ≥ n</span> אז יש מעגל.</p>
+            <p><strong>הוכחה:</strong> עץ עם <span class="term">n</span> קודקודים יש בו בדיוק <span class="term">n−1</span> קשתות. אם הגרף קשיר ויש בו לפחות <span class="term">n</span> קשתות, יש בו לפחות קשת אחת "מיותרת" שיוצרת מעגל. אם הגרף לא קשיר, יש לפחות אחד מהרכיבים שעובד עם פחות מ-(גודלו−1) קשתות, אז סך הקשתות &lt; n−1, וזה סתירה ל-m ≥ n.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 2 · האלגוריתם</div>
+            <pre style="margin-top:6px;margin-bottom:6px;"><code class="language-plaintext">DETECT-CYCLE(G):
+    if |E| ≥ |V|:
+        return "יש מעגל"
+    else:
+        # |E| ≤ n-1, אז הרצת DFS עולה O(n+m) = O(n)
+        run DFS, look for back edge
+        return result</code></pre>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 3 · סיבוכיות</div>
+            <p>בדיקת <span class="term">|E| ≥ |V|</span> ב-<span class="term">O(1)</span> (בהנחה ש-|E| ידוע). אם הענף השני: <span class="term">m ≤ n-1</span> ולכן DFS ב-<span class="term">O(n+m) = O(n)</span>.</p>
+          </div>
+
+          <div class="final-answer">
+            הטריק: לא ידעו שאפשר לחסוך זמן כש-m גדול, כי ברגע ש-<span class="term">m ≥ n</span> בטוח יש מעגל בגרף לא-מכוון.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 2 · practice3 שאלה 2 — וריאציות באלגוריתמי DFS</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">DFS · counterexamples</span>
+          <p><strong>(א)</strong> נשנה את אלגוריתם המיון הטופולוגי המבוסס DFS כך: במקום להחזיר את הקודקודים לפי סדר <em>סיום</em> (יורד), נחזיר אותם לפי סדר <em>גילוי</em>. האם האלגוריתם יעבוד נכון?</p>
+          <p><strong>(ב)</strong> נשנה את אלגוריתם Kosaraju למציאת SCC כך: במקום להריץ את ה-DFS השני על <span class="term">G^T</span> בסדר סיום הפוך, נריץ אותו על <span class="term">G</span> המקורי בסדר סיום (לא הפוך). האם זה יעבוד?</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">סעיף א — לא יעבוד</div>
+            <p><strong>דוגמה נגדית:</strong> גרף מכוון עם 3 קודקודים <span class="term">{1, 2, 3}</span> והקשת <span class="term">(3, 2)</span>.</p>
+            <p>נריץ DFS לפי סדר לקסיקוגרפי: <span class="term">1</span> ראשון (אין שכנים, מסיים מיד), <span class="term">2</span> שני (אין יוצאים, מסיים), <span class="term">3</span> שלישי (יוצא ל-<span class="term">2</span> שכבר שחור, מסיים).</p>
+            <p><strong>סדר גילוי:</strong> 1, 2, 3.</p>
+            <p>אבל בגרף יש קשת <span class="term">(3, 2)</span> — סדר תקף חייב <span class="term">3</span> לפני <span class="term">2</span>. הסדר 1,2,3 שגוי! ✗</p>
+            <p><strong>למה זה לא עובד:</strong> זמן גילוי לא מבטיח שכל ההורים-הקדמונים-בעץ-DFS כבר נגלו. רק זמן <em>סיום</em> מבטיח שכל הצאצאים סיימו.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף ב — לא יעבוד</div>
+            <p><strong>דוגמה נגדית:</strong> גרף מכוון עם 3 קודקודים <span class="term">{1, 2, 3}</span>, קשתות <span class="term">(1, 2), (3, 2)</span>. שני רכיבי קשירות חזקה: <span class="term">{1, 3}</span> כל אחד בנפרד (כי אין דרך לחזור אליהם), ו-<span class="term">{2}</span>.</p>
+            <p>אם DFS ראשון מתחיל מ-<span class="term">2</span>: סדר גילוי 2,1,3 (לפי הסדר הלקסיקוגרפי בתחילה אחרי 2). אבל 2 אין לו שכנים. אז סדר סיום: <span class="term">2, 1, 3</span>.</p>
+            <p>DFS שני על <span class="term">G</span> בסדר סיום: התחל מ-<span class="term">2</span>, אין שכן יוצא, ולא נגיע אף פעם מ-<span class="term">2</span> ל-<span class="term">1</span> או <span class="term">3</span>. כל אחד מ-<span class="term">1, 3</span> נסרק לחוד.</p>
+            <p>נקבל 3 רכיבים (תקין). אבל בגרף שבו <em>יש</em> מסלולים בין רק"חים שונים, השיטה יכולה לאחד שני רק"חים שונים לעץ DFS אחד. דוגמה: גרף עם 3 קודקודים וקשתות <span class="term">(1,2), (2,3)</span> — שלושה רק"חים נפרדים, אבל DFS שני על G המקורי לפי סדר סיום (1,2,3 — סיום: 3,2,1) יחזיר עץ אחד שמכיל את כל השלושה.</p>
+          </div>
+
+          <div class="final-answer">
+            שתי השינויים שוברים את האלגוריתם. (א) סדר גילוי לא מספיק כדי לכבד את כל הקשתות; (ב) הסדר ההפוך וההפיכה של הגרף שניהם חיוניים ל-Kosaraju.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 3 · practice3 שאלה 4 — מסלול המילטון ↔ מיון טופולוגי יחיד</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">DAG · uniqueness · Hamilton path</span>
+          <p><strong>הגדרה:</strong> מסלול המילטון בגרף הוא מסלול המבקר בכל קודקוד פעם אחת בדיוק.</p>
+          <p><strong>(א)</strong> הוכח: אם בגרף מכוון אציקלי קיים מסלול המילטון, אז למיון הטופולוגי יש סידור אחד ויחיד.</p>
+          <p><strong>(ב)</strong> אם ידוע שלגרף יש מיון טופולוגי יחיד — האם בהכרח קיים מסלול המילטון?</p>
+          <p><strong>(ג)</strong> תאר אלגוריתם יעיל למציאת מסלול המילטון ב-DAG (או החזרת "אין").</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">סעיף א — מסלול המילטון גורר מיון יחיד</div>
+            <p>נניח קיים מסלול המילטון <span class="term">(v₁, v₂, ..., vₙ)</span>. אז יש קשת <span class="term">(vᵢ, vᵢ₊₁)</span> לכל <span class="term">1 ≤ i ≤ n−1</span>. נראה שכל סידור אחר אינו תקף.</p>
+            <p>תהי <span class="term">L</span> תמורה השונה מהמסלול. בהכרח קיים זוג <span class="term">vᵢ, vⱼ</span> כך ש-<span class="term">i &lt; j</span> אבל ב-<span class="term">L</span> <span class="term">vⱼ</span> מופיע <em>לפני</em> <span class="term">vᵢ</span>.</p>
+            <p>בגרף קיים המסלול <span class="term">(vᵢ → vᵢ₊₁ → ... → vⱼ)</span>. מהמשפט שהוכחנו בפרק 4 — בכל מיון טופולוגי <span class="term">vᵢ</span> חייב להופיע לפני <span class="term">vⱼ</span>. סתירה. ✓</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף ב — מיון יחיד גורר מסלול המילטון</div>
+            <p><strong>גם כן נכון.</strong> נראה זאת. נניח המיון היחיד הוא <span class="term">(v₁, ..., vₙ)</span>.</p>
+            <p>נסתכל על אלגוריתם המיון הטופולוגי שלמדנו (איתור מקור והסרה). מהיחידות נובע שבכל רגע יש <em>בדיוק מקור אחד</em> בתור. אילו היו שניים, היה אפשר להחליף את סדרם ולקבל מיון שונה.</p>
+            <p>בזמן ש-<span class="term">vᵢ₋₁</span> בתור (כמקור יחיד), <span class="term">vᵢ</span> עוד לא הופך למקור. הוא הופך למקור רק אחרי הסרת <span class="term">vᵢ₋₁</span> מהגרף. זאת אומרת שהדרגת הכניסה של <span class="term">vᵢ</span> ירדה ב-1 ברגע הסרת <span class="term">vᵢ₋₁</span>. כלומר, יש קשת <span class="term">(vᵢ₋₁, vᵢ)</span> בגרף!</p>
+            <p>זה נכון לכל <span class="term">i</span>, אז המסלול <span class="term">(v₁, v₂, ..., vₙ)</span> קיים — והוא מסלול המילטון. ✓</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף ג — האלגוריתם</div>
+            <p>מהסעיפים הקודמים: מסלול המילטון קיים ⇔ המיון יחיד ⇔ בכל רגע יש מקור יחיד באלגוריתם המיון.</p>
+            <p><strong>אלגוריתם:</strong></p>
+            <ol>
+              <li>הרץ אלגוריתם מיון טופולוגי (לא DFS — האלגוריתם של פרק 4 עם הסרת מקור).</li>
+              <li>בכל שלב, בדוק שיש <em>בדיוק מקור אחד</em> בתור. אם יש 2 או יותר — החזר "אין מסלול המילטון".</li>
+              <li>אם המיון הסתיים בהצלחה — החזר את הסידור כמסלול המילטון.</li>
+            </ol>
+            <p><strong>סיבוכיות:</strong> <span class="term">Θ(n+m)</span> — כמו מיון רגיל.</p>
+          </div>
+
+          <div class="final-answer">
+            ב-DAG, מסלול המילטון ↔ מיון יחיד ↔ "מקור יחיד תמיד" בעת הריצה. שלוש טענות שקולות. אלגוריתם המיון הופך לבדיקה ישירה.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 4 · practice1 שאלה 4 — תכונת מסלולים ו-SCC</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">SCC · path structure</span>
+          <p>יהי <span class="term">G = (V, E)</span> גרף מכוון.</p>
+          <p><strong>(א)</strong> הוכח: לכל מסלול בגרף, ולכל שלושה קודקודים <span class="term">u, v, w</span> שמופיעים על המסלול בסדר <span class="term">u → ... → v → ... → w</span>:</p>
+          <p style="margin-right:20px;">אם <span class="term">u, v</span> ברק"חים שונים, אז <span class="term">w</span> ברק"ח שונה מ-<span class="term">u</span>.</p>
+          <p><strong>(ב)</strong> הסק: בכל גרף מכוון, ולכל רק"ח <span class="term">C</span>, ולכל זוג קודקודים <span class="term">u, v ∈ C</span>, קיים מסלול מ-<span class="term">u</span> ל-<span class="term">v</span> שעובר <em>רק דרך קודקודי <span class="term">C</span></em>.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">סעיף א · הוכחה בשלילה</div>
+            <p>נניח בשלילה: <span class="term">u → ... → v → ... → w</span>, <span class="term">u, v</span> ברק"חים שונים, אבל <span class="term">u, w</span> באותו רק"ח. אז קיים מסלול <span class="term">w → ... → u</span> (כי <span class="term">u, w</span> קשירים-חזק).</p>
+
+            <p><strong>בנייה של סתירה:</strong> נראה שגם <span class="term">u → ... → v</span> וגם <span class="term">v → ... → u</span>, מה שיסתור את ההנחה ש-<span class="term">u, v</span> ברק"חים שונים.</p>
+            <ul>
+              <li><span class="term">u → ... → v</span> — קיים, חלק מהמסלול המקורי. ✓</li>
+              <li><span class="term">v → ... → u</span> — נראה: יש <span class="term">v → ... → w</span> (חלק מהמסלול), ויש <span class="term">w → ... → u</span> (כי <span class="term">u,w</span> ברק"ח אחד). שרשור: <span class="term">v → ... → w → ... → u</span>. ✓</li>
+            </ul>
+            <p>אז <span class="term">u, v</span> קשירים-חזק — סתירה. ∎</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף ב · רק"ח "סגור על עצמו"</div>
+            <p>יהיו <span class="term">u, v ∈ C</span>. כיוון ש-<span class="term">u, v</span> קשירים-חזק, יש מסלול <span class="term">P</span> מ-<span class="term">u</span> ל-<span class="term">v</span>. נניח בשלילה ש-<span class="term">P</span> עובר דרך קודקוד <span class="term">w ∉ C</span>.</p>
+
+            <p>אז <span class="term">u → ... → w → ... → v</span>. מסעיף א: <span class="term">u, w</span> ברק"חים שונים, ולכן <span class="term">v</span> ברק"ח שונה מ-<span class="term">u</span>. אבל הנחנו <span class="term">u, v ∈ C</span> — סתירה. ∎</p>
+
+            <p><strong>הסקה כללית:</strong> רק"ח הוא תת-גרף "סגור" — כל המסלולים בין קודקודים שלו עוברים בתוכו בלבד. זה מצדיק להגדיר את רק"חים כתת-גרפים <em>שלמים</em> ולא רק כקבוצות קודקודים.</p>
+          </div>
+
+          <div class="final-answer">
+            תכונה חזקה: רק"ח הוא תת-גרף סגור. זאת התובנה שמאחורי גרף-העל — אפשר "להחליק" כל רק"ח לקודקוד בודד בלי לאבד מידע על מסלולים בגרף המקורי.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 5 · practice3 שאלה 3 — בניית גרף-העל בזמן ליניארי</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">SCC graph · linear-time construction</span>
+          <p>כתוב אלגוריתם המקבל גרף מכוון <span class="term">G = (V, E)</span> ומחזיר את גרף-העל <span class="term">G^SCC</span>.</p>
+          <p><strong>דרישות:</strong></p>
+          <ol>
+            <li>זמן ריצה <span class="term">Θ(n+m)</span>.</li>
+            <li>בגרף הפלט אין לולאות עצמיות וקשתות כפולות בין אותו זוג רק"חים.</li>
+          </ol>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">גישה — מיון ע״י Bucket Sort</div>
+            <ol>
+              <li>הרץ Kosaraju ל-SCC. מקבל <span class="term">Root[v]</span> = נציג הרק"ח של <span class="term">v</span>.</li>
+              <li>צור "מערך קשתות" ריק. לכל קשת <span class="term">(u, v) ∈ E</span>: אם <span class="term">Root[u] ≠ Root[v]</span>, הוסף למערך את הזוג <span class="term">(Root[u], Root[v])</span>.</li>
+              <li><strong>מיון לקסיקוגרפי</strong> של מערך הקשתות ע״י Bucket-Sort כפול: ראשית לפי <span class="term">Root[u]</span>, ואחר לפי <span class="term">Root[v]</span>. כל מיון <span class="term">O(n+m)</span> (שמות הנציגים בין 1 ל-<span class="term">n</span>).</li>
+              <li>צור גרף חדש <span class="term">G̃</span> עם קודקודים = נציגי הרק"חים. עבור על המערך הממוין והוסף קשת רק אם היא שונה מקודמתה (כך נמנעות כפילויות).</li>
+            </ol>
+            <p><strong>סיבוכיות:</strong> Kosaraju ב-<span class="term">Θ(n+m)</span>, יצירת מערך ב-<span class="term">Θ(m)</span>, מיון ב-<span class="term">Θ(n+m)</span> (לא <span class="term">Θ(m log m)</span> בזכות Bucket-Sort!), מילוי <span class="term">G̃</span> ב-<span class="term">Θ(m)</span>. סה״כ <span class="term">Θ(n+m)</span>. ✓</p>
+          </div>
+
+          <div class="final-answer">
+            הטריק לעמידה בדרישת הליניאריות הוא <strong>Bucket Sort</strong> במקום מיון השוואתי. כיוון ששמות הנציגים בטווח <span class="term">[1, n]</span>, אפשר למיין ב-<span class="term">O(n+m)</span> במקום <span class="term">O(m log m)</span>.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 6 · practice3 שאלה 5 — קישוריות חצי-חזקה</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">SCC + Hamilton path · combined</span>
+          <p>גרף מכוון <span class="term">G</span> נקרא <strong>חצי-קשיר היטב</strong> אם לכל זוג קודקודים <span class="term">u, v</span> קיים מסלול מ-<span class="term">u</span> ל-<span class="term">v</span> או מ-<span class="term">v</span> ל-<span class="term">u</span> (או שניהם).</p>
+          <p>כתוב אלגוריתם יעיל הבודק אם גרף הוא חצי-קשיר היטב. הוכח נכונות.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">האלגוריתם</div>
+            <ol>
+              <li>בנה את גרף-העל <span class="term">G^SCC</span> (תרגיל 5, <span class="term">Θ(n+m)</span>).</li>
+              <li>בדוק אם ל-<span class="term">G^SCC</span> יש <em>מיון טופולוגי יחיד</em> (תרגיל 3 שראינו: שקול למסלול המילטון, <span class="term">Θ(n+m)</span>).</li>
+              <li>אם כן — <span class="term">G</span> חצי-קשיר היטב. אחרת — לא.</li>
+            </ol>
+            <p><strong>סיבוכיות:</strong> <span class="term">Θ(n+m)</span>.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">הוכחת נכונות — כיוון 1: מיון יחיד גורר חצי-קשירות</div>
+            <p>נניח של-<span class="term">G^SCC</span> יש מיון טופולוגי יחיד, כלומר יש מסלול המילטון <span class="term">C₁ → C₂ → ... → Cₖ</span>.</p>
+            <p>יהיו <span class="term">u, v</span> קודקודים ב-<span class="term">G</span>. שני מקרים:</p>
+            <ul>
+              <li><strong>I:</strong> <span class="term">u, v</span> באותו רק"ח. אז יש מסלול מ-<span class="term">u</span> ל-<span class="term">v</span> ולהיפך. ✓</li>
+              <li><strong>II:</strong> <span class="term">u ∈ Cᵢ, v ∈ Cⱼ</span>, בה״כ <span class="term">i &lt; j</span>. אז יש מסלול במסלול המילטון <span class="term">Cᵢ → Cᵢ₊₁ → ... → Cⱼ</span>. בתוך כל רק"ח אפשר לעבור בין כל זוג, וביניהם דרך הקשתות שמחברות. אז יש מסלול <span class="term">u → ... → v</span>. ✓</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="step-label">הוכחת נכונות — כיוון 2: חצי-קשירות גוררת מיון יחיד</div>
+            <p>נניח של-<span class="term">G^SCC</span> אין מיון יחיד, אז יש שני מיונים שונים. קיים זוג <span class="term">Cᵢ, Cⱼ</span> כך ש-<span class="term">Cᵢ</span> לפני <span class="term">Cⱼ</span> במיון אחד, ו-<span class="term">Cⱼ</span> לפני <span class="term">Cᵢ</span> במיון השני.</p>
+            <p>במיון טופולוגי, אם יש קשת <span class="term">Cᵢ → Cⱼ</span> אז <span class="term">Cᵢ</span> חייב להופיע לפני <span class="term">Cⱼ</span>. אז משני המיונים נובע: <em>אין</em> קשת <span class="term">Cᵢ → Cⱼ</span> ו<em>אין</em> קשת <span class="term">Cⱼ → Cᵢ</span> ב-<span class="term">G^SCC</span>.</p>
+            <p>מכאן: אין מסלול ב-<span class="term">G</span> מאף קודקוד ב-<span class="term">Cᵢ</span> לאף קודקוד ב-<span class="term">Cⱼ</span>, וגם לא בכיוון ההפוך. אז <span class="term">G</span> <em>לא</em> חצי-קשיר היטב. ✓</p>
+          </div>
+
+          <div class="final-answer">
+            <strong>תוצאה אלגנטית:</strong> חצי-קישוריות בגרף מכוון ⇔ מיון יחיד בגרף-העל ⇔ מסלול המילטון בגרף-העל. שלוש טענות שקולות. הכל מתבצע ב-<span class="term">Θ(n+m)</span>.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <h2>מה לזכור למבחן</h2>
+
+  <div class="box summary">
+    <div class="box-head"><span class="icon">📌</span>שלושה אלגוריתמים</div>
+    <div class="box-body">
+      <ol>
+        <li><strong>זיהוי מעגל</strong> — DFS + חיפוש קשת Back. <span class="term">Θ(n+m)</span>.</li>
+        <li><strong>SCC ב-Kosaraju</strong> — שני DFS + סדר סיום. <span class="term">Θ(n+m)</span>.</li>
+        <li><strong>גשרים בגרף לא-מכוון</strong> — DFS עם <span class="term">low[v]</span>. <span class="term">Θ(n+m)</span>.</li>
+      </ol>
+      <p><strong>כל יישומי DFS:</strong> סיבוכיות <span class="term">Θ(n+m)</span>. כל פעם שאתה רואה בעיה על גרף עם תיוג זמני (לפני/אחרי, סדר) — חשוד ב-DFS.</p>
+    </div>
+  </div>
+</main>
+</div>
+</body>
+</html>

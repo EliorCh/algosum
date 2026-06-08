@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פרק 9 · מסלולים קלים ביותר ב׳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/styles/atom-one-dark.min.css">
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js"></script>
+<script>
+  window.addEventListener('load', () => {
+    if (window.renderMathInElement) {
+      try { renderMathInElement(document.body, { delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\(',right:'\\)',display:false}], throwOnError: false, strict: false }); } catch(e){}
+    }
+    if (window.hljs) { try { document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el)); } catch(e){} }
+    document.body.classList.add('ready');
+  });
+</script>
+<style>
+  :root {
+    --bg: #fbf9f3; --bg-paper: #fffefa; --ink: #1c1917; --ink-soft: #44403c; --ink-mute: #78716c;
+    --rule: #e7e5e0; --rule-soft: #f1efe9;
+    --indigo-9: #312e81; --indigo-7: #4f46e5; --indigo-3: #c7d2fe; --indigo-1: #eef2ff;
+    --c-theory-h: #1d4ed8; --c-theory-bg: #eff6ff; --c-theory-edge: #bfdbfe;
+    --c-formula-h: #b45309; --c-formula-bg: #fef9e7; --c-formula-edge: #fcd34d;
+    --c-example-h: #047857; --c-example-bg: #ecfdf5; --c-example-edge: #a7f3d0;
+    --c-warn-h: #be123c; --c-warn-bg: #fff1f2; --c-warn-edge: #fecdd3;
+    --c-exercise-h: #6d28d9; --c-exercise-bg: #f5f3ff; --c-exercise-edge: #ddd6fe;
+    --c-summary-h: #334155; --c-summary-bg: #f1f5f9; --c-summary-edge: #cbd5e1;
+    --code-bg: #0f172a; --code-bg-2: #1e293b; --code-ink: #e2e8f0;
+    --shadow-sm: 0 1px 2px rgba(28,25,23,.04), 0 1px 3px rgba(28,25,23,.06);
+    --shadow: 0 4px 12px rgba(28,25,23,.05), 0 1px 3px rgba(28,25,23,.04);
+    --serif: 'Frank Ruhl Libre', Georgia, serif;
+    --sans: 'Assistant', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.75; font-size: 17px; -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 20% 0%, rgba(99,102,241,.035), transparent 40%), radial-gradient(circle at 80% 100%, rgba(245,158,11,.035), transparent 40%);
+    background-attachment: fixed; opacity: 0; transition: opacity .2s ease; }
+  body.ready { opacity: 1; }
+  .app { display: grid; grid-template-columns: 320px 1fr; min-height: 100vh; max-width: 1480px; margin: 0 auto; }
+  .sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%); color: #e0e7ff; padding: 32px 24px; border-left: 1px solid rgba(255,255,255,.06); }
+  .sidebar::-webkit-scrollbar { width: 6px; } .sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 3px; }
+  .brand { font-family: var(--serif); font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -.01em; line-height: 1.2; }
+  .brand a { color: #fff; text-decoration: none; } .brand a:hover { color: #fbbf24; }
+  .brand-sub { font-size: 13px; color: #c7d2fe; margin-bottom: 28px; font-weight: 500; }
+  .brand-meta { font-size: 11px; color: #a5b4fc; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .nav-label { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: #818cf8; font-weight: 700; margin: 24px 0 12px; padding-right: 8px; }
+  .nav-list { list-style: none; } .nav-list li { margin-bottom: 2px; }
+  .nav-list a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; color: #c7d2fe; text-decoration: none; border-radius: 8px; font-size: 14.5px; font-weight: 500; transition: all .15s ease; }
+  .nav-list a:hover { background: rgba(255,255,255,.06); color: #fff; }
+  .nav-list a.active { background: rgba(255,255,255,.1); color: #fff; box-shadow: inset 3px 0 0 #fbbf24; }
+  .nav-list a.pending { opacity: .5; }
+  .nav-num { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; background: rgba(255,255,255,.08); border-radius: 6px; font-size: 11px; font-weight: 700; font-family: var(--mono); }
+  .nav-list a.active .nav-num { background: #fbbf24; color: #1e1b4b; }
+  main { padding: 56px 64px 120px; max-width: 960px; }
+  .page-eyebrow { display: inline-block; font-size: 12px; font-weight: 700; color: var(--indigo-7); letter-spacing: .15em; text-transform: uppercase; background: var(--indigo-1); padding: 6px 12px; border-radius: 99px; margin-bottom: 16px; }
+  h1.page-title { font-family: var(--serif); font-size: 48px; font-weight: 700; line-height: 1.15; letter-spacing: -.02em; color: var(--ink); margin-bottom: 14px; }
+  .page-subtitle { font-size: 19px; color: var(--ink-soft); margin-bottom: 48px; font-weight: 400; line-height: 1.55; }
+  h2 { font-family: var(--serif); font-size: 32px; font-weight: 700; letter-spacing: -.015em; margin: 56px 0 20px; color: var(--ink); position: relative; padding-right: 20px; }
+  h2::before { content: ''; position: absolute; right: 0; top: 14px; bottom: 14px; width: 4px; background: var(--indigo-7); border-radius: 2px; }
+  h3 { font-family: var(--sans); font-size: 22px; font-weight: 700; margin: 32px 0 12px; color: var(--ink); letter-spacing: -.005em; }
+  h4 { font-size: 17px; font-weight: 700; margin: 18px 0 8px; color: var(--ink-soft); }
+  p { margin-bottom: 14px; color: var(--ink-soft); } p strong { color: var(--ink); font-weight: 700; }
+  ul, ol { margin: 12px 24px 18px; color: var(--ink-soft); } li { margin-bottom: 8px; }
+  .term { font-family: var(--mono); direction: ltr; display: inline-block; font-size: .88em; background: #f5f5f4; padding: 1px 8px; border-radius: 5px; color: #be185d; border: 1px solid #e7e5e4; vertical-align: baseline; unicode-bidi: isolate; }
+  .term.blue { color: var(--c-theory-h); background: var(--c-theory-bg); border-color: var(--c-theory-edge); }
+  .term.green { color: var(--c-example-h); background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .term.amber { color: var(--c-formula-h); background: var(--c-formula-bg); border-color: var(--c-formula-edge); }
+  .katex-display { margin: 18px 0 !important; direction: ltr !important; text-align: center !important; unicode-bidi: isolate; } .katex { direction: ltr !important; unicode-bidi: isolate; }
+  .box { border-radius: 14px; margin: 24px 0; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); background: var(--bg-paper); }
+  .box-head { display: flex; align-items: center; gap: 10px; padding: 14px 20px; font-weight: 700; font-size: 15px; border-bottom: 1px solid var(--rule); }
+  .box-head .icon { width: 28px; height: 28px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 16px; }
+  .box-body { padding: 18px 22px; }
+  .box.theory { border-color: var(--c-theory-edge); } .box.theory .box-head { background: var(--c-theory-bg); color: var(--c-theory-h); } .box.theory .box-head .icon { background: var(--c-theory-h); color: #fff; }
+  .box.formula { border-color: var(--c-formula-edge); background: var(--c-formula-bg); } .box.formula .box-head { background: transparent; color: var(--c-formula-h); border-bottom-color: rgba(180,83,9,.18); } .box.formula .box-head .icon { background: var(--c-formula-h); color: #fff; } .box.formula .box-body { background: var(--c-formula-bg); } .box.formula p { color: #78350f; }
+  .box.example { border-color: var(--c-example-edge); } .box.example .box-head { background: var(--c-example-bg); color: var(--c-example-h); } .box.example .box-head .icon { background: var(--c-example-h); color: #fff; }
+  .box.warn { border-color: var(--c-warn-edge); } .box.warn .box-head { background: var(--c-warn-bg); color: var(--c-warn-h); } .box.warn .box-head .icon { background: var(--c-warn-h); color: #fff; }
+  .box.exercise { border-color: var(--c-exercise-edge); } .box.exercise .box-head { background: var(--c-exercise-bg); color: var(--c-exercise-h); } .box.exercise .box-head .icon { background: var(--c-exercise-h); color: #fff; }
+  .box.summary { border-color: var(--c-summary-edge); } .box.summary .box-head { background: var(--c-summary-bg); color: var(--c-summary-h); } .box.summary .box-head .icon { background: var(--c-summary-h); color: #fff; }
+  pre { background: var(--code-bg) !important; border-radius: 0 0 12px 12px; padding: 18px 22px !important; margin: 0 0 16px 0; overflow-x: auto; direction: ltr; font-size: 14px; line-height: 1.7; box-shadow: var(--shadow); border: 1px solid var(--code-bg-2); border-top: none; }
+  pre code { font-family: var(--mono) !important; background: transparent !important; padding: 0 !important; border: none !important; color: var(--code-ink) !important; }
+  .code-label { display: flex; align-items: center; gap: 8px; background: var(--code-bg-2); color: #94a3b8; font-family: var(--mono); font-size: 12px; padding: 10px 16px; border-radius: 12px 12px 0 0; direction: ltr; border: 1px solid var(--code-bg-2); border-bottom: 1px solid #334155; margin-top: 18px; }
+  .code-label .dot { width: 8px; height: 8px; border-radius: 50%; background: #475569; }
+  .code-label .dot.red { background: #ef4444; } .code-label .dot.amber { background: #f59e0b; } .code-label .dot.green { background: #22c55e; }
+  .code-label .name { margin-right: auto; opacity: .9; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm); font-size: 15px; }
+  th, td { padding: 11px 14px; text-align: right; border-bottom: 1px solid var(--rule-soft); border-left: 1px solid var(--rule-soft); }
+  th { background: var(--c-summary-bg); font-weight: 700; color: var(--c-summary-h); }
+  tr:last-child td { border-bottom: none; }
+  td.num, th.num { font-family: var(--mono); direction: ltr; text-align: center; font-size: 14px; }
+  td.highlight { background: var(--c-formula-bg); font-weight: 700; color: var(--c-formula-h); }
+  td.updated { background: #dcfce7; font-weight: 700; color: #166534; }
+  .exercise-card { background: #fff; border-radius: 10px; margin: 14px 0; border: 1px solid var(--c-exercise-edge); overflow: hidden; }
+  .exercise-tag { display: inline-block; font-size: 11px; font-weight: 700; background: var(--c-exercise-h); color: #fff; padding: 3px 10px; border-radius: 99px; margin-bottom: 10px; font-family: var(--mono); letter-spacing: .05em; direction: ltr; }
+  .exercise-q { padding: 20px 24px; background: #fafaf9; border-bottom: 1px solid var(--rule-soft); }
+  .exercise-q p:last-child { margin-bottom: 0; }
+  .reveal-btn { display: block; width: 100%; background: var(--c-exercise-bg); border: none; border-top: 1px solid var(--c-exercise-edge); padding: 13px; font-family: var(--sans); font-size: 14px; font-weight: 700; color: var(--c-exercise-h); cursor: pointer; transition: background .15s ease; }
+  .reveal-btn:hover { background: #ede9fe; } .reveal-btn::before { content: '▼ '; font-size: 10px; margin-left: 6px; transition: transform .2s ease; }
+  .exercise-card.open .reveal-btn::before { content: '▲ '; }
+  .solution { padding: 22px 26px; background: var(--c-example-bg); border-top: 1px solid var(--c-example-edge); display: none; }
+  .exercise-card.open .solution { display: block; }
+  .solution .step { background: #fff; border-radius: 8px; padding: 14px 18px; margin: 12px 0; border-right: 3px solid var(--c-example-h); }
+  .solution .step-label { font-size: 11px; font-weight: 700; color: var(--c-example-h); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; font-family: var(--mono); }
+  .solution .final-answer { background: #fff; border: 2px solid var(--c-example-h); border-radius: 10px; padding: 14px 20px; margin-top: 16px; font-weight: 600; }
+  .solution .final-answer::before { content: '✓ '; color: var(--c-example-h); font-weight: 900; }
+  .lead { font-size: 19px; color: var(--ink-soft); border-right: 3px solid var(--indigo-7); padding-right: 20px; margin: 24px 0 32px; font-weight: 400; line-height: 1.6; }
+  .keypoint { background: linear-gradient(90deg, var(--c-formula-bg) 0%, transparent 100%); padding: 14px 18px; border-radius: 8px; margin: 16px 0; border-right: 3px solid var(--c-formula-h); }
+  .keypoint::before { content: '💡 '; font-size: 18px; margin-left: 4px; }
+  .figure { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 18px; margin: 18px 0; text-align: center; box-shadow: var(--shadow-sm); }
+  .figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .figure .cap { font-size: 13px; color: var(--ink-mute); margin-top: 12px; font-style: italic; }
+  .mc-list { list-style: none; margin: 12px 0; padding: 0; }
+  .mc-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; background: #fff; border: 1px solid var(--rule); border-radius: 8px; margin-bottom: 8px; transition: all .15s ease; }
+  .mc-list li .mc-marker { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--rule); flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--ink-mute); background: #fff; }
+  .mc-list li.correct { background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .mc-list li.correct .mc-marker { background: var(--c-example-h); color: #fff; border-color: var(--c-example-h); }
+  .mc-list li.correct .mc-marker::after { content: '✓'; }
+  .mc-list li.wrong { background: var(--c-warn-bg); border-color: var(--c-warn-edge); }
+  .mc-list li.wrong .mc-marker { background: var(--c-warn-h); color: #fff; border-color: var(--c-warn-h); }
+  .mc-list li.wrong .mc-marker::after { content: '✗'; }
+  .mc-list li .mc-text { flex: 1; line-height: 1.55; color: var(--ink-soft); }
+  .mc-list li .mc-text .why { display: block; margin-top: 6px; font-size: 13.5px; color: var(--ink-mute); font-style: italic; }
+  .algo-compare { background: #fff; border-radius: 12px; padding: 0; margin: 18px 0; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); overflow: hidden; }
+  .algo-compare table { margin: 0; border-radius: 0; box-shadow: none; }
+  @media (max-width: 900px) { .app { grid-template-columns: 1fr; } .sidebar { position: static; height: auto; } main { padding: 32px 24px 80px; } h1.page-title { font-size: 36px; } h2 { font-size: 26px; } }
+</style>
+</head>
+<body>
+<div class="app">
+
+<aside class="sidebar">
+  <div class="brand"><a href="index.html">אלגוריתמים</a></div>
+  <div class="brand-sub">ד״ר אלעזר גולדנברג · הגב׳ שלומית אריאן</div>
+  <div class="brand-meta">MTA · קיץ 2026</div>
+
+  <div class="nav-label">יסודות</div>
+  <ul class="nav-list">
+    <li><a href="01-intro.html" class="pending"><span class="nav-num">1</span>מושג האלגוריתם</a></li>
+    <li><a href="02-numbers.html" class="pending"><span class="nav-num">2</span>ייצוג מספרים</a></li>
+  </ul>
+
+  <div class="nav-label">גרפים בסיסיים</div>
+  <ul class="nav-list">
+    <li><a href="03-graph-basics.html" class="pending"><span class="nav-num">3</span>מושגי יסוד</a></li>
+    <li><a href="04-toposort.html" class="pending"><span class="nav-num">4</span>מיון טופולוגי</a></li>
+  </ul>
+
+  <div class="nav-label">סריקות</div>
+  <ul class="nav-list">
+    <li><a href="05-dfs.html" class="pending"><span class="nav-num">5</span>DFS</a></li>
+    <li><a href="06-dfs-apps.html" class="pending"><span class="nav-num">6</span>יישומי DFS</a></li>
+    <li><a href="07-bfs.html" class="active" class="pending"><span class="nav-num">7</span>BFS</a></li>
+  </ul>
+
+  <div class="nav-label">מסלולים קלים ביותר</div>
+  <ul class="nav-list">
+    <li><a href="08-shortest-paths-1.html" class="pending"><span class="nav-num">8</span>מק״בים א׳</a></li>
+    <li><a href="09-shortest-paths-2.html"><span class="nav-num">9</span>מק״בים ב׳</a></li>
+  </ul>
+
+  <div class="nav-label">אופטימיזציה ורשתות</div>
+  <ul class="nav-list">
+    <li><a href="10-mst.html" class="pending"><span class="nav-num">10</span>עצים פורשים</a></li>
+    <li><a href="11-dp.html" class="pending"><span class="nav-num">11</span>תכנות דינמי</a></li>
+    <li><a href="12-flow.html" class="pending"><span class="nav-num">12</span>זרימה</a></li>
+  </ul>
+</aside>
+
+
+<main>
+<span class="page-eyebrow">פרק 7 · סריקות גרף</span>
+  <h1 class="page-title">חיפוש לרוחב<br>· BFS ·</h1>
+  <p class="page-subtitle">סריקה לפי שכבות, מציאת מסלולים קלים ביותר בגרף לא-ממושקל, ומידול בעיות באמצעות גרף.</p>
+
+  <p class="lead">
+    אם DFS "צולל עמוק" — BFS "מתפשט רחב". בכל שלב מבקרים בכל הקודקודים שמרחקם <span class="term">k</span> מהמקור, ורק אז ממשיכים למרחק <span class="term">k+1</span>. התוצאה: <strong>BFS מוצא מסלול עם הכי פחות קשתות</strong> בין שני קודקודים בגרף לא-ממושקל. זה הופך אותו לאלגוריתם בסיסי לבעיית "המרחק הקצר ביותר", ולמודל הרבה בעיות מהעולם האמיתי דרך גרפים.
+  </p>
+
+  <div class="keypoint">
+    <strong>על המבחן:</strong> שאלה קלאסית — לקחת בעיה (כדים, חידה, רובוט בלוח) ולמדל אותה כגרף. BFS אז יעזור למצוא את הפתרון "המהיר ביותר" (= הכי פחות צעדים). תרגול: מילוי הכדים — דוגמה המקורית בהרצאה.
+  </div>
+
+  <h2>האלגוריתם</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הרעיון</div>
+    <div class="box-body">
+      <p>מתחילים מהקודקוד <span class="term">s</span>. <strong>מרחק</strong> <span class="term">d[v]</span> = מספר הקשתות במסלול הקצר ביותר מ-<span class="term">s</span> ל-<span class="term">v</span>. נסדר את הקודקודים בתור FIFO ונסרוק לפי הסדר. כל קודקוד נסרק פעם אחת.</p>
+    </div>
+  </div>
+
+  <div class="code-label">
+    <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+    <span class="name">BFS.txt</span>
+  </div>
+<pre><code class="language-plaintext">BFS(Graph G, source s):
+    for each u in V:
+        d[u] = ∞
+        p[u] = NULL
+        color[u] = WHITE
+    d[s] = 0
+    color[s] = GRAY
+    Q = empty queue
+    Q.enqueue(s)
+    while Q ≠ ∅:
+        u = Q.dequeue()
+        for each v in Adj[u]:
+            if color[v] = WHITE:
+                color[v] = GRAY
+                d[v] = d[u] + 1
+                p[v] = u
+                Q.enqueue(v)
+        color[u] = BLACK
+
+יעילות: Θ(n + m)
+</code></pre>
+
+  <h2>נכונות — BFS מוצא מסלולים קצרים ביותר</h2>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>הטענה</div>
+    <div class="box-body">
+      <p>בסיום BFS מ-<span class="term">s</span>, לכל קודקוד <span class="term">v</span> שנגיש מ-<span class="term">s</span>: <span class="term">d[v]</span> שווה למרחק האמיתי <span class="term">δ(s, v)</span> במונחי <em>מספר קשתות</em>.</p>
+      <p>(אם <span class="term">v</span> לא נגיש: <span class="term">d[v]</span> נשאר <span class="term">∞</span>.)</p>
+    </div>
+  </div>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>אינטואיציה</div>
+    <div class="box-body">
+      <p>BFS מבקר בכל הקודקודים במרחק 0 (רק <span class="term">s</span>), ואז במרחק 1 (השכנים של <span class="term">s</span>), ואז במרחק 2 וכך הלאה. כשמגיעים ל-<span class="term">v</span> בפעם הראשונה, זה <em>הכרחית</em> דרך המסלול הקצר ביותר — כי אחרת היינו צריכים להגיע אליו דרך מסלול ארוך יותר, אבל מסלולים ארוכים יותר מבוקרים <em>אחר כך</em>.</p>
+    </div>
+  </div>
+
+  <h2>דוגמת הרצה — BFS לפי שכבות</h2>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>BFS על גרף לא-מכוון, מתחיל מ-s</div>
+    <div class="box-body">
+
+      <div style="text-align:center; margin: 12px 0;">
+        <svg viewBox="0 0 540 260" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;">
+          <!-- Layer labels on the left side (RTL: actually the right) -->
+          <text x="510" y="50" text-anchor="middle" font-family="Assistant" font-size="11" font-weight="700" fill="#b45309">שכבה 0</text>
+          <text x="510" y="135" text-anchor="middle" font-family="Assistant" font-size="11" font-weight="700" fill="#1d4ed8">שכבה 1</text>
+          <text x="510" y="220" text-anchor="middle" font-family="Assistant" font-size="11" font-weight="700" fill="#047857">שכבה 2</text>
+
+          <!-- Layer 0: s -->
+          <circle cx="240" cy="50" r="24" fill="#fef9e7" stroke="#b45309" stroke-width="2.5"/>
+          <text x="240" y="56" text-anchor="middle" font-family="JetBrains Mono" font-size="16" font-weight="700" fill="#b45309">s</text>
+          <text x="270" y="56" font-family="JetBrains Mono" font-size="11" fill="#b45309">d=0</text>
+
+          <!-- Layer 1: a, b, c -->
+          <circle cx="120" cy="135" r="22" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+          <text x="120" y="141" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700">a</text>
+          <text x="148" y="141" font-family="JetBrains Mono" font-size="11" fill="#1d4ed8">d=1</text>
+
+          <circle cx="240" cy="135" r="22" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+          <text x="240" y="141" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700">b</text>
+          <text x="268" y="141" font-family="JetBrains Mono" font-size="11" fill="#1d4ed8">d=1</text>
+
+          <circle cx="360" cy="135" r="22" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+          <text x="360" y="141" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700">c</text>
+          <text x="388" y="141" font-family="JetBrains Mono" font-size="11" fill="#1d4ed8">d=1</text>
+
+          <!-- Layer 2: d, e, f -->
+          <circle cx="90" cy="220" r="22" fill="#ecfdf5" stroke="#047857" stroke-width="2"/>
+          <text x="90" y="226" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700">d</text>
+          <text x="118" y="226" font-family="JetBrains Mono" font-size="11" fill="#047857">d=2</text>
+
+          <circle cx="220" cy="220" r="22" fill="#ecfdf5" stroke="#047857" stroke-width="2"/>
+          <text x="220" y="226" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700">e</text>
+          <text x="248" y="226" font-family="JetBrains Mono" font-size="11" fill="#047857">d=2</text>
+
+          <circle cx="370" cy="220" r="22" fill="#ecfdf5" stroke="#047857" stroke-width="2"/>
+          <text x="370" y="226" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700">f</text>
+          <text x="398" y="226" font-family="JetBrains Mono" font-size="11" fill="#047857">d=2</text>
+
+          <!-- Tree edges (solid black) -->
+          <line x1="223" y1="65" x2="135" y2="120" stroke="#1d4ed8" stroke-width="2.5"/>
+          <line x1="240" y1="74" x2="240" y2="113" stroke="#1d4ed8" stroke-width="2.5"/>
+          <line x1="257" y1="65" x2="345" y2="120" stroke="#1d4ed8" stroke-width="2.5"/>
+
+          <line x1="115" y1="156" x2="95" y2="199" stroke="#047857" stroke-width="2.5"/>
+          <line x1="232" y1="156" x2="222" y2="199" stroke="#047857" stroke-width="2.5"/>
+          <line x1="355" y1="156" x2="372" y2="199" stroke="#047857" stroke-width="2.5"/>
+
+          <!-- Cross-layer edges (within same layer or back to source) -->
+          <!-- Non-tree edges (dashed - exist but not used by BFS tree) -->
+          <line x1="142" y1="135" x2="218" y2="135" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <line x1="262" y1="135" x2="338" y2="135" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <line x1="242" y1="220" x2="348" y2="220" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,3"/>
+        </svg>
+      </div>
+
+      <p><strong>סדר התור (FIFO):</strong></p>
+      <ol>
+        <li>הכנס <span class="term">s</span>. שלוף <span class="term">s</span>, גלה את <span class="term">a, b, c</span> (כולם במרחק 1) והכנס אותם.</li>
+        <li>שלוף <span class="term">a</span>, גלה את <span class="term">d</span> (מרחק 2). הכנס.</li>
+        <li>שלוף <span class="term">b</span>, גלה את <span class="term">e</span>. הכנס.</li>
+        <li>שלוף <span class="term">c</span>, גלה את <span class="term">f</span>. הכנס.</li>
+        <li>שלוף <span class="term">d, e, f</span> — אין שכנים חדשים. סיום.</li>
+      </ol>
+
+      <p><strong>תוצאות:</strong> <span class="term">d[s]=0, d[a]=d[b]=d[c]=1, d[d]=d[e]=d[f]=2</span>.</p>
+
+      <p><strong>הקווים הכחולים/ירוקים:</strong> קשתות עץ BFS. <strong>הקווים האפורים המקווקווים:</strong> קשתות שבגרף המקורי אבל לא נכללו בעץ (קשתות בין קודקודים באותה שכבה או חוזרות לאחור).</p>
+
+      <p><strong>תכונה מרכזית:</strong> כל קודקוד בשכבה <span class="term">k</span> מחובר ל-<span class="term">s</span> דרך מסלול עץ באורך בדיוק <span class="term">k</span>. זה המסלול הקצר ביותר ב-<span class="term">G</span>.</p>
+    </div>
+  </div>
+
+  <h2>BFS עץ המסלולים הקצרים ביותר</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>בניית עץ BFS</div>
+    <div class="box-body">
+      <p>בריצת BFS, כל קודקוד <span class="term">v</span> (פרט ל-<span class="term">s</span>) מקבל <em>אב</em> <span class="term">p[v]</span> — הקודקוד ממנו גילינו את <span class="term">v</span>. הקשתות <span class="term">{p[v], v}</span> יוצרות עץ <strong>שורש</strong> <span class="term">s</span>, כאשר המסלול מ-<span class="term">s</span> לכל <span class="term">v</span> הוא מסלול קצר ביותר בגרף המקורי.</p>
+      <p><strong>חשוב:</strong> עץ ה-BFS נותן <em>מסלול אחד</em> לכל קודקוד. אבל לפעמים יש <em>כמה</em> מסלולים קצרים ביותר ל-<span class="term">v</span>, ועץ BFS מציג רק אחד מהם (השרירותית הראשונה שהאלגוריתם פגש).</p>
+    </div>
+  </div>
+
+  <h3>גרף המסלולים הקצרים ביותר — מציאת <em>כל</em> המסלולים</h3>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>הגדרה</div>
+    <div class="box-body">
+      <p><strong>גרף המסלולים הקצרים</strong> <span class="term">G* = (V*, E*)</span>: תת-גרף של <span class="term">G</span> שמכיל קודקוד <span class="term">v</span> ⇔ <span class="term">v</span> נגיש מ-<span class="term">s</span>, וקשת <span class="term">(u, v) ∈ E*</span> ⇔ הקשת קיימת ב-<span class="term">G</span> וגם <span class="term">d[v] = d[u] + 1</span>.</p>
+      <p><strong>מה היא נותנת:</strong> כל מסלול ב-<span class="term">G*</span> מ-<span class="term">s</span> ל-<span class="term">v</span> הוא מסלול קצר ביותר ב-<span class="term">G</span>. ההפך גם נכון.</p>
+    </div>
+  </div>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>בנייה דרך BFS</div>
+    <div class="box-body">
+      <p>בריצת BFS, אחרי שחשבנו <span class="term">d[v]</span> לכל הקודקודים:</p>
+      <pre style="margin-top:6px;"><code class="language-plaintext">E* = ∅
+for each edge (u, v) in E:
+    if d[v] = d[u] + 1:
+        E* = E* ∪ {(u, v)}</code></pre>
+      <p>סיבוכיות: <span class="term">Θ(n+m)</span> נוסף ל-BFS.</p>
+      <p><strong>מבנה:</strong> <span class="term">G*</span> הוא DAG מכוון משכבות, כל קשת מקדמת בדיוק שכבה אחת. ספירת מסלולים: אפשר לחשב את "מספר המסלולים הקצרים מ-<span class="term">s</span> ל-<span class="term">v</span>" ב-<span class="term">G*</span> דרך DP פשוט.</p>
+    </div>
+  </div>
+
+  <h2>מידול בעיות באמצעות גרף — בעיית מילוי הכדים</h2>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>בעיית הכדים</div>
+    <div class="box-body">
+      <p><strong>הבעיה:</strong> שני כדים, אחד בגודל <span class="term">a=5</span> ליטר ואחד בגודל <span class="term">b=3</span> ליטר. אפשר: למלא את אחד הכדים עד הסוף, לרוקן אחד, או להעביר מים מאחד לשני עד שאחד מלא או השני ריק. <strong>שאלה:</strong> כמה צעדים מינימליים נדרשים כדי להשיג בדיוק 4 ליטר באחד הכדים?</p>
+
+      <p><strong>מידול לגרף:</strong></p>
+      <ul>
+        <li><strong>קודקוד:</strong> זוג <span class="term">(x, y)</span> שמייצג כמות מים בשני הכדים. <span class="term">0 ≤ x ≤ 5, 0 ≤ y ≤ 3</span>. סה״כ 6×4 = 24 מצבים אפשריים.</li>
+        <li><strong>קשת:</strong> מ-<span class="term">(x,y)</span> ל-<span class="term">(x',y')</span> אם״ם פעולה חוקית אחת מובילה ממצב אחד לשני.</li>
+        <li><strong>מצב התחלתי:</strong> <span class="term">(0, 0)</span>. <strong>מצב מטרה:</strong> כל מצב שבו <span class="term">x=4</span> או <span class="term">y=4</span>.</li>
+      </ul>
+
+      <p><strong>פתרון:</strong> BFS מ-<span class="term">(0,0)</span>. המרחק לראשון מצב-המטרה = מספר הפעולות המינימלי.</p>
+
+      <p>סיבוכיות: <span class="term">O(ab)</span> מצבים, <span class="term">O(ab)</span> קשתות (כל מצב יש לו לכל היותר 6 פעולות לבצע). BFS רץ ב-<span class="term">Θ(ab)</span>.</p>
+    </div>
+  </div>
+
+  <h2>השוואה — DFS vs BFS</h2>
+
+  <table>
+    <tr><th>אפיון</th><th>DFS</th><th>BFS</th></tr>
+    <tr><td>מבנה</td><td>סטאק (רקורסיה)</td><td>תור FIFO</td></tr>
+    <tr><td>מאפיין מרכזי</td><td>זמני <span class="term">d, f</span></td><td>מרחק <span class="term">d[v]</span></td></tr>
+    <tr><td>מסלולים</td><td>כל מסלול (לא בהכרח קצר)</td><td>מסלול קצר ביותר (במס׳ קשתות)</td></tr>
+    <tr><td>סיבוכיות</td><td><span class="term">Θ(n+m)</span></td><td><span class="term">Θ(n+m)</span></td></tr>
+    <tr><td>שימושים</td><td>SCC, מעגלים, גשרים</td><td>מסלולים קצרים, מידול בעיות</td></tr>
+  </table>
+
+  <h2>תרגילים מהפרקטיקה</h2>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 1 · practice3 שאלה 7 — מימוש BFS וניתוח נכונות</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">BFS · invariant proof</span>
+          <p>בריצת BFS, נטען שלכל זוג קודקודים <span class="term">u, v</span> שמופיעים בתור באותו זמן: <span class="term">d[u] ≤ d[v]</span> אם״ם <span class="term">u</span> הוצא ל-Q לפני <span class="term">v</span>. הוכח את הטענה.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">אינווריאנט</div>
+            <p>נטען: בכל רגע במהלך BFS, אם התור מכיל את הקודקודים <span class="term">v₁, v₂, ..., vₖ</span> לפי סדר ההכנסה, אז:</p>
+            $$d[v_1] \leq d[v_2] \leq \ldots \leq d[v_k] \leq d[v_1] + 1$$
+            <p>(כלומר, ה-d-ים מסודרים, וההפרש בין הראשון לאחרון בתור הוא לכל היותר 1.)</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">הוכחה באינדוקציה על מס׳ פעולות התור</div>
+            <p><strong>בסיס:</strong> בתחילה התור מכיל רק <span class="term">s</span>, ו-<span class="term">d[s] = 0</span>. האינווריאנט מתקיים טריוויאלית.</p>
+
+            <p><strong>צעד הוצאה (dequeue u):</strong> נסיר את <span class="term">v₁ = u</span>. הסדר נשמר. ההפרש בין הראשון לאחרון לאחר ההסרה הוא לכל היותר <span class="term">d[v_k] - d[v_2]</span> ≤ <span class="term">d[v_k] - d[v_1]</span> ≤ 1. ✓</p>
+
+            <p><strong>צעד הכנסה (enqueue x):</strong> כש-<span class="term">u</span> נסרק (כעת הוצא), הוסף <span class="term">x</span> שכן של <span class="term">u</span> וצבעו לבן. הקובע: <span class="term">d[x] = d[u] + 1</span>. נטעון ש-<span class="term">d[x]</span> גדול-שווה לכל ה-<span class="term">d[vᵢ]</span> בתור.</p>
+            <p>בזמן הסריקה של <span class="term">u</span>, היה <span class="term">u</span> בראש התור לפני ההוצאה. אז כל <span class="term">vᵢ</span> בתור (שנכנסו אחרי <span class="term">u</span>) קיימים בגלל <span class="term">d[vᵢ] ≥ d[u] = d[x] - 1</span>, וההפרש ביניהם לכל היותר 1. אז <span class="term">d[vᵢ] ∈ {d[u], d[u]+1}</span>, ו-<span class="term">d[x] = d[u]+1 ≥ d[vᵢ]</span>. בנוסף, <span class="term">d[x] = d[v_1] + 1</span> כי <span class="term">v_1</span> זה ה-<span class="term">u</span> שיצא. האינווריאנט נשמר. ∎</p>
+          </div>
+
+          <div class="final-answer">
+            התוצאה: BFS באמת מבצע "סריקה לפי שכבות" — קודקודים במרחק <span class="term">k</span> נכנסים לתור לפני קודקודים במרחק <span class="term">k+1</span>.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 2 · practice3 שאלה 6 — תכונות גרף המסלולים הקצרים</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">BFS · shortest paths graph properties</span>
+          <p>יהי <span class="term">G = (V, E)</span> גרף מכוון, <span class="term">s ∈ V</span>, ותהי <span class="term">(u, v) ∈ E</span>. הוכח:</p>
+          <p><strong>(א)</strong> <span class="term">(u, v)</span> שייכת לגרף המסלולים הקצרים ביותר מ-<span class="term">s</span> אם״ם <span class="term">δ(s, v) = δ(s, u) + 1</span> וגם <span class="term">δ(s, u) &lt; ∞</span>.</p>
+          <p><strong>(ב)</strong> בגרף המסלולים הקצרים ביותר מ-<span class="term">s</span> אין מעגל.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">סעיף א — כיוון 1: התנאי גורר שהקשת בגרף</div>
+            <p>נניח <span class="term">δ(s, v) = δ(s, u) + 1</span> ו-<span class="term">δ(s, u) &lt; ∞</span>. מהשני, יש מסלול קצר ביותר <span class="term">P_u</span> מ-<span class="term">s</span> ל-<span class="term">u</span> באורך <span class="term">δ(s, u)</span>.</p>
+            <p>נשרשר את הקשת <span class="term">(u, v)</span> לסוף <span class="term">P_u</span>: נקבל מסלול חוקי מ-<span class="term">s</span> ל-<span class="term">v</span> באורך <span class="term">δ(s, u) + 1 = δ(s, v)</span>. זה מסלול קצר ביותר, והקשת <span class="term">(u, v)</span> משתתפת בו. לכן <span class="term">(u, v)</span> בגרף המסלולים הקצרים. ✓</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף א — כיוון 2: הקשת בגרף גוררת את התנאי</div>
+            <p>נניח <span class="term">(u, v)</span> בגרף המסלולים הקצרים. אז קיים מסלול קצר ביותר <span class="term">P</span> מ-<span class="term">s</span> ל-<span class="term">v</span> שעובר דרך הקשת <span class="term">(u, v)</span>. הקודקוד הקודם לפני <span class="term">v</span> ב-<span class="term">P</span> הוא <span class="term">u</span>.</p>
+            <p>מ"אי-שוויון המשולש — המקרה ההדוק" (תכונה ידועה של מסלולים קצרים): אם <span class="term">u</span> הוא הקודקוד הלפני-אחרון במסלול קצר ביותר מ-<span class="term">s</span> ל-<span class="term">v</span>, אז <span class="term">δ(s, v) = δ(s, u) + 1</span>. ובוודאי <span class="term">δ(s, u) &lt; ∞</span> כי קיים מסלול. ✓</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף ב — אין מעגלים בגרף המסלולים הקצרים</div>
+            <p>נניח בשלילה שיש מעגל <span class="term">(v₀, v₁, ..., vₖ = v₀)</span> באורך <span class="term">k ≥ 1</span> בגרף המסלולים הקצרים.</p>
+            <p>מסעיף א, לכל קשת <span class="term">(vᵢ, vᵢ₊₁)</span> במעגל:</p>
+            $$\delta(s, v_{i+1}) = \delta(s, v_i) + 1$$
+            <p>נסכם על פני כל קשתות המעגל:</p>
+            $$\sum_{i=0}^{k-1} \delta(s, v_{i+1}) = \sum_{i=0}^{k-1} \delta(s, v_i) + k$$
+            <p>שני האגפים שווים כיוון ש-<span class="term">v₀ = vₖ</span> (סכומים מחזוריים זהים). לכן <span class="term">0 = k</span>. אבל <span class="term">k ≥ 1</span> — סתירה. ∎</p>
+          </div>
+
+          <div class="final-answer">
+            (א) הקשת בגרף המסלולים הקצרים ⇔ היא "שומרת" על האורך הקצר ביותר. (ב) גרף המסלולים הקצרים תמיד DAG — תוצאה חזקה, היא ההוכחה שאפשר לעשות עליו DP לספירת מסלולים.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <h2>מה לזכור למבחן</h2>
+
+  <div class="box summary">
+    <div class="box-head"><span class="icon">📌</span>סיכום BFS</div>
+    <div class="box-body">
+      <ul>
+        <li><strong>סיבוכיות:</strong> <span class="term">Θ(n+m)</span>.</li>
+        <li><strong>מבנה נתונים:</strong> תור FIFO.</li>
+        <li><strong>תוצרים:</strong> <span class="term">d[v]</span> (מרחק בקשתות) ו-<span class="term">p[v]</span> (אב בעץ).</li>
+        <li><strong>נכונות:</strong> <span class="term">d[v] = δ(s,v)</span> לכל קודקוד נגיש.</li>
+        <li><strong>שימוש מרכזי:</strong> מסלולים קצרים בגרף לא-ממושקל. למידול בעיות ← מצבי-מערכת כקודקודים, פעולות כקשתות.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+</div>
+</body>
+</html>

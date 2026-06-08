@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פרק 9 · מסלולים קלים ביותר ב׳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/styles/atom-one-dark.min.css">
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js"></script>
+<script>
+  window.addEventListener('load', () => {
+    if (window.renderMathInElement) {
+      try { renderMathInElement(document.body, { delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\(',right:'\\)',display:false}], throwOnError: false, strict: false }); } catch(e){}
+    }
+    if (window.hljs) { try { document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el)); } catch(e){} }
+    document.body.classList.add('ready');
+  });
+</script>
+<style>
+  :root {
+    --bg: #fbf9f3; --bg-paper: #fffefa; --ink: #1c1917; --ink-soft: #44403c; --ink-mute: #78716c;
+    --rule: #e7e5e0; --rule-soft: #f1efe9;
+    --indigo-9: #312e81; --indigo-7: #4f46e5; --indigo-3: #c7d2fe; --indigo-1: #eef2ff;
+    --c-theory-h: #1d4ed8; --c-theory-bg: #eff6ff; --c-theory-edge: #bfdbfe;
+    --c-formula-h: #b45309; --c-formula-bg: #fef9e7; --c-formula-edge: #fcd34d;
+    --c-example-h: #047857; --c-example-bg: #ecfdf5; --c-example-edge: #a7f3d0;
+    --c-warn-h: #be123c; --c-warn-bg: #fff1f2; --c-warn-edge: #fecdd3;
+    --c-exercise-h: #6d28d9; --c-exercise-bg: #f5f3ff; --c-exercise-edge: #ddd6fe;
+    --c-summary-h: #334155; --c-summary-bg: #f1f5f9; --c-summary-edge: #cbd5e1;
+    --code-bg: #0f172a; --code-bg-2: #1e293b; --code-ink: #e2e8f0;
+    --shadow-sm: 0 1px 2px rgba(28,25,23,.04), 0 1px 3px rgba(28,25,23,.06);
+    --shadow: 0 4px 12px rgba(28,25,23,.05), 0 1px 3px rgba(28,25,23,.04);
+    --serif: 'Frank Ruhl Libre', Georgia, serif;
+    --sans: 'Assistant', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.75; font-size: 17px; -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 20% 0%, rgba(99,102,241,.035), transparent 40%), radial-gradient(circle at 80% 100%, rgba(245,158,11,.035), transparent 40%);
+    background-attachment: fixed; opacity: 0; transition: opacity .2s ease; }
+  body.ready { opacity: 1; }
+  .app { display: grid; grid-template-columns: 320px 1fr; min-height: 100vh; max-width: 1480px; margin: 0 auto; }
+  .sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%); color: #e0e7ff; padding: 32px 24px; border-left: 1px solid rgba(255,255,255,.06); }
+  .sidebar::-webkit-scrollbar { width: 6px; } .sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 3px; }
+  .brand { font-family: var(--serif); font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -.01em; line-height: 1.2; }
+  .brand a { color: #fff; text-decoration: none; } .brand a:hover { color: #fbbf24; }
+  .brand-sub { font-size: 13px; color: #c7d2fe; margin-bottom: 28px; font-weight: 500; }
+  .brand-meta { font-size: 11px; color: #a5b4fc; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .nav-label { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: #818cf8; font-weight: 700; margin: 24px 0 12px; padding-right: 8px; }
+  .nav-list { list-style: none; } .nav-list li { margin-bottom: 2px; }
+  .nav-list a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; color: #c7d2fe; text-decoration: none; border-radius: 8px; font-size: 14.5px; font-weight: 500; transition: all .15s ease; }
+  .nav-list a:hover { background: rgba(255,255,255,.06); color: #fff; }
+  .nav-list a.active { background: rgba(255,255,255,.1); color: #fff; box-shadow: inset 3px 0 0 #fbbf24; }
+  .nav-list a.pending { opacity: .5; }
+  .nav-num { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; background: rgba(255,255,255,.08); border-radius: 6px; font-size: 11px; font-weight: 700; font-family: var(--mono); }
+  .nav-list a.active .nav-num { background: #fbbf24; color: #1e1b4b; }
+  main { padding: 56px 64px 120px; max-width: 960px; }
+  .page-eyebrow { display: inline-block; font-size: 12px; font-weight: 700; color: var(--indigo-7); letter-spacing: .15em; text-transform: uppercase; background: var(--indigo-1); padding: 6px 12px; border-radius: 99px; margin-bottom: 16px; }
+  h1.page-title { font-family: var(--serif); font-size: 48px; font-weight: 700; line-height: 1.15; letter-spacing: -.02em; color: var(--ink); margin-bottom: 14px; }
+  .page-subtitle { font-size: 19px; color: var(--ink-soft); margin-bottom: 48px; font-weight: 400; line-height: 1.55; }
+  h2 { font-family: var(--serif); font-size: 32px; font-weight: 700; letter-spacing: -.015em; margin: 56px 0 20px; color: var(--ink); position: relative; padding-right: 20px; }
+  h2::before { content: ''; position: absolute; right: 0; top: 14px; bottom: 14px; width: 4px; background: var(--indigo-7); border-radius: 2px; }
+  h3 { font-family: var(--sans); font-size: 22px; font-weight: 700; margin: 32px 0 12px; color: var(--ink); letter-spacing: -.005em; }
+  h4 { font-size: 17px; font-weight: 700; margin: 18px 0 8px; color: var(--ink-soft); }
+  p { margin-bottom: 14px; color: var(--ink-soft); } p strong { color: var(--ink); font-weight: 700; }
+  ul, ol { margin: 12px 24px 18px; color: var(--ink-soft); } li { margin-bottom: 8px; }
+  .term { font-family: var(--mono); direction: ltr; display: inline-block; font-size: .88em; background: #f5f5f4; padding: 1px 8px; border-radius: 5px; color: #be185d; border: 1px solid #e7e5e4; vertical-align: baseline; unicode-bidi: isolate; }
+  .term.blue { color: var(--c-theory-h); background: var(--c-theory-bg); border-color: var(--c-theory-edge); }
+  .term.green { color: var(--c-example-h); background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .term.amber { color: var(--c-formula-h); background: var(--c-formula-bg); border-color: var(--c-formula-edge); }
+  .katex-display { margin: 18px 0 !important; direction: ltr !important; text-align: center !important; unicode-bidi: isolate; } .katex { direction: ltr !important; unicode-bidi: isolate; }
+  .box { border-radius: 14px; margin: 24px 0; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); background: var(--bg-paper); }
+  .box-head { display: flex; align-items: center; gap: 10px; padding: 14px 20px; font-weight: 700; font-size: 15px; border-bottom: 1px solid var(--rule); }
+  .box-head .icon { width: 28px; height: 28px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 16px; }
+  .box-body { padding: 18px 22px; }
+  .box.theory { border-color: var(--c-theory-edge); } .box.theory .box-head { background: var(--c-theory-bg); color: var(--c-theory-h); } .box.theory .box-head .icon { background: var(--c-theory-h); color: #fff; }
+  .box.formula { border-color: var(--c-formula-edge); background: var(--c-formula-bg); } .box.formula .box-head { background: transparent; color: var(--c-formula-h); border-bottom-color: rgba(180,83,9,.18); } .box.formula .box-head .icon { background: var(--c-formula-h); color: #fff; } .box.formula .box-body { background: var(--c-formula-bg); } .box.formula p { color: #78350f; }
+  .box.example { border-color: var(--c-example-edge); } .box.example .box-head { background: var(--c-example-bg); color: var(--c-example-h); } .box.example .box-head .icon { background: var(--c-example-h); color: #fff; }
+  .box.warn { border-color: var(--c-warn-edge); } .box.warn .box-head { background: var(--c-warn-bg); color: var(--c-warn-h); } .box.warn .box-head .icon { background: var(--c-warn-h); color: #fff; }
+  .box.exercise { border-color: var(--c-exercise-edge); } .box.exercise .box-head { background: var(--c-exercise-bg); color: var(--c-exercise-h); } .box.exercise .box-head .icon { background: var(--c-exercise-h); color: #fff; }
+  .box.summary { border-color: var(--c-summary-edge); } .box.summary .box-head { background: var(--c-summary-bg); color: var(--c-summary-h); } .box.summary .box-head .icon { background: var(--c-summary-h); color: #fff; }
+  pre { background: var(--code-bg) !important; border-radius: 0 0 12px 12px; padding: 18px 22px !important; margin: 0 0 16px 0; overflow-x: auto; direction: ltr; font-size: 14px; line-height: 1.7; box-shadow: var(--shadow); border: 1px solid var(--code-bg-2); border-top: none; }
+  pre code { font-family: var(--mono) !important; background: transparent !important; padding: 0 !important; border: none !important; color: var(--code-ink) !important; }
+  .code-label { display: flex; align-items: center; gap: 8px; background: var(--code-bg-2); color: #94a3b8; font-family: var(--mono); font-size: 12px; padding: 10px 16px; border-radius: 12px 12px 0 0; direction: ltr; border: 1px solid var(--code-bg-2); border-bottom: 1px solid #334155; margin-top: 18px; }
+  .code-label .dot { width: 8px; height: 8px; border-radius: 50%; background: #475569; }
+  .code-label .dot.red { background: #ef4444; } .code-label .dot.amber { background: #f59e0b; } .code-label .dot.green { background: #22c55e; }
+  .code-label .name { margin-right: auto; opacity: .9; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm); font-size: 15px; }
+  th, td { padding: 11px 14px; text-align: right; border-bottom: 1px solid var(--rule-soft); border-left: 1px solid var(--rule-soft); }
+  th { background: var(--c-summary-bg); font-weight: 700; color: var(--c-summary-h); }
+  tr:last-child td { border-bottom: none; }
+  td.num, th.num { font-family: var(--mono); direction: ltr; text-align: center; font-size: 14px; }
+  td.highlight { background: var(--c-formula-bg); font-weight: 700; color: var(--c-formula-h); }
+  td.updated { background: #dcfce7; font-weight: 700; color: #166534; }
+  .exercise-card { background: #fff; border-radius: 10px; margin: 14px 0; border: 1px solid var(--c-exercise-edge); overflow: hidden; }
+  .exercise-tag { display: inline-block; font-size: 11px; font-weight: 700; background: var(--c-exercise-h); color: #fff; padding: 3px 10px; border-radius: 99px; margin-bottom: 10px; font-family: var(--mono); letter-spacing: .05em; direction: ltr; }
+  .exercise-q { padding: 20px 24px; background: #fafaf9; border-bottom: 1px solid var(--rule-soft); }
+  .exercise-q p:last-child { margin-bottom: 0; }
+  .reveal-btn { display: block; width: 100%; background: var(--c-exercise-bg); border: none; border-top: 1px solid var(--c-exercise-edge); padding: 13px; font-family: var(--sans); font-size: 14px; font-weight: 700; color: var(--c-exercise-h); cursor: pointer; transition: background .15s ease; }
+  .reveal-btn:hover { background: #ede9fe; } .reveal-btn::before { content: '▼ '; font-size: 10px; margin-left: 6px; transition: transform .2s ease; }
+  .exercise-card.open .reveal-btn::before { content: '▲ '; }
+  .solution { padding: 22px 26px; background: var(--c-example-bg); border-top: 1px solid var(--c-example-edge); display: none; }
+  .exercise-card.open .solution { display: block; }
+  .solution .step { background: #fff; border-radius: 8px; padding: 14px 18px; margin: 12px 0; border-right: 3px solid var(--c-example-h); }
+  .solution .step-label { font-size: 11px; font-weight: 700; color: var(--c-example-h); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; font-family: var(--mono); }
+  .solution .final-answer { background: #fff; border: 2px solid var(--c-example-h); border-radius: 10px; padding: 14px 20px; margin-top: 16px; font-weight: 600; }
+  .solution .final-answer::before { content: '✓ '; color: var(--c-example-h); font-weight: 900; }
+  .lead { font-size: 19px; color: var(--ink-soft); border-right: 3px solid var(--indigo-7); padding-right: 20px; margin: 24px 0 32px; font-weight: 400; line-height: 1.6; }
+  .keypoint { background: linear-gradient(90deg, var(--c-formula-bg) 0%, transparent 100%); padding: 14px 18px; border-radius: 8px; margin: 16px 0; border-right: 3px solid var(--c-formula-h); }
+  .keypoint::before { content: '💡 '; font-size: 18px; margin-left: 4px; }
+  .figure { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 18px; margin: 18px 0; text-align: center; box-shadow: var(--shadow-sm); }
+  .figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .figure .cap { font-size: 13px; color: var(--ink-mute); margin-top: 12px; font-style: italic; }
+  .mc-list { list-style: none; margin: 12px 0; padding: 0; }
+  .mc-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; background: #fff; border: 1px solid var(--rule); border-radius: 8px; margin-bottom: 8px; transition: all .15s ease; }
+  .mc-list li .mc-marker { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--rule); flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--ink-mute); background: #fff; }
+  .mc-list li.correct { background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .mc-list li.correct .mc-marker { background: var(--c-example-h); color: #fff; border-color: var(--c-example-h); }
+  .mc-list li.correct .mc-marker::after { content: '✓'; }
+  .mc-list li.wrong { background: var(--c-warn-bg); border-color: var(--c-warn-edge); }
+  .mc-list li.wrong .mc-marker { background: var(--c-warn-h); color: #fff; border-color: var(--c-warn-h); }
+  .mc-list li.wrong .mc-marker::after { content: '✗'; }
+  .mc-list li .mc-text { flex: 1; line-height: 1.55; color: var(--ink-soft); }
+  .mc-list li .mc-text .why { display: block; margin-top: 6px; font-size: 13.5px; color: var(--ink-mute); font-style: italic; }
+  .algo-compare { background: #fff; border-radius: 12px; padding: 0; margin: 18px 0; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); overflow: hidden; }
+  .algo-compare table { margin: 0; border-radius: 0; box-shadow: none; }
+  @media (max-width: 900px) { .app { grid-template-columns: 1fr; } .sidebar { position: static; height: auto; } main { padding: 32px 24px 80px; } h1.page-title { font-size: 36px; } h2 { font-size: 26px; } }
+</style>
+</head>
+<body>
+<div class="app">
+
+<aside class="sidebar">
+  <div class="brand"><a href="index.html">אלגוריתמים</a></div>
+  <div class="brand-sub">ד״ר אלעזר גולדנברג · הגב׳ שלומית אריאן</div>
+  <div class="brand-meta">MTA · קיץ 2026</div>
+
+  <div class="nav-label">יסודות</div>
+  <ul class="nav-list">
+    <li><a href="01-intro.html" class="pending"><span class="nav-num">1</span>מושג האלגוריתם</a></li>
+    <li><a href="02-numbers.html" class="active" class="pending"><span class="nav-num">2</span>ייצוג מספרים</a></li>
+  </ul>
+
+  <div class="nav-label">גרפים בסיסיים</div>
+  <ul class="nav-list">
+    <li><a href="03-graph-basics.html" class="pending"><span class="nav-num">3</span>מושגי יסוד</a></li>
+    <li><a href="04-toposort.html" class="pending"><span class="nav-num">4</span>מיון טופולוגי</a></li>
+  </ul>
+
+  <div class="nav-label">סריקות</div>
+  <ul class="nav-list">
+    <li><a href="05-dfs.html" class="pending"><span class="nav-num">5</span>DFS</a></li>
+    <li><a href="06-dfs-apps.html" class="pending"><span class="nav-num">6</span>יישומי DFS</a></li>
+    <li><a href="07-bfs.html" class="pending"><span class="nav-num">7</span>BFS</a></li>
+  </ul>
+
+  <div class="nav-label">מסלולים קלים ביותר</div>
+  <ul class="nav-list">
+    <li><a href="08-shortest-paths-1.html" class="pending"><span class="nav-num">8</span>מק״בים א׳</a></li>
+    <li><a href="09-shortest-paths-2.html"><span class="nav-num">9</span>מק״בים ב׳</a></li>
+  </ul>
+
+  <div class="nav-label">אופטימיזציה ורשתות</div>
+  <ul class="nav-list">
+    <li><a href="10-mst.html" class="pending"><span class="nav-num">10</span>עצים פורשים</a></li>
+    <li><a href="11-dp.html" class="pending"><span class="nav-num">11</span>תכנות דינמי</a></li>
+    <li><a href="12-flow.html" class="pending"><span class="nav-num">12</span>זרימה</a></li>
+  </ul>
+</aside>
+
+
+<main>
+<span class="page-eyebrow">פרק 2 · ייצוג מספרים ופעולות אריתמטיות</span>
+  <h1 class="page-title">log(x), לא x<br>זה גודל הקלט</h1>
+  <p class="page-subtitle">למה ייצוג מספר בבסיס k דורש Θ(log x) ספרות, מה זה אומר על סיבוכיות, ושלושה אלגוריתמי כפל (נאיבי, רקורסיבי, Karatsuba).</p>
+
+  <p class="lead">
+    האבחנה היחידה והחשובה ביותר בפרק הזה: כש<strong>הקלט הוא מספר טבעי x</strong>, גודל הייצוג שלו הוא
+    <span class="term">log(x)</span>, לא <span class="term">x</span>. לולאה ש<em>סופרת מ-x ל-0</em> רצה <span class="term">Θ(x)</span> פעמים — שזה <strong>אקספוננציאלי בגודל הקלט</strong>.
+    בכל ניתוח סיבוכיות שמערב מספרים, השאלה הראשונה היא: <em>מה זה n? מספר האיברים, או אורך הייצוג?</em>
+  </p>
+
+  <div class="keypoint">
+    <strong>קביעה חמורה למבחן:</strong> אלגוריתם "פולינומי" שאורך הביצוע שלו הוא <span class="term">poly(x)</span> אבל גודל הקלט הוא <span class="term">log(x)</span> — הוא <em>אקספוננציאלי</em>. תמיד תציין מה <span class="term">n</span> מייצג.
+  </div>
+
+  <!-- =============== 1. ייצוג מספרים =============== -->
+  <h2>ייצוג מספרים — כמה ספרות צריך?</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>בסיס עשרוני, בינארי, וכל k אחר</div>
+    <div class="box-body">
+      <p><strong>בסיס עשרוני</strong> — שימוש בספרות <span class="term">{0,...,9}</span>. המספר <span class="term">6379</span> פירושו:</p>
+      $$6 \cdot 10^3 + 3 \cdot 10^2 + 7 \cdot 10^1 + 9 \cdot 10^0$$
+      <p>כתבנו 4 ספרות, לא 6379. זוהי דרך <em>קומפקטית</em> לייצוג מספרים — חוסכת אקספוננציאלית בכמות הסימנים.</p>
+      <p><strong>הכלל הכללי:</strong> אם הבסיס <span class="term">k > 1</span> קבוע (לא תלוי ב-x), אז מספר הספרות הנדרש לייצוג <span class="term">x</span> הוא:</p>
+      $$\Theta(\log_k x) = \Theta(\log x)$$
+      <p>(לבסיסים שונים יש קבוע מכפלי בלבד — שאסימפטוטית לא משנה).</p>
+    </div>
+  </div>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>גודל קלט מול ערך הקלט — ההבחנה הקריטית</div>
+    <div class="box-body">
+      <p>בכל בעיה אלגוריתמית שכוללת מספר טבעי <span class="term">x</span>:</p>
+      <ul>
+        <li><strong>ערך הקלט</strong>: <span class="term">x</span> עצמו (לדוגמה: 1000000)</li>
+        <li><strong>גודל הייצוג</strong>: <span class="term">n = ⌈log₁₀(x)⌉</span> או <span class="term">log₂(x)</span> בייצוג בינארי (לדוגמה: 7 ספרות עשרוניות, או 20 ביטים)</li>
+      </ul>
+      <p>סיבוכיות נמדדת ב<strong>גודל הייצוג</strong>, לא בערך:</p>
+      <ul>
+        <li>אלגוריתם ב-<span class="term">O(n)</span> = <span class="term">O(log x)</span> — מצוין</li>
+        <li>אלגוריתם ב-<span class="term">O(x)</span> = <span class="term">O(2^n)</span> — אקספוננציאלי, לא יעיל</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- =============== 2. הנחות יסוד =============== -->
+  <h2>הנחות יסוד על מספרים</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>פעולות בסיסיות שמותר להניח</div>
+    <div class="box-body">
+      <p>כשנכתוב אלגוריתמים על מספרים טבעיים, מניחים שנתונות לנו הפעולות הבאות על <strong>ספרות בודדות</strong> (או מילים של <span class="term">O(log n)</span> ביטים) בזמן <span class="term">O(1)</span>:</p>
+      <ul>
+        <li><strong>חיבור +</strong></li>
+        <li><strong>חיסור −</strong></li>
+        <li><strong>כפל ×</strong> (של מספרים קטנים)</li>
+        <li><strong>חלוקה ÷</strong> (של מספרים קטנים, עם שארית)</li>
+        <li><strong>השוואה &lt;, &gt;, =</strong></li>
+      </ul>
+      <p>עבור מספרים <em>גדולים</em> (שהייצוג שלהם ארוך), חיבור וכפל הם <strong>פעולות שצריך לממש בעצמנו</strong> — וזה מה שהפרק עוסק בו.</p>
+    </div>
+  </div>
+
+  <!-- =============== 3. חיבור =============== -->
+  <h2>חיבור מספרים גדולים</h2>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>שיטה נאיבית מול שיטה אריתמטית</div>
+    <div class="box-body">
+      <p><strong>שיטת ה"גולות":</strong> נחבר את <span class="term">x</span> ל-<span class="term">y</span> ע״י לקיחת <span class="term">x</span> גולות וגם <span class="term">y</span> גולות וספירת כולן. זמן: <span class="term">Θ(x+y)</span>. <em>זה אקספוננציאלי</em> ב-<span class="term">n=log(x+y)</span>.</p>
+      <p><strong>שיטת החיבור הארוך:</strong> פסאודו-קוד מהבסיס:</p>
+<pre style="margin:8px 0;"><code class="language-plaintext">LONG-ADD(x[1..n], y[1..n]):  # ספרות מימין לשמאל
+    r = 0  # carry
+    for i = 1 to n:
+        m = x[i] + y[i] + r
+        if m &lt; 10:
+            z[i] = m;     r = 0
+        else:
+            z[i] = m - 10; r = 1
+    if r = 1: z[n+1] = 1
+    return z
+</code></pre>
+      <p><strong>סיבוכיות:</strong></p>
+      $$T(n) = \Theta(\log x + \log y)$$
+      <p>זה <em>לינארי בגודל הייצוג</em> — אופטימלי.</p>
+    </div>
+  </div>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הוכחת נכונות (סקיצה)</div>
+    <div class="box-body">
+      <p>הוכחה באינדוקציה על <span class="term">n</span>, מספר הספרות.</p>
+      <p><strong>בסיס (n=1):</strong> שני מקרים:</p>
+      <ul>
+        <li>אם <span class="term">x₁+y₁ &lt; 10</span> — הפלט הוא <span class="term">x₁+y₁</span>, נכון.</li>
+        <li>אם <span class="term">x₁+y₁ ≥ 10</span> — הפלט הוא 2 ספרות: <span class="term">(x₁+y₁) mod 10</span> והספרה השנייה 1. זה בדיוק הייצוג העשרוני של הסכום.</li>
+      </ul>
+      <p><strong>צעד אינדוקציה:</strong> הנח שהאלגוריתם נכון על מספרים באורך <span class="term">n−1</span>. נסמן <span class="term">x'=x[1..n-1]</span> ו-<span class="term">y'=y[1..n-1]</span>. אזי:</p>
+      $$x + y = (x_n + y_n) \cdot 10^{n-1} + (x' + y')$$
+      <p>מהנחת האינדוקציה, האלגוריתם מחשב נכון את <span class="term">x'+y'</span> ב-<span class="term">n−1</span> הספרות הראשונות, וה-<span class="term">carry</span> שעובר לספרה ה-<span class="term">n</span> בדיוק תואם ל-<span class="term">(x'+y') div 10^(n-1)</span>. הספרה האחרונה יוצאת <span class="term">(x_n + y_n + r) mod 10</span>, נכון. ∎</p>
+    </div>
+  </div>
+
+  <!-- =============== 4. כפל =============== -->
+  <h2>כפל מספרים גדולים — שלוש גישות</h2>
+
+  <h3>גישה 1 — כפל נאיבי דרך חיבור</h3>
+  <p><span class="term">x·y</span> מתקבל ע״י חיבור <span class="term">y</span> לעצמו <span class="term">x</span> פעמים. ביצועים: <span class="term">x</span> פעולות חיבור, כל אחת ב-<span class="term">O(n)</span>. סך הכל <span class="term">O(x·n) = O(n · 2^n)</span> — <strong>אקספוננציאלי</strong>.</p>
+
+  <h3>גישה 2 — כפל ארוך ("מאונך")</h3>
+  <p>השיטה מבית הספר: מכפילים ספרה-ספרה ומחברים. <span class="term">n × n</span> מכפלות של ספרות + <span class="term">n</span> חיבורים של מספרים באורך <span class="term">2n</span>. סך הכל <span class="term">Θ(n²)</span>. <em>פולינומי</em> אבל לא הכי מהיר.</p>
+
+  <h3>גישה 3 — כפל רקורסיבי (לפני Karatsuba)</h3>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>פירוק רקורסיבי לחצאים</div>
+    <div class="box-body">
+      <p>נחלק את <span class="term">x</span> ואת <span class="term">y</span> לשני חצאים באורך <span class="term">n/2</span> ספרות:</p>
+      $$x = a \cdot 10^{n/2} + b, \quad y = c \cdot 10^{n/2} + d$$
+      <p>מתקיימת הזהות:</p>
+      $$xy = ac \cdot 10^n + (ad + bc) \cdot 10^{n/2} + bd$$
+      <p>זה דורש <strong>4 כפלים</strong> רקורסיביים (<span class="term">ac, ad, bc, bd</span>) של מספרים באורך <span class="term">n/2</span>, פלוס 3 חיבורים ושני "כפלים בחזקות של 10" (זזוז סיביות).</p>
+    </div>
+  </div>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>ניתוח זמן הריצה</div>
+    <div class="box-body">
+      <p>נוסחת הנסיגה:</p>
+      $$T(n) = 4T(n/2) + \Theta(n)$$
+      <p>פתרון לפי משפט האב (Master Theorem):</p>
+      $$T(n) = \Theta(n^{\log_2 4}) = \Theta(n^2)$$
+      <p><strong>אכזבה:</strong> זה לא יותר טוב מהכפל המאונך הרגיל. ארבעת הכפלים הקטנים "אוכלים" את כל החיסכון.</p>
+    </div>
+  </div>
+
+  <h3>גישה 4 — אלגוריתם Karatsuba</h3>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>הטריק האלגברי</div>
+    <div class="box-body">
+      <p>במקום 4 כפלים, נשתמש ב<strong>3 בלבד</strong>. הזהות המרכזית:</p>
+      $$ad + bc = (a+b)(c+d) - ac - bd$$
+      <p>נחשב רק שלושה כפלים: <span class="term">ac</span>, <span class="term">bd</span>, <span class="term">(a+b)(c+d)</span>. את <span class="term">ad+bc</span> מקבלים <em>בחיסור</em>:</p>
+      $$xy = ac \cdot 10^n + \bigl[(a+b)(c+d) - ac - bd\bigr] \cdot 10^{n/2} + bd$$
+    </div>
+  </div>
+
+  <div class="code-label">
+    <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+    <span class="name">Karatsuba.txt</span>
+  </div>
+<pre><code class="language-plaintext">KARATSUBA(x, y):  # x, y מספרים בני n ספרות
+    if n = 1: return x*y          # מקרה בסיס
+    a, b = split(x, n/2)           # x = a·10^(n/2) + b
+    c, d = split(y, n/2)           # y = c·10^(n/2) + d
+    z1 = KARATSUBA(a, c)
+    z2 = KARATSUBA(b, d)
+    z3 = KARATSUBA(a+b, c+d)
+    return z1·10^n + (z3 - z1 - z2)·10^(n/2) + z2
+</code></pre>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>ניתוח זמן הריצה של Karatsuba</div>
+    <div class="box-body">
+      <p>נוסחת הנסיגה:</p>
+      $$T(n) = 3T(n/2) + \Theta(n)$$
+      <p>לפי משפט האב:</p>
+      $$T(n) = \Theta(n^{\log_2 3}) \approx \Theta(n^{1.585})$$
+      <p><strong>הצלחה:</strong> מהר יותר מ-<span class="term">Θ(n²)</span> משמעותית — לדוגמה, על מספרים של 1000 ספרות, פי כ-25 מהיר.</p>
+    </div>
+  </div>
+
+  <div class="keypoint">
+    <strong>השוואת ארבעת האלגוריתמים</strong> על מספרים בני <span class="term">n</span> ספרות:
+    <table style="margin-top:10px;">
+      <tr><th>אלגוריתם</th><th class="num">סיבוכיות</th></tr>
+      <tr><td>נאיבי (חיבור חוזר)</td><td class="num">Θ(n · 10^n)</td></tr>
+      <tr><td>כפל ארוך מאונך</td><td class="num">Θ(n²)</td></tr>
+      <tr><td>כפל רקורסיבי (4 קריאות)</td><td class="num">Θ(n²)</td></tr>
+      <tr><td>Karatsuba</td><td class="num highlight">Θ(n^1.585)</td></tr>
+    </table>
+  </div>
+
+  <!-- =============== 5. תרגילים =============== -->
+  <h2>תרגילים מהפרקטיקה</h2>
+
+  <!-- Q2 from practice 1: decrement loop -->
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 1 · practice1, שאלה 2 — סיבוכיות של "ירידה ל-0"</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">complexity · input-size analysis</span>
+          <p>לפניך קטע הקוד:</p>
+<pre style="margin:8px 0;"><code class="language-plaintext">INPUT: x ∈ ℕ (בייצוג עשרוני)
+while x &gt; 0:
+    x ← x - 1
+</code></pre>
+          <p><strong>א.</strong> תן חסם תחתון וחסם עליון (לאו דווקא זהים) לעלות איטרציה אחת (פעולת החיסור), כפונקציה של <span class="term">x</span>. נמק.</p>
+          <p><strong>ב.</strong> הוכח כי סיבוכיות הזמן של קטע הקוד היא <span class="term">Θ(x)</span>. רמז: חשבו כמה פעמים <em>בסך הכל</em> משתנה כל אחת מהספרות.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">סעיף א · עלות איטרציה בודדת</div>
+            <p>פעולת <span class="term">x ← x − 1</span> בייצוג עשרוני דורשת מעבר על ספרות מהמשמעותית פחות (ימין). אם הספרה הימנית ≥ 1, מוריד 1 והכל מסתיים — <span class="term">O(1)</span>. אם הימנית = 0, צריך "לשאול" מהספרה הבאה, ואם גם היא 0 — ממשיכים שמאלה.</p>
+            <p><strong>חסם תחתון:</strong> <span class="term">Ω(1)</span> — לפחות פעולה אחת.</p>
+            <p><strong>חסם עליון:</strong> <span class="term">O(log x)</span> — לכל היותר עוברים על כל ספרות <span class="term">x</span>, כלומר <span class="term">⌊log₁₀ x⌋ + 1</span> ספרות.</p>
+            <p>למשל: <span class="term">x = 1000</span>. החיסור צריך לשנות 4 ספרות (1000 → 0999) → <span class="term">O(log x)</span>.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף ב · סיבוכיות סך-הכל</div>
+            <p>החסם הנאיבי: <span class="term">x</span> איטרציות × <span class="term">O(log x)</span> לכל אחת = <span class="term">O(x log x)</span>. אבל זה <strong>לא הדוק</strong>.</p>
+            <p>הטריק (מהרמז): נספור כמה פעמים <em>כל ספרה</em> משתנה לאורך כל הריצה:</p>
+            <ul>
+              <li>הספרה הימנית (היחידות) משתנה <strong>בכל איטרציה</strong> → <span class="term">x</span> פעמים.</li>
+              <li>ספרת העשרות משתנה רק כש-יחידות "עוברות" 0 → <span class="term">x/10</span> פעמים.</li>
+              <li>ספרת המאות משתנה <span class="term">x/100</span> פעמים.</li>
+              <li>...</li>
+              <li>בכלל: ספרה במקום <span class="term">i</span> משתנה <span class="term">x/10^i</span> פעמים.</li>
+            </ul>
+            <p>סך-כל שינויי הספרות לאורך כל הריצה:</p>
+            $$\sum_{i=0}^{\log_{10} x} \frac{x}{10^i} = x \cdot \sum_{i=0}^{\infty} \frac{1}{10^i} \leq x \cdot \frac{10}{9}$$
+            <p>זוהי <strong>סדרה גיאומטרית</strong> שמתכנסת לקבוע × <span class="term">x</span>. סך הזמן: <span class="term">Θ(x)</span>. ∎</p>
+          </div>
+
+          <div class="final-answer">
+            הזמן הוא <span class="term">Θ(x)</span> — לא <span class="term">Θ(x log x)</span>. החסם ההדוק מתקבל מסיכום סדרה גיאומטרית, לא מהכפלת הגרוע ביותר. <strong>הערה חשובה:</strong> <span class="term">Θ(x) = Θ(2^n)</span> כאשר <span class="term">n = log x</span> — האלגוריתם <em>אקספוננציאלי בגודל הקלט</em>.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Q3 from practice 1: divisibility by subtraction -->
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 2 · practice1, שאלה 3 — בדיקת חלוקה ללא שארית</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">algorithm correctness + complexity</span>
+          <p><strong>הגדרה:</strong> <span class="term">n</span> מתחלק ב-<span class="term">a</span> אם קיים טבעי <span class="term">k</span> כך ש-<span class="term">n = ka</span>.</p>
+          <p>נתון האלגוריתם:</p>
+<pre style="margin:8px 0;"><code class="language-plaintext">DIV-CHECK(n, a):
+    r = n
+    while r &gt; 0:
+        r = r - a
+    if r = 0: return YES
+    else:     return NO
+</code></pre>
+          <p><strong>א.</strong> הוכח את נכונות האלגוריתם.</p>
+          <p><strong>ב.</strong> מהי סיבוכיות הזמן? נמק.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">שלב 1 · הוכחת נכונות (סעיף א)</div>
+            <p><strong>טענת אינווריאנט:</strong> בכל איטרציה, <span class="term">r ≡ n (mod a)</span> — כלומר השארית של <span class="term">r</span> בחלוקה ב-<span class="term">a</span> שווה לשארית של <span class="term">n</span> בחלוקה ב-<span class="term">a</span>.</p>
+            <ul>
+              <li><strong>בסיס:</strong> בהתחלה <span class="term">r = n</span>, אז <span class="term">r ≡ n (mod a)</span> טריוויאלית.</li>
+              <li><strong>צעד:</strong> אם <span class="term">r ≡ n (mod a)</span>, אז גם <span class="term">r − a ≡ n (mod a)</span> (חיסור כפולה של <span class="term">a</span> לא משנה שארית). ✓</li>
+            </ul>
+            <p><strong>תנאי עצירה:</strong> הלולאה נעצרת כש-<span class="term">r ≤ 0</span>. נראה ש-<span class="term">r = 0</span> בעצירה אם״ם <span class="term">a | n</span>:</p>
+            <ul>
+              <li>אם <span class="term">a | n</span> אז <span class="term">n = ka</span>, ואחרי <span class="term">k</span> איטרציות <span class="term">r = 0</span> בדיוק.</li>
+              <li>אם <span class="term">a ∤ n</span>, אז יש שארית חיובית <span class="term">0 &lt; m &lt; a</span>. לאחר איטרציה כשמגיעים ל-<span class="term">r = m</span>, איטרציה נוספת תוריד אותו ל-<span class="term">m − a &lt; 0</span> ונעצור עם <span class="term">r &lt; 0</span> ≠ 0.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 2 · סיבוכיות (סעיף ב)</div>
+            <p>מספר האיטרציות: <span class="term">⌈n/a⌉</span>. בכל איטרציה חיסור של מספרים באורכים <span class="term">O(log n)</span> = <span class="term">O(log n)</span> זמן.</p>
+            <p>סך הכל:</p>
+            $$T(n, a) = O\!\left(\frac{n}{a} \cdot \log n\right)$$
+            <p>במונחי גודל הקלט <span class="term">N = log n + log a</span>:</p>
+            $$T = O\!\left(\frac{2^N}{a} \cdot N\right)$$
+            <p>זה <strong>אקספוננציאלי</strong> בגודל הקלט.</p>
+            <p><strong>זה אלגוריתם איטי:</strong> במספרים גדולים שווה לחלק "במאונך" ב-<span class="term">O(log² n)</span>, או להשתמש ב-<span class="term">mod</span> שמובנה.</p>
+          </div>
+
+          <div class="final-answer">
+            (א) האלגוריתם נכון בעזרת אינווריאנט שמירת שארית. (ב) סיבוכיות <span class="term">O((n/a) · log n)</span> — <em>אקספוננציאלית בגודל הקלט</em>. שוב הלקח מתרגיל 1: <span class="term">n</span> כערך הוא אקספוננציאלי ב-<span class="term">log n</span> שהוא גודל הייצוג.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =============== 6. סיכום למבחן =============== -->
+  <h2>מה לזכור למבחן</h2>
+
+  <div class="box summary">
+    <div class="box-head"><span class="icon">📌</span>טבלת מהירות</div>
+    <div class="box-body">
+      <table>
+        <tr><th>אופרציה</th><th>אלגוריתם</th><th class="num">סיבוכיות</th></tr>
+        <tr><td>חיבור</td><td>חיבור ארוך</td><td class="num">Θ(n)</td></tr>
+        <tr><td>חיסור</td><td>חיסור ארוך</td><td class="num">Θ(n)</td></tr>
+        <tr><td>כפל (נאיבי בית-ספר)</td><td>מאונך</td><td class="num">Θ(n²)</td></tr>
+        <tr><td>כפל (Karatsuba)</td><td>3-קריאות רקורסיביות</td><td class="num highlight">Θ(n^1.585)</td></tr>
+        <tr><td>חזקה x^k</td><td>חזקה מהירה (Repeated Squaring)</td><td class="num">Θ(log k · M(n))</td></tr>
+      </table>
+      <p style="margin-top:14px;">כאשר <span class="term">n</span> הוא <em>מספר הספרות</em> ו-<span class="term">M(n)</span> זמן הכפל.</p>
+    </div>
+  </div>
+
+  <div class="box warn">
+    <div class="box-head"><span class="icon">⚠</span>הטעות הגדולה</div>
+    <div class="box-body">
+      <p>שלוש שאלות שמצוטטות פעם אחר פעם במבחן:</p>
+      <ol>
+        <li><strong>"האלגוריתם רץ ב-O(n)" — מה זה n?</strong> אם זה <em>ערך הקלט</em>, האלגוריתם אקספוננציאלי בגודל הייצוג. אם זה <em>מספר הספרות</em>, האלגוריתם פולינומי.</li>
+        <li><strong>חלוקת ערכים שונים בעולם של גדלים שונים.</strong> מספר באורך 1024 ביטים מבטא ערך עד <span class="term">2^1024 ≈ 10^308</span>. ספירה עד שם בלוופ "פשוט" אינה אפשרית.</li>
+        <li><strong>Karatsuba מדגים שגם עבור פעולות "פשוטות", יש מקום לאלגוריתמיקה.</strong> ה-O(n²) הנאיבי לא בהכרח אופטימלי.</li>
+      </ol>
+    </div>
+  </div>
+
+
+</main>
+</div>
+</body>
+</html>
+</main>
+</div>
+</body>
+</html>

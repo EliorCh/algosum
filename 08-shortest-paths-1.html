@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פרק 9 · מסלולים קלים ביותר ב׳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/styles/atom-one-dark.min.css">
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js"></script>
+<script>
+  window.addEventListener('load', () => {
+    if (window.renderMathInElement) {
+      try { renderMathInElement(document.body, { delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\(',right:'\\)',display:false}], throwOnError: false, strict: false }); } catch(e){}
+    }
+    if (window.hljs) { try { document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el)); } catch(e){} }
+    document.body.classList.add('ready');
+  });
+</script>
+<style>
+  :root {
+    --bg: #fbf9f3; --bg-paper: #fffefa; --ink: #1c1917; --ink-soft: #44403c; --ink-mute: #78716c;
+    --rule: #e7e5e0; --rule-soft: #f1efe9;
+    --indigo-9: #312e81; --indigo-7: #4f46e5; --indigo-3: #c7d2fe; --indigo-1: #eef2ff;
+    --c-theory-h: #1d4ed8; --c-theory-bg: #eff6ff; --c-theory-edge: #bfdbfe;
+    --c-formula-h: #b45309; --c-formula-bg: #fef9e7; --c-formula-edge: #fcd34d;
+    --c-example-h: #047857; --c-example-bg: #ecfdf5; --c-example-edge: #a7f3d0;
+    --c-warn-h: #be123c; --c-warn-bg: #fff1f2; --c-warn-edge: #fecdd3;
+    --c-exercise-h: #6d28d9; --c-exercise-bg: #f5f3ff; --c-exercise-edge: #ddd6fe;
+    --c-summary-h: #334155; --c-summary-bg: #f1f5f9; --c-summary-edge: #cbd5e1;
+    --code-bg: #0f172a; --code-bg-2: #1e293b; --code-ink: #e2e8f0;
+    --shadow-sm: 0 1px 2px rgba(28,25,23,.04), 0 1px 3px rgba(28,25,23,.06);
+    --shadow: 0 4px 12px rgba(28,25,23,.05), 0 1px 3px rgba(28,25,23,.04);
+    --serif: 'Frank Ruhl Libre', Georgia, serif;
+    --sans: 'Assistant', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.75; font-size: 17px; -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 20% 0%, rgba(99,102,241,.035), transparent 40%), radial-gradient(circle at 80% 100%, rgba(245,158,11,.035), transparent 40%);
+    background-attachment: fixed; opacity: 0; transition: opacity .2s ease; }
+  body.ready { opacity: 1; }
+  .app { display: grid; grid-template-columns: 320px 1fr; min-height: 100vh; max-width: 1480px; margin: 0 auto; }
+  .sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%); color: #e0e7ff; padding: 32px 24px; border-left: 1px solid rgba(255,255,255,.06); }
+  .sidebar::-webkit-scrollbar { width: 6px; } .sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 3px; }
+  .brand { font-family: var(--serif); font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -.01em; line-height: 1.2; }
+  .brand a { color: #fff; text-decoration: none; } .brand a:hover { color: #fbbf24; }
+  .brand-sub { font-size: 13px; color: #c7d2fe; margin-bottom: 28px; font-weight: 500; }
+  .brand-meta { font-size: 11px; color: #a5b4fc; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .nav-label { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: #818cf8; font-weight: 700; margin: 24px 0 12px; padding-right: 8px; }
+  .nav-list { list-style: none; } .nav-list li { margin-bottom: 2px; }
+  .nav-list a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; color: #c7d2fe; text-decoration: none; border-radius: 8px; font-size: 14.5px; font-weight: 500; transition: all .15s ease; }
+  .nav-list a:hover { background: rgba(255,255,255,.06); color: #fff; }
+  .nav-list a.active { background: rgba(255,255,255,.1); color: #fff; box-shadow: inset 3px 0 0 #fbbf24; }
+  .nav-list a.pending { opacity: .5; }
+  .nav-num { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; background: rgba(255,255,255,.08); border-radius: 6px; font-size: 11px; font-weight: 700; font-family: var(--mono); }
+  .nav-list a.active .nav-num { background: #fbbf24; color: #1e1b4b; }
+  main { padding: 56px 64px 120px; max-width: 960px; }
+  .page-eyebrow { display: inline-block; font-size: 12px; font-weight: 700; color: var(--indigo-7); letter-spacing: .15em; text-transform: uppercase; background: var(--indigo-1); padding: 6px 12px; border-radius: 99px; margin-bottom: 16px; }
+  h1.page-title { font-family: var(--serif); font-size: 48px; font-weight: 700; line-height: 1.15; letter-spacing: -.02em; color: var(--ink); margin-bottom: 14px; }
+  .page-subtitle { font-size: 19px; color: var(--ink-soft); margin-bottom: 48px; font-weight: 400; line-height: 1.55; }
+  h2 { font-family: var(--serif); font-size: 32px; font-weight: 700; letter-spacing: -.015em; margin: 56px 0 20px; color: var(--ink); position: relative; padding-right: 20px; }
+  h2::before { content: ''; position: absolute; right: 0; top: 14px; bottom: 14px; width: 4px; background: var(--indigo-7); border-radius: 2px; }
+  h3 { font-family: var(--sans); font-size: 22px; font-weight: 700; margin: 32px 0 12px; color: var(--ink); letter-spacing: -.005em; }
+  h4 { font-size: 17px; font-weight: 700; margin: 18px 0 8px; color: var(--ink-soft); }
+  p { margin-bottom: 14px; color: var(--ink-soft); } p strong { color: var(--ink); font-weight: 700; }
+  ul, ol { margin: 12px 24px 18px; color: var(--ink-soft); } li { margin-bottom: 8px; }
+  .term { font-family: var(--mono); direction: ltr; display: inline-block; font-size: .88em; background: #f5f5f4; padding: 1px 8px; border-radius: 5px; color: #be185d; border: 1px solid #e7e5e4; vertical-align: baseline; unicode-bidi: isolate; }
+  .term.blue { color: var(--c-theory-h); background: var(--c-theory-bg); border-color: var(--c-theory-edge); }
+  .term.green { color: var(--c-example-h); background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .term.amber { color: var(--c-formula-h); background: var(--c-formula-bg); border-color: var(--c-formula-edge); }
+  .katex-display { margin: 18px 0 !important; direction: ltr !important; text-align: center !important; unicode-bidi: isolate; } .katex { direction: ltr !important; unicode-bidi: isolate; }
+  .box { border-radius: 14px; margin: 24px 0; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); background: var(--bg-paper); }
+  .box-head { display: flex; align-items: center; gap: 10px; padding: 14px 20px; font-weight: 700; font-size: 15px; border-bottom: 1px solid var(--rule); }
+  .box-head .icon { width: 28px; height: 28px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 16px; }
+  .box-body { padding: 18px 22px; }
+  .box.theory { border-color: var(--c-theory-edge); } .box.theory .box-head { background: var(--c-theory-bg); color: var(--c-theory-h); } .box.theory .box-head .icon { background: var(--c-theory-h); color: #fff; }
+  .box.formula { border-color: var(--c-formula-edge); background: var(--c-formula-bg); } .box.formula .box-head { background: transparent; color: var(--c-formula-h); border-bottom-color: rgba(180,83,9,.18); } .box.formula .box-head .icon { background: var(--c-formula-h); color: #fff; } .box.formula .box-body { background: var(--c-formula-bg); } .box.formula p { color: #78350f; }
+  .box.example { border-color: var(--c-example-edge); } .box.example .box-head { background: var(--c-example-bg); color: var(--c-example-h); } .box.example .box-head .icon { background: var(--c-example-h); color: #fff; }
+  .box.warn { border-color: var(--c-warn-edge); } .box.warn .box-head { background: var(--c-warn-bg); color: var(--c-warn-h); } .box.warn .box-head .icon { background: var(--c-warn-h); color: #fff; }
+  .box.exercise { border-color: var(--c-exercise-edge); } .box.exercise .box-head { background: var(--c-exercise-bg); color: var(--c-exercise-h); } .box.exercise .box-head .icon { background: var(--c-exercise-h); color: #fff; }
+  .box.summary { border-color: var(--c-summary-edge); } .box.summary .box-head { background: var(--c-summary-bg); color: var(--c-summary-h); } .box.summary .box-head .icon { background: var(--c-summary-h); color: #fff; }
+  pre { background: var(--code-bg) !important; border-radius: 0 0 12px 12px; padding: 18px 22px !important; margin: 0 0 16px 0; overflow-x: auto; direction: ltr; font-size: 14px; line-height: 1.7; box-shadow: var(--shadow); border: 1px solid var(--code-bg-2); border-top: none; }
+  pre code { font-family: var(--mono) !important; background: transparent !important; padding: 0 !important; border: none !important; color: var(--code-ink) !important; }
+  .code-label { display: flex; align-items: center; gap: 8px; background: var(--code-bg-2); color: #94a3b8; font-family: var(--mono); font-size: 12px; padding: 10px 16px; border-radius: 12px 12px 0 0; direction: ltr; border: 1px solid var(--code-bg-2); border-bottom: 1px solid #334155; margin-top: 18px; }
+  .code-label .dot { width: 8px; height: 8px; border-radius: 50%; background: #475569; }
+  .code-label .dot.red { background: #ef4444; } .code-label .dot.amber { background: #f59e0b; } .code-label .dot.green { background: #22c55e; }
+  .code-label .name { margin-right: auto; opacity: .9; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm); font-size: 15px; }
+  th, td { padding: 11px 14px; text-align: right; border-bottom: 1px solid var(--rule-soft); border-left: 1px solid var(--rule-soft); }
+  th { background: var(--c-summary-bg); font-weight: 700; color: var(--c-summary-h); }
+  tr:last-child td { border-bottom: none; }
+  td.num, th.num { font-family: var(--mono); direction: ltr; text-align: center; font-size: 14px; }
+  td.highlight { background: var(--c-formula-bg); font-weight: 700; color: var(--c-formula-h); }
+  td.updated { background: #dcfce7; font-weight: 700; color: #166534; }
+  .exercise-card { background: #fff; border-radius: 10px; margin: 14px 0; border: 1px solid var(--c-exercise-edge); overflow: hidden; }
+  .exercise-tag { display: inline-block; font-size: 11px; font-weight: 700; background: var(--c-exercise-h); color: #fff; padding: 3px 10px; border-radius: 99px; margin-bottom: 10px; font-family: var(--mono); letter-spacing: .05em; direction: ltr; }
+  .exercise-q { padding: 20px 24px; background: #fafaf9; border-bottom: 1px solid var(--rule-soft); }
+  .exercise-q p:last-child { margin-bottom: 0; }
+  .reveal-btn { display: block; width: 100%; background: var(--c-exercise-bg); border: none; border-top: 1px solid var(--c-exercise-edge); padding: 13px; font-family: var(--sans); font-size: 14px; font-weight: 700; color: var(--c-exercise-h); cursor: pointer; transition: background .15s ease; }
+  .reveal-btn:hover { background: #ede9fe; } .reveal-btn::before { content: '▼ '; font-size: 10px; margin-left: 6px; transition: transform .2s ease; }
+  .exercise-card.open .reveal-btn::before { content: '▲ '; }
+  .solution { padding: 22px 26px; background: var(--c-example-bg); border-top: 1px solid var(--c-example-edge); display: none; }
+  .exercise-card.open .solution { display: block; }
+  .solution .step { background: #fff; border-radius: 8px; padding: 14px 18px; margin: 12px 0; border-right: 3px solid var(--c-example-h); }
+  .solution .step-label { font-size: 11px; font-weight: 700; color: var(--c-example-h); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; font-family: var(--mono); }
+  .solution .final-answer { background: #fff; border: 2px solid var(--c-example-h); border-radius: 10px; padding: 14px 20px; margin-top: 16px; font-weight: 600; }
+  .solution .final-answer::before { content: '✓ '; color: var(--c-example-h); font-weight: 900; }
+  .lead { font-size: 19px; color: var(--ink-soft); border-right: 3px solid var(--indigo-7); padding-right: 20px; margin: 24px 0 32px; font-weight: 400; line-height: 1.6; }
+  .keypoint { background: linear-gradient(90deg, var(--c-formula-bg) 0%, transparent 100%); padding: 14px 18px; border-radius: 8px; margin: 16px 0; border-right: 3px solid var(--c-formula-h); }
+  .keypoint::before { content: '💡 '; font-size: 18px; margin-left: 4px; }
+  .figure { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 18px; margin: 18px 0; text-align: center; box-shadow: var(--shadow-sm); }
+  .figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .figure .cap { font-size: 13px; color: var(--ink-mute); margin-top: 12px; font-style: italic; }
+  .mc-list { list-style: none; margin: 12px 0; padding: 0; }
+  .mc-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; background: #fff; border: 1px solid var(--rule); border-radius: 8px; margin-bottom: 8px; transition: all .15s ease; }
+  .mc-list li .mc-marker { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--rule); flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--ink-mute); background: #fff; }
+  .mc-list li.correct { background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .mc-list li.correct .mc-marker { background: var(--c-example-h); color: #fff; border-color: var(--c-example-h); }
+  .mc-list li.correct .mc-marker::after { content: '✓'; }
+  .mc-list li.wrong { background: var(--c-warn-bg); border-color: var(--c-warn-edge); }
+  .mc-list li.wrong .mc-marker { background: var(--c-warn-h); color: #fff; border-color: var(--c-warn-h); }
+  .mc-list li.wrong .mc-marker::after { content: '✗'; }
+  .mc-list li .mc-text { flex: 1; line-height: 1.55; color: var(--ink-soft); }
+  .mc-list li .mc-text .why { display: block; margin-top: 6px; font-size: 13.5px; color: var(--ink-mute); font-style: italic; }
+  .algo-compare { background: #fff; border-radius: 12px; padding: 0; margin: 18px 0; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); overflow: hidden; }
+  .algo-compare table { margin: 0; border-radius: 0; box-shadow: none; }
+  @media (max-width: 900px) { .app { grid-template-columns: 1fr; } .sidebar { position: static; height: auto; } main { padding: 32px 24px 80px; } h1.page-title { font-size: 36px; } h2 { font-size: 26px; } }
+</style>
+</head>
+<body>
+<div class="app">
+
+<aside class="sidebar">
+  <div class="brand"><a href="index.html">אלגוריתמים</a></div>
+  <div class="brand-sub">ד״ר אלעזר גולדנברג · הגב׳ שלומית אריאן</div>
+  <div class="brand-meta">MTA · קיץ 2026</div>
+
+  <div class="nav-label">יסודות</div>
+  <ul class="nav-list">
+    <li><a href="01-intro.html" class="pending"><span class="nav-num">1</span>מושג האלגוריתם</a></li>
+    <li><a href="02-numbers.html" class="pending"><span class="nav-num">2</span>ייצוג מספרים</a></li>
+  </ul>
+
+  <div class="nav-label">גרפים בסיסיים</div>
+  <ul class="nav-list">
+    <li><a href="03-graph-basics.html" class="pending"><span class="nav-num">3</span>מושגי יסוד</a></li>
+    <li><a href="04-toposort.html" class="pending"><span class="nav-num">4</span>מיון טופולוגי</a></li>
+  </ul>
+
+  <div class="nav-label">סריקות</div>
+  <ul class="nav-list">
+    <li><a href="05-dfs.html" class="pending"><span class="nav-num">5</span>DFS</a></li>
+    <li><a href="06-dfs-apps.html" class="pending"><span class="nav-num">6</span>יישומי DFS</a></li>
+    <li><a href="07-bfs.html" class="pending"><span class="nav-num">7</span>BFS</a></li>
+  </ul>
+
+  <div class="nav-label">מסלולים קלים ביותר</div>
+  <ul class="nav-list">
+    <li><a href="08-shortest-paths-1.html" class="active" class="pending"><span class="nav-num">8</span>מק״בים א׳</a></li>
+    <li><a href="09-shortest-paths-2.html"><span class="nav-num">9</span>מק״בים ב׳</a></li>
+  </ul>
+
+  <div class="nav-label">אופטימיזציה ורשתות</div>
+  <ul class="nav-list">
+    <li><a href="10-mst.html" class="pending"><span class="nav-num">10</span>עצים פורשים</a></li>
+    <li><a href="11-dp.html" class="pending"><span class="nav-num">11</span>תכנות דינמי</a></li>
+    <li><a href="12-flow.html" class="pending"><span class="nav-num">12</span>זרימה</a></li>
+  </ul>
+</aside>
+
+
+<main>
+<span class="page-eyebrow">פרק 8 · מסלולים קלים ביותר א׳</span>
+  <h1 class="page-title">Bellman-Ford<br>ושיטת פורד</h1>
+  <p class="page-subtitle">הגדרת בעיית המק״בים, פעולת Relax, 4 ההבחנות של שיטת פורד, ואלגוריתם Bellman-Ford.</p>
+
+  <p class="lead">
+    זה הפרק הבסיסי של 3 פרקי המק״בים בקורס. כל מה שעושים פה הוא להוסיף <strong>משקלים</strong> לקשתות בגרף ולהגדיר בעיה חדשה: מצא מסלול מ-<span class="term">s</span> ל-<span class="term">v</span> שמשקלו הכולל הוא מינימלי.
+    הכלי המרכזי הוא פעולת <strong>Relax</strong>, ו-4 הבחנות פשוטות עליה — כל אלגוריתם בקורס שמטפל בבעיה הזו מקיים את ההבחנות האלה.
+    ה<em>שיא</em> של הפרק: אלגוריתם <strong>Bellman-Ford</strong>, שעובד <em>תמיד</em>: עם משקלים שליליים, עם מעגלים שליליים, על כל גרף.
+  </p>
+
+  <div class="keypoint">
+    <strong>על המבחן:</strong> שתי שאלות סטנדרטיות — (1) הרצת Bellman-Ford על גרף ובניית טבלת איטרציות (כמו בפרק 9); (2) הוכחה תיאורטית באמצעות אחת מ-4 ההבחנות. הוכחת הבחנה ג׳ (<span class="term">d[v] ≥ δ(s,v)</span>) הופיעה במבחנים קודמים.
+  </div>
+
+  <h2>הגדרת הבעיה</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>בעיית המוצא היחיד (SSSP)</div>
+    <div class="box-body">
+      <p><strong>קלט:</strong> גרף מכוון ממושקל <span class="term">G = (V, E, w)</span>, כאשר <span class="term">w: E → ℝ</span> פונקציית משקל. קודקוד מוצא <span class="term">s ∈ V</span>.</p>
+      <p><strong>פלט:</strong> לכל <span class="term">v ∈ V</span>, מצא את <span class="term">δ(s, v)</span> — משקל המסלול הקל ביותר מ-<span class="term">s</span> ל-<span class="term">v</span>. אם אין מסלול: <span class="term">δ(s,v) = ∞</span>.</p>
+      <p><strong>אבל היזהר ממעגלים שליליים!</strong> אם קיים מעגל שלילי שנגיש מ-<span class="term">s</span>, <span class="term">δ(s,v)</span> לא מוגדר היטב (אפשר להמשיך לרדת ב-∞).</p>
+    </div>
+  </div>
+
+  <h2>פעולת Relax — לב האלגוריתם</h2>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>הפעולה</div>
+    <div class="box-body">
+      <p>נשמור לכל קודקוד שני שדות: <span class="term">d[v]</span> (אומדן המרחק הנוכחי) ו-<span class="term">p[v]</span> (אבא במסלול).</p>
+      <p><strong>פעולת <span class="term">Relax(u, v)</span></strong> בודקת אם המסלול דרך <span class="term">u</span> משפר את <span class="term">v</span>:</p>
+      <pre style="margin-top:6px;margin-bottom:6px;"><code class="language-plaintext">Relax(u, v):
+    if d[v] > d[u] + w(u,v):
+        d[v] = d[u] + w(u,v)
+        p[v] = u</code></pre>
+      <p>זאת הפעולה היחידה שמעדכנת את ה-<span class="term">d</span>-ים. כל האלגוריתמים בפרקים 8 ו-9 הם בעצם <em>סדרי קריאות שונים ל-Relax</em>.</p>
+    </div>
+  </div>
+
+  <h3>אתחול</h3>
+
+  <pre style="margin-top:6px;margin-bottom:6px;"><code class="language-plaintext">INIT(G, s):
+    for each v in V:
+        d[v] = ∞
+        p[v] = NULL
+    d[s] = 0</code></pre>
+
+  <h2>שיטת Ford — מסגרת כללית</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הרעיון</div>
+    <div class="box-body">
+      <p>שיטת Ford היא <strong>מסגרת כללית</strong> ולא אלגוריתם ספציפי. הצורה:</p>
+      <ol>
+        <li>בצע אתחול.</li>
+        <li>כל עוד יש קשת <span class="term">(u,v) ∈ E</span> שבה Relax יבצע שיפור: בצע <span class="term">Relax(u, v)</span>.</li>
+      </ol>
+      <p>השאלה היא רק <em>באיזה סדר</em> בוחרים קשתות. אלגוריתמים שונים = סדרים שונים. <strong>Bellman-Ford</strong> בוחר בסדר פשטני: עוברים על כל הקשתות, חוזרים. <strong>Dijkstra</strong> בוחר בסדר חכם לפי תור קדימויות.</p>
+    </div>
+  </div>
+
+  <h2>4 ההבחנות של שיטת Ford</h2>
+
+  <p>אלה ארבע טענות שמקיימות בכל יישום של שיטת Ford, ולא משנה מה סדר ה-Relax-ים. הוכחה של אלגוריתם ספציפי תמיד מתבססת על האבחנות האלה.</p>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>הבחנה א׳ — מונוטוניות</div>
+    <div class="box-body">
+      <p>לכל קודקוד <span class="term">v</span>, ערכי <span class="term">d[v]</span> <strong>יורדים מונוטונית</strong> במהלך הפעלת השיטה.</p>
+      <p><strong>למה?</strong> כי Relax רק יכול להוריד את <span class="term">d[v]</span>, אף פעם לא להעלות אותו.</p>
+    </div>
+  </div>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>הבחנה ב׳ — d[v] תמיד תקין</div>
+    <div class="box-body">
+      <p>בכל שלב שבו <span class="term">d[v] ≠ ∞</span>, ערכו של <span class="term">d[v]</span> הוא משקל של איזשהו מסלול מ-<span class="term">s</span> ל-<span class="term">v</span> (לא בהכרח קצר ביותר), העובר דרך הקשת <span class="term">(p[v], v)</span>.</p>
+      <p><strong>למה זה חשוב?</strong> כשהאלגוריתם עוצר, אם נשרשר את ההורים <span class="term">p[v] → p[p[v]] → ...</span> נקבל מסלול תקף מ-<span class="term">s</span> ל-<span class="term">v</span>.</p>
+    </div>
+  </div>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>הבחנה ג׳ — d[v] ≥ δ(s,v)</div>
+    <div class="box-body">
+      <p>בכל שלב מתקיים <span class="term">d[v] ≥ δ(s, v)</span>. כלומר <span class="term">d[v]</span> תמיד <em>חסם עליון</em> על המרחק האמיתי.</p>
+      <p><strong>סיבה:</strong> מהבחנה ב, <span class="term">d[v]</span> שווה למשקל מסלול ממשי, ומסלול ממשי לא יכול להיות קצר מהמסלול המינימלי.</p>
+    </div>
+  </div>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>הבחנה ד׳ — אם d[v]=δ(s,v) פעם, זה לעולם</div>
+    <div class="box-body">
+      <p>אם בנקודת זמן <span class="term">d[v] = δ(s, v)</span> (הגענו לערך האופטימלי), אז <span class="term">d[v]</span> <strong>לא ישתנה</strong> בהמשך.</p>
+      <p><strong>סיבה:</strong> מהבחנה א, רק יורדים מונוטונית; מהבחנה ג, לא יורדים מתחת ל-<span class="term">δ</span>. סה״כ, נשארים על <span class="term">δ</span>.</p>
+    </div>
+  </div>
+
+  <h2>אלגוריתם Bellman-Ford</h2>
+
+  <div class="box warn">
+    <div class="box-head"><span class="icon">⚠</span>למה צריך סדר מסודר? — דוגמה למספר מעריכי של שיפורים</div>
+    <div class="box-body">
+      <p>שיטת Ford ה<em>גנרית</em> (בלי סדר ספציפי) יכולה לעשות <strong>מספר מעריכי של שיפורים</strong> לפני שמתכנסת. דוגמה קלאסית:</p>
+      <p>בגרף בעל <span class="term">n+1</span> קודקודים <span class="term">s=0, 1, 2, ..., n</span> עם קשתות בעלות משקלים <span class="term">2^(n-1), 2^(n-2), ..., 2^1, 2^0</span>, וקשתות 0 בכיוונים מסוימים — אם סדר השיפור הוא "רע", האלגוריתם עושה <span class="term">2^n</span> שיפורים. כל פעם משפר משקל בגודל הולך וקטן ופותח עוד דרך לחזור על שיפורים.</p>
+      <p><strong>המסקנה:</strong> שיטת Ford גנרית — אקספוננציאלית. צריך <em>אסטרטגיה</em> לבחירת סדר. Bellman-Ford בוחר אסטרטגיה פשטנית (כל הקשתות, חזור) — וזה מספיק כדי לקבל <span class="term">Θ(nm)</span>.</p>
+    </div>
+  </div>
+
+  <div class="code-label">
+    <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+    <span class="name">BellmanFord.txt</span>
+  </div>
+<pre><code class="language-plaintext">BELLMAN-FORD(G, s):
+    INIT(G, s)
+    for i = 1 to |V| − 1:
+        for each edge (u,v) in E:
+            Relax(u, v)
+    
+    // בדיקת מעגל שלילי:
+    for each edge (u,v) in E:
+        if d[v] > d[u] + w(u,v):
+            return "יש מעגל שלילי נגיש מ-s"
+    return d, p
+
+יעילות: Θ(|V| · |E|) = Θ(nm)
+</code></pre>
+
+  <h3>נכונות</h3>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>טענה מרכזית</div>
+    <div class="box-body">
+      <p>אם אין מעגלים שליליים נגישים מ-<span class="term">s</span>, אז אחרי <span class="term">|V| − 1</span> איטרציות, <span class="term">d[v] = δ(s, v)</span> לכל <span class="term">v</span>.</p>
+      <p><strong>אינטואיציה:</strong> במסלול קל ביותר ללא מעגלים יש לכל היותר <span class="term">|V| − 1</span> קשתות. באיטרציה <span class="term">i</span>, ערכי <span class="term">d</span> "מסכמים" מסלולים באורך <span class="term">≤ i</span> קשתות. אחרי <span class="term">|V| − 1</span> איטרציות — כל המסלולים הקצרים ביותר מסוכמים.</p>
+    </div>
+  </div>
+
+  <h3>למה יש לפעמים שיפור באמצע ולפעמים לא?</h3>
+
+  <p>סדר הקשתות באיטרציה חשוב. אם קשת <span class="term">(u,v)</span> מופיעה <em>אחרי</em> שכבר עדכנו את <span class="term">d[u]</span> באותה איטרציה, ה-Relax על <span class="term">(u,v)</span> משתמש בערך החדש של <span class="term">d[u]</span> ויכול לשפר את <span class="term">d[v]</span>. אם הסדר לא נוח, האיטרציה הזאת לא תיתן כלום ונחכה לאיטרציה הבאה. <strong>זה בדיוק התרגול בפרק 9.</strong></p>
+
+  <h3>מעגלים שליליים</h3>
+
+  <div class="box warn">
+    <div class="box-head"><span class="icon">⚠</span>בדיקת המעגל השלילי בסוף האלגוריתם</div>
+    <div class="box-body">
+      <p>אחרי <span class="term">|V|−1</span> איטרציות, אם אין מעגלים שליליים, האלגוריתם <em>התכנס</em>. אז קשתות נוספות לא יביאו שיפור. אם יש שיפור באיטרציה <span class="term">|V|</span>-ית — זה הסימן למעגל שלילי.</p>
+      <p>סמן: יציאה ב-<span class="term">"יש מעגל שלילי"</span> — אז <span class="term">δ</span> לא מוגדר היטב.</p>
+    </div>
+  </div>
+
+  <h2>דוגמת הרצה — Bellman-Ford עם משקלים שליליים</h2>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>גרף ל-trace</div>
+    <div class="box-body">
+
+      <div style="text-align:center; margin: 12px 0;">
+        <svg viewBox="0 0 460 240" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;">
+          <defs>
+            <marker id="arrow-bf" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+            </marker>
+          </defs>
+          <!-- s, a, b, c -->
+          <circle cx="60" cy="120" r="26" fill="#fef9e7" stroke="#b45309" stroke-width="2.5"/>
+          <text x="60" y="126" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700" fill="#b45309">s</text>
+
+          <circle cx="200" cy="50" r="26" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="200" y="56" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700">a</text>
+
+          <circle cx="200" cy="190" r="26" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="200" y="196" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700">b</text>
+
+          <circle cx="380" cy="120" r="26" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="380" y="126" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700">c</text>
+
+          <!-- Edges -->
+          <!-- s→a = 4 -->
+          <line x1="82" y1="105" x2="180" y2="62" stroke="#475569" stroke-width="2" marker-end="url(#arrow-bf)"/>
+          <text x="125" y="78" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">4</text>
+
+          <!-- s→b = 5 -->
+          <line x1="82" y1="135" x2="180" y2="178" stroke="#475569" stroke-width="2" marker-end="url(#arrow-bf)"/>
+          <text x="125" y="174" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">5</text>
+
+          <!-- a→b = -3 -->
+          <line x1="200" y1="76" x2="200" y2="164" stroke="#475569" stroke-width="2" marker-end="url(#arrow-bf)"/>
+          <text x="212" y="125" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">-3</text>
+
+          <!-- a→c = 8 -->
+          <line x1="224" y1="62" x2="360" y2="105" stroke="#475569" stroke-width="2" marker-end="url(#arrow-bf)"/>
+          <text x="290" y="73" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">8</text>
+
+          <!-- b→c = 4 -->
+          <line x1="224" y1="178" x2="360" y2="135" stroke="#475569" stroke-width="2" marker-end="url(#arrow-bf)"/>
+          <text x="290" y="178" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">4</text>
+        </svg>
+      </div>
+
+      <p><strong>קודקודים:</strong> <span class="term">s, a, b, c</span>. מוצא: <span class="term">s</span>.</p>
+      <p><strong>קשתות:</strong> <span class="term">(s,a)=4, (s,b)=5, (a,b)=-3, (a,c)=8, (b,c)=4</span></p>
+      <p><strong>סדר עיבוד הקשתות באיטרציה</strong> (שרירותי): <span class="term">(s,a), (s,b), (a,b), (a,c), (b,c)</span></p>
+    </div>
+  </div>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>טבלת הרצת Bellman-Ford</div>
+    <div class="box-body">
+      <table>
+        <tr><th>איטרציה</th><th>d[s]</th><th>d[a]</th><th>d[b]</th><th>d[c]</th><th>עדכונים</th></tr>
+        <tr><td>init</td><td>0</td><td>∞</td><td>∞</td><td>∞</td><td>—</td></tr>
+        <tr><td>I</td><td>0</td><td>4</td><td>1</td><td>5</td><td>(s,a): d[a]=4; (s,b): d[b]=5; (a,b): d[b]=4−3=1; (a,c): d[c]=4+8=12; (b,c): d[c]=1+4=5</td></tr>
+        <tr><td>II</td><td>0</td><td>4</td><td>1</td><td>5</td><td>אין שינוי — מתכנס</td></tr>
+        <tr><td>III</td><td>0</td><td>4</td><td>1</td><td>5</td><td>אישור: ללא שינוי, אין מעגל שלילי</td></tr>
+      </table>
+
+      <p style="margin-top:8px;"><strong>הערות חשובות:</strong></p>
+      <ul>
+        <li><strong>איטרציה I לבדה הספיקה:</strong> סדר הקשתות "טוב" — <span class="term">(a,b)</span> בא אחרי <span class="term">(s,a)</span>, ו-<span class="term">(b,c)</span> בא אחרי <span class="term">(a,b)</span>. כל שיפור משוסר באותה איטרציה.</li>
+        <li><strong>נדרשו עד <span class="term">n−1 = 3</span> איטרציות לכל היותר.</strong> פה התכנסנו אחרי 1, אבל זה לא מובטח תמיד.</li>
+        <li><strong>נכון לציין:</strong> ערך <span class="term">d[c]</span> ב-init היה ∞, ואז עודכן ל-12 (דרך a), ואז ל-5 (דרך b) — באותה איטרציה. שני שיפורים על אותו קודקוד באותה איטרציה.</li>
+      </ul>
+
+      <p><strong>פלט סופי:</strong> <span class="term">d[s]=0, d[a]=4, d[b]=1, d[c]=5</span></p>
+      <p><strong>אילן ההורים:</strong> <span class="term">p[a]=s, p[b]=a, p[c]=b</span></p>
+    </div>
+  </div>
+
+  <h2>תרגילים מהפרקטיקה</h2>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 1 · practice4 שאלה 1 — הוכחת הבחנה ב׳</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">proof · induction on Relax operations</span>
+          <p>הוכח את הבחנה ב׳ של שיטת Ford: בכל שלב שבו <span class="term">d[v] ≠ ∞</span>, ערכו של <span class="term">d[v]</span> הוא משקל של מסלול מ-<span class="term">s</span> ל-<span class="term">v</span>, העובר דרך הקשת <span class="term">(p[v], v)</span>.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">אינדוקציה על מספר ה-Relax-ים</div>
+            <p><strong>בסיס</strong> (0 Relax-ים): רק <span class="term">d[s] = 0</span> שונה מ-<span class="term">∞</span>. המסלול: רק <span class="term">s</span> עצמו, אורך 0. ✓</p>
+
+            <p><strong>צעד:</strong> נניח שאחרי <span class="term">k</span> Relax-ים, הטענה נכונה לכל קודקוד עם <span class="term">d ≠ ∞</span>.</p>
+            <p>בצעד <span class="term">k+1</span> מבצעים <span class="term">Relax(u, v)</span>. אם לא מתבצע עדכון — אין שינוי, הטענה נשמרת. אם מתבצע עדכון: <span class="term">d[v]</span> מתעדכן ל-<span class="term">d[u] + w(u,v)</span>, ו-<span class="term">p[v] = u</span>.</p>
+            <p>מהנחת האינדוקציה, <span class="term">d[u]</span> שווה למשקל מסלול <span class="term">P_u</span> מ-<span class="term">s</span> ל-<span class="term">u</span>. נגדיר <span class="term">P_v = P_u ⊕ (u,v)</span>. <span class="term">P_v</span> מסלול מ-<span class="term">s</span> ל-<span class="term">v</span> במשקל <span class="term">d[u] + w(u,v) = d[v]</span>, העובר דרך הקשת <span class="term">(u,v) = (p[v], v)</span>. ✓</p>
+          </div>
+
+          <div class="final-answer">
+            הבחנה ב׳ מבטיחה ש-<span class="term">d[v]</span> תמיד "תיאור" של מסלול ממשי, וגם ש-<span class="term">p[v]</span> מבנה את עץ ה-SP בצורה תקפה.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 2 · practice4 שאלה 5 — מציאת מעגל שלילי דרך מצביעי אב</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">Bellman-Ford · negative cycle construction</span>
+          <p>אחרי <span class="term">n−1</span> איטרציות BF, מבצעים מעבר נוסף. אם נמצאה קשת משפרת <span class="term">(u, v)</span> — עוצרים, ועוקבים אחר מצביעי אב מ-<span class="term">v</span> (שאביו הוא <span class="term">u</span>) עד שסוגרים מעגל. הוכח את הנכונות ב-4 שלבים:</p>
+          <p><strong>(א)</strong> בכל רגע, אם <span class="term">p[v]=u</span> אז <span class="term">d[v] ≥ d[u] + w(u,v)</span>. (למה לא בהכרח שוויון?)</p>
+          <p><strong>(ב)</strong> מעגל במצביעי אב הוא בהכרח מעגל שלילי.</p>
+          <p><strong>(ג)</strong> אם קשת שופרה באיטרציה ה-<span class="term">n</span>, אז המעקב מ-<span class="term">v</span> אחורה דרך <span class="term">p</span> לא יסתיים ב-NULL.</p>
+          <p><strong>(ד)</strong> מ-(ב) ו-(ג) נובעת הנכונות.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">סעיף א · d[v] ≥ d[u] + w(u,v)</div>
+            <p>נסמן ב-<span class="term">d'</span> את ערכי המערך מיד אחרי העדכון האחרון של <span class="term">d[v]</span>. אז <span class="term">d'[v] = d'[u] + w(u,v)</span>.</p>
+            <p><strong>שתי אפשרויות:</strong></p>
+            <ol>
+              <li><strong>אחרי העדכון <span class="term">d[u]</span> לא השתנה:</strong> <span class="term">d[v] = d[u] + w(u,v)</span> (שוויון).</li>
+              <li><strong>אחרי העדכון <span class="term">d[u]</span> ירד</strong> (<span class="term">d'[u] &gt; d[u]</span>): <span class="term">d[v] = d'[v] = d'[u] + w(u,v) &gt; d[u] + w(u,v)</span> (אי-שוויון חמור).</li>
+            </ol>
+            <p><strong>למה לא תמיד שוויון:</strong> <span class="term">d[u]</span> יכול לרדת אחרי שכבר עדכנו את <span class="term">d[v]</span> דרכו. ✓</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף ב · מעגל ב-p גורר מעגל שלילי</div>
+            <p>יהי <span class="term">C = (v₀, v₁, ..., vₖ = v₀)</span> מעגל ב-p (<span class="term">p[vᵢ] = vᵢ₋₁</span>). בה״כ נניח ש-<span class="term">vₖ</span> הוא הקודקוד שהתעדכן אחרון.</p>
+            <p>מסעיף א:</p>
+            <ul>
+              <li>לכל <span class="term">1 ≤ i ≤ k−1</span>: <span class="term">d[vᵢ₊₁] ≥ d[vᵢ] + w(vᵢ, vᵢ₊₁)</span></li>
+              <li>לקשת <span class="term">(v₀, v₁)</span>: מאז העדכון של <span class="term">d[v₁]</span>, <span class="term">d[v₀]=d[vₖ]</span> השתנה. אז <em>אי-שוויון חמור</em>: <span class="term">d[v₁] &gt; d[v₀] + w(v₀, v₁)</span>.</li>
+            </ul>
+
+            <p>נעביר אגפים ונסכם:</p>
+            $$w(C) = \sum_{i=0}^{k-1} w(v_i, v_{i+1}) < \sum_{i=0}^{k-1} (d[v_{i+1}] - d[v_i]) = d[v_k] - d[v_0] = 0$$
+            <p>(הסכום הטלסקופי מתאפס כי <span class="term">v_k = v_0</span>.) כלומר <span class="term">w(C) &lt; 0</span>. ∎</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף ג · המעקב לא יסתיים ב-NULL</div>
+            <p>תהי <span class="term">(u,v)</span> ששופרה באיטרציה <span class="term">n</span>. בשלילה: המסלול אחורה <span class="term">v ← u ← p[u] ← ...</span> מסתיים, כל הקודקודים שונים. יהיו <span class="term">(s = v₀, v₁, ..., vₖ = v)</span>.</p>
+            <p>נסמן <span class="term">t(vᵢ)</span> = איטרציית העדכון האחרון של <span class="term">p[vᵢ]</span>. נטען:</p>
+            <ul>
+              <li><span class="term">t(vₖ) = n</span></li>
+              <li><span class="term">t(vᵢ₋₁) ≥ t(vᵢ) − 1</span></li>
+            </ul>
+            <p>(כי בכל איטרציה עוברים על <em>כל</em> הקשתות, אז אם <span class="term">p[vᵢ]</span> התעדכן באיטרציה <span class="term">t</span>, אז <span class="term">d[vᵢ₋₁]</span> ירד בה או באיטרציה הקודמת.)</p>
+
+            <p>בקיצור: <span class="term">t(s) = t(v₀) ≥ n − k</span>. אבל <span class="term">d[s] = 0</span> רק התעדכן באתחול, אז <span class="term">t(s) = 0</span>., כלומר <span class="term">k ≥ n</span>.</p>
+            <p>אורך המסלול הפשוט הוא <span class="term">k</span>, יש בו <span class="term">k+1 &gt; n</span> קודקודים שונים — סתירה. ∎</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף ד · סיכום</div>
+            <p>מסעיף ג: עקיבה מ-<span class="term">v</span> אחורה דרך <span class="term">p</span> תיתן מעגל. מסעיף ב: כל מעגל ב-<span class="term">p</span> הוא שלילי. סה״כ: השיטה מאתרת בהכרח מעגל שלילי. ∎</p>
+          </div>
+
+          <div class="final-answer">
+            <strong>אלגוריתם מציאת המעגל:</strong> אחרי <span class="term">n−1</span> איטרציות, בצע איטרציה <span class="term">n</span>. אם נמצא <span class="term">(u,v)</span> משפרת — עקוב מ-<span class="term">v</span> אחורה: <span class="term">v → u → p[u] → p[p[u]] → ...</span> עד שמגיעים לקודקוד שכבר ראינו. החלק החוזר הוא המעגל השלילי.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <h2>מה לזכור למבחן</h2>
+
+  <div class="box summary">
+    <div class="box-head"><span class="icon">📌</span>סיכום</div>
+    <div class="box-body">
+      <ul>
+        <li><strong>בעיית SSSP:</strong> מצא <span class="term">δ(s,v)</span> לכל <span class="term">v</span>. נשבר אם יש מעגל שלילי נגיש.</li>
+        <li><strong>Relax(u,v):</strong> אם <span class="term">d[v] &gt; d[u] + w(u,v)</span>, עדכן. הפעולה היחידה שמשנה <span class="term">d</span>.</li>
+        <li><strong>4 הבחנות:</strong> (א) מונוטוניות יורדת, (ב) <span class="term">d[v]</span> תמיד תקין, (ג) <span class="term">d[v] ≥ δ(s,v)</span>, (ד) פעם <span class="term">d=δ</span> תמיד.</li>
+        <li><strong>Bellman-Ford:</strong> <span class="term">|V|−1</span> איטרציות, בכל איטרציה Relax על כל הקשתות. <span class="term">Θ(nm)</span>. עובד תמיד.</li>
+        <li><strong>זיהוי מעגל שלילי:</strong> איטרציה נוספת בודקת אם יש שיפור — אם כן, יש מעגל שלילי.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פרק 9 · מסלולים קלים ביותר ב׳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/styles/atom-one-dark.min.css">
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js"></script>
+<script>
+  window.addEventListener('load', () => {
+    if (window.renderMathInElement) {
+      try { renderMathInElement(document.body, { delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\(',right:'\\)',display:false}], throwOnError: false, strict: false }); } catch(e){}
+    }
+    if (window.hljs) { try { document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el)); } catch(e){} }
+    document.body.classList.add('ready');
+  });
+</script>
+<style>
+  :root {
+    --bg: #fbf9f3; --bg-paper: #fffefa; --ink: #1c1917; --ink-soft: #44403c; --ink-mute: #78716c;
+    --rule: #e7e5e0; --rule-soft: #f1efe9;
+    --indigo-9: #312e81; --indigo-7: #4f46e5; --indigo-3: #c7d2fe; --indigo-1: #eef2ff;
+    --c-theory-h: #1d4ed8; --c-theory-bg: #eff6ff; --c-theory-edge: #bfdbfe;
+    --c-formula-h: #b45309; --c-formula-bg: #fef9e7; --c-formula-edge: #fcd34d;
+    --c-example-h: #047857; --c-example-bg: #ecfdf5; --c-example-edge: #a7f3d0;
+    --c-warn-h: #be123c; --c-warn-bg: #fff1f2; --c-warn-edge: #fecdd3;
+    --c-exercise-h: #6d28d9; --c-exercise-bg: #f5f3ff; --c-exercise-edge: #ddd6fe;
+    --c-summary-h: #334155; --c-summary-bg: #f1f5f9; --c-summary-edge: #cbd5e1;
+    --code-bg: #0f172a; --code-bg-2: #1e293b; --code-ink: #e2e8f0;
+    --shadow-sm: 0 1px 2px rgba(28,25,23,.04), 0 1px 3px rgba(28,25,23,.06);
+    --shadow: 0 4px 12px rgba(28,25,23,.05), 0 1px 3px rgba(28,25,23,.04);
+    --serif: 'Frank Ruhl Libre', Georgia, serif;
+    --sans: 'Assistant', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.75; font-size: 17px; -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 20% 0%, rgba(99,102,241,.035), transparent 40%), radial-gradient(circle at 80% 100%, rgba(245,158,11,.035), transparent 40%);
+    background-attachment: fixed; opacity: 0; transition: opacity .2s ease; }
+  body.ready { opacity: 1; }
+  .app { display: grid; grid-template-columns: 320px 1fr; min-height: 100vh; max-width: 1480px; margin: 0 auto; }
+  .sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%); color: #e0e7ff; padding: 32px 24px; border-left: 1px solid rgba(255,255,255,.06); }
+  .sidebar::-webkit-scrollbar { width: 6px; } .sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 3px; }
+  .brand { font-family: var(--serif); font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -.01em; line-height: 1.2; }
+  .brand a { color: #fff; text-decoration: none; } .brand a:hover { color: #fbbf24; }
+  .brand-sub { font-size: 13px; color: #c7d2fe; margin-bottom: 28px; font-weight: 500; }
+  .brand-meta { font-size: 11px; color: #a5b4fc; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .nav-label { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: #818cf8; font-weight: 700; margin: 24px 0 12px; padding-right: 8px; }
+  .nav-list { list-style: none; } .nav-list li { margin-bottom: 2px; }
+  .nav-list a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; color: #c7d2fe; text-decoration: none; border-radius: 8px; font-size: 14.5px; font-weight: 500; transition: all .15s ease; }
+  .nav-list a:hover { background: rgba(255,255,255,.06); color: #fff; }
+  .nav-list a.active { background: rgba(255,255,255,.1); color: #fff; box-shadow: inset 3px 0 0 #fbbf24; }
+  .nav-list a.pending { opacity: .5; }
+  .nav-num { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; background: rgba(255,255,255,.08); border-radius: 6px; font-size: 11px; font-weight: 700; font-family: var(--mono); }
+  .nav-list a.active .nav-num { background: #fbbf24; color: #1e1b4b; }
+  main { padding: 56px 64px 120px; max-width: 960px; }
+  .page-eyebrow { display: inline-block; font-size: 12px; font-weight: 700; color: var(--indigo-7); letter-spacing: .15em; text-transform: uppercase; background: var(--indigo-1); padding: 6px 12px; border-radius: 99px; margin-bottom: 16px; }
+  h1.page-title { font-family: var(--serif); font-size: 48px; font-weight: 700; line-height: 1.15; letter-spacing: -.02em; color: var(--ink); margin-bottom: 14px; }
+  .page-subtitle { font-size: 19px; color: var(--ink-soft); margin-bottom: 48px; font-weight: 400; line-height: 1.55; }
+  h2 { font-family: var(--serif); font-size: 32px; font-weight: 700; letter-spacing: -.015em; margin: 56px 0 20px; color: var(--ink); position: relative; padding-right: 20px; }
+  h2::before { content: ''; position: absolute; right: 0; top: 14px; bottom: 14px; width: 4px; background: var(--indigo-7); border-radius: 2px; }
+  h3 { font-family: var(--sans); font-size: 22px; font-weight: 700; margin: 32px 0 12px; color: var(--ink); letter-spacing: -.005em; }
+  h4 { font-size: 17px; font-weight: 700; margin: 18px 0 8px; color: var(--ink-soft); }
+  p { margin-bottom: 14px; color: var(--ink-soft); } p strong { color: var(--ink); font-weight: 700; }
+  ul, ol { margin: 12px 24px 18px; color: var(--ink-soft); } li { margin-bottom: 8px; }
+  .term { font-family: var(--mono); direction: ltr; display: inline-block; font-size: .88em; background: #f5f5f4; padding: 1px 8px; border-radius: 5px; color: #be185d; border: 1px solid #e7e5e4; vertical-align: baseline; unicode-bidi: isolate; }
+  .term.blue { color: var(--c-theory-h); background: var(--c-theory-bg); border-color: var(--c-theory-edge); }
+  .term.green { color: var(--c-example-h); background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .term.amber { color: var(--c-formula-h); background: var(--c-formula-bg); border-color: var(--c-formula-edge); }
+  .katex-display { margin: 18px 0 !important; direction: ltr !important; text-align: center !important; unicode-bidi: isolate; } .katex { direction: ltr !important; unicode-bidi: isolate; }
+  .box { border-radius: 14px; margin: 24px 0; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); background: var(--bg-paper); }
+  .box-head { display: flex; align-items: center; gap: 10px; padding: 14px 20px; font-weight: 700; font-size: 15px; border-bottom: 1px solid var(--rule); }
+  .box-head .icon { width: 28px; height: 28px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 16px; }
+  .box-body { padding: 18px 22px; }
+  .box.theory { border-color: var(--c-theory-edge); } .box.theory .box-head { background: var(--c-theory-bg); color: var(--c-theory-h); } .box.theory .box-head .icon { background: var(--c-theory-h); color: #fff; }
+  .box.formula { border-color: var(--c-formula-edge); background: var(--c-formula-bg); } .box.formula .box-head { background: transparent; color: var(--c-formula-h); border-bottom-color: rgba(180,83,9,.18); } .box.formula .box-head .icon { background: var(--c-formula-h); color: #fff; } .box.formula .box-body { background: var(--c-formula-bg); } .box.formula p { color: #78350f; }
+  .box.example { border-color: var(--c-example-edge); } .box.example .box-head { background: var(--c-example-bg); color: var(--c-example-h); } .box.example .box-head .icon { background: var(--c-example-h); color: #fff; }
+  .box.warn { border-color: var(--c-warn-edge); } .box.warn .box-head { background: var(--c-warn-bg); color: var(--c-warn-h); } .box.warn .box-head .icon { background: var(--c-warn-h); color: #fff; }
+  .box.exercise { border-color: var(--c-exercise-edge); } .box.exercise .box-head { background: var(--c-exercise-bg); color: var(--c-exercise-h); } .box.exercise .box-head .icon { background: var(--c-exercise-h); color: #fff; }
+  .box.summary { border-color: var(--c-summary-edge); } .box.summary .box-head { background: var(--c-summary-bg); color: var(--c-summary-h); } .box.summary .box-head .icon { background: var(--c-summary-h); color: #fff; }
+  pre { background: var(--code-bg) !important; border-radius: 0 0 12px 12px; padding: 18px 22px !important; margin: 0 0 16px 0; overflow-x: auto; direction: ltr; font-size: 14px; line-height: 1.7; box-shadow: var(--shadow); border: 1px solid var(--code-bg-2); border-top: none; }
+  pre code { font-family: var(--mono) !important; background: transparent !important; padding: 0 !important; border: none !important; color: var(--code-ink) !important; }
+  .code-label { display: flex; align-items: center; gap: 8px; background: var(--code-bg-2); color: #94a3b8; font-family: var(--mono); font-size: 12px; padding: 10px 16px; border-radius: 12px 12px 0 0; direction: ltr; border: 1px solid var(--code-bg-2); border-bottom: 1px solid #334155; margin-top: 18px; }
+  .code-label .dot { width: 8px; height: 8px; border-radius: 50%; background: #475569; }
+  .code-label .dot.red { background: #ef4444; } .code-label .dot.amber { background: #f59e0b; } .code-label .dot.green { background: #22c55e; }
+  .code-label .name { margin-right: auto; opacity: .9; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm); font-size: 15px; }
+  th, td { padding: 11px 14px; text-align: right; border-bottom: 1px solid var(--rule-soft); border-left: 1px solid var(--rule-soft); }
+  th { background: var(--c-summary-bg); font-weight: 700; color: var(--c-summary-h); }
+  tr:last-child td { border-bottom: none; }
+  td.num, th.num { font-family: var(--mono); direction: ltr; text-align: center; font-size: 14px; }
+  td.highlight { background: var(--c-formula-bg); font-weight: 700; color: var(--c-formula-h); }
+  td.updated { background: #dcfce7; font-weight: 700; color: #166534; }
+  .exercise-card { background: #fff; border-radius: 10px; margin: 14px 0; border: 1px solid var(--c-exercise-edge); overflow: hidden; }
+  .exercise-tag { display: inline-block; font-size: 11px; font-weight: 700; background: var(--c-exercise-h); color: #fff; padding: 3px 10px; border-radius: 99px; margin-bottom: 10px; font-family: var(--mono); letter-spacing: .05em; direction: ltr; }
+  .exercise-q { padding: 20px 24px; background: #fafaf9; border-bottom: 1px solid var(--rule-soft); }
+  .exercise-q p:last-child { margin-bottom: 0; }
+  .reveal-btn { display: block; width: 100%; background: var(--c-exercise-bg); border: none; border-top: 1px solid var(--c-exercise-edge); padding: 13px; font-family: var(--sans); font-size: 14px; font-weight: 700; color: var(--c-exercise-h); cursor: pointer; transition: background .15s ease; }
+  .reveal-btn:hover { background: #ede9fe; } .reveal-btn::before { content: '▼ '; font-size: 10px; margin-left: 6px; transition: transform .2s ease; }
+  .exercise-card.open .reveal-btn::before { content: '▲ '; }
+  .solution { padding: 22px 26px; background: var(--c-example-bg); border-top: 1px solid var(--c-example-edge); display: none; }
+  .exercise-card.open .solution { display: block; }
+  .solution .step { background: #fff; border-radius: 8px; padding: 14px 18px; margin: 12px 0; border-right: 3px solid var(--c-example-h); }
+  .solution .step-label { font-size: 11px; font-weight: 700; color: var(--c-example-h); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; font-family: var(--mono); }
+  .solution .final-answer { background: #fff; border: 2px solid var(--c-example-h); border-radius: 10px; padding: 14px 20px; margin-top: 16px; font-weight: 600; }
+  .solution .final-answer::before { content: '✓ '; color: var(--c-example-h); font-weight: 900; }
+  .lead { font-size: 19px; color: var(--ink-soft); border-right: 3px solid var(--indigo-7); padding-right: 20px; margin: 24px 0 32px; font-weight: 400; line-height: 1.6; }
+  .keypoint { background: linear-gradient(90deg, var(--c-formula-bg) 0%, transparent 100%); padding: 14px 18px; border-radius: 8px; margin: 16px 0; border-right: 3px solid var(--c-formula-h); }
+  .keypoint::before { content: '💡 '; font-size: 18px; margin-left: 4px; }
+  .figure { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 18px; margin: 18px 0; text-align: center; box-shadow: var(--shadow-sm); }
+  .figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .figure .cap { font-size: 13px; color: var(--ink-mute); margin-top: 12px; font-style: italic; }
+  .mc-list { list-style: none; margin: 12px 0; padding: 0; }
+  .mc-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; background: #fff; border: 1px solid var(--rule); border-radius: 8px; margin-bottom: 8px; transition: all .15s ease; }
+  .mc-list li .mc-marker { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--rule); flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--ink-mute); background: #fff; }
+  .mc-list li.correct { background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .mc-list li.correct .mc-marker { background: var(--c-example-h); color: #fff; border-color: var(--c-example-h); }
+  .mc-list li.correct .mc-marker::after { content: '✓'; }
+  .mc-list li.wrong { background: var(--c-warn-bg); border-color: var(--c-warn-edge); }
+  .mc-list li.wrong .mc-marker { background: var(--c-warn-h); color: #fff; border-color: var(--c-warn-h); }
+  .mc-list li.wrong .mc-marker::after { content: '✗'; }
+  .mc-list li .mc-text { flex: 1; line-height: 1.55; color: var(--ink-soft); }
+  .mc-list li .mc-text .why { display: block; margin-top: 6px; font-size: 13.5px; color: var(--ink-mute); font-style: italic; }
+  .algo-compare { background: #fff; border-radius: 12px; padding: 0; margin: 18px 0; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); overflow: hidden; }
+  .algo-compare table { margin: 0; border-radius: 0; box-shadow: none; }
+  @media (max-width: 900px) { .app { grid-template-columns: 1fr; } .sidebar { position: static; height: auto; } main { padding: 32px 24px 80px; } h1.page-title { font-size: 36px; } h2 { font-size: 26px; } }
+</style>
+</head>
+<body>
+<div class="app">
+
+<aside class="sidebar">
+  <div class="brand"><a href="index.html">אלגוריתמים</a></div>
+  <div class="brand-sub">ד״ר אלעזר גולדנברג · הגב׳ שלומית אריאן</div>
+  <div class="brand-meta">MTA · קיץ 2026</div>
+
+  <div class="nav-label">יסודות</div>
+  <ul class="nav-list">
+    <li><a href="01-intro.html" class="pending"><span class="nav-num">1</span>מושג האלגוריתם</a></li>
+    <li><a href="02-numbers.html" class="pending"><span class="nav-num">2</span>ייצוג מספרים</a></li>
+  </ul>
+
+  <div class="nav-label">גרפים בסיסיים</div>
+  <ul class="nav-list">
+    <li><a href="03-graph-basics.html" class="pending"><span class="nav-num">3</span>מושגי יסוד</a></li>
+    <li><a href="04-toposort.html" class="pending"><span class="nav-num">4</span>מיון טופולוגי</a></li>
+  </ul>
+
+  <div class="nav-label">סריקות</div>
+  <ul class="nav-list">
+    <li><a href="05-dfs.html" class="pending"><span class="nav-num">5</span>DFS</a></li>
+    <li><a href="06-dfs-apps.html" class="pending"><span class="nav-num">6</span>יישומי DFS</a></li>
+    <li><a href="07-bfs.html" class="pending"><span class="nav-num">7</span>BFS</a></li>
+  </ul>
+
+  <div class="nav-label">מסלולים קלים ביותר</div>
+  <ul class="nav-list">
+    <li><a href="08-shortest-paths-1.html" class="pending"><span class="nav-num">8</span>מק״בים א׳</a></li>
+    <li><a href="09-shortest-paths-2.html"><span class="nav-num">9</span>מק״בים ב׳</a></li>
+  </ul>
+
+  <div class="nav-label">אופטימיזציה ורשתות</div>
+  <ul class="nav-list">
+    <li><a href="10-mst.html" class="active" class="pending"><span class="nav-num">10</span>עצים פורשים</a></li>
+    <li><a href="11-dp.html" class="pending"><span class="nav-num">11</span>תכנות דינמי</a></li>
+    <li><a href="12-flow.html" class="pending"><span class="nav-num">12</span>זרימה</a></li>
+  </ul>
+</aside>
+
+
+<main>
+<span class="page-eyebrow">פרק 10 · אופטימיזציה ברשתות</span>
+  <h1 class="page-title">עצים פורשים<br>מינימליים · MST ·</h1>
+  <p class="page-subtitle">משפט הקשת הבטוחה, אלגוריתמי Prim ו-Kruskal, ומבני נתונים Union-Find לייצוג רכיבי קשירות.</p>
+
+  <p class="lead">
+    בעיית ה-MST היא דוגמה קלאסית לאלגוריתם <strong>חמדני</strong> שעובד <em>תמיד</em> (בניגוד לחמדנות במטבעות מפרק 1).
+    שני אלגוריתמים יקרים מפז: <strong>Prim</strong> בונה את העץ קודקוד-קודקוד (כמו Dijkstra), ו-<strong>Kruskal</strong> בונה את העץ קשת-קשת (ממיין לפי משקל).
+    שניהם עובדים בזכות <strong>משפט הקשת הבטוחה</strong> — הלמה היחידה שצריך להבין באמת בפרק.
+  </p>
+
+  <div class="keypoint">
+    <strong>על המבחן:</strong> שאלה 1 — הוכחת תכונה של MST. שאלה 2 — הרצת Prim או Kruskal על גרף נתון, מבצעים את האיטרציות ידנית. שאלה 3 — שינוי במשקלים (הוסיף k לכל קשת — האם MST משתנה? מה אם מחליפים <span class="term">w</span> ב-<span class="term">w²</span>?). דרגות החופש האלה תמיד חוזרות.
+  </div>
+
+  <h2>הגדרת הבעיה</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הגדרות</div>
+    <div class="box-body">
+      <p><strong>קלט:</strong> גרף לא-מכוון, קשיר, ממושקל <span class="term">G = (V, E, w)</span> כאשר <span class="term">w: E → ℝ</span>.</p>
+      <p><strong>עץ פורש</strong> (Spanning Tree): תת-קבוצה <span class="term">T ⊆ E</span> שמהווה <em>עץ</em> (קשיר, ללא מעגלים), המכיל את כל הקודקודים. תמיד יש לעץ פורש בדיוק <span class="term">|V| − 1</span> קשתות.</p>
+      <p><strong>עץ פורש מינימלי</strong> (MST): עץ פורש <span class="term">T</span> שמשקלו <span class="term">w(T) = Σ_{e ∈ T} w(e)</span> מינימלי בין כל העצים הפורשים האפשריים.</p>
+      <p><strong>הערה:</strong> ה-MST לא בהכרח יחיד. אם כל המשקלים שונים — יחיד.</p>
+    </div>
+  </div>
+
+  <h2>משפט הקשת הבטוחה — לב הפרק</h2>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>הגדרת חתך וקשת קלה</div>
+    <div class="box-body">
+      <p><strong>חתך</strong> (Cut): חלוקה של <span class="term">V</span> לשתי תת-קבוצות זרות <span class="term">S</span> ו-<span class="term">V \ S</span>.</p>
+      <p><strong>קשת חוצה</strong>: קשת <span class="term">{u, v}</span> כאשר <span class="term">u ∈ S</span> ו-<span class="term">v ∈ V \ S</span>.</p>
+      <p><strong>קשת קלה</strong> של חתך: קשת חוצה במשקל המינימלי בין כל הקשתות החוצות.</p>
+    </div>
+  </div>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>משפט הקשת הבטוחה</div>
+    <div class="box-body">
+      <p>יהי <span class="term">A ⊆ E</span> תת-קבוצה של קשתות שמכילה ב-MST כלשהו. יהי <span class="term">(S, V\S)</span> חתך כך שאף קשת ב-<span class="term">A</span> לא חוצה את החתך. תהי <span class="term">e</span> קשת קלה של החתך. אז <strong><span class="term">A ∪ {e}</span> מכילה ב-MST</strong>.</p>
+      <p><strong>במילים:</strong> כשבונים MST שלב-שלב, אם בשלב מסוים יש "קבוצה חלקית בטוחה" <span class="term">A</span>, אז אפשר תמיד להוסיף את הקשת הקלה ביותר שחוצה חתך שמפריד את <span class="term">A</span> מהשאר.</p>
+    </div>
+  </div>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הוכחה (סקיצה)</div>
+    <div class="box-body">
+      <p>נניח <span class="term">A</span> מוכלת ב-MST שנקרא לו <span class="term">T</span>. אם <span class="term">e ∈ T</span> סיימנו. אחרת, ב-<span class="term">T ∪ {e}</span> נוצר מעגל. במעגל הזה חייבת להיות לפחות עוד קשת אחת <span class="term">e'</span> שחוצה את החתך (כי <span class="term">e</span> חוצה ומעגל לא יכול לחצות חתך פעם אחת בלבד).</p>
+      <p>נחליף <span class="term">e'</span> ב-<span class="term">e</span>: נקבל עץ פורש חדש <span class="term">T' = T \ {e'} ∪ {e}</span>. כיוון ש-<span class="term">e</span> קלה (מינימלית) מבין הקשתות החוצות, <span class="term">w(e) ≤ w(e')</span>, ולכן <span class="term">w(T') ≤ w(T)</span>. <span class="term">T'</span> גם הוא MST. <span class="term">A ∪ {e} ⊆ T'</span>. ∎</p>
+    </div>
+  </div>
+
+  <h2>אלגוריתם Prim</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הרעיון</div>
+    <div class="box-body">
+      <p>נתחיל מקודקוד יחיד <span class="term">s</span>. בכל שלב, נרחיב את העץ הנוכחי <span class="term">A</span> על-ידי הוספת הקשת הקלה ביותר שיוצאת מ-<span class="term">A</span> אל קודקוד שלא ב-<span class="term">A</span>. נמשיך עד שכל הקודקודים בעץ.</p>
+      <p><strong>הזיהוי עם משפט הקשת הבטוחה:</strong> בכל שלב, החתך הוא <span class="term">(A, V \ A)</span>, והקשת המוסיפה היא הקשת הקלה החוצה.</p>
+    </div>
+  </div>
+
+  <div class="code-label">
+    <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+    <span class="name">Prim.txt</span>
+  </div>
+<pre><code class="language-plaintext">PRIM(G, w, s):
+    for each v in V:
+        key[v] = ∞
+        p[v] = NULL
+    key[s] = 0
+    Q = priority queue with all v keyed by key[v]
+    while Q ≠ ∅:
+        u = Q.extractMin()
+        for each v in Adj[u]:
+            if v in Q and w(u,v) &lt; key[v]:
+                p[v] = u
+                key[v] = w(u,v)   # DecreaseKey
+    return tree {(p[v], v) : v ≠ s}
+
+יעילות עם ערימה בינארית: O(m log n)
+יעילות עם פיבונאצ׳י: O(m + n log n)
+</code></pre>
+
+  <p><strong>שים לב לדמיון ל-Dijkstra:</strong> זה בעצם אותה תבנית. ההבדל היחיד: ב-Dijkstra <span class="term">key[v] = d[u] + w(u,v)</span> (מצטבר), ב-Prim <span class="term">key[v] = w(u,v)</span> (רק הקשת האחרונה).</p>
+
+  <h2>אלגוריתם Kruskal</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הרעיון</div>
+    <div class="box-body">
+      <p>נסדר את כל הקשתות לפי משקל עולה. נעבור עליהן אחת-אחת:
+      <em>הוסף את הקשת ל-MST אם״ם היא לא יוצרת מעגל</em>. בסוף נקבל את ה-MST.</p>
+      <p><strong>השאלה הטכנית:</strong> איך בודקים "האם הקשת יוצרת מעגל?" בצורה יעילה? התשובה: <span class="term">Union-Find</span>.</p>
+    </div>
+  </div>
+
+  <div class="code-label">
+    <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+    <span class="name">Kruskal.txt</span>
+  </div>
+<pre><code class="language-plaintext">KRUSKAL(G, w):
+    A = ∅
+    for each v in V:
+        MakeSet(v)
+    sort edges of E by weight w
+    for each edge (u, v) in sorted order:
+        if FindSet(u) ≠ FindSet(v):
+            A = A ∪ {(u, v)}
+            Union(u, v)
+    return A
+
+יעילות: O(m log n) (בעיקר בגלל המיון)
+</code></pre>
+
+  <h3>מבנה Union-Find</h3>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>שתי פעולות, יעילות אינ-אקרמן הפוך</div>
+    <div class="box-body">
+      <p>Union-Find הוא מבנה נתונים שתומך בקבוצות זרות:</p>
+      <ul>
+        <li><span class="term">MakeSet(v)</span> — יוצר קבוצה חדשה {v}.</li>
+        <li><span class="term">FindSet(v)</span> — מחזיר נציג של הקבוצה ש-<span class="term">v</span> שייכת אליה.</li>
+        <li><span class="term">Union(u, v)</span> — מאחד את הקבוצות של <span class="term">u</span> ו-<span class="term">v</span>.</li>
+      </ul>
+      <p>עם <strong>איחוד לפי דרגה (Union by Rank)</strong> ו<strong>קיצור מסלול (Path Compression)</strong>, יעילות אמורטית של פעולה: <span class="term">O(α(n))</span> ≈ <span class="term">O(1)</span>.</p>
+    </div>
+  </div>
+
+  <h2>השוואת Prim ו-Kruskal</h2>
+
+  <table>
+    <tr><th>אפיון</th><th>Prim</th><th>Kruskal</th></tr>
+    <tr><td>אסטרטגיה</td><td>הרחבה מנקודה</td><td>מיון לפי משקל</td></tr>
+    <tr><td>מבנה נתונים</td><td>תור קדימויות</td><td>Union-Find</td></tr>
+    <tr><td>סיבוכיות (ערימה בינארית)</td><td><span class="term">O(m log n)</span></td><td><span class="term">O(m log n)</span></td></tr>
+    <tr><td>סיבוכיות (פיבונאצ׳י)</td><td><span class="term">O(m + n log n)</span></td><td><span class="term">O(m log n)</span></td></tr>
+    <tr><td>מתי עדיף?</td><td>גרף צפוף (m≈n²)</td><td>גרף דליל</td></tr>
+  </table>
+
+  <h2>למת הפונקציה המונוטונית — שינויים שמשמרים MST</h2>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>טענה</div>
+    <div class="box-body">
+      <p>תהי <span class="term">f: ℝ → ℝ</span> פונקציה <strong>מונוטונית עולה ממש</strong>. אם נחליף כל משקל <span class="term">w(e)</span> ב-<span class="term">f(w(e))</span>, אז כל MST של הגרף המקורי הוא גם MST של הגרף החדש.</p>
+      <p><strong>נקודה דקה:</strong> זה לא אומר שהמשקל הכולל זהה — רק <em>זהות העץ</em>.</p>
+    </div>
+  </div>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הוכחה ושימוש</div>
+    <div class="box-body">
+      <p><strong>אינטואיציה:</strong> אלגוריתמי MST (Prim, Kruskal) משווים בין משקלים — לעולם לא משתמשים בערכים המוחלטים. אם <span class="term">f</span> מונוטונית, סדר ההשוואות נשמר, ולכן ההחלטות זהות.</p>
+
+      <p><strong>שימושים נפוצים במבחנים:</strong></p>
+      <ul>
+        <li><strong>הוספת קבוע:</strong> <span class="term">f(x) = x + c</span> תמיד מונוטונית. אם נוסיף <span class="term">c</span> לכל קשת — MST לא משתנה.</li>
+        <li><strong>הכפלה בקבוע חיובי:</strong> <span class="term">f(x) = c·x, c &gt; 0</span> מונוטונית. אם נכפיל את כל המשקלים ב-<span class="term">c &gt; 0</span> — MST לא משתנה.</li>
+        <li><strong>ריבוע משקלים חיוביים:</strong> אם כל המשקלים חיוביים, <span class="term">f(x) = x²</span> מונוטונית בטווח החיובי. MST נשמר.</li>
+        <li><strong>אבל:</strong> <span class="term">f(x) = -x</span> <em>אינה</em> מונוטונית עולה — היא יורדת! היא הופכת את הסדר, וה-"MST" של הגרף החדש הוא בעצם ה<em>maximum</em> spanning tree של המקורי.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>דוגמת הרצה — Prim ו-Kruskal על אותו גרף</h2>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>גרף לדוגמה</div>
+    <div class="box-body">
+
+      <div style="text-align:center; margin: 12px 0;">
+        <svg viewBox="0 0 460 280" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;">
+          <!-- 5 vertices: a (top), b, c, d, e -->
+          <circle cx="230" cy="40" r="24" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="230" y="46" text-anchor="middle" font-family="JetBrains Mono" font-size="16" font-weight="700">a</text>
+
+          <circle cx="80" cy="120" r="24" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="80" y="126" text-anchor="middle" font-family="JetBrains Mono" font-size="16" font-weight="700">b</text>
+
+          <circle cx="380" cy="120" r="24" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="380" y="126" text-anchor="middle" font-family="JetBrains Mono" font-size="16" font-weight="700">c</text>
+
+          <circle cx="140" cy="240" r="24" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="140" y="246" text-anchor="middle" font-family="JetBrains Mono" font-size="16" font-weight="700">d</text>
+
+          <circle cx="320" cy="240" r="24" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="320" y="246" text-anchor="middle" font-family="JetBrains Mono" font-size="16" font-weight="700">e</text>
+
+          <!-- Edges (undirected, no arrows) -->
+          <!-- a-b = 3 -->
+          <line x1="212" y1="56" x2="98" y2="104" stroke="#475569" stroke-width="2"/>
+          <text x="145" y="72" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">3</text>
+
+          <!-- a-c = 5 -->
+          <line x1="248" y1="56" x2="362" y2="104" stroke="#475569" stroke-width="2"/>
+          <text x="315" y="72" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">5</text>
+
+          <!-- b-c = 6 (through middle) -->
+          <line x1="104" y1="120" x2="356" y2="120" stroke="#475569" stroke-width="2"/>
+          <text x="230" y="115" text-anchor="middle" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">6</text>
+
+          <!-- b-d = 2 -->
+          <line x1="92" y1="142" x2="128" y2="218" stroke="#475569" stroke-width="2"/>
+          <text x="98" y="185" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">2</text>
+
+          <!-- c-e = 4 -->
+          <line x1="368" y1="142" x2="332" y2="218" stroke="#475569" stroke-width="2"/>
+          <text x="358" y="185" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">4</text>
+
+          <!-- d-e = 7 -->
+          <line x1="164" y1="240" x2="296" y2="240" stroke="#475569" stroke-width="2"/>
+          <text x="230" y="232" text-anchor="middle" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">7</text>
+
+          <!-- a-d = 9 (long diagonal) -->
+          <line x1="218" y1="61" x2="158" y2="219" stroke="#475569" stroke-width="2" stroke-dasharray="3,3" opacity="0.5"/>
+          <text x="170" y="155" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c" opacity="0.6">9</text>
+        </svg>
+      </div>
+
+      <p><strong>קשתות (לא מכוון):</strong> <span class="term">{a,b}=3, {a,c}=5, {a,d}=9, {b,c}=6, {b,d}=2, {c,e}=4, {d,e}=7</span></p>
+    </div>
+  </div>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>Kruskal — מיון לפי משקל וצירוף</div>
+    <div class="box-body">
+      <p>מיון קשתות בסדר עולה: <span class="term">{b,d}=2, {a,b}=3, {c,e}=4, {a,c}=5, {b,c}=6, {d,e}=7, {a,d}=9</span></p>
+
+      <table>
+        <tr><th>שלב</th><th>קשת נבדקת</th><th>יוצרת מעגל?</th><th>פעולה</th><th>רכיבי קשירות</th></tr>
+        <tr><td>1</td><td>{b,d}=2</td><td>לא</td><td>הוסף</td><td>{b,d}, {a}, {c}, {e}</td></tr>
+        <tr><td>2</td><td>{a,b}=3</td><td>לא</td><td>הוסף</td><td>{a,b,d}, {c}, {e}</td></tr>
+        <tr><td>3</td><td>{c,e}=4</td><td>לא</td><td>הוסף</td><td>{a,b,d}, {c,e}</td></tr>
+        <tr><td>4</td><td>{a,c}=5</td><td>לא</td><td>הוסף</td><td>{a,b,c,d,e}</td></tr>
+        <tr><td>5</td><td>{b,c}=6</td><td>כן</td><td>דלג</td><td>—</td></tr>
+        <tr><td>—</td><td>—</td><td>—</td><td>סיום</td><td>—</td></tr>
+      </table>
+
+      <p><strong>MST:</strong> <span class="term">{(b,d), (a,b), (c,e), (a,c)}</span>, משקל כולל = <span class="term">2 + 3 + 4 + 5 = 14</span>.</p>
+    </div>
+  </div>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>Prim — הרחבה מקודקוד התחלה a</div>
+    <div class="box-body">
+      <table>
+        <tr><th>שלב</th><th>נשלף</th><th>key הוצא</th><th>עדכונים</th><th>תור Q אחרי</th></tr>
+        <tr><td>0</td><td>—</td><td>—</td><td>אתחול</td><td>{a:0, b:∞, c:∞, d:∞, e:∞}</td></tr>
+        <tr><td>1</td><td>a</td><td>0</td><td>key[b]=3, key[c]=5, key[d]=9</td><td>{b:3, c:5, d:9, e:∞}</td></tr>
+        <tr><td>2</td><td>b</td><td>3</td><td>key[d]=2, key[c]≤6 (כבר 5)</td><td>{d:2, c:5, e:∞}</td></tr>
+        <tr><td>3</td><td>d</td><td>2</td><td>key[e]=7</td><td>{c:5, e:7}</td></tr>
+        <tr><td>4</td><td>c</td><td>5</td><td>key[e]=4</td><td>{e:4}</td></tr>
+        <tr><td>5</td><td>e</td><td>4</td><td>—</td><td>{}</td></tr>
+      </table>
+
+      <p><strong>MST:</strong> אותו עץ כמו ב-Kruskal — <span class="term">{(a,b), (b,d), (a,c), (c,e)}</span>, משקל <span class="term">3 + 2 + 5 + 4 = 14</span> ✓</p>
+
+      <p><strong>הערה:</strong> בשלב 2, כש-<span class="term">b</span> מתווסף לעץ, הקשת <span class="term">(b,d)=2</span> מורידה את <span class="term">key[d]</span> מ-9 ל-2. הקשת <span class="term">(b,c)=6</span> לא מורידה את <span class="term">key[c]</span> כי 6 &gt; 5 (כבר ערך נמוך יותר).</p>
+    </div>
+  </div>
+
+  <h2>תרגילים מהפרקטיקה</h2>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 1 · practice5 שאלה 1 — מבצע "משלם רק על היקר"</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">MST · alternative cost function</span>
+          <p>חברת תקשורת מציעה: מי שקונה <span class="term">n−1</span> קווים המהווים עץ פורש משלם רק עבור היקר ביניהם. עבור עץ <span class="term">T</span>, נגדיר <span class="term">cost(T) = max_{e∈T} w(e)</span>. מחפשים עץ פורש שעבורו <span class="term">cost(T)</span> מינימלי.</p>
+          <p><strong>(א)</strong> הוכח או הפרך:
+            <br>טענה 1: כל עץ פורש <span class="term">T</span> שעבורו <span class="term">cost(T)</span> מינימלי הוא MST של <span class="term">G</span>.
+            <br>טענה 2: כל MST של <span class="term">G</span> הוא עץ שעבורו <span class="term">cost(T)</span> מינימלי.</p>
+          <p><strong>(ב)</strong> האם אפשר להשתמש באלגוריתם MST כדי למצוא עץ שעבורו <span class="term">cost(T)</span> מינימלי?</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">שלב 1 · טענה 1 — הפרכה</div>
+            <p>נראה דוגמה נגדית: גרף עם 4 קודקודים <span class="term">a, b, c, d</span> ו-5 קשתות:</p>
+            <ul>
+              <li><span class="term">{a,b}=1, {b,c}=1, {c,d}=1, {a,c}=2, {b,d}=10</span></li>
+            </ul>
+            <p><strong>MST:</strong> <span class="term">{a,b}, {b,c}, {c,d}</span> במשקל כולל 3, <span class="term">cost(T)=1</span>.</p>
+            <p><strong>אבל יש עוד עץ:</strong> <span class="term">{a,b}, {a,c}, {c,d}</span> במשקל כולל 4, <span class="term">cost(T)=2</span>.</p>
+            <p>שניהם עצים פורשים, אבל רק הראשון הוא MST. ה-cost מינימלי עבור הראשון: <strong>במקרה זה טענה 1 כן מתקיימת</strong>. אז צריך דוגמה אחרת...</p>
+
+            <p><strong>דוגמה נגדית טובה יותר:</strong> גרף עם משקלים <span class="term">{a,b}=1, {b,c}=2, {c,a}=2</span>. שני עצים פורשים אפשריים:</p>
+            <ul>
+              <li><span class="term">T₁ = {a,b}, {b,c}</span> משקל 3, <span class="term">cost=2</span></li>
+              <li><span class="term">T₂ = {a,b}, {c,a}</span> משקל 3, <span class="term">cost=2</span></li>
+              <li><span class="term">T₃ = {b,c}, {c,a}</span> משקל 4, <span class="term">cost=2</span></li>
+            </ul>
+            <p>שלושתם בעלי <span class="term">cost=2</span> מינימלי. אבל רק <span class="term">T₁, T₂</span> הם MST (משקל 3). <span class="term">T₃</span> מינימלי-cost אבל לא MST. <strong>טענה 1 הופרכה.</strong></p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 2 · טענה 2 — הוכחה</div>
+            <p>נניח <span class="term">T</span> MST. נניח בשלילה שיש עץ פורש <span class="term">T'</span> עם <span class="term">cost(T') &lt; cost(T)</span>. ניקח את הקשת היקרה ביותר ב-<span class="term">T</span>, ונסמן <span class="term">e_max = arg max_{e ∈ T} w(e)</span>. אז <span class="term">w(e_max) = cost(T) &gt; cost(T') ≥ w(e')</span> לכל <span class="term">e' ∈ T'</span>.</p>
+            <p>נסיר את <span class="term">e_max</span> מ-<span class="term">T</span>. נקבל שני רכיבי קשירות <span class="term">S</span> ו-<span class="term">V \ S</span>. <span class="term">T'</span> פורש, אז יש לפחות קשת אחת ב-<span class="term">T'</span> שחוצה את החתך — נסמן אותה <span class="term">e'</span>. ידוע <span class="term">w(e') &lt; w(e_max)</span>.</p>
+            <p>נחליף ב-<span class="term">T</span> את <span class="term">e_max</span> ב-<span class="term">e'</span>. קיבלנו עץ פורש חדש <span class="term">T''</span>, במשקל <span class="term">w(T'') = w(T) - w(e_max) + w(e') &lt; w(T)</span>. אבל <span class="term">T</span> היה MST — סתירה! ∎</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 3 · סעיף ב</div>
+            <p>מטענה 2: כל MST פותר את בעיית ה-min-cost. אז כן, אפשר להריץ Prim או Kruskal ולקבל פתרון.</p>
+          </div>
+
+          <div class="final-answer">
+            (א) טענה 1 שגויה (לא כל min-cost הוא MST). טענה 2 נכונה (כל MST הוא min-cost). (ב) כן — MST הוא פתרון לבעיה (אבל לא הפתרון היחיד).
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 2 · practice5 שאלה 2 — קשת כבדה במעגל לא ב-MST</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">MST · cycle property</span>
+          <p><strong>(א)</strong> הוכח: אם קשת <span class="term">e</span> היא הכבדה ביותר במעגל בו היא נמצאת (<span class="term">w(e) ≥ w(e')</span> לכל <span class="term">e'</span> במעגל), אז קיים MST שלא מכיל את <span class="term">e</span>.</p>
+          <p><strong>(ב)</strong> בנה אלגוריתם MST המתבסס על הסעיף הקודם, ונתח את יעילותו.</p>
+          <p><strong>(ג)</strong> באילו ערכי <span class="term">m</span> האלגוריתם עדיף על Prim?</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">סעיף א — הוכחה</div>
+            <p>תהי <span class="term">e = {u, v}</span> קשת הכבדה ביותר במעגל <span class="term">C</span>. נניח בשלילה ש-<span class="term">e</span> נמצאת ב<em>כל</em> MST. ניקח MST שרירותי <span class="term">T</span> שמכיל את <span class="term">e</span>.</p>
+            <p>נסיר את <span class="term">e</span> מ-<span class="term">T</span>: נקבל שני רכיבי קשירות <span class="term">S, V\S</span>, כאשר <span class="term">u ∈ S, v ∈ V\S</span>.</p>
+            <p>במעגל <span class="term">C</span> יש לפחות קשת אחרת <span class="term">e' ≠ e</span> שחוצה את <span class="term">(S, V\S)</span> (כי מעגל לא יכול לחצות חתך פעם אחת בלבד). מהנחה <span class="term">w(e') ≤ w(e)</span>.</p>
+            <p>נחליף ב-<span class="term">T</span> את <span class="term">e</span> ב-<span class="term">e'</span>: נקבל עץ פורש חדש <span class="term">T'</span> במשקל <span class="term">≤ w(T)</span>. <span class="term">T'</span> גם הוא MST, ו-<span class="term">e ∉ T'</span>. סתירה. ∎</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף ב — האלגוריתם</div>
+            <p><strong>רעיון:</strong> נסיר את הקשתות הכבדות ביותר במעגלים, אחת-אחת, עד שלא יישאר אף מעגל. מה שנשאר הוא ה-MST.</p>
+
+            <pre style="margin-top:6px;margin-bottom:6px;"><code class="language-plaintext">REVERSE-DELETE(G):
+    sort edges of E by weight DESCENDING
+    for each edge e in sorted order:
+        if removing e doesn't disconnect G:
+            remove e
+    return remaining edges</code></pre>
+            <p>הבדיקה "האם הסרת <span class="term">e</span> מנתקת" שקולה ל"האם <span class="term">e</span> נמצאת במעגל".</p>
+            <p><strong>סיבוכיות:</strong> מיון <span class="term">O(m log m) = O(m log n)</span>. לכל קשת — בדיקת קישוריות ב-<span class="term">O(n+m)</span> דרך BFS/DFS. סה״כ <span class="term">O(m · (n+m)) = O(m²)</span>.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף ג — מתי עדיף?</div>
+            <p>Prim: <span class="term">O(m log n)</span>. אלגוריתם המעגלים: <span class="term">O(m²)</span>.</p>
+            <p><span class="term">m² &lt; m log n</span> ⇔ <span class="term">m &lt; log n</span>. בגרף קשיר <span class="term">m ≥ n−1</span>, אז זה לא יקרה ב-<span class="term">m ≥ n</span>. <strong>תשובה: באף ערך של <span class="term">m</span> סביר.</strong> אלגוריתם המעגלים תיאורטי יותר — Prim/Kruskal יעילים יותר תמיד.</p>
+          </div>
+
+          <div class="final-answer">
+            הוכחנו תכונה משלימה לתכונת הקשת הבטוחה: הקשת הכבדה במעגל <em>תמיד</em> חוץ מ-MST כלשהו. בסיס לאלגוריתם "Reverse-Delete" — קונספטואלי, לא מעשי.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 3 · practice5 שאלה 5 — גשרים ב-MST</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">MST · bridges</span>
+          <p>תהי <span class="term">e</span> גשר בגרף לא-מכוון קשיר <span class="term">G</span> (קשת שהסרתה מנתקת).</p>
+          <p><strong>(א)</strong> הוכח: <span class="term">e</span> משתתפת ב<strong>כל</strong> עץ פורש (ובפרט ב-MST).</p>
+          <p><strong>(ב)</strong> תאר אלגוריתם שמוצא את כל הגשרים בגרף, ונתח יעילות.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">סעיף א</div>
+            <p>נניח <span class="term">e = {u, v}</span> גשר. נניח בשלילה שיש עץ פורש <span class="term">T</span> שלא מכיל את <span class="term">e</span>. ב-<span class="term">T</span> יש מסלול <span class="term">P</span> מ-<span class="term">u</span> ל-<span class="term">v</span> (כי עץ פורש קשיר). <span class="term">P</span> לא משתמש ב-<span class="term">e</span>.</p>
+            <p>כעת בגרף <span class="term">G \ {e}</span> עדיין יש המסלול <span class="term">P</span> מ-<span class="term">u</span> ל-<span class="term">v</span>. אז <span class="term">G \ {e}</span> קשיר — סתירה לכך ש-<span class="term">e</span> גשר. ∎</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף ב — אלגוריתם נאיבי</div>
+            <p><strong>גישה ראשונה (נאיבית):</strong> לכל קשת <span class="term">e</span>, הסר אותה ובדוק קישוריות (DFS/BFS). אם הגרף לא נשאר קשיר ← הקשת גשר.</p>
+            <p>סיבוכיות: <span class="term">O(m)</span> קשתות, כל בדיקה <span class="term">O(n+m)</span>. סה״כ <span class="term">O(m·(n+m)) = O(m²)</span>.</p>
+            <p><strong>גישה שנייה (יעילה):</strong> אלגוריתם מבוסס DFS עם <span class="term">low[v]</span> — כפי שתיארנו בפרק 6. רץ ב-<span class="term">Θ(n+m)</span>, מוצא את כל הגשרים בריצה אחת.</p>
+            <p><strong>למה הגישה השנייה עובדת:</strong> קשת עץ <span class="term">(u,v)</span> ב-DFS היא גשר ⇔ <span class="term">low[v] = d[v]</span> (אין דרך מ-<span class="term">v</span> או מצאצאיו לחזור אחורה מעבר ל-<span class="term">v</span>).</p>
+          </div>
+
+          <div class="final-answer">
+            (א) כל גשר חייב להיות בכל עץ פורש, בפרט כל MST. (ב) הגישה היעילה: DFS עם <span class="term">low[v]</span> ב-<span class="term">Θ(n+m)</span>, פי <span class="term">m</span> מהר יותר מהגישה הנאיבית.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 4 · practice5 שאלה 3 — MST עם חפיפה מינימלית עם T נתון</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">MST · alternative MSTs · advanced</span>
+          <p>בהינתן גרף לא-מכוון <span class="term">G = (V, E)</span> ממושקל ו-MST <span class="term">T</span> שלו, מצא MST אחר <span class="term">T'</span> כך ש-<span class="term">|T ∩ T'|</span> מינימלי. (אם <span class="term">T</span> יחיד, אז <span class="term">T' = T</span>.)</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">שלב 1 · מאפיין הקשתות "ניתנות-להחלפה"</div>
+            <p><strong>הגדרה:</strong> קשת <span class="term">e ∈ T</span> נקראת <em>ניתנת-להחלפה</em> אם קיים MST אחר שלא מכיל את <span class="term">e</span>.</p>
+            <p><strong>למה:</strong> <span class="term">e = {u, v} ∈ T</span> ניתנת-להחלפה אם״ם בקבוצת הצלעות החוצות את החתך <span class="term">(S, V\S)</span> שנוצר ע״י הסרת <span class="term">e</span> מ-<span class="term">T</span>, קיימת קשת <span class="term">e' ≠ e</span> במשקל <span class="term">w(e') = w(e)</span>.</p>
+            <p><strong>הוכחה:</strong></p>
+            <p><strong>כיוון 1 (יש e' עם משקל שווה ⟸ ניתנת-להחלפה):</strong> אם נמצאת כזו <span class="term">e'</span>, ניצור <span class="term">T'' = T \ {e} ∪ {e'}</span>. <span class="term">T''</span> עדיין עץ פורש (חתך אחד הוחלף בקשת אחרת), ומשקלו זהה — אז <span class="term">T''</span> MST שלא מכיל את <span class="term">e</span>.</p>
+            <p><strong>כיוון 2 (ניתנת-להחלפה ⟸ יש e' שווה משקל):</strong> אם <span class="term">e</span> לא ב-MST <span class="term">T'</span>, אז ב-<span class="term">T'</span> יש קשת אחרת <span class="term">e'</span> שחוצה את החתך. ממשפט הקשת הבטוחה, חייב <span class="term">w(e') ≤ w(e)</span>. אבל גם <span class="term">w(e') ≥ w(e)</span> (אחרת <span class="term">T \ {e} ∪ {e'}</span> היה MST קל יותר מ-<span class="term">T</span>). אז <span class="term">w(e') = w(e)</span>. ∎</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 2 · האלגוריתם</div>
+            <pre style="margin-top:6px;margin-bottom:6px;"><code class="language-plaintext">MIN-OVERLAP-MST(G, T):
+    T' = T
+    for each edge e = {u, v} in T:
+        # Find S = vertices reachable from u in T \ {e}
+        S = COMPONENT(T - {e}, u)
+        # Find edges crossing the cut (S, V\S)
+        candidates = {e' ∈ E : e' crosses (S, V\S), e' ≠ e}
+        # Find one with minimum weight
+        e_min = argmin {w(e') : e' ∈ candidates}
+        if e_min exists and w(e_min) = w(e):
+            T' = T' \ {e} ∪ {e_min}
+    return T'</code></pre>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 3 · נכונות</div>
+            <p>נטען ש-<span class="term">T'</span> שמופק MST.</p>
+            <p>בכל החלפה, מסעיף 1 (כיוון 1): <span class="term">T \ {e} ∪ {e'}</span> MST. ההחלפות עצמן אינן מפריעות זו לזו: אם הסרנו <span class="term">e₁</span> והוספנו <span class="term">e'₁</span>, ועכשיו מסתכלים על <span class="term">e₂</span>, החתך של <span class="term">e₂</span> ב-<span class="term">T \ {e₂}</span> נשמר זהה — כי <span class="term">e'₁</span> מחבר את אותם רכיבים כמו <span class="term">e₁</span>.</p>
+            <p>אם <span class="term">e</span> אינה ניתנת-להחלפה, היא חייבת להישאר ב-<span class="term">T'</span> (היא ב<em>כל</em> MST). אם היא ניתנת-להחלפה, מסירים אותה. <strong>סה״כ:</strong> <span class="term">|T ∩ T'|</span> = מספר הקשתות הלא-ניתנות-להחלפה (המינימום האפשרי).</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 4 · סיבוכיות</div>
+            <ul>
+              <li>לכל קשת <span class="term">e ∈ T</span> (<span class="term">n−1</span> קשתות): מציאת רכיב <span class="term">S</span> ב-<span class="term">O(n)</span> דרך DFS על <span class="term">T \ {e}</span>.</li>
+              <li>מציאת קשת אחרת קלה ביותר בחתך: <span class="term">O(m)</span>.</li>
+              <li><strong>סה״כ:</strong> <span class="term">O(n · (n + m)) = O(nm)</span> במקרה הגרוע.</li>
+            </ul>
+            <p>זמן ריצה ניתן לשיפור ל-<span class="term">O(m log n)</span> בעזרת מבני נתונים מתקדמים יותר (Link/Cut Trees), אבל זה מעבר לדרישות הקורס.</p>
+          </div>
+
+          <div class="final-answer">
+            <strong>אבחנה מרכזית:</strong> קשת ב-MST היא "כפויה" (ב<em>כל</em> MST) אם״ם היא <em>היחידה</em> במשקלה בחתך שלה. כל קשת אחרת ניתנת להחלפה. ה-min-overlap MST שומר רק את הכפויות ומחליף את השאר.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <h2>מה לזכור למבחן</h2>
+
+  <div class="box summary">
+    <div class="box-head"><span class="icon">📌</span>סיכום MST</div>
+    <div class="box-body">
+      <ul>
+        <li><strong>הגדרה:</strong> עץ פורש (n−1 קשתות) עם משקל כולל מינימלי.</li>
+        <li><strong>משפט הקשת הבטוחה:</strong> תמיד אפשר להוסיף את הקשת הקלה החוצה את חתך שאף קשת בנויה לא חוצה אותו.</li>
+        <li><strong>Prim:</strong> תור קדימויות, מתחיל מקודקוד. <span class="term">O(m log n)</span> או <span class="term">O(m + n log n)</span>.</li>
+        <li><strong>Kruskal:</strong> מיון קשתות + Union-Find. <span class="term">O(m log n)</span>.</li>
+        <li><strong>טריקים:</strong> חיבור קבוע למשקלים לא משנה MST. שינוי מונוטוני (<span class="term">w → w²</span>) משמר MST כל עוד <span class="term">w &gt; 0</span>.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+</div>
+</body>
+</html>

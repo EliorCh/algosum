@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>דף קצר · אלגוריתמים · MTA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<style>
+  :root {
+    --bg: #fbf9f3; --bg-paper: #fffefa; --ink: #1c1917; --ink-soft: #44403c; --ink-mute: #78716c;
+    --rule: #e7e5e0;
+    --indigo-9: #312e81; --indigo-7: #4f46e5; --indigo-3: #c7d2fe; --indigo-1: #eef2ff;
+    --c-theory-h: #1d4ed8; --c-theory-bg: #eff6ff;
+    --c-formula-h: #b45309; --c-formula-bg: #fef9e7;
+    --c-example-h: #047857; --c-example-bg: #ecfdf5;
+    --c-warn-h: #be123c; --c-warn-bg: #fff1f2;
+    --serif: 'Frank Ruhl Libre', Georgia, serif;
+    --sans: 'Assistant', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.5; font-size: 14px; -webkit-font-smoothing: antialiased; padding: 24px; }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 { font-family: var(--serif); font-size: 32px; font-weight: 700; line-height: 1.1; margin-bottom: 6px; }
+  .meta { color: var(--ink-mute); font-size: 13px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--rule); }
+  .top-link { display: inline-block; margin-top: 14px; font-family: var(--mono); font-size: 12px; color: var(--indigo-7); text-decoration: none; padding: 4px 12px; background: var(--indigo-1); border-radius: 99px; }
+  .top-link:hover { background: var(--indigo-3); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+  @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+  .card { background: var(--bg-paper); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px; }
+  .card h2 { font-family: var(--serif); font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--ink); border-bottom: 1px solid var(--rule); padding-bottom: 6px; }
+  .card h3 { font-size: 13px; font-weight: 700; margin: 10px 0 4px; color: var(--ink-soft); font-family: var(--mono); text-transform: uppercase; letter-spacing: .05em; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; margin: 4px 0; }
+  td, th { border: 1px solid var(--rule); padding: 4px 8px; text-align: right; }
+  th { background: var(--c-theory-bg); font-weight: 700; color: var(--c-theory-h); font-size: 11px; }
+  .num, .mono { font-family: var(--mono); direction: ltr; display: inline-block; unicode-bidi: isolate; }
+  ul { padding-right: 16px; margin: 4px 0; }
+  li { margin-bottom: 3px; font-size: 13px; }
+  .note { background: var(--c-warn-bg); border-right: 3px solid var(--c-warn-h); padding: 6px 10px; margin: 6px 0; font-size: 12px; }
+  .key { background: var(--c-formula-bg); border-right: 3px solid var(--c-formula-h); padding: 6px 10px; margin: 6px 0; font-size: 12px; }
+  .term { font-family: var(--mono); direction: ltr; display: inline-block; background: #f5f5f4; padding: 0 5px; border-radius: 3px; font-size: 12px; unicode-bidi: isolate; }
+  @media print { @page { margin: 1cm; } .top-link { display: none; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<h1>אלגוריתמים — דף קצר</h1>
+<div class="meta">
+סיכום של כל הסיבוכיות, המשפטים, וטבלת בחירת אלגוריתם. דף אחד למבחן. MTA, סמסטר קיץ 2026.
+<br>
+<a href="index.html" class="top-link">← חזרה לאינדקס</a>
+</div>
+
+<!-- =================== ROW 1 — COMPLEXITY TABLES =================== -->
+<div class="grid">
+
+  <div class="card">
+    <h2>סריקות גרף</h2>
+    <table>
+      <tr><th>אלגוריתם</th><th>סיבוכיות</th><th>מבנה</th></tr>
+      <tr><td>DFS</td><td><span class="num">Θ(n+m)</span></td><td>סטאק</td></tr>
+      <tr><td>BFS</td><td><span class="num">Θ(n+m)</span></td><td>תור</td></tr>
+      <tr><td>מיון טופולוגי</td><td><span class="num">Θ(n+m)</span></td><td>תור מקורות</td></tr>
+      <tr><td>SCC (Kosaraju)</td><td><span class="num">Θ(n+m)</span></td><td>2× DFS</td></tr>
+      <tr><td>גשרים</td><td><span class="num">Θ(n+m)</span></td><td>DFS + low</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>מסלולים קלים ביותר</h2>
+    <table>
+      <tr><th>אלגוריתם</th><th>סיבוכיות</th><th>תנאי</th></tr>
+      <tr><td>BFS</td><td><span class="num">Θ(n+m)</span></td><td>בלי משקלים</td></tr>
+      <tr><td>DAG-SP</td><td><span class="num">Θ(n+m)</span></td><td>DAG בלבד</td></tr>
+      <tr><td>Dijkstra (heap)</td><td><span class="num">O(m log n)</span></td><td>w(e) ≥ 0</td></tr>
+      <tr><td>Dijkstra (Fib)</td><td><span class="num">O(m+n log n)</span></td><td>w(e) ≥ 0</td></tr>
+      <tr><td>Bellman-Ford</td><td><span class="num">Θ(n·m)</span></td><td>תמיד — גם שליליים</td></tr>
+      <tr><td>A*</td><td>תלוי בהיוריסטיקה</td><td>היוריסטיקה קבילה</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>עצים פורשים מינימליים</h2>
+    <table>
+      <tr><th>אלגוריתם</th><th>סיבוכיות</th><th>מבנה</th></tr>
+      <tr><td>Prim (heap)</td><td><span class="num">O(m log n)</span></td><td>תור קדימויות</td></tr>
+      <tr><td>Prim (Fib)</td><td><span class="num">O(m+n log n)</span></td><td>פיבונאצ׳י</td></tr>
+      <tr><td>Kruskal</td><td><span class="num">O(m log n)</span></td><td>Union-Find</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>אופטימיזציה</h2>
+    <table>
+      <tr><th>אלגוריתם</th><th>סיבוכיות</th><th>סוג</th></tr>
+      <tr><td>Knapsack DP</td><td><span class="num">O(n·W)</span></td><td>פסאודו-פולינומי</td></tr>
+      <tr><td>LCS DP</td><td><span class="num">O(m·n)</span></td><td>פולינומי</td></tr>
+      <tr><td>Interval Scheduling</td><td><span class="num">O(n log n)</span></td><td>DP+מיון</td></tr>
+      <tr><td>Ford-Fulkerson</td><td><span class="num">O(E·|f*|)</span></td><td>פסאודו-פולינומי</td></tr>
+      <tr><td>Edmonds-Karp</td><td><span class="num">O(V·E²)</span></td><td>פולינומי</td></tr>
+    </table>
+  </div>
+
+</div>
+
+<!-- =================== ROW 2 — KEY THEOREMS =================== -->
+<div class="grid">
+
+  <div class="card">
+    <h2>משפטים מרכזיים</h2>
+
+    <h3>גרפים</h3>
+    <ul>
+      <li>מיון טופולוגי קיים ⇔ הגרף DAG</li>
+      <li>בגרף יש מעגל ⇔ DFS חושף קשת Back</li>
+      <li>גרף-העל של רכיבי קשירות חזקה תמיד DAG</li>
+    </ul>
+
+    <h3>מסלולים</h3>
+    <ul>
+      <li>BFS: <span class="num">d[v] = δ(s,v)</span> בגרף בלי משקלים</li>
+      <li>Dijkstra תקף ⇔ אין משקלים שליליים</li>
+      <li>אם אין מעגלים שליליים, BF מתכנס תוך <span class="num">|V|−1</span> איטרציות</li>
+      <li>גרף המסלולים הקצרים תמיד DAG</li>
+    </ul>
+
+    <h3>MST</h3>
+    <ul>
+      <li><strong>קשת בטוחה:</strong> אפשר תמיד להוסיף את הקלה החוצה את חתך תקף</li>
+      <li><strong>קשת כבדה במעגל:</strong> תמיד <em>לא</em> ב-MST כלשהו</li>
+      <li><strong>גשר:</strong> תמיד ב<em>כל</em> עץ פורש</li>
+      <li><strong>למת מונוטוניות:</strong> שינוי משקלים ע״י <span class="num">f</span> מונוטונית עולה שומר על MST</li>
+    </ul>
+
+    <h3>זרימה</h3>
+    <ul>
+      <li>max-flow = min-cut (3 טענות שקולות)</li>
+      <li>זרימה מקסימלית ⇔ אין מסלול משפר ב-G_f</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>בעיות ← אלגוריתם</h2>
+    <table>
+      <tr><th>בעיה</th><th>אלגוריתם</th></tr>
+      <tr><td>חיבור גרף לא-ממושקל</td><td>DFS / BFS</td></tr>
+      <tr><td>זיהוי מעגל בגרף מכוון/לא-מכוון</td><td>DFS (back edge)</td></tr>
+      <tr><td>סידור משימות עם תלויות</td><td>מיון טופולוגי</td></tr>
+      <tr><td>SCC</td><td>Kosaraju</td></tr>
+      <tr><td>גשרים בגרף לא-מכוון</td><td>DFS + <span class="num">low</span></td></tr>
+      <tr><td>מסלול קצר ב-1 משקל</td><td>BFS</td></tr>
+      <tr><td>SSSP ב-DAG</td><td>DAG-SP</td></tr>
+      <tr><td>SSSP עם <span class="num">w ≥ 0</span></td><td>Dijkstra</td></tr>
+      <tr><td>SSSP כללי (גם שליליים)</td><td>Bellman-Ford</td></tr>
+      <tr><td>SSSP עם היוריסטיקה</td><td>A*</td></tr>
+      <tr><td>MST</td><td>Prim / Kruskal</td></tr>
+      <tr><td>Knapsack 0/1</td><td>DP <span class="num">O(nW)</span></td></tr>
+      <tr><td>LCS / Edit Distance</td><td>DP <span class="num">O(mn)</span></td></tr>
+      <tr><td>תזמון קטעים ממושקלים</td><td>DP <span class="num">O(n log n)</span></td></tr>
+      <tr><td>זרימה מקסימלית</td><td>Edmonds-Karp</td></tr>
+      <tr><td>התאמה מקסימלית בדו-צדדי</td><td>זרימה (קיבול 1)</td></tr>
+      <tr><td>חתך מינימלי s-t</td><td>זרימה ← קודקודים נגישים</td></tr>
+    </table>
+  </div>
+
+</div>
+
+<!-- =================== ROW 3 — TIPS & PITFALLS =================== -->
+<div class="grid">
+
+  <div class="card">
+    <h2>בורות נפוצים במבחן</h2>
+    <div class="note">
+      <strong>סיבוכיות לפי ערך, לא לפי גודל:</strong> "לולאה רצה x פעמים" — אם x מספר ולא מערך, זה <span class="num">Θ(2ⁿ)</span> ב-<span class="num">n=log x</span>.
+    </div>
+    <div class="note">
+      <strong>Dijkstra עם משקל שלילי:</strong> נשבר! Dijkstra "סוגר" קודקוד אחרי שלוף ראשון מהתור. עם קשת שלילית, ייתכן מסלול קצר יותר שלא נסרק. תמיד תשאל "האם יש משקלים שליליים?"
+    </div>
+    <div class="note">
+      <strong>חמדני לא תמיד עובד:</strong> דוגמה — חמדני למטבעות <span class="num">{1, 4, 6}, N=8</span> = 3 מטבעות, אופטימלי = 2 (4+4).
+    </div>
+    <div class="note">
+      <strong>שכחת בסיס לרקורסיה:</strong> נוסחת DP בלי תנאי קצה = חוסר תקין.
+    </div>
+    <div class="note">
+      <strong>BFS על גרף ממושקל:</strong> לא נכון! BFS מוצא מסלול קצר ביותר רק במספר קשתות. למשקלים — Dijkstra.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>סימוני אסימפטוטיקה</h2>
+    <div class="key">
+      <strong><span class="num">O(g)</span> — חסם עליון:</strong> <span class="num">∃c, n₀: ∀n≥n₀, f(n) ≤ c·g(n)</span>
+    </div>
+    <div class="key">
+      <strong><span class="num">Ω(g)</span> — חסם תחתון:</strong> <span class="num">∃c, n₀: ∀n≥n₀, f(n) ≥ c·g(n)</span>
+    </div>
+    <div class="key">
+      <strong><span class="num">Θ(g)</span> — חסם הדוק:</strong> גם <span class="num">O(g)</span> וגם <span class="num">Ω(g)</span>
+    </div>
+
+    <h3>נוסחאות שימושיות</h3>
+    <ul>
+      <li><span class="num">log<sub>a</sub>(n) = Θ(log<sub>b</sub>(n))</span> לכל <span class="num">a,b &gt; 1</span></li>
+      <li><span class="num">log(n!) = Θ(n log n)</span></li>
+      <li><span class="num">Σ<sub>i=1</sub><sup>n</sup> i = n(n+1)/2 = Θ(n²)</span></li>
+      <li><span class="num">Σ<sub>i=0</sub><sup>n</sup> 2ⁱ = 2<sup>n+1</sup>−1 = Θ(2ⁿ)</span></li>
+      <li>נוסחאות רקורסיה:
+        <ul>
+          <li><span class="num">T(n)=2T(n/2)+O(n) = Θ(n log n)</span> (MergeSort)</li>
+          <li><span class="num">T(n)=T(n-1)+T(n-2) = Θ(φⁿ) ≈ Θ(2ⁿ)</span> (Fibonacci)</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- =================== ROW 4 — STRATEGIC ADVICE =================== -->
+<div class="grid">
+
+  <div class="card" style="grid-column: 1 / -1;">
+    <h2>גישת מבחן — כיצד לקרוא שאלה</h2>
+
+    <h3>1. זהה את הקלט</h3>
+    <ul>
+      <li>גרף? מכוון או לא? ממושקל? קשיר?</li>
+      <li>מספר? מערך? מחרוזת?</li>
+      <li><strong>שאל תמיד:</strong> מהו <span class="term">n</span>? גודל ייצוג או ערך?</li>
+    </ul>
+
+    <h3>2. זהה את הפלט</h3>
+    <ul>
+      <li>אופטימיזציה (מינ׳/מקס׳)? בעיית הכרעה (כן/לא)? בנייה (החזר את הפתרון)?</li>
+    </ul>
+
+    <h3>3. זהה את האסטרטגיה</h3>
+    <ul>
+      <li>בעיית מסלולים? ← BFS / Dijkstra / BF / DAG-SP</li>
+      <li>בעיית "קיים תכונה X"? ← DFS עם אינווריאנט</li>
+      <li>אופטימיזציה על תת-קבוצה? ← DP או חמדני</li>
+      <li>זרימה במערכת? ← Ford-Fulkerson / Edmonds-Karp</li>
+      <li>חיבור גרף ע״י קשתות זולות? ← MST (Prim/Kruskal)</li>
+    </ul>
+
+    <h3>4. נכונות + סיבוכיות</h3>
+    <ul>
+      <li>הוכחת נכונות תמיד חיונית. אינווריאנט, אינדוקציה, או הוכחה ישירה.</li>
+      <li>סיבוכיות: <em>תמיד בגודל ייצוג הקלט</em>, לא בערך.</li>
+      <li>אם רוצים יעילות נמוכה ממה שאתה רגיל — חפש "טריק" של ידע מקדים (כמו <span class="term">|E| &lt; |V|</span> בגרף לא-מכוון לבדיקת מעגל).</li>
+    </ul>
+  </div>
+
+</div>
+
+</div>
+</body>
+</html>

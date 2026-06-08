@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פרק 9 · מסלולים קלים ביותר ב׳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/styles/atom-one-dark.min.css">
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js"></script>
+<script>
+  window.addEventListener('load', () => {
+    if (window.renderMathInElement) {
+      try { renderMathInElement(document.body, { delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\(',right:'\\)',display:false}], throwOnError: false, strict: false }); } catch(e){}
+    }
+    if (window.hljs) { try { document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el)); } catch(e){} }
+    document.body.classList.add('ready');
+  });
+</script>
+<style>
+  :root {
+    --bg: #fbf9f3; --bg-paper: #fffefa; --ink: #1c1917; --ink-soft: #44403c; --ink-mute: #78716c;
+    --rule: #e7e5e0; --rule-soft: #f1efe9;
+    --indigo-9: #312e81; --indigo-7: #4f46e5; --indigo-3: #c7d2fe; --indigo-1: #eef2ff;
+    --c-theory-h: #1d4ed8; --c-theory-bg: #eff6ff; --c-theory-edge: #bfdbfe;
+    --c-formula-h: #b45309; --c-formula-bg: #fef9e7; --c-formula-edge: #fcd34d;
+    --c-example-h: #047857; --c-example-bg: #ecfdf5; --c-example-edge: #a7f3d0;
+    --c-warn-h: #be123c; --c-warn-bg: #fff1f2; --c-warn-edge: #fecdd3;
+    --c-exercise-h: #6d28d9; --c-exercise-bg: #f5f3ff; --c-exercise-edge: #ddd6fe;
+    --c-summary-h: #334155; --c-summary-bg: #f1f5f9; --c-summary-edge: #cbd5e1;
+    --code-bg: #0f172a; --code-bg-2: #1e293b; --code-ink: #e2e8f0;
+    --shadow-sm: 0 1px 2px rgba(28,25,23,.04), 0 1px 3px rgba(28,25,23,.06);
+    --shadow: 0 4px 12px rgba(28,25,23,.05), 0 1px 3px rgba(28,25,23,.04);
+    --serif: 'Frank Ruhl Libre', Georgia, serif;
+    --sans: 'Assistant', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.75; font-size: 17px; -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 20% 0%, rgba(99,102,241,.035), transparent 40%), radial-gradient(circle at 80% 100%, rgba(245,158,11,.035), transparent 40%);
+    background-attachment: fixed; opacity: 0; transition: opacity .2s ease; }
+  body.ready { opacity: 1; }
+  .app { display: grid; grid-template-columns: 320px 1fr; min-height: 100vh; max-width: 1480px; margin: 0 auto; }
+  .sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%); color: #e0e7ff; padding: 32px 24px; border-left: 1px solid rgba(255,255,255,.06); }
+  .sidebar::-webkit-scrollbar { width: 6px; } .sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 3px; }
+  .brand { font-family: var(--serif); font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -.01em; line-height: 1.2; }
+  .brand a { color: #fff; text-decoration: none; } .brand a:hover { color: #fbbf24; }
+  .brand-sub { font-size: 13px; color: #c7d2fe; margin-bottom: 28px; font-weight: 500; }
+  .brand-meta { font-size: 11px; color: #a5b4fc; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .nav-label { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: #818cf8; font-weight: 700; margin: 24px 0 12px; padding-right: 8px; }
+  .nav-list { list-style: none; } .nav-list li { margin-bottom: 2px; }
+  .nav-list a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; color: #c7d2fe; text-decoration: none; border-radius: 8px; font-size: 14.5px; font-weight: 500; transition: all .15s ease; }
+  .nav-list a:hover { background: rgba(255,255,255,.06); color: #fff; }
+  .nav-list a.active { background: rgba(255,255,255,.1); color: #fff; box-shadow: inset 3px 0 0 #fbbf24; }
+  .nav-list a.pending { opacity: .5; }
+  .nav-num { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; background: rgba(255,255,255,.08); border-radius: 6px; font-size: 11px; font-weight: 700; font-family: var(--mono); }
+  .nav-list a.active .nav-num { background: #fbbf24; color: #1e1b4b; }
+  main { padding: 56px 64px 120px; max-width: 960px; }
+  .page-eyebrow { display: inline-block; font-size: 12px; font-weight: 700; color: var(--indigo-7); letter-spacing: .15em; text-transform: uppercase; background: var(--indigo-1); padding: 6px 12px; border-radius: 99px; margin-bottom: 16px; }
+  h1.page-title { font-family: var(--serif); font-size: 48px; font-weight: 700; line-height: 1.15; letter-spacing: -.02em; color: var(--ink); margin-bottom: 14px; }
+  .page-subtitle { font-size: 19px; color: var(--ink-soft); margin-bottom: 48px; font-weight: 400; line-height: 1.55; }
+  h2 { font-family: var(--serif); font-size: 32px; font-weight: 700; letter-spacing: -.015em; margin: 56px 0 20px; color: var(--ink); position: relative; padding-right: 20px; }
+  h2::before { content: ''; position: absolute; right: 0; top: 14px; bottom: 14px; width: 4px; background: var(--indigo-7); border-radius: 2px; }
+  h3 { font-family: var(--sans); font-size: 22px; font-weight: 700; margin: 32px 0 12px; color: var(--ink); letter-spacing: -.005em; }
+  h4 { font-size: 17px; font-weight: 700; margin: 18px 0 8px; color: var(--ink-soft); }
+  p { margin-bottom: 14px; color: var(--ink-soft); } p strong { color: var(--ink); font-weight: 700; }
+  ul, ol { margin: 12px 24px 18px; color: var(--ink-soft); } li { margin-bottom: 8px; }
+  .term { font-family: var(--mono); direction: ltr; display: inline-block; font-size: .88em; background: #f5f5f4; padding: 1px 8px; border-radius: 5px; color: #be185d; border: 1px solid #e7e5e4; vertical-align: baseline; unicode-bidi: isolate; }
+  .term.blue { color: var(--c-theory-h); background: var(--c-theory-bg); border-color: var(--c-theory-edge); }
+  .term.green { color: var(--c-example-h); background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .term.amber { color: var(--c-formula-h); background: var(--c-formula-bg); border-color: var(--c-formula-edge); }
+  .katex-display { margin: 18px 0 !important; direction: ltr !important; text-align: center !important; unicode-bidi: isolate; } .katex { direction: ltr !important; unicode-bidi: isolate; }
+  .box { border-radius: 14px; margin: 24px 0; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); background: var(--bg-paper); }
+  .box-head { display: flex; align-items: center; gap: 10px; padding: 14px 20px; font-weight: 700; font-size: 15px; border-bottom: 1px solid var(--rule); }
+  .box-head .icon { width: 28px; height: 28px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 16px; }
+  .box-body { padding: 18px 22px; }
+  .box.theory { border-color: var(--c-theory-edge); } .box.theory .box-head { background: var(--c-theory-bg); color: var(--c-theory-h); } .box.theory .box-head .icon { background: var(--c-theory-h); color: #fff; }
+  .box.formula { border-color: var(--c-formula-edge); background: var(--c-formula-bg); } .box.formula .box-head { background: transparent; color: var(--c-formula-h); border-bottom-color: rgba(180,83,9,.18); } .box.formula .box-head .icon { background: var(--c-formula-h); color: #fff; } .box.formula .box-body { background: var(--c-formula-bg); } .box.formula p { color: #78350f; }
+  .box.example { border-color: var(--c-example-edge); } .box.example .box-head { background: var(--c-example-bg); color: var(--c-example-h); } .box.example .box-head .icon { background: var(--c-example-h); color: #fff; }
+  .box.warn { border-color: var(--c-warn-edge); } .box.warn .box-head { background: var(--c-warn-bg); color: var(--c-warn-h); } .box.warn .box-head .icon { background: var(--c-warn-h); color: #fff; }
+  .box.exercise { border-color: var(--c-exercise-edge); } .box.exercise .box-head { background: var(--c-exercise-bg); color: var(--c-exercise-h); } .box.exercise .box-head .icon { background: var(--c-exercise-h); color: #fff; }
+  .box.summary { border-color: var(--c-summary-edge); } .box.summary .box-head { background: var(--c-summary-bg); color: var(--c-summary-h); } .box.summary .box-head .icon { background: var(--c-summary-h); color: #fff; }
+  pre { background: var(--code-bg) !important; border-radius: 0 0 12px 12px; padding: 18px 22px !important; margin: 0 0 16px 0; overflow-x: auto; direction: ltr; font-size: 14px; line-height: 1.7; box-shadow: var(--shadow); border: 1px solid var(--code-bg-2); border-top: none; }
+  pre code { font-family: var(--mono) !important; background: transparent !important; padding: 0 !important; border: none !important; color: var(--code-ink) !important; }
+  .code-label { display: flex; align-items: center; gap: 8px; background: var(--code-bg-2); color: #94a3b8; font-family: var(--mono); font-size: 12px; padding: 10px 16px; border-radius: 12px 12px 0 0; direction: ltr; border: 1px solid var(--code-bg-2); border-bottom: 1px solid #334155; margin-top: 18px; }
+  .code-label .dot { width: 8px; height: 8px; border-radius: 50%; background: #475569; }
+  .code-label .dot.red { background: #ef4444; } .code-label .dot.amber { background: #f59e0b; } .code-label .dot.green { background: #22c55e; }
+  .code-label .name { margin-right: auto; opacity: .9; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm); font-size: 15px; }
+  th, td { padding: 11px 14px; text-align: right; border-bottom: 1px solid var(--rule-soft); border-left: 1px solid var(--rule-soft); }
+  th { background: var(--c-summary-bg); font-weight: 700; color: var(--c-summary-h); }
+  tr:last-child td { border-bottom: none; }
+  td.num, th.num { font-family: var(--mono); direction: ltr; text-align: center; font-size: 14px; }
+  td.highlight { background: var(--c-formula-bg); font-weight: 700; color: var(--c-formula-h); }
+  td.updated { background: #dcfce7; font-weight: 700; color: #166534; }
+  .exercise-card { background: #fff; border-radius: 10px; margin: 14px 0; border: 1px solid var(--c-exercise-edge); overflow: hidden; }
+  .exercise-tag { display: inline-block; font-size: 11px; font-weight: 700; background: var(--c-exercise-h); color: #fff; padding: 3px 10px; border-radius: 99px; margin-bottom: 10px; font-family: var(--mono); letter-spacing: .05em; direction: ltr; }
+  .exercise-q { padding: 20px 24px; background: #fafaf9; border-bottom: 1px solid var(--rule-soft); }
+  .exercise-q p:last-child { margin-bottom: 0; }
+  .reveal-btn { display: block; width: 100%; background: var(--c-exercise-bg); border: none; border-top: 1px solid var(--c-exercise-edge); padding: 13px; font-family: var(--sans); font-size: 14px; font-weight: 700; color: var(--c-exercise-h); cursor: pointer; transition: background .15s ease; }
+  .reveal-btn:hover { background: #ede9fe; } .reveal-btn::before { content: '▼ '; font-size: 10px; margin-left: 6px; transition: transform .2s ease; }
+  .exercise-card.open .reveal-btn::before { content: '▲ '; }
+  .solution { padding: 22px 26px; background: var(--c-example-bg); border-top: 1px solid var(--c-example-edge); display: none; }
+  .exercise-card.open .solution { display: block; }
+  .solution .step { background: #fff; border-radius: 8px; padding: 14px 18px; margin: 12px 0; border-right: 3px solid var(--c-example-h); }
+  .solution .step-label { font-size: 11px; font-weight: 700; color: var(--c-example-h); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; font-family: var(--mono); }
+  .solution .final-answer { background: #fff; border: 2px solid var(--c-example-h); border-radius: 10px; padding: 14px 20px; margin-top: 16px; font-weight: 600; }
+  .solution .final-answer::before { content: '✓ '; color: var(--c-example-h); font-weight: 900; }
+  .lead { font-size: 19px; color: var(--ink-soft); border-right: 3px solid var(--indigo-7); padding-right: 20px; margin: 24px 0 32px; font-weight: 400; line-height: 1.6; }
+  .keypoint { background: linear-gradient(90deg, var(--c-formula-bg) 0%, transparent 100%); padding: 14px 18px; border-radius: 8px; margin: 16px 0; border-right: 3px solid var(--c-formula-h); }
+  .keypoint::before { content: '💡 '; font-size: 18px; margin-left: 4px; }
+  .figure { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 18px; margin: 18px 0; text-align: center; box-shadow: var(--shadow-sm); }
+  .figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .figure .cap { font-size: 13px; color: var(--ink-mute); margin-top: 12px; font-style: italic; }
+  .mc-list { list-style: none; margin: 12px 0; padding: 0; }
+  .mc-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; background: #fff; border: 1px solid var(--rule); border-radius: 8px; margin-bottom: 8px; transition: all .15s ease; }
+  .mc-list li .mc-marker { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--rule); flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--ink-mute); background: #fff; }
+  .mc-list li.correct { background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .mc-list li.correct .mc-marker { background: var(--c-example-h); color: #fff; border-color: var(--c-example-h); }
+  .mc-list li.correct .mc-marker::after { content: '✓'; }
+  .mc-list li.wrong { background: var(--c-warn-bg); border-color: var(--c-warn-edge); }
+  .mc-list li.wrong .mc-marker { background: var(--c-warn-h); color: #fff; border-color: var(--c-warn-h); }
+  .mc-list li.wrong .mc-marker::after { content: '✗'; }
+  .mc-list li .mc-text { flex: 1; line-height: 1.55; color: var(--ink-soft); }
+  .mc-list li .mc-text .why { display: block; margin-top: 6px; font-size: 13.5px; color: var(--ink-mute); font-style: italic; }
+  .algo-compare { background: #fff; border-radius: 12px; padding: 0; margin: 18px 0; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); overflow: hidden; }
+  .algo-compare table { margin: 0; border-radius: 0; box-shadow: none; }
+  @media (max-width: 900px) { .app { grid-template-columns: 1fr; } .sidebar { position: static; height: auto; } main { padding: 32px 24px 80px; } h1.page-title { font-size: 36px; } h2 { font-size: 26px; } }
+</style>
+</head>
+<body>
+<div class="app">
+
+<aside class="sidebar">
+  <div class="brand"><a href="index.html">אלגוריתמים</a></div>
+  <div class="brand-sub">ד״ר אלעזר גולדנברג · הגב׳ שלומית אריאן</div>
+  <div class="brand-meta">MTA · קיץ 2026</div>
+
+  <div class="nav-label">יסודות</div>
+  <ul class="nav-list">
+    <li><a href="01-intro.html" class="pending"><span class="nav-num">1</span>מושג האלגוריתם</a></li>
+    <li><a href="02-numbers.html" class="pending"><span class="nav-num">2</span>ייצוג מספרים</a></li>
+  </ul>
+
+  <div class="nav-label">גרפים בסיסיים</div>
+  <ul class="nav-list">
+    <li><a href="03-graph-basics.html" class="active" class="pending"><span class="nav-num">3</span>מושגי יסוד</a></li>
+    <li><a href="04-toposort.html" class="pending"><span class="nav-num">4</span>מיון טופולוגי</a></li>
+  </ul>
+
+  <div class="nav-label">סריקות</div>
+  <ul class="nav-list">
+    <li><a href="05-dfs.html" class="pending"><span class="nav-num">5</span>DFS</a></li>
+    <li><a href="06-dfs-apps.html" class="pending"><span class="nav-num">6</span>יישומי DFS</a></li>
+    <li><a href="07-bfs.html" class="pending"><span class="nav-num">7</span>BFS</a></li>
+  </ul>
+
+  <div class="nav-label">מסלולים קלים ביותר</div>
+  <ul class="nav-list">
+    <li><a href="08-shortest-paths-1.html" class="pending"><span class="nav-num">8</span>מק״בים א׳</a></li>
+    <li><a href="09-shortest-paths-2.html"><span class="nav-num">9</span>מק״בים ב׳</a></li>
+  </ul>
+
+  <div class="nav-label">אופטימיזציה ורשתות</div>
+  <ul class="nav-list">
+    <li><a href="10-mst.html" class="pending"><span class="nav-num">10</span>עצים פורשים</a></li>
+    <li><a href="11-dp.html" class="pending"><span class="nav-num">11</span>תכנות דינמי</a></li>
+    <li><a href="12-flow.html" class="pending"><span class="nav-num">12</span>זרימה</a></li>
+  </ul>
+</aside>
+
+
+<main>
+<span class="page-eyebrow">פרק 3 · מושגי יסוד בגרפים</span>
+  <h1 class="page-title">השפה<br>של גרפים</h1>
+  <p class="page-subtitle">קודקודים, קשתות, דרגות, מסלולים, מעגלים, קשירות (גם חזקה), ייצוגי גרפים, וגרפים מיוחדים — עץ, גרף שלם, גרף דו-צדדי.</p>
+
+  <p class="lead">
+    פרק זה הוא <strong>מילון מונחים</strong> שכל יתר הקורס מבוסס עליו.
+    כל אלגוריתם בהמשך (DFS, BFS, מיון טופולוגי, מסלולים, MST, זרימה) מניח שאתה יודע בדיוק מה זה <em>קשת חוזרת</em>, <em>קשירות חזקה</em>, <em>דרגת יציאה</em> וכו׳.
+    במבחן יש כמעט תמיד שאלת <strong>הוכח או הפרך</strong> שבודקת הבנה של ההגדרות —
+    בלי דיוק במונחים, נפסיד נקודות.
+  </p>
+
+  <!-- =============== 1. הגדרת גרף =============== -->
+  <h2>גרפים — מכוונים ולא-מכוונים</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הגדרה פורמלית</div>
+    <div class="box-body">
+      <p>גרף הוא זוג <span class="term">G = (V, E)</span> כאשר:</p>
+      <ul>
+        <li><span class="term">V</span> — קבוצת <strong>קודקודים</strong> (vertices, גם nodes)</li>
+        <li><span class="term">E</span> — קבוצת <strong>קשתות</strong> (edges) המחברות זוגות של קודקודים</li>
+      </ul>
+      <p><strong>גרף מכוון (directed):</strong> כל קשת היא זוג סדור <span class="term">(u,v)</span> — יש לה <em>כיוון</em> מ-<span class="term">u</span> ל-<span class="term">v</span>. הקשתות <span class="term">(u,v)</span> ו-<span class="term">(v,u)</span> שונות.</p>
+      <p><strong>גרף לא-מכוון (undirected):</strong> כל קשת היא זוג לא-סדור <span class="term">{u,v}</span> — אין כיוון. הקשת <span class="term">{u,v}</span> זהה ל-<span class="term">{v,u}</span>.</p>
+      <p><strong>סימונים:</strong> <span class="term">n = |V|</span> (מספר קודקודים), <span class="term">m = |E|</span> (מספר קשתות).</p>
+    </div>
+  </div>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>שתי דוגמאות: מכוון ולא-מכוון</div>
+    <div class="box-body">
+
+      <div class="figure">
+        <svg viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow-ch3a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+            </marker>
+          </defs>
+
+          <!-- LEFT: directed graph -->
+          <text x="170" y="20" text-anchor="middle" font-size="14" font-weight="700" fill="#1d4ed8">גרף מכוון</text>
+          <circle cx="80" cy="60" r="22" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="80" y="66" text-anchor="middle" font-family="JetBrains Mono" font-size="16" font-weight="700">a</text>
+          <circle cx="260" cy="60" r="22" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="260" y="66" text-anchor="middle" font-family="JetBrains Mono" font-size="16" font-weight="700">b</text>
+          <circle cx="80" cy="170" r="22" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="80" y="176" text-anchor="middle" font-family="JetBrains Mono" font-size="16" font-weight="700">c</text>
+          <circle cx="260" cy="170" r="22" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="260" y="176" text-anchor="middle" font-family="JetBrains Mono" font-size="16" font-weight="700">d</text>
+
+          <line x1="102" y1="60" x2="238" y2="60" stroke="#475569" stroke-width="2" marker-end="url(#arrow-ch3a)"/>
+          <line x1="80" y1="82" x2="80" y2="148" stroke="#475569" stroke-width="2" marker-end="url(#arrow-ch3a)"/>
+          <line x1="260" y1="82" x2="260" y2="148" stroke="#475569" stroke-width="2" marker-end="url(#arrow-ch3a)"/>
+          <line x1="98" y1="80" x2="240" y2="155" stroke="#475569" stroke-width="2" marker-end="url(#arrow-ch3a)"/>
+          <line x1="238" y1="170" x2="102" y2="170" stroke="#475569" stroke-width="2" marker-end="url(#arrow-ch3a)"/>
+
+          <!-- RIGHT: undirected graph -->
+          <text x="600" y="20" text-anchor="middle" font-size="14" font-weight="700" fill="#047857">גרף לא-מכוון</text>
+          <circle cx="510" cy="60" r="22" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="510" y="66" text-anchor="middle" font-family="JetBrains Mono" font-size="16" font-weight="700">a</text>
+          <circle cx="690" cy="60" r="22" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="690" y="66" text-anchor="middle" font-family="JetBrains Mono" font-size="16" font-weight="700">b</text>
+          <circle cx="510" cy="170" r="22" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="510" y="176" text-anchor="middle" font-family="JetBrains Mono" font-size="16" font-weight="700">c</text>
+          <circle cx="690" cy="170" r="22" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="690" y="176" text-anchor="middle" font-family="JetBrains Mono" font-size="16" font-weight="700">d</text>
+
+          <line x1="532" y1="60" x2="668" y2="60" stroke="#475569" stroke-width="2"/>
+          <line x1="510" y1="82" x2="510" y2="148" stroke="#475569" stroke-width="2"/>
+          <line x1="690" y1="82" x2="690" y2="148" stroke="#475569" stroke-width="2"/>
+          <line x1="532" y1="170" x2="668" y2="170" stroke="#475569" stroke-width="2"/>
+        </svg>
+        <div class="cap">משמאל: גרף מכוון עם 5 קשתות סדורות. מימין: גרף לא-מכוון עם 4 קשתות (ללא כיוון).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =============== 2. דרגות =============== -->
+  <h2>דרגות של קודקודים</h2>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>שלוש הגדרות מרכזיות</div>
+    <div class="box-body">
+      <p><strong>בגרף לא-מכוון:</strong></p>
+      <ul>
+        <li><span class="term">d(v)</span> — דרגה (degree): מספר הקשתות הנוגעות ב-<span class="term">v</span></li>
+      </ul>
+      <p><strong>בגרף מכוון:</strong></p>
+      <ul>
+        <li><span class="term">d_in(v)</span> — דרגת כניסה (indegree): מספר הקשתות הנכנסות ל-<span class="term">v</span></li>
+        <li><span class="term">d_out(v)</span> — דרגת יציאה (outdegree): מספר הקשתות היוצאות מ-<span class="term">v</span></li>
+      </ul>
+      <p><strong>סך הדרגות:</strong> בגרף לא-מכוון, סכום הדרגות שווה ל-<span class="term">2m</span> (כל קשת תורמת 1 לכל קצה). בגרף מכוון, סכום דרגות הכניסה = סכום דרגות היציאה = <span class="term">m</span>.</p>
+    </div>
+  </div>
+
+  <div class="keypoint">
+    <strong>מקור (source)</strong> — קודקוד עם דרגת כניסה 0. <strong>בור (sink)</strong> — קודקוד עם דרגת יציאה 0. בכל DAG (גרף מכוון אציקלי) קיים לפחות מקור אחד ולפחות בור אחד.
+  </div>
+
+  <!-- =============== 3. מסלולים ומעגלים =============== -->
+  <h2>מסלולים ומעגלים</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הגדרות פורמליות</div>
+    <div class="box-body">
+      <p><strong>מסלול (path):</strong> סדרת קודקודים <span class="term">(v₀, v₁, ..., vₖ)</span> כאשר כל זוג עוקבים <span class="term">(vᵢ₋₁, vᵢ)</span> מחובר בקשת.</p>
+      <p><strong>אורך המסלול:</strong> מספר ה<em>קשתות</em>, כלומר <span class="term">k</span> (לא מספר הקודקודים). קודקוד מבודד הוא מסלול באורך 0.</p>
+      <p><strong>מסלול פשוט (simple path):</strong> מסלול שבו <em>כל הקודקודים שונים</em>. בלי חזרות.</p>
+      <p><strong>מעגל (cycle):</strong></p>
+      <ul>
+        <li><strong>בגרף מכוון:</strong> מסלול שבו הקודקוד האחרון = הראשון, ואורכו לפחות 1 (אפילו לולאה עצמית <span class="term">(v,v)</span> היא מעגל באורך 1).</li>
+        <li><strong>בגרף לא-מכוון:</strong> אורכו לפחות 3. למה? כי בגרף לא-מכוון, מעבר על קשת <span class="term">{u,v}</span> ואז חזרה דרך אותה קשת לא נחשב מעגל — הוא משתמש באותה קשת פעמיים.</li>
+      </ul>
+      <p><strong>מעגל פשוט:</strong> מעגל שבו פרט לקודקוד הראשון והאחרון (שזהים), אין חזרות על קודקודים.</p>
+    </div>
+  </div>
+
+  <div class="box warn">
+    <div class="box-head"><span class="icon">⚠</span>פרט עדין: אורך מסלול נמדד בקשתות</div>
+    <div class="box-body">
+      <p>אם מסלול הוא <span class="term">(v₀, v₁, v₂, v₃)</span>, אורכו הוא <strong>3</strong> (שלוש קשתות), לא 4. זה מקור נפוץ לטעויות בתרגילים שמדברים על "מסלול באורך k" — ההתייחסות תמיד לקשתות.</p>
+    </div>
+  </div>
+
+  <h3>גרף אציקלי — DAG</h3>
+  <p><strong>גרף אציקלי</strong> — גרף ללא מעגלים. בהקשר של גרפים מכוונים, <strong>DAG</strong> (Directed Acyclic Graph) הוא גרף מכוון חסר מעגלים. כל מסלול ב-DAG אינו חוזר על קודקוד.</p>
+
+  <!-- =============== 4. קשירות =============== -->
+  <h2>קשירות</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>שלושה סוגים של קשירות</div>
+    <div class="box-body">
+      <p><strong>קשירות בגרף לא-מכוון:</strong> הגרף <em>קשיר</em> אם בין כל זוג קודקודים קיים מסלול. אחרת — לא קשיר, ויש לו כמה רכיבי קשירות.</p>
+      <p><strong>קשירות חזקה בגרף מכוון:</strong> הגרף <em>קשיר חזק</em> (strongly connected) אם בין כל זוג קודקודים <span class="term">u, v</span> קיים מסלול <span class="term">u→v</span> <em>וגם</em> מסלול <span class="term">v→u</span>.</p>
+      <p><strong>רכיב קשירות חזקה (SCC):</strong> תת-גרף שהוא קשיר חזק ו<em>מקסימלי בהכלה</em> — אי-אפשר להוסיף לו עוד קודקודים מבלי לאבד את הקשירות החזקה.</p>
+      <p><strong>הבחנה:</strong> כל גרף ניתן לחלק לתת-גרפים זרים שהם רכיבי הקשירות (או הקשירות החזקה, בגרף מכוון).</p>
+    </div>
+  </div>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>טענה — חסם תחתון על מספר הקשתות</div>
+    <div class="box-body">
+      <p>בגרף לא-מכוון <em>קשיר</em> מתקיים <span class="term">m ≥ n − 1</span>. כלומר, צריך לפחות <span class="term">n−1</span> קשתות כדי לחבר <span class="term">n</span> קודקודים.</p>
+      <p><strong>שוויון</strong> מתקיים אם״ם הגרף הוא <strong>עץ</strong>.</p>
+    </div>
+  </div>
+
+  <!-- =============== 5. עצים וגרפים מיוחדים =============== -->
+  <h2>גרפים מיוחדים</h2>
+
+  <div class="box summary">
+    <div class="box-head"><span class="icon">📌</span>שלוש משפחות חשובות</div>
+    <div class="box-body">
+      <p><strong>עץ (לא מכוון):</strong> גרף לא-מכוון שהוא קשיר וחסר מעגלים. תכונות שקולות:</p>
+      <ul>
+        <li>קשיר עם בדיוק <span class="term">n−1</span> קשתות</li>
+        <li>חסר מעגלים עם <span class="term">n−1</span> קשתות</li>
+        <li>בין כל זוג קודקודים מסלול יחיד</li>
+      </ul>
+      <p><strong>יער:</strong> אוסף של עצים זרים = גרף לא-מכוון חסר מעגלים (לא בהכרח קשיר).</p>
+      <p><strong>גרף שלם <span class="term">K_n</span>:</strong> גרף לא-מכוון שבו כל זוג קודקודים מחובר. מספר הקשתות: <span class="term">n(n−1)/2</span>.</p>
+      <p><strong>גרף דו-צדדי (bipartite):</strong> ניתן לחלק את <span class="term">V</span> לשתי קבוצות זרות <span class="term">V₁, V₂</span> כך שכל קשת מחברת קודקוד ב-<span class="term">V₁</span> לקודקוד ב-<span class="term">V₂</span> (אין קשתות בתוך אותה קבוצה). שקול ל: הגרף לא מכיל מעגל באורך אי-זוגי.</p>
+    </div>
+  </div>
+
+  <!-- =============== 6. ייצוגי גרפים =============== -->
+  <h2>ייצוגי גרפים</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>שתי הדרכים המקובלות</div>
+    <div class="box-body">
+      <p><strong>1. מטריצת שכנויות (Adjacency Matrix):</strong> מטריצה <span class="term">M</span> בגודל <span class="term">n × n</span>:</p>
+      <ul>
+        <li><span class="term">M[i][j] = 1</span> אם יש קשת <span class="term">(i,j)</span></li>
+        <li><span class="term">M[i][j] = 0</span> אחרת</li>
+      </ul>
+      <p>בגרף לא-מכוון המטריצה <strong>סימטרית</strong>. בגרף לא ממושקל — ערכים בינאריים; בגרף ממושקל — הערך הוא משקל הקשת.</p>
+      <p><strong>2. רשימת שכנויות (Adjacency List):</strong> לכל קודקוד <span class="term">v</span> שומרים רשימה של שכניו (קודקודים שיש אליהם קשת יוצאת מ-<span class="term">v</span>).</p>
+    </div>
+  </div>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>מתי כל ייצוג עדיף?</div>
+    <div class="box-body">
+      <table>
+        <tr><th>פעולה</th><th class="num">מטריצה</th><th class="num">רשימה</th></tr>
+        <tr><td>בדיקה אם קיימת קשת (u,v)</td><td class="num">O(1)</td><td class="num">O(deg(u))</td></tr>
+        <tr><td>איטרציה על כל השכנים של v</td><td class="num">O(n)</td><td class="num">O(deg(v))</td></tr>
+        <tr><td>איטרציה על כל הקשתות</td><td class="num">O(n²)</td><td class="num">O(n + m)</td></tr>
+        <tr><td>זיכרון</td><td class="num">O(n²)</td><td class="num">O(n + m)</td></tr>
+      </table>
+      <p style="margin-top:14px;"><strong>כלל אצבע:</strong> רשימה עדיפה לגרפים <em>דלילים</em> (<span class="term">m = O(n)</span>). מטריצה עדיפה לגרפים <em>צפופים</em> (<span class="term">m = Θ(n²)</span>) או כשבדיקת קשת ספציפית חשובה.</p>
+    </div>
+  </div>
+
+  <!-- =============== 7. תרגילים — הוכח/הפרך =============== -->
+  <h2>תרגילים מהפרקטיקה</h2>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 1 · הוכח/הפרך — כיוון צלעות לקבל קשירות חזקה</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">prove or disprove</span>
+          <p><strong>טענה 1:</strong> יהי <span class="term">G</span> גרף לא-מכוון קשיר. <strong>בכל דרך</strong> שבה נכוון את צלעות <span class="term">G</span>, נקבל גרף קשיר חזק.</p>
+          <p><strong>טענה 2:</strong> יהי <span class="term">G</span> גרף לא-מכוון קשיר. <strong>קיימת דרך</strong> לכוון את הצלעות כך שנקבל גרף קשיר חזק.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">טענה 1 — שגויה</div>
+            <p><strong>דוגמה נגדית:</strong> משולש פשוט (3 קודקודים <span class="term">1,2,3</span> עם קשתות <span class="term">{1,2}, {2,3}, {1,3}</span>).</p>
+            <p>נכוון: <span class="term">2→1, 2→3, 1→3</span>. אז <span class="term">2</span> הוא מקור, אבל אין מסלול אל <span class="term">2</span> משום קודקוד אחר, אז הגרף <em>לא קשיר חזק</em>. סתירה.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">טענה 2 — גם שגויה</div>
+            <p><strong>דוגמה נגדית:</strong> עץ <span class="term">P₂</span> (גרף קשיר על 2 קודקודים, קשת בודדת <span class="term">{1,2}</span>).</p>
+            <p>אפשרויות כיוון: <span class="term">1→2</span> (אז אין מסלול <span class="term">2→1</span>), או <span class="term">2→1</span> (אז אין מסלול <span class="term">1→2</span>). בשני המקרים לא קשיר חזק.</p>
+            <p><strong>הכללה:</strong> בכל עץ עם קשת אחת לפחות, אי-אפשר לכוון לקשירות חזקה — כי קשת מגשרת בין שני "צדדים" של העץ, ובלי קשת חוזרת אין מסלול הפוך.</p>
+          </div>
+
+          <div class="final-answer">
+            שתי הטענות שגויות. <strong>הטענה האמיתית</strong> (משפט Robbins): גרף לא-מכוון קשיר ניתן לכוון לקשירות חזקה אם״ם הוא <em>חסר גשרים</em> (bridges). עץ בנוי כולו מגשרים, ולכן אינו ניתן לכיוון לקשירות חזקה.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 2 · הוכח — קשתות בגרף קשיר חזק</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">prove</span>
+          <p><strong>טענה:</strong> יהי <span class="term">G</span> גרף מכוון. אם <span class="term">G</span> קשיר חזק, אז <em>כל קשת</em> ב-<span class="term">G</span> שייכת למעגל.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">הוכחה ישירה</div>
+            <p>תהי <span class="term">(u,v)</span> קשת בגרף.</p>
+            <ul>
+              <li>הקשת עצמה היא מסלול מ-<span class="term">u</span> ל-<span class="term">v</span>.</li>
+              <li>מהגדרת קשירות חזקה, קיים מסלול מ-<span class="term">v</span> ל-<span class="term">u</span> (נסמנו <span class="term">P</span>).</li>
+              <li>שרשור: הקשת <span class="term">(u,v)</span> ואחריה <span class="term">P</span> יוצרים מסלול שמתחיל ב-<span class="term">u</span> וחוזר אליו — <strong>מעגל</strong> שמכיל את <span class="term">(u,v)</span>. ∎</li>
+            </ul>
+          </div>
+
+          <div class="final-answer">
+            הטענה <strong>נכונה</strong>. הוכחה ב-3 שורות: קשת + מסלול חוזר ⟹ מעגל. <em>הכיוון ההפוך אינו נכון</em>: אם כל קשת במעגל זה לא בהכרח אומר שהגרף קשיר חזק.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =============== 8. סיכום =============== -->
+  <h2>מה לזכור למבחן</h2>
+
+  <div class="box summary">
+    <div class="box-head"><span class="icon">📌</span>טבלת מונחים מהירה</div>
+    <div class="box-body">
+      <table>
+        <tr><th>מונח</th><th>הגדרה תמציתית</th></tr>
+        <tr><td><strong>גרף מכוון</strong></td><td>קשתות סדורות (u,v) — יש להן כיוון</td></tr>
+        <tr><td><strong>גרף לא-מכוון</strong></td><td>קשתות לא-סדורות {u,v}</td></tr>
+        <tr><td><strong>דרגה</strong></td><td>d(v) — מספר קשתות נוגעות (in/out במכוון)</td></tr>
+        <tr><td><strong>מסלול</strong></td><td>סדרת קודקודים עם קשתות בין עוקבים. אורך = מספר קשתות</td></tr>
+        <tr><td><strong>מסלול פשוט</strong></td><td>כל הקודקודים שונים</td></tr>
+        <tr><td><strong>מעגל</strong></td><td>מסלול שחוזר להתחלה. במכוון: אורך ≥ 1; בלא-מכוון: ≥ 3</td></tr>
+        <tr><td><strong>DAG</strong></td><td>גרף מכוון חסר מעגלים</td></tr>
+        <tr><td><strong>קשיר</strong></td><td>(לא-מכוון) מסלול בין כל זוג קודקודים</td></tr>
+        <tr><td><strong>קשיר חזק</strong></td><td>(מכוון) מסלול בשני הכיוונים בין כל זוג</td></tr>
+        <tr><td><strong>רכיב קשירות</strong></td><td>תת-גרף קשיר מקסימלי בהכלה</td></tr>
+        <tr><td><strong>עץ</strong></td><td>לא-מכוון, קשיר, חסר מעגלים</td></tr>
+        <tr><td><strong>גרף דו-צדדי</strong></td><td>חלוקה ל-V₁, V₂ כך שכל קשת מחברת ביניהן</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="box warn">
+    <div class="box-head"><span class="icon">⚠</span>טעויות נפוצות במבחן</div>
+    <div class="box-body">
+      <ol>
+        <li><strong>אורך מסלול ≠ מספר קודקודים.</strong> אורך = מספר קשתות = (מספר קודקודים − 1).</li>
+        <li><strong>מעגל בגרף לא-מכוון חייב להיות באורך ≥ 3.</strong> אסור לחזור באותה קשת.</li>
+        <li><strong>קשירות vs קשירות חזקה.</strong> בגרף לא-מכוון יש רק "קשירות". בגרף מכוון, "קשיר" יכול להתייחס לקשירות בגרף הלא-מכוון התואם, ולכן כשמתכוונים לקשירות במובן הצפוי — צריך להגיד <em>קשיר חזק</em>.</li>
+        <li><strong>בחירה לא נכונה של ייצוג</strong> — בגרף עם <span class="term">n=10⁶</span> ו-<span class="term">m=10⁷</span> (דליל), מטריצה תיקח 4TB. השתמשו ברשימה.</li>
+      </ol>
+    </div>
+  </div>
+
+
+</main>
+</div>
+</body>
+</html>
+</main>
+</div>
+</body>
+</html>

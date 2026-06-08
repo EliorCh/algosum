@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פרק 9 · מסלולים קלים ביותר ב׳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/styles/atom-one-dark.min.css">
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js"></script>
+<script>
+  window.addEventListener('load', () => {
+    if (window.renderMathInElement) {
+      try { renderMathInElement(document.body, { delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\(',right:'\\)',display:false}], throwOnError: false, strict: false }); } catch(e){}
+    }
+    if (window.hljs) { try { document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el)); } catch(e){} }
+    document.body.classList.add('ready');
+  });
+</script>
+<style>
+  :root {
+    --bg: #fbf9f3; --bg-paper: #fffefa; --ink: #1c1917; --ink-soft: #44403c; --ink-mute: #78716c;
+    --rule: #e7e5e0; --rule-soft: #f1efe9;
+    --indigo-9: #312e81; --indigo-7: #4f46e5; --indigo-3: #c7d2fe; --indigo-1: #eef2ff;
+    --c-theory-h: #1d4ed8; --c-theory-bg: #eff6ff; --c-theory-edge: #bfdbfe;
+    --c-formula-h: #b45309; --c-formula-bg: #fef9e7; --c-formula-edge: #fcd34d;
+    --c-example-h: #047857; --c-example-bg: #ecfdf5; --c-example-edge: #a7f3d0;
+    --c-warn-h: #be123c; --c-warn-bg: #fff1f2; --c-warn-edge: #fecdd3;
+    --c-exercise-h: #6d28d9; --c-exercise-bg: #f5f3ff; --c-exercise-edge: #ddd6fe;
+    --c-summary-h: #334155; --c-summary-bg: #f1f5f9; --c-summary-edge: #cbd5e1;
+    --code-bg: #0f172a; --code-bg-2: #1e293b; --code-ink: #e2e8f0;
+    --shadow-sm: 0 1px 2px rgba(28,25,23,.04), 0 1px 3px rgba(28,25,23,.06);
+    --shadow: 0 4px 12px rgba(28,25,23,.05), 0 1px 3px rgba(28,25,23,.04);
+    --serif: 'Frank Ruhl Libre', Georgia, serif;
+    --sans: 'Assistant', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.75; font-size: 17px; -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 20% 0%, rgba(99,102,241,.035), transparent 40%), radial-gradient(circle at 80% 100%, rgba(245,158,11,.035), transparent 40%);
+    background-attachment: fixed; opacity: 0; transition: opacity .2s ease; }
+  body.ready { opacity: 1; }
+  .app { display: grid; grid-template-columns: 320px 1fr; min-height: 100vh; max-width: 1480px; margin: 0 auto; }
+  .sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%); color: #e0e7ff; padding: 32px 24px; border-left: 1px solid rgba(255,255,255,.06); }
+  .sidebar::-webkit-scrollbar { width: 6px; } .sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 3px; }
+  .brand { font-family: var(--serif); font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -.01em; line-height: 1.2; }
+  .brand a { color: #fff; text-decoration: none; } .brand a:hover { color: #fbbf24; }
+  .brand-sub { font-size: 13px; color: #c7d2fe; margin-bottom: 28px; font-weight: 500; }
+  .brand-meta { font-size: 11px; color: #a5b4fc; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .nav-label { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: #818cf8; font-weight: 700; margin: 24px 0 12px; padding-right: 8px; }
+  .nav-list { list-style: none; } .nav-list li { margin-bottom: 2px; }
+  .nav-list a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; color: #c7d2fe; text-decoration: none; border-radius: 8px; font-size: 14.5px; font-weight: 500; transition: all .15s ease; }
+  .nav-list a:hover { background: rgba(255,255,255,.06); color: #fff; }
+  .nav-list a.active { background: rgba(255,255,255,.1); color: #fff; box-shadow: inset 3px 0 0 #fbbf24; }
+  .nav-list a.pending { opacity: .5; }
+  .nav-num { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; background: rgba(255,255,255,.08); border-radius: 6px; font-size: 11px; font-weight: 700; font-family: var(--mono); }
+  .nav-list a.active .nav-num { background: #fbbf24; color: #1e1b4b; }
+  main { padding: 56px 64px 120px; max-width: 960px; }
+  .page-eyebrow { display: inline-block; font-size: 12px; font-weight: 700; color: var(--indigo-7); letter-spacing: .15em; text-transform: uppercase; background: var(--indigo-1); padding: 6px 12px; border-radius: 99px; margin-bottom: 16px; }
+  h1.page-title { font-family: var(--serif); font-size: 48px; font-weight: 700; line-height: 1.15; letter-spacing: -.02em; color: var(--ink); margin-bottom: 14px; }
+  .page-subtitle { font-size: 19px; color: var(--ink-soft); margin-bottom: 48px; font-weight: 400; line-height: 1.55; }
+  h2 { font-family: var(--serif); font-size: 32px; font-weight: 700; letter-spacing: -.015em; margin: 56px 0 20px; color: var(--ink); position: relative; padding-right: 20px; }
+  h2::before { content: ''; position: absolute; right: 0; top: 14px; bottom: 14px; width: 4px; background: var(--indigo-7); border-radius: 2px; }
+  h3 { font-family: var(--sans); font-size: 22px; font-weight: 700; margin: 32px 0 12px; color: var(--ink); letter-spacing: -.005em; }
+  h4 { font-size: 17px; font-weight: 700; margin: 18px 0 8px; color: var(--ink-soft); }
+  p { margin-bottom: 14px; color: var(--ink-soft); } p strong { color: var(--ink); font-weight: 700; }
+  ul, ol { margin: 12px 24px 18px; color: var(--ink-soft); } li { margin-bottom: 8px; }
+  .term { font-family: var(--mono); direction: ltr; display: inline-block; font-size: .88em; background: #f5f5f4; padding: 1px 8px; border-radius: 5px; color: #be185d; border: 1px solid #e7e5e4; vertical-align: baseline; unicode-bidi: isolate; }
+  .term.blue { color: var(--c-theory-h); background: var(--c-theory-bg); border-color: var(--c-theory-edge); }
+  .term.green { color: var(--c-example-h); background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .term.amber { color: var(--c-formula-h); background: var(--c-formula-bg); border-color: var(--c-formula-edge); }
+  .katex-display { margin: 18px 0 !important; direction: ltr !important; text-align: center !important; unicode-bidi: isolate; } .katex { direction: ltr !important; unicode-bidi: isolate; }
+  .box { border-radius: 14px; margin: 24px 0; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); background: var(--bg-paper); }
+  .box-head { display: flex; align-items: center; gap: 10px; padding: 14px 20px; font-weight: 700; font-size: 15px; border-bottom: 1px solid var(--rule); }
+  .box-head .icon { width: 28px; height: 28px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 16px; }
+  .box-body { padding: 18px 22px; }
+  .box.theory { border-color: var(--c-theory-edge); } .box.theory .box-head { background: var(--c-theory-bg); color: var(--c-theory-h); } .box.theory .box-head .icon { background: var(--c-theory-h); color: #fff; }
+  .box.formula { border-color: var(--c-formula-edge); background: var(--c-formula-bg); } .box.formula .box-head { background: transparent; color: var(--c-formula-h); border-bottom-color: rgba(180,83,9,.18); } .box.formula .box-head .icon { background: var(--c-formula-h); color: #fff; } .box.formula .box-body { background: var(--c-formula-bg); } .box.formula p { color: #78350f; }
+  .box.example { border-color: var(--c-example-edge); } .box.example .box-head { background: var(--c-example-bg); color: var(--c-example-h); } .box.example .box-head .icon { background: var(--c-example-h); color: #fff; }
+  .box.warn { border-color: var(--c-warn-edge); } .box.warn .box-head { background: var(--c-warn-bg); color: var(--c-warn-h); } .box.warn .box-head .icon { background: var(--c-warn-h); color: #fff; }
+  .box.exercise { border-color: var(--c-exercise-edge); } .box.exercise .box-head { background: var(--c-exercise-bg); color: var(--c-exercise-h); } .box.exercise .box-head .icon { background: var(--c-exercise-h); color: #fff; }
+  .box.summary { border-color: var(--c-summary-edge); } .box.summary .box-head { background: var(--c-summary-bg); color: var(--c-summary-h); } .box.summary .box-head .icon { background: var(--c-summary-h); color: #fff; }
+  pre { background: var(--code-bg) !important; border-radius: 0 0 12px 12px; padding: 18px 22px !important; margin: 0 0 16px 0; overflow-x: auto; direction: ltr; font-size: 14px; line-height: 1.7; box-shadow: var(--shadow); border: 1px solid var(--code-bg-2); border-top: none; }
+  pre code { font-family: var(--mono) !important; background: transparent !important; padding: 0 !important; border: none !important; color: var(--code-ink) !important; }
+  .code-label { display: flex; align-items: center; gap: 8px; background: var(--code-bg-2); color: #94a3b8; font-family: var(--mono); font-size: 12px; padding: 10px 16px; border-radius: 12px 12px 0 0; direction: ltr; border: 1px solid var(--code-bg-2); border-bottom: 1px solid #334155; margin-top: 18px; }
+  .code-label .dot { width: 8px; height: 8px; border-radius: 50%; background: #475569; }
+  .code-label .dot.red { background: #ef4444; } .code-label .dot.amber { background: #f59e0b; } .code-label .dot.green { background: #22c55e; }
+  .code-label .name { margin-right: auto; opacity: .9; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm); font-size: 15px; }
+  th, td { padding: 11px 14px; text-align: right; border-bottom: 1px solid var(--rule-soft); border-left: 1px solid var(--rule-soft); }
+  th { background: var(--c-summary-bg); font-weight: 700; color: var(--c-summary-h); }
+  tr:last-child td { border-bottom: none; }
+  td.num, th.num { font-family: var(--mono); direction: ltr; text-align: center; font-size: 14px; }
+  td.highlight { background: var(--c-formula-bg); font-weight: 700; color: var(--c-formula-h); }
+  td.updated { background: #dcfce7; font-weight: 700; color: #166534; }
+  .exercise-card { background: #fff; border-radius: 10px; margin: 14px 0; border: 1px solid var(--c-exercise-edge); overflow: hidden; }
+  .exercise-tag { display: inline-block; font-size: 11px; font-weight: 700; background: var(--c-exercise-h); color: #fff; padding: 3px 10px; border-radius: 99px; margin-bottom: 10px; font-family: var(--mono); letter-spacing: .05em; direction: ltr; }
+  .exercise-q { padding: 20px 24px; background: #fafaf9; border-bottom: 1px solid var(--rule-soft); }
+  .exercise-q p:last-child { margin-bottom: 0; }
+  .reveal-btn { display: block; width: 100%; background: var(--c-exercise-bg); border: none; border-top: 1px solid var(--c-exercise-edge); padding: 13px; font-family: var(--sans); font-size: 14px; font-weight: 700; color: var(--c-exercise-h); cursor: pointer; transition: background .15s ease; }
+  .reveal-btn:hover { background: #ede9fe; } .reveal-btn::before { content: '▼ '; font-size: 10px; margin-left: 6px; transition: transform .2s ease; }
+  .exercise-card.open .reveal-btn::before { content: '▲ '; }
+  .solution { padding: 22px 26px; background: var(--c-example-bg); border-top: 1px solid var(--c-example-edge); display: none; }
+  .exercise-card.open .solution { display: block; }
+  .solution .step { background: #fff; border-radius: 8px; padding: 14px 18px; margin: 12px 0; border-right: 3px solid var(--c-example-h); }
+  .solution .step-label { font-size: 11px; font-weight: 700; color: var(--c-example-h); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; font-family: var(--mono); }
+  .solution .final-answer { background: #fff; border: 2px solid var(--c-example-h); border-radius: 10px; padding: 14px 20px; margin-top: 16px; font-weight: 600; }
+  .solution .final-answer::before { content: '✓ '; color: var(--c-example-h); font-weight: 900; }
+  .lead { font-size: 19px; color: var(--ink-soft); border-right: 3px solid var(--indigo-7); padding-right: 20px; margin: 24px 0 32px; font-weight: 400; line-height: 1.6; }
+  .keypoint { background: linear-gradient(90deg, var(--c-formula-bg) 0%, transparent 100%); padding: 14px 18px; border-radius: 8px; margin: 16px 0; border-right: 3px solid var(--c-formula-h); }
+  .keypoint::before { content: '💡 '; font-size: 18px; margin-left: 4px; }
+  .figure { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 18px; margin: 18px 0; text-align: center; box-shadow: var(--shadow-sm); }
+  .figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .figure .cap { font-size: 13px; color: var(--ink-mute); margin-top: 12px; font-style: italic; }
+  .mc-list { list-style: none; margin: 12px 0; padding: 0; }
+  .mc-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; background: #fff; border: 1px solid var(--rule); border-radius: 8px; margin-bottom: 8px; transition: all .15s ease; }
+  .mc-list li .mc-marker { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--rule); flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--ink-mute); background: #fff; }
+  .mc-list li.correct { background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .mc-list li.correct .mc-marker { background: var(--c-example-h); color: #fff; border-color: var(--c-example-h); }
+  .mc-list li.correct .mc-marker::after { content: '✓'; }
+  .mc-list li.wrong { background: var(--c-warn-bg); border-color: var(--c-warn-edge); }
+  .mc-list li.wrong .mc-marker { background: var(--c-warn-h); color: #fff; border-color: var(--c-warn-h); }
+  .mc-list li.wrong .mc-marker::after { content: '✗'; }
+  .mc-list li .mc-text { flex: 1; line-height: 1.55; color: var(--ink-soft); }
+  .mc-list li .mc-text .why { display: block; margin-top: 6px; font-size: 13.5px; color: var(--ink-mute); font-style: italic; }
+  .algo-compare { background: #fff; border-radius: 12px; padding: 0; margin: 18px 0; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); overflow: hidden; }
+  .algo-compare table { margin: 0; border-radius: 0; box-shadow: none; }
+  @media (max-width: 900px) { .app { grid-template-columns: 1fr; } .sidebar { position: static; height: auto; } main { padding: 32px 24px 80px; } h1.page-title { font-size: 36px; } h2 { font-size: 26px; } }
+</style>
+</head>
+<body>
+<div class="app">
+
+<aside class="sidebar">
+  <div class="brand"><a href="index.html">אלגוריתמים</a></div>
+  <div class="brand-sub">ד״ר אלעזר גולדנברג · הגב׳ שלומית אריאן</div>
+  <div class="brand-meta">MTA · קיץ 2026</div>
+
+  <div class="nav-label">יסודות</div>
+  <ul class="nav-list">
+    <li><a href="01-intro.html" class="pending"><span class="nav-num">1</span>מושג האלגוריתם</a></li>
+    <li><a href="02-numbers.html" class="pending"><span class="nav-num">2</span>ייצוג מספרים</a></li>
+  </ul>
+
+  <div class="nav-label">גרפים בסיסיים</div>
+  <ul class="nav-list">
+    <li><a href="03-graph-basics.html" class="pending"><span class="nav-num">3</span>מושגי יסוד</a></li>
+    <li><a href="04-toposort.html" class="pending"><span class="nav-num">4</span>מיון טופולוגי</a></li>
+  </ul>
+
+  <div class="nav-label">סריקות</div>
+  <ul class="nav-list">
+    <li><a href="05-dfs.html" class="pending"><span class="nav-num">5</span>DFS</a></li>
+    <li><a href="06-dfs-apps.html" class="pending"><span class="nav-num">6</span>יישומי DFS</a></li>
+    <li><a href="07-bfs.html" class="pending"><span class="nav-num">7</span>BFS</a></li>
+  </ul>
+
+  <div class="nav-label">מסלולים קלים ביותר</div>
+  <ul class="nav-list">
+    <li><a href="08-shortest-paths-1.html" class="pending"><span class="nav-num">8</span>מק״בים א׳</a></li>
+    <li><a href="09-shortest-paths-2.html"><span class="nav-num">9</span>מק״בים ב׳</a></li>
+  </ul>
+
+  <div class="nav-label">אופטימיזציה ורשתות</div>
+  <ul class="nav-list">
+    <li><a href="10-mst.html" class="pending"><span class="nav-num">10</span>עצים פורשים</a></li>
+    <li><a href="11-dp.html" class="pending"><span class="nav-num">11</span>תכנות דינמי</a></li>
+    <li><a href="12-flow.html" class="active" class="pending"><span class="nav-num">12</span>זרימה</a></li>
+  </ul>
+</aside>
+
+
+<main>
+<span class="page-eyebrow">פרק 12 · אופטימיזציה ברשתות</span>
+  <h1 class="page-title">זרימה ברשתות</h1>
+  <p class="page-subtitle">בעיית הזרימה המקסימלית, אלגוריתם Ford-Fulkerson, וגרף השיירית.</p>
+
+  <p class="lead">
+    זה הפרק האחרון של הקורס. הבעיה: בהינתן רשת של צינורות עם קיבולות, כמה מים אפשר להעביר ממקור <span class="term">s</span> לבור <span class="term">t</span>?
+    <strong>המבט החדש:</strong> המסלולים ברשת מתנגשים על קשתות, ועלינו לאזן ביניהם. המפתח לכל מה שעובד פה הוא <strong>הגרף השיורי</strong> — צילום של "מה עוד אפשר להזרים".
+    <strong>התוצאה המרכזית:</strong> זרימה מקסימלית = חתך מינימלי (משפט max-flow min-cut). שתי בעיות שונות לחלוטין, אותה תשובה.
+  </p>
+
+  <div class="keypoint">
+    <strong>על המבחן:</strong> שאלה 1 — חישוב זרימה מקסימלית על רשת קטנה ידנית (4-6 קודקודים). שאלה 2 — שימוש במשפט max-flow min-cut להפרכת טענה או הוכחה. בעיות "התאמה מקסימלית בגרף דו-צדדי" כיישום של זרימה.
+  </div>
+
+  <h2>הגדרת הבעיה</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>רשת זרימה</div>
+    <div class="box-body">
+      <p><strong>רשת זרימה</strong>: גרף מכוון <span class="term">G = (V, E)</span> עם:</p>
+      <ul>
+        <li><strong>פונקציית קיבול</strong> <span class="term">c: E → ℝ⁺</span> (קיבול כל קשת חיובי).</li>
+        <li>שני קודקודים מיוחדים: <strong>מקור</strong> <span class="term">s</span> ו<strong>בור</strong> <span class="term">t</span>.</li>
+      </ul>
+
+      <p><strong>פונקציית זרימה</strong> <span class="term">f: E → ℝ⁺</span> חוקית אם מקיימת:</p>
+      <ol>
+        <li><strong>חוק הקיבול:</strong> <span class="term">0 ≤ f(e) ≤ c(e)</span> לכל קשת.</li>
+        <li><strong>שימור זרימה:</strong> לכל <span class="term">v ≠ s, t</span>: כמות הזרימה הנכנסת = כמות היוצאת.</li>
+      </ol>
+
+      <p><strong>ערך הזרימה</strong> <span class="term">|f| = </span> זרימה יוצאת מ-<span class="term">s</span> פחות זרימה נכנסת ל-<span class="term">s</span>.</p>
+      <p><strong>בעיית הזרימה המקסימלית:</strong> מצא פונקציית זרימה <span class="term">f</span> שמקסמת את <span class="term">|f|</span>.</p>
+    </div>
+  </div>
+
+  <div class="box warn">
+    <div class="box-head"><span class="icon">⚠</span>הנחה טכנית — אין קשתות אנטי-מקבילות</div>
+    <div class="box-body">
+      <p>בהגדרה הסטנדרטית של רשת זרימה דורשים שלא יהיו <strong>קשתות אנטי-מקבילות</strong> — כלומר אסור שגם <span class="term">(u,v)</span> וגם <span class="term">(v,u)</span> יהיו ב-<span class="term">E</span> בו-זמנית. הסיבה: זה מסבך את הגדרת הגרף השיורי (כי קשת אחורית של <span class="term">(u,v)</span> תהיה במקום שיש בו כבר קשת קדמית).</p>
+      <p><strong>פתרון:</strong> אם הגרף מכיל זוג אנטי-מקבילי, מוסיפים קודקוד-ביניים <span class="term">u'</span> ומחליפים <span class="term">(v,u)</span> ב-<span class="term">(v,u')</span> ו-<span class="term">(u',u)</span> עם אותו קיבול. עכשיו הגרף לא מכיל אנטי-מקבילים, אבל ה-max-flow נשמר.</p>
+    </div>
+  </div>
+
+  <h2>הגרף השיורי</h2>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>הגדרה</div>
+    <div class="box-body">
+      <p>בהינתן רשת <span class="term">G</span> וזרימה <span class="term">f</span>, ה<strong>גרף השיורי</strong> <span class="term">G_f</span> מתאר "כמה עוד אפשר להזרים":</p>
+      <ul>
+        <li>אם <span class="term">f(u,v) &lt; c(u,v)</span>: יש קשת קדמית <span class="term">(u,v)</span> ב-<span class="term">G_f</span> עם קיבול <em>שיורי</em> <span class="term">c(u,v) - f(u,v)</span>.</li>
+        <li>אם <span class="term">f(u,v) &gt; 0</span>: יש קשת אחורית <span class="term">(v,u)</span> ב-<span class="term">G_f</span> עם קיבול <span class="term">f(u,v)</span> — "אפשר לבטל זרימה קיימת".</li>
+      </ul>
+      <p><strong>נקודה מהותית:</strong> הקשתות האחוריות לא מופיעות ב-<span class="term">G</span> המקורי! הן מציינות אפשרות לחזור בנו ממה שכבר הזרמנו. זה הטריק שעושה את כל ההבדל.</p>
+    </div>
+  </div>
+
+  <h2>אלגוריתם Ford-Fulkerson</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הרעיון</div>
+    <div class="box-body">
+      <p>נתחיל מזרימה אפסית. כל עוד יש <strong>מסלול משפר</strong> (augmenting path) מ-<span class="term">s</span> ל-<span class="term">t</span> בגרף השיורי, נגדיל את הזרימה לאורך המסלול.</p>
+      <p>הגדלה: לאורך המסלול המשפר, יש קיבול שיורי מינימלי <span class="term">b</span>. נוסיף <span class="term">b</span> לכל קשת קדמית במסלול ונחסיר <span class="term">b</span> מכל קשת אחורית.</p>
+      <p>כשאין יותר מסלול משפר ← סיימנו, הזרימה מקסימלית.</p>
+    </div>
+  </div>
+
+  <div class="code-label">
+    <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+    <span class="name">FordFulkerson.txt</span>
+  </div>
+<pre><code class="language-plaintext">FORD-FULKERSON(G, c, s, t):
+    f = 0  (initialize all edges to 0)
+    while there exists augmenting path P from s to t in G_f:
+        b = min(c_f(e) : e in P)
+        for each edge (u, v) in P:
+            if (u, v) ∈ E: f(u, v) += b
+            else: f(v, u) -= b
+        update G_f
+    return f
+</code></pre>
+
+  <p><strong>איך מוצאים מסלול משפר?</strong> BFS על הגרף השיורי. כל קודקוד נגיש מ-<span class="term">s</span> דרך קשתות עם קיבול שיורי <span class="term">&gt; 0</span> — אם <span class="term">t</span> נגיש, יש מסלול.</p>
+
+  <h2>משפט max-flow min-cut</h2>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>הגדרת חתך ברשת זרימה</div>
+    <div class="box-body">
+      <p><strong>חתך s-t</strong>: חלוקה של <span class="term">V</span> לשתי קבוצות <span class="term">S, T</span> כך ש-<span class="term">s ∈ S</span> ו-<span class="term">t ∈ T</span>.</p>
+      <p><strong>קיבול החתך:</strong> סכום הקיבולות של הקשתות שיוצאות מ-<span class="term">S</span> ל-<span class="term">T</span>:</p>
+      $$c(S,T) = \sum_{u \in S, v \in T, (u,v) \in E} c(u,v)$$
+      <p><strong>חתך מינימלי:</strong> חתך <span class="term">(S,T)</span> שעבורו <span class="term">c(S,T)</span> מינימלי.</p>
+    </div>
+  </div>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>המשפט המרכזי</div>
+    <div class="box-body">
+      <p><strong>שלוש טענות שקולות עבור זרימה <span class="term">f</span>:</strong></p>
+      <ol>
+        <li><span class="term">f</span> זרימה מקסימלית.</li>
+        <li>אין מסלול משפר ב-<span class="term">G_f</span>.</li>
+        <li>קיים חתך <span class="term">(S, T)</span> כך ש-<span class="term">|f| = c(S, T)</span>.</li>
+      </ol>
+      <p>במילים: <strong>ערך הזרימה המקסימלית = קיבול החתך המינימלי</strong>.</p>
+    </div>
+  </div>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>נכונות והוכחה (סקיצה)</div>
+    <div class="box-body">
+      <p><strong>1 גורר 2:</strong> אם <span class="term">f</span> מקסימלית, לא יכולה להיות שיפור אפשרי, אז אין מסלול משפר.</p>
+      <p><strong>2 גורר 3:</strong> אם אין מסלול משפר ב-<span class="term">G_f</span>, נסמן <span class="term">S = {v : v נגיש מ-s ב-G_f}</span>. אז <span class="term">t ∉ S</span> (אחרת היה מסלול). נחשיב את <span class="term">(S, V\S)</span> חתך. כל קשת <span class="term">(u, v)</span> עם <span class="term">u ∈ S, v ∉ S</span> חייבת להיות <em>רוויה</em> (<span class="term">f(u,v) = c(u,v)</span>) אחרת היה אפשר להמשיך ל-<span class="term">v</span>. לכן <span class="term">|f| = c(S, V\S)</span>.</p>
+      <p><strong>3 גורר 1:</strong> כל זרימה חסומה ע״י כל חתך (זרם דרך החתך = ערך הזרימה). אם <span class="term">|f| = c(S,T)</span> והחתך הזה מינימלי, הזרימה מקסימלית. ∎</p>
+    </div>
+  </div>
+
+  <h2>סיבוכיות Ford-Fulkerson</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>ארבע הקושיות של Ford-Fulkerson</div>
+    <div class="box-body">
+      <p>ההרצאה מציבה ארבע שאלות תיאורטיות שכל ניתוח של FF צריך לענות עליהן:</p>
+      <ol>
+        <li><strong>האם כל ריצה עוצרת?</strong> אם הקיבולות שלמים — כן. כל איטרציה מוסיפה לפחות 1 לזרימה, ומהקיבול חסום. אם הקיבולות רציונליים — אפשר להכפיל במכנה משותף ולחזור לשלמים. אם הקיבולות אי-רציונליים — <em>אפשר שלא יעצור!</em></li>
+        <li><strong>אם הריצה עוצרת, האם היא מוצאת זרימה מקסימלית?</strong> כן — זאת בדיוק טענה "2 גורר 1" של max-flow min-cut: אם אין מסלול משפר אז הזרימה מקסימלית.</li>
+        <li><strong>כמה איטרציות יידרשו?</strong> תלוי בגודל הזרימה המקסימלית. גבול עליון: <span class="term">O(|f*|)</span>, כי כל איטרציה מוסיפה לפחות 1.</li>
+        <li><strong>האם יש דוגמה רעה?</strong> כן. גרף עם 4 קודקודים וקיבולות M, M, 1, M, M (כאשר M גדול): עם בחירה גרועה של מסלולים משפרים, האלגוריתם יעבור 2M איטרציות בלי צורך. זאת הסיבה ל-Edmonds-Karp.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="box warn">
+    <div class="box-head"><span class="icon">⚠</span>תלות בקיבולות</div>
+    <div class="box-body">
+      <p><strong>סיבוכיות גרועה:</strong> <span class="term">O(|E| · max-flow)</span>. במילים: בכל איטרציה מוצאים מסלול ב-<span class="term">O(|E|)</span>, ומספר האיטרציות חסום ב-max-flow.</p>
+      <p>אם הקיבולות גדולות (אקספוננציאליות בגודל הקלט) — האלגוריתם פסאודו-פולינומי.</p>
+      <p><strong>פתרון: אלגוריתם Edmonds-Karp.</strong> כש-Ford-Fulkerson משתמש ב-BFS למציאת מסלול משפר (קצר ביותר במספר קשתות), הסיבוכיות הופכת <span class="term">O(|V| · |E|²)</span> — לחלוטין פולינומית.</p>
+    </div>
+  </div>
+
+  <h2>אלגוריתם Edmonds-Karp — Ford-Fulkerson עם BFS</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הרעיון</div>
+    <div class="box-body">
+      <p>Edmonds-Karp הוא בדיוק Ford-Fulkerson עם <strong>אבחנה אחת חיונית</strong>: בכל איטרציה בוחרים את המסלול המשפר ה<em>קצר ביותר</em> (במספר קשתות). זאת אומרת — משתמשים ב-BFS במקום DFS למציאת המסלול בגרף השיורי.</p>
+      <p><strong>השינוי הקטן הזה משנה את הסיבוכיות באופן דרמטי</strong> — מ-<span class="term">O(|E| · max-flow)</span> (פסאודו-פולינומי) ל-<span class="term">O(|V| · |E|²)</span> (פולינומי לחלוטין).</p>
+    </div>
+  </div>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>טענת הסיבוכיות</div>
+    <div class="box-body">
+      <p><strong>טענה:</strong> בריצת Edmonds-Karp, מספר האיטרציות חסום ע״י <span class="term">O(|V| · |E|)</span>.</p>
+      <p><strong>למה <span class="term">O(|V|·|E|²)</span> סה״כ?</strong> כל איטרציה: BFS ב-<span class="term">O(|V| + |E|) = O(|E|)</span>. מספר איטרציות: <span class="term">O(|V|·|E|)</span>. סה״כ: <span class="term">O(|V|·|E|²)</span>.</p>
+    </div>
+  </div>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>אינטואיציה להוכחת חסם האיטרציות</div>
+    <div class="box-body">
+      <p>שני שלבי הטיעון:</p>
+      <ol>
+        <li><strong>מרחקים גדלים מונוטונית:</strong> אם נסמן <span class="term">δ_f(s, v)</span> = המרחק בגרף השיורי <span class="term">G_f</span> מ-<span class="term">s</span> ל-<span class="term">v</span> (מספר קשתות), אז <span class="term">δ_f(s, v)</span> לא יורד במהלך הריצה (יכול רק לעלות או להישאר).</li>
+        <li><strong>קשת קריטית נסתמת ≤ |V|/2 פעמים:</strong> קשת <span class="term">(u, v)</span> נקראת "קריטית" באיטרציה אם היא הקשת בעלת הקיבול השיורי המינימלי במסלול המשפר. בכל פעם שקשת הופכת קריטית, <span class="term">δ_f(s, u)</span> גדל ב-2 לפחות עד שהיא הופכת קריטית שוב.</li>
+      </ol>
+      <p>מהאמור: כל קשת קריטית לכל היותר <span class="term">|V|/2</span> פעמים. יש <span class="term">|E|</span> קשתות. סה״כ <span class="term">O(|V|·|E|)</span> איטרציות. ∎</p>
+    </div>
+  </div>
+
+  <h2>תרגיל מהפרקטיקה</h2>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל · מציאת חתך מינימלי על-ידי Max-Flow</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">flow · using the theorem</span>
+          <p>נתונה רשת זרימה <span class="term">G</span> עם 4 קודקודים: <span class="term">s, a, b, t</span>. קיבולות:</p>
+          <ul>
+            <li><span class="term">c(s,a) = 10, c(s,b) = 5</span></li>
+            <li><span class="term">c(a,b) = 15, c(a,t) = 10</span></li>
+            <li><span class="term">c(b,t) = 10</span></li>
+          </ul>
+          <p>מצא את הזרימה המקסימלית והוכח שהיא מקסימלית.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">שלב 1 · הרצת Ford-Fulkerson</div>
+            <p><strong>איטרציה 1:</strong> מסלול משפר <span class="term">s → a → t</span> בקיבול שיורי <span class="term">min(10, 10) = 10</span>. עדכון: <span class="term">f(s,a)=10, f(a,t)=10</span>. ערך: 10.</p>
+            <p><strong>איטרציה 2:</strong> מסלול משפר <span class="term">s → b → t</span> בקיבול שיורי <span class="term">min(5, 10) = 5</span>. עדכון: <span class="term">f(s,b)=5, f(b,t)=5</span>. ערך: 15.</p>
+            <p><strong>איטרציה 3:</strong> ב-<span class="term">G_f</span> אין יותר מסלול מ-<span class="term">s</span> ל-<span class="term">t</span> (הקשתות מ-<span class="term">s</span> רוויות, אין דרך לעקוף). האלגוריתם עוצר.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 2 · זיהוי החתך המינימלי</div>
+            <p>נגדיר <span class="term">S = {v : v נגיש מ-s ב-G_f}</span>. כיוון שכל הקשתות מ-<span class="term">s</span> רוויות (<span class="term">f=c</span>), אין קשת קדמית מ-<span class="term">s</span> ב-<span class="term">G_f</span>. אז <span class="term">S = {s}</span>.</p>
+            <p><strong>החתך:</strong> <span class="term">(S, V\S) = ({s}, {a, b, t})</span>. קיבולו: <span class="term">c(s,a) + c(s,b) = 10 + 5 = 15</span>.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 3 · הוכחה</div>
+            <p><span class="term">|f| = 15 = c(S, T)</span>. מטענה "3 גורר 1" של max-flow min-cut: <span class="term">f</span> זרימה מקסימלית. ∎</p>
+          </div>
+
+          <div class="final-answer">
+            זרימה מקסימלית: 15. החתך המינימלי: <span class="term">({s}, {a, b, t})</span> בקיבול 15. שני הערכים שווים — אישור למשפט.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <h2>שימוש: התאמה מקסימלית בגרף דו-צדדי</h2>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>מ-מתאמ ל-זרימה</div>
+    <div class="box-body">
+      <p>נתון גרף דו-צדדי <span class="term">G = (L ∪ R, E)</span>. <strong>התאמה</strong> (matching): תת-קבוצה של קשתות שאין שתיים שחולקות קודקוד.</p>
+      <p><strong>אלגוריתם:</strong> בנה רשת זרימה <span class="term">G'</span>:</p>
+      <ul>
+        <li>הוסף מקור <span class="term">s</span> וקשתות <span class="term">s → ℓ</span> בקיבול 1 לכל <span class="term">ℓ ∈ L</span>.</li>
+        <li>שמור על הקשתות בין <span class="term">L</span> ו-<span class="term">R</span>, כיוון לפי <span class="term">L → R</span> בקיבול 1.</li>
+        <li>הוסף בור <span class="term">t</span> וקשתות <span class="term">r → t</span> בקיבול 1 לכל <span class="term">r ∈ R</span>.</li>
+      </ul>
+      <p>הרץ Ford-Fulkerson על <span class="term">G'</span>. הזרימה המקסימלית = גודל ההתאמה המקסימלית.</p>
+      <p>סיבוכיות: <span class="term">O(V · E)</span> כי הזרימה המקסימלית חסומה על-ידי <span class="term">|L|</span>.</p>
+    </div>
+  </div>
+
+  <h2>מה לזכור למבחן</h2>
+
+  <div class="box summary">
+    <div class="box-head"><span class="icon">📌</span>סיכום זרימה</div>
+    <div class="box-body">
+      <ul>
+        <li><strong>בעיה:</strong> זרימה <span class="term">f</span> חוקית (קיבול + שימור) שמקסמת <span class="term">|f|</span>.</li>
+        <li><strong>גרף שיורי <span class="term">G_f</span>:</strong> מתאר "כמה עוד אפשר להזרים" + "מה אפשר לבטל".</li>
+        <li><strong>Ford-Fulkerson:</strong> שיפור איטרטיבי דרך מסלולים משפרים. <span class="term">O(|E|·max-flow)</span> פסאודו-פולינומי.</li>
+        <li><strong>Edmonds-Karp:</strong> Ford-Fulkerson עם BFS. <span class="term">O(|V|·|E|²)</span> פולינומי.</li>
+        <li><strong>max-flow min-cut:</strong> זרימה מקסימלית = קיבול חתך מינימלי. שלוש טענות שקולות.</li>
+        <li><strong>שימוש:</strong> התאמה מקסימלית בגרף דו-צדדי. כל בעיה של "הזרמה" מסוג כלשהו ← נמדל כרשת.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פרק 9 · מסלולים קלים ביותר ב׳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/styles/atom-one-dark.min.css">
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js"></script>
+<script>
+  window.addEventListener('load', () => {
+    if (window.renderMathInElement) {
+      try { renderMathInElement(document.body, { delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\(',right:'\\)',display:false}], throwOnError: false, strict: false }); } catch(e){}
+    }
+    if (window.hljs) { try { document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el)); } catch(e){} }
+    document.body.classList.add('ready');
+  });
+</script>
+<style>
+  :root {
+    --bg: #fbf9f3; --bg-paper: #fffefa; --ink: #1c1917; --ink-soft: #44403c; --ink-mute: #78716c;
+    --rule: #e7e5e0; --rule-soft: #f1efe9;
+    --indigo-9: #312e81; --indigo-7: #4f46e5; --indigo-3: #c7d2fe; --indigo-1: #eef2ff;
+    --c-theory-h: #1d4ed8; --c-theory-bg: #eff6ff; --c-theory-edge: #bfdbfe;
+    --c-formula-h: #b45309; --c-formula-bg: #fef9e7; --c-formula-edge: #fcd34d;
+    --c-example-h: #047857; --c-example-bg: #ecfdf5; --c-example-edge: #a7f3d0;
+    --c-warn-h: #be123c; --c-warn-bg: #fff1f2; --c-warn-edge: #fecdd3;
+    --c-exercise-h: #6d28d9; --c-exercise-bg: #f5f3ff; --c-exercise-edge: #ddd6fe;
+    --c-summary-h: #334155; --c-summary-bg: #f1f5f9; --c-summary-edge: #cbd5e1;
+    --code-bg: #0f172a; --code-bg-2: #1e293b; --code-ink: #e2e8f0;
+    --shadow-sm: 0 1px 2px rgba(28,25,23,.04), 0 1px 3px rgba(28,25,23,.06);
+    --shadow: 0 4px 12px rgba(28,25,23,.05), 0 1px 3px rgba(28,25,23,.04);
+    --serif: 'Frank Ruhl Libre', Georgia, serif;
+    --sans: 'Assistant', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.75; font-size: 17px; -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 20% 0%, rgba(99,102,241,.035), transparent 40%), radial-gradient(circle at 80% 100%, rgba(245,158,11,.035), transparent 40%);
+    background-attachment: fixed; opacity: 0; transition: opacity .2s ease; }
+  body.ready { opacity: 1; }
+  .app { display: grid; grid-template-columns: 320px 1fr; min-height: 100vh; max-width: 1480px; margin: 0 auto; }
+  .sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%); color: #e0e7ff; padding: 32px 24px; border-left: 1px solid rgba(255,255,255,.06); }
+  .sidebar::-webkit-scrollbar { width: 6px; } .sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 3px; }
+  .brand { font-family: var(--serif); font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -.01em; line-height: 1.2; }
+  .brand a { color: #fff; text-decoration: none; } .brand a:hover { color: #fbbf24; }
+  .brand-sub { font-size: 13px; color: #c7d2fe; margin-bottom: 28px; font-weight: 500; }
+  .brand-meta { font-size: 11px; color: #a5b4fc; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .nav-label { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: #818cf8; font-weight: 700; margin: 24px 0 12px; padding-right: 8px; }
+  .nav-list { list-style: none; } .nav-list li { margin-bottom: 2px; }
+  .nav-list a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; color: #c7d2fe; text-decoration: none; border-radius: 8px; font-size: 14.5px; font-weight: 500; transition: all .15s ease; }
+  .nav-list a:hover { background: rgba(255,255,255,.06); color: #fff; }
+  .nav-list a.active { background: rgba(255,255,255,.1); color: #fff; box-shadow: inset 3px 0 0 #fbbf24; }
+  .nav-list a.pending { opacity: .5; }
+  .nav-num { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; background: rgba(255,255,255,.08); border-radius: 6px; font-size: 11px; font-weight: 700; font-family: var(--mono); }
+  .nav-list a.active .nav-num { background: #fbbf24; color: #1e1b4b; }
+  main { padding: 56px 64px 120px; max-width: 960px; }
+  .page-eyebrow { display: inline-block; font-size: 12px; font-weight: 700; color: var(--indigo-7); letter-spacing: .15em; text-transform: uppercase; background: var(--indigo-1); padding: 6px 12px; border-radius: 99px; margin-bottom: 16px; }
+  h1.page-title { font-family: var(--serif); font-size: 48px; font-weight: 700; line-height: 1.15; letter-spacing: -.02em; color: var(--ink); margin-bottom: 14px; }
+  .page-subtitle { font-size: 19px; color: var(--ink-soft); margin-bottom: 48px; font-weight: 400; line-height: 1.55; }
+  h2 { font-family: var(--serif); font-size: 32px; font-weight: 700; letter-spacing: -.015em; margin: 56px 0 20px; color: var(--ink); position: relative; padding-right: 20px; }
+  h2::before { content: ''; position: absolute; right: 0; top: 14px; bottom: 14px; width: 4px; background: var(--indigo-7); border-radius: 2px; }
+  h3 { font-family: var(--sans); font-size: 22px; font-weight: 700; margin: 32px 0 12px; color: var(--ink); letter-spacing: -.005em; }
+  h4 { font-size: 17px; font-weight: 700; margin: 18px 0 8px; color: var(--ink-soft); }
+  p { margin-bottom: 14px; color: var(--ink-soft); } p strong { color: var(--ink); font-weight: 700; }
+  ul, ol { margin: 12px 24px 18px; color: var(--ink-soft); } li { margin-bottom: 8px; }
+  .term { font-family: var(--mono); direction: ltr; display: inline-block; font-size: .88em; background: #f5f5f4; padding: 1px 8px; border-radius: 5px; color: #be185d; border: 1px solid #e7e5e4; vertical-align: baseline; unicode-bidi: isolate; }
+  .term.blue { color: var(--c-theory-h); background: var(--c-theory-bg); border-color: var(--c-theory-edge); }
+  .term.green { color: var(--c-example-h); background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .term.amber { color: var(--c-formula-h); background: var(--c-formula-bg); border-color: var(--c-formula-edge); }
+  .katex-display { margin: 18px 0 !important; direction: ltr !important; text-align: center !important; unicode-bidi: isolate; } .katex { direction: ltr !important; unicode-bidi: isolate; }
+  .box { border-radius: 14px; margin: 24px 0; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); background: var(--bg-paper); }
+  .box-head { display: flex; align-items: center; gap: 10px; padding: 14px 20px; font-weight: 700; font-size: 15px; border-bottom: 1px solid var(--rule); }
+  .box-head .icon { width: 28px; height: 28px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 16px; }
+  .box-body { padding: 18px 22px; }
+  .box.theory { border-color: var(--c-theory-edge); } .box.theory .box-head { background: var(--c-theory-bg); color: var(--c-theory-h); } .box.theory .box-head .icon { background: var(--c-theory-h); color: #fff; }
+  .box.formula { border-color: var(--c-formula-edge); background: var(--c-formula-bg); } .box.formula .box-head { background: transparent; color: var(--c-formula-h); border-bottom-color: rgba(180,83,9,.18); } .box.formula .box-head .icon { background: var(--c-formula-h); color: #fff; } .box.formula .box-body { background: var(--c-formula-bg); } .box.formula p { color: #78350f; }
+  .box.example { border-color: var(--c-example-edge); } .box.example .box-head { background: var(--c-example-bg); color: var(--c-example-h); } .box.example .box-head .icon { background: var(--c-example-h); color: #fff; }
+  .box.warn { border-color: var(--c-warn-edge); } .box.warn .box-head { background: var(--c-warn-bg); color: var(--c-warn-h); } .box.warn .box-head .icon { background: var(--c-warn-h); color: #fff; }
+  .box.exercise { border-color: var(--c-exercise-edge); } .box.exercise .box-head { background: var(--c-exercise-bg); color: var(--c-exercise-h); } .box.exercise .box-head .icon { background: var(--c-exercise-h); color: #fff; }
+  .box.summary { border-color: var(--c-summary-edge); } .box.summary .box-head { background: var(--c-summary-bg); color: var(--c-summary-h); } .box.summary .box-head .icon { background: var(--c-summary-h); color: #fff; }
+  pre { background: var(--code-bg) !important; border-radius: 0 0 12px 12px; padding: 18px 22px !important; margin: 0 0 16px 0; overflow-x: auto; direction: ltr; font-size: 14px; line-height: 1.7; box-shadow: var(--shadow); border: 1px solid var(--code-bg-2); border-top: none; }
+  pre code { font-family: var(--mono) !important; background: transparent !important; padding: 0 !important; border: none !important; color: var(--code-ink) !important; }
+  .code-label { display: flex; align-items: center; gap: 8px; background: var(--code-bg-2); color: #94a3b8; font-family: var(--mono); font-size: 12px; padding: 10px 16px; border-radius: 12px 12px 0 0; direction: ltr; border: 1px solid var(--code-bg-2); border-bottom: 1px solid #334155; margin-top: 18px; }
+  .code-label .dot { width: 8px; height: 8px; border-radius: 50%; background: #475569; }
+  .code-label .dot.red { background: #ef4444; } .code-label .dot.amber { background: #f59e0b; } .code-label .dot.green { background: #22c55e; }
+  .code-label .name { margin-right: auto; opacity: .9; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm); font-size: 15px; }
+  th, td { padding: 11px 14px; text-align: right; border-bottom: 1px solid var(--rule-soft); border-left: 1px solid var(--rule-soft); }
+  th { background: var(--c-summary-bg); font-weight: 700; color: var(--c-summary-h); }
+  tr:last-child td { border-bottom: none; }
+  td.num, th.num { font-family: var(--mono); direction: ltr; text-align: center; font-size: 14px; }
+  td.highlight { background: var(--c-formula-bg); font-weight: 700; color: var(--c-formula-h); }
+  td.updated { background: #dcfce7; font-weight: 700; color: #166534; }
+  .exercise-card { background: #fff; border-radius: 10px; margin: 14px 0; border: 1px solid var(--c-exercise-edge); overflow: hidden; }
+  .exercise-tag { display: inline-block; font-size: 11px; font-weight: 700; background: var(--c-exercise-h); color: #fff; padding: 3px 10px; border-radius: 99px; margin-bottom: 10px; font-family: var(--mono); letter-spacing: .05em; direction: ltr; }
+  .exercise-q { padding: 20px 24px; background: #fafaf9; border-bottom: 1px solid var(--rule-soft); }
+  .exercise-q p:last-child { margin-bottom: 0; }
+  .reveal-btn { display: block; width: 100%; background: var(--c-exercise-bg); border: none; border-top: 1px solid var(--c-exercise-edge); padding: 13px; font-family: var(--sans); font-size: 14px; font-weight: 700; color: var(--c-exercise-h); cursor: pointer; transition: background .15s ease; }
+  .reveal-btn:hover { background: #ede9fe; } .reveal-btn::before { content: '▼ '; font-size: 10px; margin-left: 6px; transition: transform .2s ease; }
+  .exercise-card.open .reveal-btn::before { content: '▲ '; }
+  .solution { padding: 22px 26px; background: var(--c-example-bg); border-top: 1px solid var(--c-example-edge); display: none; }
+  .exercise-card.open .solution { display: block; }
+  .solution .step { background: #fff; border-radius: 8px; padding: 14px 18px; margin: 12px 0; border-right: 3px solid var(--c-example-h); }
+  .solution .step-label { font-size: 11px; font-weight: 700; color: var(--c-example-h); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; font-family: var(--mono); }
+  .solution .final-answer { background: #fff; border: 2px solid var(--c-example-h); border-radius: 10px; padding: 14px 20px; margin-top: 16px; font-weight: 600; }
+  .solution .final-answer::before { content: '✓ '; color: var(--c-example-h); font-weight: 900; }
+  .lead { font-size: 19px; color: var(--ink-soft); border-right: 3px solid var(--indigo-7); padding-right: 20px; margin: 24px 0 32px; font-weight: 400; line-height: 1.6; }
+  .keypoint { background: linear-gradient(90deg, var(--c-formula-bg) 0%, transparent 100%); padding: 14px 18px; border-radius: 8px; margin: 16px 0; border-right: 3px solid var(--c-formula-h); }
+  .keypoint::before { content: '💡 '; font-size: 18px; margin-left: 4px; }
+  .figure { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 18px; margin: 18px 0; text-align: center; box-shadow: var(--shadow-sm); }
+  .figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .figure .cap { font-size: 13px; color: var(--ink-mute); margin-top: 12px; font-style: italic; }
+  .mc-list { list-style: none; margin: 12px 0; padding: 0; }
+  .mc-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; background: #fff; border: 1px solid var(--rule); border-radius: 8px; margin-bottom: 8px; transition: all .15s ease; }
+  .mc-list li .mc-marker { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--rule); flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--ink-mute); background: #fff; }
+  .mc-list li.correct { background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .mc-list li.correct .mc-marker { background: var(--c-example-h); color: #fff; border-color: var(--c-example-h); }
+  .mc-list li.correct .mc-marker::after { content: '✓'; }
+  .mc-list li.wrong { background: var(--c-warn-bg); border-color: var(--c-warn-edge); }
+  .mc-list li.wrong .mc-marker { background: var(--c-warn-h); color: #fff; border-color: var(--c-warn-h); }
+  .mc-list li.wrong .mc-marker::after { content: '✗'; }
+  .mc-list li .mc-text { flex: 1; line-height: 1.55; color: var(--ink-soft); }
+  .mc-list li .mc-text .why { display: block; margin-top: 6px; font-size: 13.5px; color: var(--ink-mute); font-style: italic; }
+  .algo-compare { background: #fff; border-radius: 12px; padding: 0; margin: 18px 0; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); overflow: hidden; }
+  .algo-compare table { margin: 0; border-radius: 0; box-shadow: none; }
+  @media (max-width: 900px) { .app { grid-template-columns: 1fr; } .sidebar { position: static; height: auto; } main { padding: 32px 24px 80px; } h1.page-title { font-size: 36px; } h2 { font-size: 26px; } }
+</style>
+</head>
+<body>
+<div class="app">
+
+<aside class="sidebar">
+  <div class="brand"><a href="index.html">אלגוריתמים</a></div>
+  <div class="brand-sub">ד״ר אלעזר גולדנברג · הגב׳ שלומית אריאן</div>
+  <div class="brand-meta">MTA · קיץ 2026</div>
+
+  <div class="nav-label">יסודות</div>
+  <ul class="nav-list">
+    <li><a href="01-intro.html" class="pending"><span class="nav-num">1</span>מושג האלגוריתם</a></li>
+    <li><a href="02-numbers.html" class="pending"><span class="nav-num">2</span>ייצוג מספרים</a></li>
+  </ul>
+
+  <div class="nav-label">גרפים בסיסיים</div>
+  <ul class="nav-list">
+    <li><a href="03-graph-basics.html" class="pending"><span class="nav-num">3</span>מושגי יסוד</a></li>
+    <li><a href="04-toposort.html" class="active" class="pending"><span class="nav-num">4</span>מיון טופולוגי</a></li>
+  </ul>
+
+  <div class="nav-label">סריקות</div>
+  <ul class="nav-list">
+    <li><a href="05-dfs.html" class="pending"><span class="nav-num">5</span>DFS</a></li>
+    <li><a href="06-dfs-apps.html" class="pending"><span class="nav-num">6</span>יישומי DFS</a></li>
+    <li><a href="07-bfs.html" class="pending"><span class="nav-num">7</span>BFS</a></li>
+  </ul>
+
+  <div class="nav-label">מסלולים קלים ביותר</div>
+  <ul class="nav-list">
+    <li><a href="08-shortest-paths-1.html" class="pending"><span class="nav-num">8</span>מק״בים א׳</a></li>
+    <li><a href="09-shortest-paths-2.html"><span class="nav-num">9</span>מק״בים ב׳</a></li>
+  </ul>
+
+  <div class="nav-label">אופטימיזציה ורשתות</div>
+  <ul class="nav-list">
+    <li><a href="10-mst.html" class="pending"><span class="nav-num">10</span>עצים פורשים</a></li>
+    <li><a href="11-dp.html" class="pending"><span class="nav-num">11</span>תכנות דינמי</a></li>
+    <li><a href="12-flow.html" class="pending"><span class="nav-num">12</span>זרימה</a></li>
+  </ul>
+</aside>
+
+
+<main>
+<span class="page-eyebrow">פרק 4 · גרפים בסיסיים</span>
+  <h1 class="page-title">מיון טופולוגי</h1>
+  <p class="page-subtitle">סידור משימות בעלות אילוצי קדם — מתי קיים, איך מוצאים, ולמה רק DAG מאפשר את זה.</p>
+
+  <p class="lead">
+    הבעיה: יש משימות שצריך לבצע בסדר מסוים (להתלבש: גרביים לפני נעליים). איך מסדרים אותן בשורה אחת כך שלא נפר אילוץ?
+    התשובה: <strong>מיון טופולוגי</strong> — סידור לינארי שמכבד את כל הקשתות.
+    המשפט המרכזי הוא: <strong>קיים מיון טופולוגי ↔ הגרף DAG</strong> (חסר מעגלים). אם יש מעגל — אין מיון. נקודה.
+  </p>
+
+  <div class="keypoint">
+    <strong>על המבחן:</strong> מיון טופולוגי תמיד מופיע, בדרך כלל בשני קונטקסטים: (1) בקש לבצע מיון על גרף נתון; (2) השתמש בו כתת-שגרה בפרק 9 (DAG-Shortest-Paths). זכור את שני הכיוונים של המשפט — הקל יותר הוא "אם יש מעגל אין מיון".
+  </div>
+
+  <h2>הבעיה והגדרתה</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הגדרה — מיון טופולוגי</div>
+    <div class="box-body">
+      <p>נתון גרף מכוון <span class="term">G=(V,E)</span>. <strong>מיון טופולוגי</strong> של <span class="term">G</span> הוא סידור של כל הקודקודים בשורה — כל קודקוד מופיע פעם אחת — כך שלכל קשת <span class="term">(u,v)∈E</span>:</p>
+      <p><span class="term">u</span> מופיע <strong>לפני</strong> <span class="term">v</span> בסידור.</p>
+      <p><strong>שקול לאמירה גיאומטרית:</strong> אם מציירים את הקודקודים בשורה (משמאל לימין) לפי הסידור, <em>כל הקשתות מצביעות ימינה</em>. אף קשת לא חוזרת אחורה.</p>
+    </div>
+  </div>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>דוגמה: הפרופסור המפוזר מתלבש</div>
+    <div class="box-body">
+      <p>אילוצים: גרביים לפני נעליים. תחתונים לפני מכנסיים. חולצה לפני עניבה. וכו׳.</p>
+      <p>כל פריט הוא קודקוד; כל אילוץ "X לפני Y" הוא קשת מ-X ל-Y. אלגוריתם המיון מחזיר סדר לבישה שלא יוביל לאבסורד (כמו לנעול נעליים לפני שגורבים).</p>
+      <p><strong>שימושים אחרים:</strong> בחירת סדר קורסים במכללה לפי דרישות קדם; סדר הרכבת חלקי מכונית; סדר הידור של קבצי קוד עם תלויות.</p>
+    </div>
+  </div>
+
+  <h2>המשפט המרכזי — מתי קיים מיון</h2>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>משפט — מיון טופולוגי ↔ DAG</div>
+    <div class="box-body">
+      <p>יהי <span class="term">G</span> גרף מכוון. <strong>קיים מיון טופולוגי לקודקודי G אם״ם G חסר מעגלים</strong> (כלומר G הוא DAG).</p>
+    </div>
+  </div>
+
+  <h3>כיוון 1 — מעגל גורר שאין מיון</h3>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הוכחה ישירה</div>
+    <div class="box-body">
+      <p>נניח שב-<span class="term">G</span> קיים מעגל <span class="term">v₁ → v₂ → ... → vₖ → v₁</span>.</p>
+      <p>בהינתן סידור כלשהו של הקודקודים, נסתכל על הקודקודים שבמעגל. אחד מהם <span class="term">vᵢ</span> חייב להיות <em>הראשון</em> ביניהם בסידור.</p>
+      <p>אבל אז הקשת הנכנסת אליו (מתוך המעגל) מגיעה מקודקוד שמופיע <em>אחריו</em> בסידור — סתירה לתנאי המיון הטופולוגי.</p>
+      <p style="margin-top:8px;"><strong>במילים אחרות:</strong> בתוך מעגל, אף קודקוד לא יכול להיות "הראשון" כי תמיד יש אילוץ שמכריח אותו להגיע אחרי מישהו אחר במעגל.</p>
+    </div>
+  </div>
+
+  <h3>כיוון 2 — DAG גורר קיום מיון (קונסטרוקטיבי)</h3>
+
+  <p>זה הכיוון המעניין. אנחנו לא רק טוענים שקיים מיון — אנחנו <em>בונים</em> אותו עם אלגוריתם יעיל.</p>
+
+  <h2>אלגוריתם — מציאת מיון טופולוגי</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הרעיון — איתור מקור ומחיקה</div>
+    <div class="box-body">
+      <p><strong>טענה:</strong> בכל DAG עם לפחות קודקוד אחד, קיים <strong>מקור</strong> — קודקוד שדרגת הכניסה שלו 0.</p>
+      <p><strong>למה?</strong> אילו לכל קודקוד הייתה קשת נכנסת, היינו יכולים ללכת אחורה מקודקוד כלשהו לאינסוף — ובגרף סופי זה היה יוצר מעגל. סתירה ל-DAG.</p>
+      <p><strong>הרעיון לאלגוריתם:</strong> מקור הוא תמיד "מועמד טבעי" לראש הסדר — אין לו תלויות. נדפיס אותו, נמחק אותו (ואת קשתותיו) מהגרף, ונחזור על התהליך עם הגרף שנותר.</p>
+    </div>
+  </div>
+
+  <div class="code-label">
+    <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+    <span class="name">TopologicalSort.txt</span>
+  </div>
+<pre><code class="language-plaintext">TOPOLOGICAL-SORT(Graph G):
+    L ← רשימה ריקה
+    חשב indeg[v] לכל v ∈ V
+    Q ← תור של כל הקודקודים v עם indeg[v]=0  // המקורות
+
+    while Q ≠ ∅:
+        u ← Q.dequeue()
+        הוסף u לסוף L
+        for each v ∈ Adj[u]:
+            indeg[v] ← indeg[v] − 1
+            if indeg[v] = 0:
+                Q.enqueue(v)
+
+    if |L| &lt; |V|:
+        return "אין מיון טופולוגי"  // נשארו קודקודים — קיים מעגל
+    else:
+        return L
+
+יעילות: Θ(n + m)
+</code></pre>
+
+  <h3>למה הסיבוכיות היא Θ(n+m)?</h3>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>ניתוח</div>
+    <div class="box-body">
+      <ul>
+        <li><strong>אתחול <span class="term">indeg</span>:</strong> מעבר על כל הקשתות — <span class="term">Θ(m)</span>.</li>
+        <li><strong>בניית התור הראשוני:</strong> מעבר על כל הקודקודים — <span class="term">Θ(n)</span>.</li>
+        <li><strong>הלולאה הראשית:</strong> כל קודקוד נכנס לתור פעם אחת ויוצא פעם אחת (<span class="term">Θ(n)</span> סך הכל). כל קשת מטופלת פעם אחת — כשמורידים את ה-<span class="term">indeg</span> של הצד השני (<span class="term">Θ(m)</span> סך הכל).</li>
+      </ul>
+      <p><strong>סה״כ:</strong></p>
+      $$T(n, m) = \Theta(n + m)$$
+    </div>
+  </div>
+
+  <h2>הוכחת נכונות</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>שתי טענות שצריך להוכיח</div>
+    <div class="box-body">
+      <p><strong>טענה 1:</strong> אם <span class="term">G</span> הוא DAG, האלגוריתם מחזיר רשימה <span class="term">L</span> שהיא מיון טופולוגי.</p>
+      <p><strong>טענה 2:</strong> אם ב-<span class="term">G</span> יש מעגל, האלגוריתם מזהה זאת (מחזיר את הודעת השגיאה).</p>
+    </div>
+  </div>
+
+  <h3>הוכחת טענה 1</h3>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>טענה: L הוא מיון טופולוגי</div>
+    <div class="box-body">
+      <p>אינווריאנט: כשקודקוד <span class="term">u</span> מתווסף ל-<span class="term">L</span>, <strong>כל הקודקודים שהיו לפניו עם קשת אליו כבר נמצאים ב-L לפניו</strong>.</p>
+      <p><strong>הוכחה:</strong> קודקוד <span class="term">u</span> מתווסף ל-<span class="term">L</span> רק כאשר <span class="term">indeg[u]=0</span> בזמן ההוצאה מהתור. <span class="term">indeg[u]</span> ירד ל-0 רק אחרי שכל הקשתות הנכנסות אליו "טופלו" — כלומר כל הקודקודים <span class="term">w</span> שיש להם קשת <span class="term">(w,u)</span> כבר יצאו מהתור והתווספו ל-<span class="term">L</span> קודם. ∎</p>
+      <p>כיוון שזה נכון לכל <span class="term">u</span>, הסדר ב-<span class="term">L</span> מכבד את כל הקשתות, ולכן <span class="term">L</span> הוא מיון טופולוגי.</p>
+    </div>
+  </div>
+
+  <h3>הוכחת טענה 2</h3>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>טענה: אם יש מעגל אז L לא יכלול את כל הקודקודים</div>
+    <div class="box-body">
+      <p>נניח שיש מעגל <span class="term">v₁ → v₂ → ... → vₖ → v₁</span>. נטען שאף אחד מ-<span class="term">vᵢ</span> לא יתווסף ל-<span class="term">L</span>.</p>
+      <p><strong>בשלילה:</strong> נניח ש-<span class="term">vᵢ</span> מתווסף ל-<span class="term">L</span> ראשון מקודקודי המעגל. בשעת ההוספה <span class="term">indeg[vᵢ]=0</span>, מה שאומר שהקודקוד הקודם לו במעגל (<span class="term">vᵢ₋₁</span>) כבר טופל ויצא מהתור — אבל אז <span class="term">vᵢ₋₁</span> נכנס ל-<span class="term">L</span> לפני <span class="term">vᵢ</span>, בסתירה להנחה ש-<span class="term">vᵢ</span> ראשון.</p>
+      <p>לכן כל קודקודי המעגל לא יתווספו אף פעם ל-<span class="term">L</span>, ונקבל <span class="term">|L| &lt; |V|</span> — האלגוריתם יזהה את הבעיה ויחזיר שאין מיון. ∎</p>
+    </div>
+  </div>
+
+  <h2>שני שימושים חשובים בקורס</h2>
+
+  <div class="box summary">
+    <div class="box-head"><span class="icon">📌</span>איפה נשתמש במיון טופולוגי בהמשך</div>
+    <div class="box-body">
+      <ol>
+        <li><strong>זיהוי מעגל בגרף מכוון:</strong> אם האלגוריתם מחזיר "אין מיון" — יש מעגל. זה אלגוריתם <span class="term">Θ(n+m)</span> לבעיית גילוי המעגלים.</li>
+        <li><strong>DAG-Shortest-Paths (פרק 9):</strong> מסלולים קלים ביותר ב-DAG פותרים ב-<span class="term">Θ(n+m)</span> על-ידי עיבוד הקודקודים בסדר טופולוגי, ועל כל קודקוד מבצעים Relax על קשתותיו היוצאות. זה האלגוריתם המהיר ביותר ל-DAG, אפילו עם משקלים שליליים.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="box warn">
+    <div class="box-head"><span class="icon">⚠</span>שלוש טעויות נפוצות</div>
+    <div class="box-body">
+      <ol>
+        <li><strong>"כל מיון טופולוגי הוא יחיד".</strong> שגוי. אם יש מספר מקורות בו-זמנית, יש כמה מיונים אפשריים. דוגמה: בגרף עם 3 קודקודים מבודדים (ללא קשתות), כל <span class="term">3!=6</span> סדרים הם מיונים טופולוגיים.</li>
+        <li><strong>"מיון טופולוגי קיים לכל גרף מכוון".</strong> שגוי. רק ל-DAG. אם יש מעגל, אין מיון.</li>
+        <li><strong>"אפשר לעשות מיון טופולוגי לגרף לא-מכוון".</strong> שגוי. ההגדרה דורשת כיוון. גרף לא-מכוון לא יכול לקיים את התנאי "u לפני v" כי הקשת היא דו-כיוונית.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- ========================== תרגילים ========================== -->
+  <!-- ============================================================== -->
+  <h2>תרגילים מהפרקטיקה</h2>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 1 · practice1, שאלה 5 — מיון טופולוגי הפוך</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">algorithm modification · 3 approaches</span>
+          <p><strong>הגדרה:</strong> מיון טופולוגי <em>הפוך</em> של גרף מכוון <span class="term">G</span> — סידור של הקודקודים המקיים: אם בגרף יש קשת <span class="term">(u,v)</span>, אז <strong>v מופיע לפני u</strong> בסידור.</p>
+          <p>הסבר בקצרה איך למצוא מיון טופולוגי הפוך ב<strong>שלוש גישות שונות</strong>:</p>
+          <ol>
+            <li>שינוי באלגוריתם המיון הטופולוגי המקורי.</li>
+            <li>הרצת האלגוריתם המקורי + עיבוד על הפלט בלבד.</li>
+            <li>הרצת האלגוריתם המקורי + עיבוד על הקלט בלבד.</li>
+          </ol>
+          <p>בכל אחת — סיבוכיות?</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">גישה 1 · שינוי באלגוריתם</div>
+            <p><strong>הרעיון:</strong> במקום להתחיל ממקורות (<span class="term">indeg=0</span>), נתחיל מ<strong>בורות</strong> (<span class="term">outdeg=0</span>, קודקודים בלי קשתות יוצאות).</p>
+            <p><strong>שינוי:</strong> נחשב <span class="term">outdeg[v]</span> במקום <span class="term">indeg[v]</span>. נשים בתור את כל ה-<span class="term">v</span> עם <span class="term">outdeg=0</span>. בלולאה הראשית, כשמוציאים <span class="term">u</span>, עוברים על קודקודי <strong>הכניסה</strong> <span class="term">w</span> כך ש-<span class="term">(w,u)∈E</span>, ומורידים <span class="term">outdeg[w]</span> ב-1.</p>
+            <p><strong>הצדקה:</strong> בור הוא קודקוד שלא יוצאת ממנו אף קשת. ב-DAG תמיד יש בור (אחרת היינו יוצרים מעגל), והוא יכול להופיע ראשון במיון ההפוך.</p>
+            <p><strong>סיבוכיות:</strong> <span class="term">Θ(n+m)</span> — זהה למקורי.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">גישה 2 · עיבוד הפלט</div>
+            <p><strong>הרעיון:</strong> מיון טופולוגי הפוך הוא בדיוק <em>היפוך הסדר</em> של מיון טופולוגי רגיל.</p>
+            <p><strong>אלגוריתם:</strong></p>
+            <ol>
+              <li>הרץ <span class="term">TopologicalSort(G)</span> וקבל את רשימת הקודקודים <span class="term">L</span>.</li>
+              <li>הפוך את <span class="term">L</span>.</li>
+              <li>החזר את הרשימה ההפוכה.</li>
+            </ol>
+            <p><strong>הצדקה:</strong> ב-<span class="term">L</span>, לכל קשת <span class="term">(u,v)</span>, <span class="term">u</span> לפני <span class="term">v</span>. בהיפוך, <span class="term">v</span> לפני <span class="term">u</span> — בדיוק תנאי המיון ההפוך. ✓</p>
+            <p><strong>סיבוכיות:</strong> <span class="term">Θ(n+m)</span> למיון + <span class="term">Θ(n)</span> להיפוך = <span class="term">Θ(n+m)</span>.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">גישה 3 · עיבוד הקלט</div>
+            <p><strong>הרעיון:</strong> נבנה את <strong>הגרף ההפוך</strong> <span class="term">G^T</span> שבו כל קשת <span class="term">(u,v)</span> הופכת ל-<span class="term">(v,u)</span>. מיון טופולוגי של <span class="term">G^T</span> הוא מיון טופולוגי הפוך של <span class="term">G</span>.</p>
+            <p><strong>אלגוריתם:</strong></p>
+            <ol>
+              <li>בנה את <span class="term">G^T</span> ע״י היפוך כל קשת.</li>
+              <li>הרץ <span class="term">TopologicalSort(G^T)</span>.</li>
+              <li>החזר את הפלט.</li>
+            </ol>
+            <p><strong>הצדקה:</strong> אם הפלט הוא מיון טופולוגי של <span class="term">G^T</span>, אז לכל קשת <span class="term">(v,u)</span> ב-<span class="term">G^T</span> (שהיא <span class="term">(u,v)</span> ב-<span class="term">G</span>), <span class="term">v</span> מופיע לפני <span class="term">u</span> בפלט — בדיוק התנאי. ✓</p>
+            <p><strong>סיבוכיות:</strong> בניית <span class="term">G^T</span> = <span class="term">Θ(n+m)</span>. מיון = <span class="term">Θ(n+m)</span>. סה״כ <span class="term">Θ(n+m)</span>.</p>
+          </div>
+
+          <div class="final-answer">
+            כל שלוש הגישות נותנות <span class="term">Θ(n+m)</span>. גישה 2 (היפוך פלט) היא הפשוטה ביותר ליישום בפועל.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 2 · practice1, שאלה 5(ב) — שימור מסלולים במיון</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">proof · topological invariant</span>
+          <p>יהי <span class="term">G</span> גרף מכוון שעבורו קיים מיון טופולוגי. הראה ש<strong>כל</strong> מיון טופולוגי של <span class="term">G</span> שומר על מסלולים: לכל זוג קודקודים <span class="term">u, v</span>, אם קיים מסלול מ-<span class="term">u</span> ל-<span class="term">v</span> ב-<span class="term">G</span>, אז <span class="term">u</span> מופיע לפני <span class="term">v</span> במיון.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">שלב 1 · ניסוח רשמי</div>
+            <p>נניח שיש מסלול <span class="term">u = w₀ → w₁ → ... → wₖ = v</span> באורך <span class="term">k</span> (כלומר <span class="term">k</span> קשתות).</p>
+            <p>צריך להראות: בכל מיון טופולוגי <span class="term">π</span>, <span class="term">u</span> מופיע לפני <span class="term">v</span>.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 2 · הוכחה באינדוקציה על אורך המסלול</div>
+            <p><strong>בסיס (k=1):</strong> יש קשת ישירה <span class="term">(u,v)∈E</span>. מהגדרת מיון טופולוגי, <span class="term">u</span> מופיע לפני <span class="term">v</span>. ✓</p>
+            <p><strong>צעד:</strong> נניח שהטענה נכונה למסלולים באורך <span class="term">k−1</span>. ניקח מסלול באורך <span class="term">k</span>:</p>
+            <p style="text-align:center;font-family:var(--mono);">u = w₀ → w₁ → ... → w<sub>k-1</sub> → w<sub>k</sub> = v</p>
+            <ul>
+              <li>תת-המסלול <span class="term">u → w₁ → ... → w_{k-1}</span> באורך <span class="term">k−1</span>. מהנחת האינדוקציה: <span class="term">u</span> מופיע לפני <span class="term">w_{k-1}</span>.</li>
+              <li>הקשת <span class="term">(w_{k-1}, v) ∈ E</span>, ולכן <span class="term">w_{k-1}</span> מופיע לפני <span class="term">v</span>.</li>
+              <li>בטרנזיטיביות של הסדר: <span class="term">u</span> לפני <span class="term">v</span>. ✓</li>
+            </ul>
+          </div>
+
+          <div class="final-answer">
+            כל קיומו של מסלול מ-<span class="term">u</span> ל-<span class="term">v</span> מכריח את הסדר ביניהם. <strong>מסקנה:</strong> אם קיים מסלול מ-<span class="term">u</span> ל-<span class="term">v</span> וגם מסלול מ-<span class="term">v</span> ל-<span class="term">u</span>, אז <span class="term">u</span> לפני <span class="term">v</span> וגם הפוך — סתירה. לכן בגרף עם מיון טופולוגי, אסור שיתקיים זוג כזה (וזה בדיוק "אין מעגל").
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- ===================== סיכום למבחן =========================== -->
+  <!-- ============================================================== -->
+  <h2>מה לזכור למבחן</h2>
+
+  <div class="box summary">
+    <div class="box-head"><span class="icon">📌</span>המסגרת המנטלית</div>
+    <div class="box-body">
+      <ul>
+        <li><strong>הגדרה:</strong> סידור לינארי שמכבד את כל הקשתות. אם <span class="term">(u,v)∈E</span> אז <span class="term">u</span> לפני <span class="term">v</span>.</li>
+        <li><strong>קיום:</strong> אם״ם הגרף הוא DAG.</li>
+        <li><strong>אלגוריתם:</strong> איתור מקור (<span class="term">indeg=0</span>) ← הדפסה ← מחיקה ← חזרה. סיבוכיות <span class="term">Θ(n+m)</span>.</li>
+        <li><strong>זיהוי מעגל:</strong> אם הפלט קצר מ-<span class="term">|V|</span> — יש מעגל.</li>
+        <li><strong>אי-יחידות:</strong> יכולים להיות כמה מיונים תקפים לאותו DAG.</li>
+        <li><strong>שמירת מסלולים:</strong> כל מיון תקף שומר על סדר של זוגות קודקודים שיש ביניהם מסלול.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="keypoint">
+    <strong>איך זה מתחבר לפרק 9:</strong> כש-DAG-SP "סורק קודקודים בסדר טופולוגי" — זה בדיוק הסדר שאנחנו לומדים לחשב פה. בלי מיון טופולוגי, אין DAG-SP. בלי DAG-SP, חוזרים ל-Bellman-Ford ולסיבוכיות גרועה יותר.
+  </div>
+</main>
+</div>
+</body>
+</html>

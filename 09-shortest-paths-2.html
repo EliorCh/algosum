@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פרק 9 · מסלולים קלים ביותר ב׳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/styles/atom-one-dark.min.css">
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js"></script>
+<script>
+  window.addEventListener('load', () => {
+    if (window.renderMathInElement) {
+      try { renderMathInElement(document.body, { delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\(',right:'\\)',display:false}], throwOnError: false, strict: false }); } catch(e){}
+    }
+    if (window.hljs) { try { document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el)); } catch(e){} }
+    document.body.classList.add('ready');
+  });
+</script>
+<style>
+  :root {
+    --bg: #fbf9f3; --bg-paper: #fffefa; --ink: #1c1917; --ink-soft: #44403c; --ink-mute: #78716c;
+    --rule: #e7e5e0; --rule-soft: #f1efe9;
+    --indigo-9: #312e81; --indigo-7: #4f46e5; --indigo-3: #c7d2fe; --indigo-1: #eef2ff;
+    --c-theory-h: #1d4ed8; --c-theory-bg: #eff6ff; --c-theory-edge: #bfdbfe;
+    --c-formula-h: #b45309; --c-formula-bg: #fef9e7; --c-formula-edge: #fcd34d;
+    --c-example-h: #047857; --c-example-bg: #ecfdf5; --c-example-edge: #a7f3d0;
+    --c-warn-h: #be123c; --c-warn-bg: #fff1f2; --c-warn-edge: #fecdd3;
+    --c-exercise-h: #6d28d9; --c-exercise-bg: #f5f3ff; --c-exercise-edge: #ddd6fe;
+    --c-summary-h: #334155; --c-summary-bg: #f1f5f9; --c-summary-edge: #cbd5e1;
+    --code-bg: #0f172a; --code-bg-2: #1e293b; --code-ink: #e2e8f0;
+    --shadow-sm: 0 1px 2px rgba(28,25,23,.04), 0 1px 3px rgba(28,25,23,.06);
+    --shadow: 0 4px 12px rgba(28,25,23,.05), 0 1px 3px rgba(28,25,23,.04);
+    --serif: 'Frank Ruhl Libre', Georgia, serif;
+    --sans: 'Assistant', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.75; font-size: 17px; -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 20% 0%, rgba(99,102,241,.035), transparent 40%), radial-gradient(circle at 80% 100%, rgba(245,158,11,.035), transparent 40%);
+    background-attachment: fixed; opacity: 0; transition: opacity .2s ease; }
+  body.ready { opacity: 1; }
+  .app { display: grid; grid-template-columns: 320px 1fr; min-height: 100vh; max-width: 1480px; margin: 0 auto; }
+  .sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%); color: #e0e7ff; padding: 32px 24px; border-left: 1px solid rgba(255,255,255,.06); }
+  .sidebar::-webkit-scrollbar { width: 6px; } .sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 3px; }
+  .brand { font-family: var(--serif); font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -.01em; line-height: 1.2; }
+  .brand a { color: #fff; text-decoration: none; } .brand a:hover { color: #fbbf24; }
+  .brand-sub { font-size: 13px; color: #c7d2fe; margin-bottom: 28px; font-weight: 500; }
+  .brand-meta { font-size: 11px; color: #a5b4fc; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .nav-label { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: #818cf8; font-weight: 700; margin: 24px 0 12px; padding-right: 8px; }
+  .nav-list { list-style: none; } .nav-list li { margin-bottom: 2px; }
+  .nav-list a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; color: #c7d2fe; text-decoration: none; border-radius: 8px; font-size: 14.5px; font-weight: 500; transition: all .15s ease; }
+  .nav-list a:hover { background: rgba(255,255,255,.06); color: #fff; }
+  .nav-list a.active { background: rgba(255,255,255,.1); color: #fff; box-shadow: inset 3px 0 0 #fbbf24; }
+  .nav-list a.pending { opacity: .5; }
+  .nav-num { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; background: rgba(255,255,255,.08); border-radius: 6px; font-size: 11px; font-weight: 700; font-family: var(--mono); }
+  .nav-list a.active .nav-num { background: #fbbf24; color: #1e1b4b; }
+  main { padding: 56px 64px 120px; max-width: 960px; }
+  .page-eyebrow { display: inline-block; font-size: 12px; font-weight: 700; color: var(--indigo-7); letter-spacing: .15em; text-transform: uppercase; background: var(--indigo-1); padding: 6px 12px; border-radius: 99px; margin-bottom: 16px; }
+  h1.page-title { font-family: var(--serif); font-size: 48px; font-weight: 700; line-height: 1.15; letter-spacing: -.02em; color: var(--ink); margin-bottom: 14px; }
+  .page-subtitle { font-size: 19px; color: var(--ink-soft); margin-bottom: 48px; font-weight: 400; line-height: 1.55; }
+  h2 { font-family: var(--serif); font-size: 32px; font-weight: 700; letter-spacing: -.015em; margin: 56px 0 20px; color: var(--ink); position: relative; padding-right: 20px; }
+  h2::before { content: ''; position: absolute; right: 0; top: 14px; bottom: 14px; width: 4px; background: var(--indigo-7); border-radius: 2px; }
+  h3 { font-family: var(--sans); font-size: 22px; font-weight: 700; margin: 32px 0 12px; color: var(--ink); letter-spacing: -.005em; }
+  h4 { font-size: 17px; font-weight: 700; margin: 18px 0 8px; color: var(--ink-soft); }
+  p { margin-bottom: 14px; color: var(--ink-soft); } p strong { color: var(--ink); font-weight: 700; }
+  ul, ol { margin: 12px 24px 18px; color: var(--ink-soft); } li { margin-bottom: 8px; }
+  .term { font-family: var(--mono); direction: ltr; display: inline-block; font-size: .88em; background: #f5f5f4; padding: 1px 8px; border-radius: 5px; color: #be185d; border: 1px solid #e7e5e4; vertical-align: baseline; unicode-bidi: isolate; }
+  .term.blue { color: var(--c-theory-h); background: var(--c-theory-bg); border-color: var(--c-theory-edge); }
+  .term.green { color: var(--c-example-h); background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .term.amber { color: var(--c-formula-h); background: var(--c-formula-bg); border-color: var(--c-formula-edge); }
+  .katex-display { margin: 18px 0 !important; direction: ltr !important; text-align: center !important; unicode-bidi: isolate; } .katex { direction: ltr !important; unicode-bidi: isolate; }
+  .box { border-radius: 14px; margin: 24px 0; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); background: var(--bg-paper); }
+  .box-head { display: flex; align-items: center; gap: 10px; padding: 14px 20px; font-weight: 700; font-size: 15px; border-bottom: 1px solid var(--rule); }
+  .box-head .icon { width: 28px; height: 28px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 16px; }
+  .box-body { padding: 18px 22px; }
+  .box.theory { border-color: var(--c-theory-edge); } .box.theory .box-head { background: var(--c-theory-bg); color: var(--c-theory-h); } .box.theory .box-head .icon { background: var(--c-theory-h); color: #fff; }
+  .box.formula { border-color: var(--c-formula-edge); background: var(--c-formula-bg); } .box.formula .box-head { background: transparent; color: var(--c-formula-h); border-bottom-color: rgba(180,83,9,.18); } .box.formula .box-head .icon { background: var(--c-formula-h); color: #fff; } .box.formula .box-body { background: var(--c-formula-bg); } .box.formula p { color: #78350f; }
+  .box.example { border-color: var(--c-example-edge); } .box.example .box-head { background: var(--c-example-bg); color: var(--c-example-h); } .box.example .box-head .icon { background: var(--c-example-h); color: #fff; }
+  .box.warn { border-color: var(--c-warn-edge); } .box.warn .box-head { background: var(--c-warn-bg); color: var(--c-warn-h); } .box.warn .box-head .icon { background: var(--c-warn-h); color: #fff; }
+  .box.exercise { border-color: var(--c-exercise-edge); } .box.exercise .box-head { background: var(--c-exercise-bg); color: var(--c-exercise-h); } .box.exercise .box-head .icon { background: var(--c-exercise-h); color: #fff; }
+  .box.summary { border-color: var(--c-summary-edge); } .box.summary .box-head { background: var(--c-summary-bg); color: var(--c-summary-h); } .box.summary .box-head .icon { background: var(--c-summary-h); color: #fff; }
+  pre { background: var(--code-bg) !important; border-radius: 0 0 12px 12px; padding: 18px 22px !important; margin: 0 0 16px 0; overflow-x: auto; direction: ltr; font-size: 14px; line-height: 1.7; box-shadow: var(--shadow); border: 1px solid var(--code-bg-2); border-top: none; }
+  pre code { font-family: var(--mono) !important; background: transparent !important; padding: 0 !important; border: none !important; color: var(--code-ink) !important; }
+  .code-label { display: flex; align-items: center; gap: 8px; background: var(--code-bg-2); color: #94a3b8; font-family: var(--mono); font-size: 12px; padding: 10px 16px; border-radius: 12px 12px 0 0; direction: ltr; border: 1px solid var(--code-bg-2); border-bottom: 1px solid #334155; margin-top: 18px; }
+  .code-label .dot { width: 8px; height: 8px; border-radius: 50%; background: #475569; }
+  .code-label .dot.red { background: #ef4444; } .code-label .dot.amber { background: #f59e0b; } .code-label .dot.green { background: #22c55e; }
+  .code-label .name { margin-right: auto; opacity: .9; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm); font-size: 15px; }
+  th, td { padding: 11px 14px; text-align: right; border-bottom: 1px solid var(--rule-soft); border-left: 1px solid var(--rule-soft); }
+  th { background: var(--c-summary-bg); font-weight: 700; color: var(--c-summary-h); }
+  tr:last-child td { border-bottom: none; }
+  td.num, th.num { font-family: var(--mono); direction: ltr; text-align: center; font-size: 14px; }
+  td.highlight { background: var(--c-formula-bg); font-weight: 700; color: var(--c-formula-h); }
+  td.updated { background: #dcfce7; font-weight: 700; color: #166534; }
+  .exercise-card { background: #fff; border-radius: 10px; margin: 14px 0; border: 1px solid var(--c-exercise-edge); overflow: hidden; }
+  .exercise-tag { display: inline-block; font-size: 11px; font-weight: 700; background: var(--c-exercise-h); color: #fff; padding: 3px 10px; border-radius: 99px; margin-bottom: 10px; font-family: var(--mono); letter-spacing: .05em; direction: ltr; }
+  .exercise-q { padding: 20px 24px; background: #fafaf9; border-bottom: 1px solid var(--rule-soft); }
+  .exercise-q p:last-child { margin-bottom: 0; }
+  .reveal-btn { display: block; width: 100%; background: var(--c-exercise-bg); border: none; border-top: 1px solid var(--c-exercise-edge); padding: 13px; font-family: var(--sans); font-size: 14px; font-weight: 700; color: var(--c-exercise-h); cursor: pointer; transition: background .15s ease; }
+  .reveal-btn:hover { background: #ede9fe; } .reveal-btn::before { content: '▼ '; font-size: 10px; margin-left: 6px; transition: transform .2s ease; }
+  .exercise-card.open .reveal-btn::before { content: '▲ '; }
+  .solution { padding: 22px 26px; background: var(--c-example-bg); border-top: 1px solid var(--c-example-edge); display: none; }
+  .exercise-card.open .solution { display: block; }
+  .solution .step { background: #fff; border-radius: 8px; padding: 14px 18px; margin: 12px 0; border-right: 3px solid var(--c-example-h); }
+  .solution .step-label { font-size: 11px; font-weight: 700; color: var(--c-example-h); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; font-family: var(--mono); }
+  .solution .final-answer { background: #fff; border: 2px solid var(--c-example-h); border-radius: 10px; padding: 14px 20px; margin-top: 16px; font-weight: 600; }
+  .solution .final-answer::before { content: '✓ '; color: var(--c-example-h); font-weight: 900; }
+  .lead { font-size: 19px; color: var(--ink-soft); border-right: 3px solid var(--indigo-7); padding-right: 20px; margin: 24px 0 32px; font-weight: 400; line-height: 1.6; }
+  .keypoint { background: linear-gradient(90deg, var(--c-formula-bg) 0%, transparent 100%); padding: 14px 18px; border-radius: 8px; margin: 16px 0; border-right: 3px solid var(--c-formula-h); }
+  .keypoint::before { content: '💡 '; font-size: 18px; margin-left: 4px; }
+  .figure { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 18px; margin: 18px 0; text-align: center; box-shadow: var(--shadow-sm); }
+  .figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .figure .cap { font-size: 13px; color: var(--ink-mute); margin-top: 12px; font-style: italic; }
+  .mc-list { list-style: none; margin: 12px 0; padding: 0; }
+  .mc-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; background: #fff; border: 1px solid var(--rule); border-radius: 8px; margin-bottom: 8px; transition: all .15s ease; }
+  .mc-list li .mc-marker { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--rule); flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--ink-mute); background: #fff; }
+  .mc-list li.correct { background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .mc-list li.correct .mc-marker { background: var(--c-example-h); color: #fff; border-color: var(--c-example-h); }
+  .mc-list li.correct .mc-marker::after { content: '✓'; }
+  .mc-list li.wrong { background: var(--c-warn-bg); border-color: var(--c-warn-edge); }
+  .mc-list li.wrong .mc-marker { background: var(--c-warn-h); color: #fff; border-color: var(--c-warn-h); }
+  .mc-list li.wrong .mc-marker::after { content: '✗'; }
+  .mc-list li .mc-text { flex: 1; line-height: 1.55; color: var(--ink-soft); }
+  .mc-list li .mc-text .why { display: block; margin-top: 6px; font-size: 13.5px; color: var(--ink-mute); font-style: italic; }
+  .algo-compare { background: #fff; border-radius: 12px; padding: 0; margin: 18px 0; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); overflow: hidden; }
+  .algo-compare table { margin: 0; border-radius: 0; box-shadow: none; }
+  @media (max-width: 900px) { .app { grid-template-columns: 1fr; } .sidebar { position: static; height: auto; } main { padding: 32px 24px 80px; } h1.page-title { font-size: 36px; } h2 { font-size: 26px; } }
+</style>
+</head>
+<body>
+<div class="app">
+
+<aside class="sidebar">
+  <div class="brand"><a href="index.html">אלגוריתמים</a></div>
+  <div class="brand-sub">ד״ר אלעזר גולדנברג · הגב׳ שלומית אריאן</div>
+  <div class="brand-meta">MTA · קיץ 2026</div>
+
+  <div class="nav-label">יסודות</div>
+  <ul class="nav-list">
+    <li><a href="01-intro.html" class="pending"><span class="nav-num">1</span>מושג האלגוריתם</a></li>
+    <li><a href="02-numbers.html" class="pending"><span class="nav-num">2</span>ייצוג מספרים</a></li>
+  </ul>
+
+  <div class="nav-label">גרפים בסיסיים</div>
+  <ul class="nav-list">
+    <li><a href="03-graph-basics.html" class="pending"><span class="nav-num">3</span>מושגי יסוד</a></li>
+    <li><a href="04-toposort.html" class="pending"><span class="nav-num">4</span>מיון טופולוגי</a></li>
+  </ul>
+
+  <div class="nav-label">סריקות</div>
+  <ul class="nav-list">
+    <li><a href="05-dfs.html" class="pending"><span class="nav-num">5</span>DFS</a></li>
+    <li><a href="06-dfs-apps.html" class="pending"><span class="nav-num">6</span>יישומי DFS</a></li>
+    <li><a href="07-bfs.html" class="pending"><span class="nav-num">7</span>BFS</a></li>
+  </ul>
+
+  <div class="nav-label">מסלולים קלים ביותר</div>
+  <ul class="nav-list">
+    <li><a href="08-shortest-paths-1.html" class="pending"><span class="nav-num">8</span>מק״בים א׳</a></li>
+    <li><a href="09-shortest-paths-2.html" class="active"><span class="nav-num">9</span>מק״בים ב׳</a></li>
+  </ul>
+
+  <div class="nav-label">אופטימיזציה ורשתות</div>
+  <ul class="nav-list">
+    <li><a href="10-mst.html" class="pending"><span class="nav-num">10</span>עצים פורשים</a></li>
+    <li><a href="11-dp.html" class="pending"><span class="nav-num">11</span>תכנות דינמי</a></li>
+    <li><a href="12-flow.html" class="pending"><span class="nav-num">12</span>זרימה</a></li>
+  </ul>
+</aside>
+
+<main>
+  <span class="page-eyebrow">פרק 9 · מסלולים קלים ביותר ב׳</span>
+  <h1 class="page-title">DAG, Dijkstra<br>ו-A*</h1>
+  <p class="page-subtitle">שלושת האלגוריתמים המרכזיים לבעיית המוצא היחיד — מתי כל אחד עובד, איך מנתחים יעילות, ולמה Dijkstra נכשל עם משקלים שליליים.</p>
+
+  <p class="lead">
+    כל אלגוריתם בפרק הזה הוא מימוש של <strong>שיטת Ford</strong> מהפרק הקודם — מה שמשתנה זה <strong>סדר ביצוע ה-Relax</strong>.
+    DAG משתמש במיון טופולוגי. Dijkstra משתמש בתור קדימויות חמדני. A* מוסיף יוריסטיקה כדי לכוון את החיפוש אל היעד.
+    כל אחד מהם <strong>מופיע במבחן כמעט תמיד</strong>, ושלוש הטעויות הקלאסיות הן: להריץ Dijkstra על משקלים שליליים, לשכוח את תנאי קבילות היוריסטיקה ב-A*, ולהתבלבל בין יעילות עם ערימה בינארית לבין ערימת פיבונאצ׳י.
+  </p>
+
+  <div class="keypoint">
+    <strong>הכלל ההכרעתי לבחירת אלגוריתם:</strong> אם יש מעגלים שליליים — Bellman-Ford. אם גרף אציקלי — DAG-SP. אם המשקלים אי-שליליים — Dijkstra. אם זוג יחיד עם יוריסטיקה — A*.
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- ===================== 1. תזכורת + הבחנות ===================== -->
+  <!-- ============================================================== -->
+  <h2>תזכורת: שיטת Ford + ארבע ההבחנות</h2>
+
+  <p>לפני שנעבור לאלגוריתמים החדשים, חשוב לוודא שאתה זוכר את <strong>הבסיס</strong>. כל אלגוריתם בפרק הזה הוא ניסוח של שיטת פורד עם החלטה ספציפית על סדר הקשתות.</p>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>תזכורת — שיטת Ford ופעולת Relax</div>
+    <div class="box-body">
+      <p><strong>אתחול:</strong> <span class="term">d[s]=0</span>, ולכל <span class="term">v≠s</span> בצע <span class="term">d[v]=∞</span> ו-<span class="term">p[v]=NULL</span>.</p>
+      <p><strong>פעולת Relax על קשת (u,v):</strong> אם מתקיים התנאי</p>
+      $$d[v] > d[u] + w(u,v)$$
+      <p>אז מעדכנים:</p>
+      $$d[v] \leftarrow d[u] + w(u,v), \quad p[v] \leftarrow u$$
+      <p><strong>קשת משפרת</strong> היא קשת שעבורה תנאי ה-Relax מתקיים — הפעלת Relax עליה תשנה את המצב.</p>
+      <p><strong>שיטת Ford:</strong> כל עוד קיימת קשת משפרת — בצע Relax עליה. ההבדל בין האלגוריתמים השונים הוא <em>בסדר</em> שבו בוחרים את הקשתות.</p>
+    </div>
+  </div>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>ארבע ההבחנות של שיטת Ford</div>
+    <div class="box-body">
+      <p><strong>הבחנה א׳ — מונוטוניות:</strong> לכל קודקוד <span class="term">v</span>, ערכי <span class="term">d[v]</span> יורדים מונוטונית.</p>
+      <p><strong>הבחנה ב׳ — משמעות d[v]:</strong> בכל שלב שבו <span class="term">d[v]≠∞</span>, ערכו של <span class="term">d[v]</span> הוא משקל של מסלול כלשהו מ-<span class="term">s</span> ל-<span class="term">v</span>, העובר דרך הקשת <span class="term">(p[v],v)</span>.</p>
+      <p><strong>הבחנה ג׳ — חסם תחתון:</strong> בכל שלב ולכל קודקוד מתקיים</p>
+      $$d[v] \geq \delta(s,v)$$
+      <p><strong>הבחנה ד׳ — סופיות התיקון:</strong> אם בנקודת זמן כלשהי הערך נכון, כלומר</p>
+      $$d[v] = \delta(s,v)$$
+      <p>אז הוא לא ישתנה בהמשך הריצה.</p>
+      <p style="margin-top:14px;border-top:1px solid rgba(180,83,9,.2);padding-top:12px;"><strong>כל ארבע ההבחנות תקפות גם בנוכחות מעגלים שליליים.</strong> זה חשוב — נשתמש בזה בהוכחות.</p>
+    </div>
+  </div>
+
+  <h3>תזכורת קצרה — Bellman-Ford</h3>
+  <p>זה האלגוריתם המכליל ביותר. עובד על כל גרף מכוון, כולל משקלים שליליים, ויודע לזהות מעגלים שליליים. הוא מבצע <span class="term">n−1</span> איטרציות; בכל איטרציה הוא עובר על <em>כל</em> קשתות הגרף ומבצע Relax.</p>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>למה דווקא n−1 איטרציות?</div>
+    <div class="box-body">
+      <p>אם אין מעגלים שליליים — קיים מסלול קל ביותר <em>פשוט</em> לכל קודקוד, ובמסלול פשוט יש לכל היותר <span class="term">n−1</span> קשתות. <strong>טענת העזר:</strong> אחרי <span class="term">k</span> איטרציות, <span class="term">d[v]</span> כבר משקלל את כל המסלולים מ-<span class="term">s</span> ל-<span class="term">v</span> בעלי <em>לכל היותר k קשתות</em>. לכן אחרי <span class="term">n−1</span> איטרציות סיימנו.</p>
+      <p>איטרציה נוספת (ה-n-ית) משמשת ל<strong>זיהוי מעגלים שליליים</strong>: אם עדיין קיימת קשת משפרת — קיים מעגל שלילי נגיש מ-<span class="term">s</span>.</p>
+    </div>
+  </div>
+
+  <p><strong>יעילות:</strong> <span class="term amber">Θ(n·m)</span>. בהמשך נראה אלגוריתמים <em>מהירים יותר</em> כשיש לנו הנחות נוספות על הגרף.</p>
+
+  <div class="code-label">
+    <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+    <span class="name">Bellman-Ford.txt</span>
+  </div>
+<pre><code class="language-plaintext">BELLMAN-FORD(Graph G, weight w, vertex s):
+    INITIALIZE-SINGLE-SOURCE(G, s)
+    for i = 1 to n − 1:
+        for each (u,v) ∈ E  (לפי סדר הקלט):
+            Relax(u, v)
+    // איטרציה נוספת לזיהוי מעגל שלילי
+    for each (u,v) ∈ E:
+        if d[v] > d[u] + w(u,v):
+            return NEGATIVE-CYCLE
+    return (d, p)
+</code></pre>
+
+  <div class="keypoint">
+    <strong>איך ממלאים טבלת BF במבחן:</strong> טור לכל קודקוד, שורה לכל איטרציה. <strong>בכל איטרציה</strong> עוברים על כל הקשתות לפי הסדר שניתן בקלט ומבצעים Relax. תא מתעדכן רק אם <span class="term">d[v] > d[u]+w(u,v)</span>. סמנו תאים שעודכנו באותה איטרציה בצבע, וזכרו לכתוב גם את <span class="term">p[v]</span>, לא רק את <span class="term">d[v]</span>.
+  </div>
+
+  <div class="box warn">
+    <div class="box-head"><span class="icon">⚠</span>טעות נפוצה במבחן</div>
+    <div class="box-body">
+      <p>סדר הקשתות באיטרציה <em>אינו</em> חלק מההגדרה של Bellman-Ford — האלגוריתם נכון לכל סדר שבוחרים. אבל הוא משפיע על <strong>מספר האיטרציות עד להתכנסות בפועל</strong>: סדר טוב יכול לסיים תוך איטרציה אחת, סדר רע ידרוש את כל ה-n−1.</p>
+      <p>כשהשאלה נותנת סדר קשתות מפורש — עבדו בדיוק לפיו. אל תייצרו "סדר טבעי" אחר.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- ================= 2. מק"בים בגרף אציקלי (DAG) ================ -->
+  <!-- ============================================================== -->
+  <h2>מסלולים קלים ביותר ב-DAG</h2>
+
+  <p>כשאנחנו יודעים שהגרף <strong>אציקלי</strong> (Directed Acyclic Graph), אפשר לפתור את הבעיה ב-<span class="term amber">Θ(n+m)</span> בלבד — מהיר משמעותית מ-Bellman-Ford. הרעיון מנצל את המיון הטופולוגי.</p>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הרעיון המרכזי</div>
+    <div class="box-body">
+      <p>בגרף אציקלי, קיים מיון טופולוגי לקודקודים. <strong>טענה:</strong> קיים מיון טופולוגי שבו <span class="term">s</span> מופיע ראשון (כל קודקוד שלא נגיש מ-<span class="term">s</span> ממילא יישאר עם <span class="term">d=∞</span> — אפשר להתעלם ממנו).</p>
+      <p>אם נסרוק את הקודקודים <em>לפי הסדר הטופולוגי</em> ולכל קודקוד <span class="term">u</span> נבצע Relax על כל קשתותיו היוצאות, אז <strong>כשמגיעים לקודקוד u — כבר ביצענו Relax על כל הקשתות הנכנסות אליו</strong>. לכן <span class="term">d[u]</span> כבר נכון, ומעבר אחד מספיק.</p>
+    </div>
+  </div>
+
+  <div class="code-label">
+    <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+    <span class="name">DAG-Shortest-Paths.txt</span>
+  </div>
+<pre><code class="language-plaintext">DAG-SHORTEST-PATHS(Graph G, weight w, vertex s):
+    L ← TOPOLOGICAL-SORT(G)
+    INITIALIZE-SINGLE-SOURCE(G, s)
+    for each u ∈ L  (in topological order):
+        for each v ∈ Adj[u]:
+            Relax(u, v)
+
+יעילות: Θ(n + m)
+</code></pre>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>דוגמת הרצה — DAG עם משקלים שליליים</div>
+    <div class="box-body">
+      <p>הגרף הבא הוא אציקלי וקודקוד <span class="term">s</span> הוא מקור (אין קשתות נכנסות אליו). נמצא מק״בים מ-<span class="term">s</span> באמצעות מיון טופולוגי <span class="term">s, b, a, c</span>:</p>
+
+      <div class="figure">
+        <svg viewBox="0 0 440 260" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+            </marker>
+          </defs>
+
+          <!-- nodes: s (top-left), a (top-right), b (bottom-left), c (bottom-right) -->
+          <circle cx="80" cy="60" r="26" fill="#fff" stroke="#1d4ed8" stroke-width="2.5"/>
+          <text x="80" y="66" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700" fill="#1d4ed8">s</text>
+          <text x="80" y="22" text-anchor="middle" font-family="JetBrains Mono" font-size="14" fill="#047857" font-weight="700">0</text>
+
+          <circle cx="360" cy="60" r="26" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="360" y="66" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700">a</text>
+          <text x="360" y="22" text-anchor="middle" font-family="JetBrains Mono" font-size="14" fill="#047857" font-weight="700">5</text>
+
+          <circle cx="80" cy="200" r="26" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="80" y="206" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700">b</text>
+          <text x="80" y="244" text-anchor="middle" font-family="JetBrains Mono" font-size="14" fill="#047857" font-weight="700">6</text>
+
+          <circle cx="360" cy="200" r="26" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="360" y="206" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700">c</text>
+          <text x="360" y="244" text-anchor="middle" font-family="JetBrains Mono" font-size="14" fill="#047857" font-weight="700">−2</text>
+
+          <!-- s → a (weight 5) -->
+          <line x1="106" y1="60" x2="334" y2="60" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+          <text x="220" y="48" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700" fill="#be123c">5</text>
+
+          <!-- s → b (weight 6) -->
+          <line x1="80" y1="86" x2="80" y2="174" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+          <text x="62" y="135" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700" fill="#be123c">6</text>
+
+          <!-- a → c (weight -4) -->
+          <line x1="360" y1="86" x2="360" y2="174" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+          <text x="378" y="135" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700" fill="#be123c">−4</text>
+
+          <!-- b → c (weight -3) -->
+          <line x1="106" y1="200" x2="334" y2="200" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+          <text x="220" y="220" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700" fill="#be123c">−3</text>
+
+          <!-- s → c (weight -2), diagonal -->
+          <line x1="103" y1="80" x2="338" y2="180" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+          <text x="200" y="125" text-anchor="middle" font-family="JetBrains Mono" font-size="14" font-weight="700" fill="#be123c">−2</text>
+        </svg>
+        <div class="cap">משקלי הקשתות (אדום) וערכי <span class="term">δ(s,v)</span> הסופיים (ירוק). שני משקלים שליליים — DAG-SP מטפל בזה ללא בעיה.</div>
+      </div>
+
+      <p><strong>טבלת איטרציות לפי הסדר הטופולוגי <span class="term">s, b, a, c</span>:</strong></p>
+      <table>
+        <tr><th>שלב</th><th>נסרק</th><th class="num">d[s]</th><th class="num">d[a]</th><th class="num">d[b]</th><th class="num">d[c]</th></tr>
+        <tr><td>אתחול</td><td>—</td><td class="num">0</td><td class="num">∞</td><td class="num">∞</td><td class="num">∞</td></tr>
+        <tr><td>I</td><td>s → {a, b, c}</td><td class="num">0</td><td class="num updated">5</td><td class="num updated">6</td><td class="num updated">−2</td></tr>
+        <tr><td>II</td><td>b → {c}: 6+(−3)=3 ≥ −2, אין שיפור</td><td class="num">0</td><td class="num">5</td><td class="num">6</td><td class="num">−2</td></tr>
+        <tr><td>III</td><td>a → {c}: 5+(−4)=1 ≥ −2, אין שיפור</td><td class="num">0</td><td class="num">5</td><td class="num">6</td><td class="num">−2</td></tr>
+        <tr><td>סוף</td><td>c → ∅</td><td class="num highlight">0</td><td class="num highlight">5</td><td class="num highlight">6</td><td class="num highlight">−2</td></tr>
+      </table>
+
+      <p style="margin-top:14px;"><strong>שים לב לשלב I:</strong> כש-s נסרק, כל הקשתות היוצאות ממנו מתעדכנות בבת אחת. ב-II ו-III, אף שעוברים על הקשתות, אף שיפור לא קורה כי <span class="term">d[c]=−2</span> כבר מינימלי. <strong>זה היתרון של DAG-SP:</strong> בזכות הסדר הטופולוגי, מעבר אחד מספיק — לא חוזרים על הקשתות שוב.</p>
+
+      <p><strong>למה המסלול הקצר ל-c הוא דרך הקשת הישירה?</strong> שלושה מסלולים אפשריים מ-<span class="term">s</span> ל-<span class="term">c</span>: ישיר (משקל −2), דרך a (5+(−4)=1), דרך b (6+(−3)=3). הישיר הוא הקצר. DAG-SP עובד <em>עם משקלים שליליים</em> כל עוד אין מעגלים — וזה היתרון הגדול שלו על Dijkstra.</p>
+    </div>
+  </div>
+
+  <div class="box warn">
+    <div class="box-head"><span class="icon">⚠</span>מה אם s לא מקור (כלומר יש לו דרגת כניסה > 0)?</div>
+    <div class="box-body">
+      <p>אם <span class="term">s</span> אינו קודקוד מקור (יש קשתות הנכנסות אליו), <em>אין בעיה</em>: פשוט <strong>מוחקים את כל הקודקודים שאינם נגישים מ-s</strong> לפני ההרצה. בגרף שנותר, <span class="term">s</span> בהכרח יהיה מקור. הקודקודים הנגישים מ-<span class="term">s</span> דרך <span class="term">s</span> בלבד — שום קשת לא הולכת חזרה ל-<span class="term">s</span> כי הגרף אציקלי.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- ====================== 3. אלגוריתם Dijkstra ================== -->
+  <!-- ============================================================== -->
+  <h2>אלגוריתם Dijkstra</h2>
+
+  <p>אלגוריתם Dijkstra פותר את בעיית המוצא היחיד בגרף עם <strong>משקלים אי-שליליים</strong> ביעילות <span class="term amber">Θ(m + n log n)</span> (עם ערימת פיבונאצ׳י). הוא בוחר בכל שלב את הקודקוד עם <span class="term">d</span> מינימלי שטרם טופל, ועליו מבצע Relax.</p>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>אבחנת הקדימות — הבסיס לחמדנות</div>
+    <div class="box-body">
+      <p><strong>טענה:</strong> יהי <span class="term">G=(V,E,w)</span> גרף ממושקל עם <em>משקלים אי-שליליים</em>. אם <span class="term">u</span> נמצא על מסלול קל ביותר מ-<span class="term">s</span> ל-<span class="term">v</span>, אז:</p>
+      $$\delta(s,u) \leq \delta(s,v)$$
+      <p><strong>הוכחה (בקצרה):</strong> מתכונת תת-המסלולים מתקיים</p>
+      $$\delta(s,v) = \delta(s,u) + \delta(u,v)$$
+      <p>כיוון שכל המשקלים אי-שליליים, מתקיים</p>
+      $$\delta(u,v) \geq 0$$
+      <p>ולכן, בהעברת אגפים</p>
+      $$\delta(s,u) \leq \delta(s,v) \quad\checkmark$$
+      <p><strong>המסקנה החמדנית:</strong> הקודקוד עם <span class="term">d</span> מינימלי שטרם טופל הוא הבא ש"מוכן" — לא יכול להיווצר לו מסלול קצר יותר דרך קודקוד שעדיין בתור.</p>
+    </div>
+  </div>
+
+  <div class="code-label">
+    <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+    <span class="name">Dijkstra.txt</span>
+  </div>
+<pre><code class="language-plaintext">DIJKSTRA(Graph G, weight w, vertex s):
+    INITIALIZE-SINGLE-SOURCE(G, s)
+    Q ← PriorityQueue.Build(V, d)   // ממוין לפי d[v]
+
+    while Q ≠ ∅:
+        u ← Q.DeleteMin()
+        for each v ∈ Adj[u]:
+            if d[v] > d[u] + w(u,v):
+                d[v] ← d[u] + w(u,v)
+                p[v] ← u
+                if v ∈ Q:
+                    Q.DecreaseKey(v, d[v])
+</code></pre>
+
+  <h3>יעילות — לפי מימוש תור הקדימויות</h3>
+
+  <p>זמן הריצה של Dijkstra <strong>נשלט לחלוטין על-ידי פעולות תור הקדימויות</strong>. יש לנו <span class="term">n</span> פעולות <span class="term">DeleteMin</span> ו-<span class="term">m</span> פעולות <span class="term">DecreaseKey</span>. לכן הבחירה במבנה הנתונים קובעת הכל.</p>
+
+  <div class="algo-compare">
+    <table>
+      <tr>
+        <th>מימוש Q</th>
+        <th class="num">Build</th>
+        <th class="num">DeleteMin (×n)</th>
+        <th class="num">DecreaseKey (×m)</th>
+        <th class="num">סה״כ</th>
+      </tr>
+      <tr>
+        <td>מערך רגיל</td>
+        <td class="num">O(n)</td>
+        <td class="num">O(n²)</td>
+        <td class="num">O(m)</td>
+        <td class="num highlight">Θ(n²)</td>
+      </tr>
+      <tr>
+        <td>ערימה בינארית</td>
+        <td class="num">O(n)</td>
+        <td class="num">O(n log n)</td>
+        <td class="num">O(m log n)</td>
+        <td class="num highlight">O(m log n)</td>
+      </tr>
+      <tr>
+        <td>ערימת פיבונאצ׳י</td>
+        <td class="num">O(n)</td>
+        <td class="num">O(n log n)</td>
+        <td class="num">O(m) amortized</td>
+        <td class="num highlight">O(m + n log n)</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="keypoint">
+    <strong>איך לזכור איזה מימוש הכי טוב מתי?</strong> כשהגרף <em>צפוף</em> (<span class="term">m=Θ(n²)</span>) — מערך רגיל ב-<span class="term">Θ(n²)</span> כבר טוב כמו ערימת פיבונאצ׳י. כשהגרף <em>דליל</em> (<span class="term">m=O(n)</span>) — ערימה בינארית נותנת <span class="term">O(n log n)</span>, וזה הכי מהיר בפועל. ערימת פיבונאצ׳י עוזרת באמצע (לדוגמה <span class="term">m=Θ(n log n)</span>).
+  </div>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>דוגמת הרצה — Dijkstra צעד אחר צעד</div>
+    <div class="box-body">
+      <p>הגרף הבא, הקודקוד הראשי <span class="term">s</span>, וכל הקשתות עם משקלים <em>אי-שליליים</em>:</p>
+
+      <div class="figure">
+        <svg viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+            </marker>
+          </defs>
+          <circle cx="60" cy="110" r="26" fill="#fef9e7" stroke="#b45309" stroke-width="2"/>
+          <text x="60" y="116" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700" fill="#b45309">s</text>
+
+          <circle cx="220" cy="50" r="26" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="220" y="56" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700">x</text>
+
+          <circle cx="220" cy="170" r="26" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="220" y="176" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700">w</text>
+
+          <circle cx="380" cy="110" r="26" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="380" y="116" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700">t</text>
+
+          <!-- s -> x : 4 -->
+          <line x1="80" y1="93" x2="200" y2="63" stroke="#475569" stroke-width="2" marker-end="url(#arrow2)"/>
+          <text x="135" y="68" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">4</text>
+          <!-- s -> w : 8 -->
+          <line x1="80" y1="125" x2="200" y2="158" stroke="#475569" stroke-width="2" marker-end="url(#arrow2)"/>
+          <text x="130" y="160" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">8</text>
+          <!-- x -> w : 2 -->
+          <line x1="220" y1="76" x2="220" y2="144" stroke="#475569" stroke-width="2" marker-end="url(#arrow2)"/>
+          <text x="232" y="115" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">2</text>
+          <!-- x -> t : 20 -->
+          <line x1="244" y1="62" x2="360" y2="98" stroke="#475569" stroke-width="2" marker-end="url(#arrow2)"/>
+          <text x="295" y="68" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">20</text>
+          <!-- w -> t : 7 -->
+          <line x1="244" y1="160" x2="360" y2="125" stroke="#475569" stroke-width="2" marker-end="url(#arrow2)"/>
+          <text x="295" y="160" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">7</text>
+        </svg>
+        <div class="cap">הצהוב הוא <span class="term">s</span>. נריץ Dijkstra ונציג את התור בכל שלב.</div>
+      </div>
+
+      <table>
+        <tr><th>שלב</th><th>שלפנו</th><th>תור Q (ממוין לפי d)</th><th class="num">d[s]</th><th class="num">d[x]</th><th class="num">d[w]</th><th class="num">d[t]</th></tr>
+        <tr><td>0</td><td>—</td><td class="num">[s:0, x:∞, w:∞, t:∞]</td><td class="num">0</td><td class="num">∞</td><td class="num">∞</td><td class="num">∞</td></tr>
+        <tr><td>1</td><td>s</td><td class="num">[x:4, w:8, t:∞]</td><td class="num">0</td><td class="num updated">4</td><td class="num updated">8</td><td class="num">∞</td></tr>
+        <tr><td>2</td><td>x</td><td class="num">[w:6, t:24]</td><td class="num">0</td><td class="num">4</td><td class="num updated">6</td><td class="num updated">24</td></tr>
+        <tr><td>3</td><td>w</td><td class="num">[t:13]</td><td class="num">0</td><td class="num">4</td><td class="num">6</td><td class="num updated">13</td></tr>
+        <tr><td>4</td><td>t</td><td class="num">[]</td><td class="num highlight">0</td><td class="num highlight">4</td><td class="num highlight">6</td><td class="num highlight">13</td></tr>
+      </table>
+
+      <p style="margin-top:14px;"><strong>שים לב לשלב 2:</strong> כשהוצאנו את <span class="term">x</span>, ערך <span class="term">d[w]</span> ירד מ-8 ל-6 דרך הקשת <span class="term">s→x→w</span>. זה בדיוק מה ש-<span class="term">DecreaseKey</span> עושה — מעדכן את העדיפות בתוך התור.</p>
+    </div>
+  </div>
+
+  <div class="box warn">
+    <div class="box-head"><span class="icon">⚠</span>למה Dijkstra נכשל עם משקלים שליליים?</div>
+    <div class="box-body">
+      <p>נסתכל בגרף הקטן הבא — אותו הגרף שמופיע בהרצאה:</p>
+
+      <div class="figure">
+        <svg viewBox="0 0 440 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+            </marker>
+          </defs>
+          <circle cx="60" cy="100" r="26" fill="#fef9e7" stroke="#b45309" stroke-width="2"/>
+          <text x="60" y="106" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700" fill="#b45309">s</text>
+
+          <circle cx="190" cy="50" r="26" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="190" y="56" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700">x</text>
+
+          <circle cx="190" cy="150" r="26" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="190" y="156" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700">w</text>
+
+          <circle cx="380" cy="100" r="26" fill="#fff" stroke="#475569" stroke-width="2"/>
+          <text x="380" y="106" text-anchor="middle" font-family="JetBrains Mono" font-size="18" font-weight="700">t</text>
+
+          <line x1="80" y1="88" x2="170" y2="62" stroke="#475569" stroke-width="2" marker-end="url(#arrow3)"/>
+          <text x="115" y="65" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">2</text>
+
+          <line x1="80" y1="115" x2="170" y2="140" stroke="#475569" stroke-width="2" marker-end="url(#arrow3)"/>
+          <text x="115" y="145" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">1</text>
+
+          <line x1="210" y1="73" x2="200" y2="125" stroke="#be123c" stroke-width="2.5" marker-end="url(#arrow3)"/>
+          <text x="222" y="105" font-family="JetBrains Mono" font-size="14" font-weight="700" fill="#be123c">-2</text>
+
+          <line x1="214" y1="160" x2="360" y2="113" stroke="#475569" stroke-width="2" marker-end="url(#arrow3)"/>
+          <text x="280" y="155" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#be123c">2</text>
+        </svg>
+        <div class="cap">הקשת מ-<span class="term">x</span> ל-<span class="term">w</span> שלילית. Dijkstra יוציא את <span class="term">w</span> מהתור עם <span class="term">d[w]=1</span>, אבל המסלול הקצר באמת הוא <span class="term">s→x→w</span> במשקל 0.</div>
+      </div>
+
+      <p><strong>הריצה:</strong> אחרי שמוציאים את <span class="term">s</span>, התור הוא <span class="term">[w:1, x:2, t:∞]</span>. Dijkstra בוחר את <span class="term">w</span> (מינימום), <em>סוגר אותו ל-d[w]=1</em>, ומעדכן <span class="term">d[t]=3</span>. אבל המסלול האמיתי <span class="term">s→x→w</span> שווה <span class="term">2 + (-2) = 0</span>, ולכן <span class="term">δ(s,t)=2</span>, לא 3.</p>
+
+      <p><strong>למה החמדנות נשברת?</strong> אבחנת הקדימות הניחה <em>שכל המשקלים אי-שליליים</em> — בלעדיה, "הקודקוד עם d המינימלי" עדיין יכול לקבל שיפור דרך קשת שלילית עתידית.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- ========================= 4. אלגוריתם A* ===================== -->
+  <!-- ============================================================== -->
+  <h2>אלגוריתם A* — חיפוש מוכוון יעד</h2>
+
+  <p>עד עכשיו פתרנו את <em>בעיית המוצא היחיד</em>: מצא את המרחק מ-<span class="term">s</span> לכל הקודקודים. אבל לעיתים אנחנו רוצים רק את המרחק <strong>מ-s ל-t</strong> (זוג יחיד) — למשל בניווט. <strong>A*</strong> הוא וריאנט של Dijkstra שמשתמש ב<em>יוריסטיקה</em> כדי לחסוך עבודה: במקום לסרוק שווה-בשווה לכל הכיוונים, הוא מטה את החיפוש <em>אל היעד</em>.</p>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הרעיון: עדיפות = מה שיש + הערכה למה שנותר</div>
+    <div class="box-body">
+      <p>במקום לסדר את התור לפי <span class="term">d[v]</span> בלבד, A* משתמש בערך <strong>מורכב</strong> שלוקח בחשבון גם הערכה כמה נותר עד היעד <span class="term">t</span>:</p>
+      $$q[v] = d[v] + h(v)$$
+      <p>כאשר <span class="term">h(v)</span> היא <strong>פונקציית יוריסטיקה</strong> — הערכה (לא מדויקת) של המרחק מ-<span class="term">v</span> ל-<span class="term">t</span>.</p>
+      <p><strong>קריטריון העצירה:</strong> כשמוציאים את <span class="term">t</span> מהתור — מסיימים.</p>
+    </div>
+  </div>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>תנאי קבילות היוריסטיקה (Admissibility + Consistency)</div>
+    <div class="box-body">
+      <p>כדי ש-A* יחזיר תוצאה נכונה, היוריסטיקה <span class="term">h</span> חייבת לקיים שלושה תנאים:</p>
+
+      <p><strong>① אי-שוויון המשולש על h</strong> (קונסיסטנטיות) — לכל קשת <span class="term">(u,v)</span>:</p>
+      $$h(u) \leq w(u,v) + h(v)$$
+
+      <p><strong>② אפס ביעד</strong> — בקודקוד היעד <span class="term">t</span>:</p>
+      $$h(t) = 0$$
+
+      <p><strong>③ חסם תחתון על המרחק האמיתי</strong> (קבילות) — לכל קודקוד <span class="term">v</span>:</p>
+      $$h(v) \leq \delta(v,t)$$
+
+      <p style="margin-top:14px;"><strong>שלושת התנאים יחד אומרים:</strong> ההערכה <span class="term">h</span> אופטימיסטית — היא תמיד <em>מקטינה או שווה</em> למרחק האמיתי, ולעולם לא מגזימה.</p>
+    </div>
+  </div>
+
+  <h3>גרפים המדמים מפה דו-מימדית</h3>
+
+  <p>הדוגמה הקלאסית של A* היא ניווט על מפה. גרף ממושקל <span class="term">G=(V,E,w)</span> "ממדל מפה דו-מימדית" אם מתקיימים שני התנאים הבאים.</p>
+
+  <p><strong>תנאי 1:</strong> כל קודקוד הוא נקודה במישור —</p>
+  $$V \subset \mathbb{R}^2$$
+
+  <p><strong>תנאי 2:</strong> משקל כל קשת שווה למרחק האוקלידי בין קצוותיה — לכל קשת <span class="term">((x₁,y₁), (x₂,y₂))</span>:</p>
+  $$w((x_1,y_1), (x_2,y_2)) = \sqrt{(x_1-x_2)^2 + (y_1-y_2)^2}$$
+
+  <p>במקרה הזה, היוריסטיקה הטבעית היא <strong>המרחק האוקלידי מ-<span class="term">v</span> ל-<span class="term">t</span></strong>:</p>
+  $$h(v) = \Delta_E(v, t) = \sqrt{(v_x - t_x)^2 + (v_y - t_y)^2}$$
+
+  <div class="keypoint">
+    <strong>למה זה עובד?</strong> במפה דו-מימדית, המרחק האוקלידי הוא הקצר ביותר אפשרי בין שתי נקודות (קו ישר). כל מסלול בגרף יכול רק להיות ארוך יותר. לכן <span class="term">Δ_E(v,t)</span> בהכרח חסם תחתון על <span class="term">δ(v,t)</span> — תנאי 3. תנאי 1 הוא אי-שוויון המשולש של מטריקות, ותנאי 2 מתקיים כי <span class="term">Δ_E(t,t)=0</span>.
+  </div>
+
+  <div class="code-label">
+    <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+    <span class="name">A-Star.txt</span>
+  </div>
+<pre><code class="language-plaintext">A-STAR(Graph G, weight w, vertex s, vertex t, heuristic h):
+    INITIALIZE-SINGLE-SOURCE(G, s)
+    for each v ∈ V: q[v] ← d[v] + h(v)
+    Q ← PriorityQueue.Build(V, q)
+
+    while Q ≠ ∅:
+        u ← Q.DeleteMin()
+        if u = t: return d[t]              // מצאנו, עוצרים
+        for each v ∈ Adj[u]:
+            if d[v] > d[u] + w(u,v):
+                d[v] ← d[u] + w(u,v)
+                p[v] ← u
+                q[v] ← d[v] + h(v)
+                if v ∈ Q: Q.DecreaseKey(v, q[v])
+</code></pre>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>למה A* בודק פחות קודקודים מ-Dijkstra?</div>
+    <div class="box-body">
+      <p>Dijkstra סורק קודקודים <em>שווה-בשווה לכל הכיוונים</em> מסביב ל-<span class="term">s</span> — הוא לא יודע איפה נמצא <span class="term">t</span>. A*, בעזרת היוריסטיקה, מטה את הסריקה לכיוון <span class="term">t</span>.</p>
+      <p><strong>אינטואיציה:</strong> דמיין את Dijkstra מתפשט כעיגול גדל מסביב ל-<span class="term">s</span> עד שמגיע ל-<span class="term">t</span>. A* מתפשט כ<em>אליפסה</em> מוארכת בכיוון <span class="term">t</span> — אותו תוצאה סופית, אבל הרבה פחות קודקודים נסרקים בדרך.</p>
+      <p>זה לא מקטין את ה<em>סיבוכיות הקבוצתית</em> במקרה הגרוע (היא נשארת כמו של Dijkstra), אבל ב<em>פועל</em> על גרפי מפות, A* יכול להיות מהיר פי 10 או יותר.</p>
+    </div>
+  </div>
+
+  <div class="box warn">
+    <div class="box-head"><span class="icon">⚠</span>מה קורה אם h לא קבילה?</div>
+    <div class="box-body">
+      <p>אם הופכים את אחד התנאים (במיוחד תנאי 3 — חסם תחתון):</p>
+      <ul>
+        <li>אם <span class="term">h</span> <strong>מגזימה</strong> (גדולה ממדי מהמרחק האמיתי) — A* עלול לפסול קודקוד שנמצא על מסלול קל ביותר אמיתי, ולהחזיר מסלול לא-אופטימלי.</li>
+        <li>אם <span class="term">h(t) ≠ 0</span> — קריטריון העצירה נשבר, אפשר לעצור מוקדם מדי.</li>
+        <li>אם אין קונסיסטנטיות (תנאי 1) — אפשר לקבל מסלול לא-אופטימלי, גם אם תנאי 3 מתקיים.</li>
+      </ul>
+      <p style="margin-top:14px;"><strong>על המבחן:</strong> אם נותנים לך פונקצית h ושואלים אם A* יעבוד נכון — תבדוק את שלושת התנאים <em>במפורש</em>. אל תנחש.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- =================== 5. סיכום בחירת אלגוריתם ================== -->
+  <!-- ============================================================== -->
+  <h2>סיכום — איך בוחרים אלגוריתם במבחן</h2>
+
+  <div class="box summary">
+    <div class="box-head"><span class="icon">📌</span>טבלת ההחלטה</div>
+    <div class="box-body">
+      <table>
+        <tr>
+          <th>תנאי הקלט</th>
+          <th>הבעיה</th>
+          <th>אלגוריתם</th>
+          <th class="num">יעילות</th>
+        </tr>
+        <tr>
+          <td><strong>גרף ללא משקלים</strong> (או כל הקשתות במשקל זהה)</td>
+          <td>מוצא יחיד</td>
+          <td><strong>BFS</strong></td>
+          <td class="num">Θ(n+m)</td>
+        </tr>
+        <tr>
+          <td>גרף כללי (גם משקלים שליליים)</td>
+          <td>מוצא יחיד</td>
+          <td><strong>Bellman-Ford</strong></td>
+          <td class="num">Θ(n·m)</td>
+        </tr>
+        <tr>
+          <td>גרף אציקלי (DAG, גם משקלים שליליים)</td>
+          <td>מוצא יחיד</td>
+          <td><strong>DAG-Shortest-Paths</strong></td>
+          <td class="num">Θ(n+m)</td>
+        </tr>
+        <tr>
+          <td>משקלים אי-שליליים</td>
+          <td>מוצא יחיד</td>
+          <td><strong>Dijkstra</strong></td>
+          <td class="num">O(m + n log n)</td>
+        </tr>
+        <tr>
+          <td>משקלים אי-שליליים + יוריסטיקה קבילה</td>
+          <td>זוג יחיד</td>
+          <td><strong>A*</strong></td>
+          <td class="num">≤ Dijkstra (בפועל)</td>
+        </tr>
+      </table>
+      <p style="margin-top:14px;"><strong>הבסיס המשותף:</strong> כל האלגוריתמים <em>למעט BFS</em> מיישמים את שיטת Ford. ההבדל ביניהם הוא <em>אך ורק בסדר ביצוע ה-Relax</em>. BFS שונה — הוא לא משתמש ב-Relax כלל, אלא בסריקה לפי מרחק בקשתות.</p>
+    </div>
+  </div>
+
+  <div class="keypoint">
+    <strong>צ׳קליסט להחלטה במבחן:</strong> (1) האם הגרף אציקלי? → DAG-SP. (2) האם יש משקלים שליליים? → Bellman-Ford. (3) זוג יחיד + יש יוריסטיקה טבעית (מפה)? → A*. (4) משקלים בקבוצה סופית קטנה (למשל <span class="term">{1,2,3}</span>)? → שקול <strong>רדוקציה ל-BFS</strong>: החלף כל קשת במשקל <span class="term">k</span> במסלול באורך <span class="term">k</span>, ורוץ BFS על הגרף החדש. (5) כל היתר → Dijkstra.
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- ========================== 6. תרגילים ======================== -->
+  <!-- ============================================================== -->
+  <h2>תרגילים מהפרקטיקה</h2>
+
+  <p>ארבעה תרגילים מתוך תרגיל 4. הם מכסים את ארבעת האלגוריתמים <em>וגם</em> את הטעויות הקלאסיות שבוחנים נופלים בהן במבחן.</p>
+
+  <!-- Exercise 1: Q3 from practice 4 - True/False BF -->
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 1 · practice4, שאלה 3 — האם BF מחזיר את המסלול הקצר ביותר בקשתות?</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">true-false · BF properties</span>
+          <p>נתון גרף מכוון וממושקל <span class="term">G=(V,E,w)</span> עם קודקוד מוצא <span class="term">s</span>, ללא מעגלים שליליים. קיים בגרף קודקוד <span class="term">v</span> עבורו <em>שני</em> מסלולים קלים ביותר במשקל מ-<span class="term">s</span> ל-<span class="term">v</span>, אך באחד מהם (נקרא לו <span class="term">P₁</span>) <strong>יש פחות קשתות</strong> מאשר בשני (<span class="term">P₂</span>).</p>
+          <p><strong>הוכח או הפרך:</strong> Bellman-Ford יחזיר תמיד את המסלול <span class="term">P₁</span> (הקצר בקשתות).</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">שלב 1 · הטענה שגויה</div>
+            <p>הטענה <strong>שגויה</strong>. נראה הפרכה לדוגמה. הסדר שבו BF עובר על הקשתות הוא חופשי, ולכן הוא יכול לבחור באיזה מסלול "להחזיק" כשמספר השיפורים זהה.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 2 · בניית גרף-הפרכה</div>
+            <p>גרף עם שלושה קודקודים <span class="term">s, u, v</span> וקשתות:</p>
+            <ul>
+              <li><span class="term">(s,u)</span> במשקל <strong>2</strong></li>
+              <li><span class="term">(u,v)</span> במשקל <strong>3</strong></li>
+              <li><span class="term">(s,v)</span> במשקל <strong>5</strong> ← מסלול ישיר</li>
+            </ul>
+            <p>שני מסלולים מ-<span class="term">s</span> ל-<span class="term">v</span>: <span class="term">P₁ = s→v</span> (קשת אחת, משקל 5) ו-<span class="term">P₂ = s→u→v</span> (שתי קשתות, משקל 5). שניהם קלים ביותר.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 3 · הסדר שמוביל ל-P₂</div>
+            <p>נריץ BF כשסדר הקשתות הוא: <span class="term">(s,u), (u,v), (s,v)</span>.</p>
+            <ul>
+              <li>Relax על <span class="term">(s,u)</span>: <span class="term">d[u]=2, p[u]=s</span></li>
+              <li>Relax על <span class="term">(u,v)</span>: <span class="term">d[v]=5, p[v]=u</span></li>
+              <li>Relax על <span class="term">(s,v)</span>: <span class="term">d[v] > d[s]+w(s,v)?</span> כלומר <span class="term">5 > 0+5</span>? לא. אין שיפור — <span class="term">p[v]</span> נשאר <span class="term">u</span>.</li>
+            </ul>
+            <p>האלגוריתם החזיר את <span class="term">P₂</span> (דרך <span class="term">u</span>) — המסלול עם <em>יותר</em> קשתות.</p>
+          </div>
+
+          <div class="final-answer">
+            הטענה הופרכה. סדר הקשתות יכול להוביל את BF לבחור בכל אחד משני המסלולים האופטימליים — האלגוריתם לא מבטיח את זה עם פחות קשתות.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Exercise 2: Q2 from practice 4 - BF trace -->
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 2 · practice4, שאלה 2 — הרצת Bellman-Ford</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">trace · Bellman-Ford</span>
+          <p>הרץ את Bellman-Ford על הקלט הבא, גרף מכוון ממושקל עם קודקודים <span class="term">A,B,C,D,E,F</span> וקודקוד מוצא <span class="term">D</span>. סדר הקשתות (משמאל לימין):</p>
+          <p style="direction:ltr;font-family:var(--mono);font-size:14px;background:#f5f5f4;padding:10px;border-radius:6px;">EF: 2, CE: −2, DC: 0, BC: 2, EB: 2, AD: −2, FD: 4, FA: 3, EA: 5, ED: 4</p>
+          <p>הצג את התהליך בטבלה: לכל קודקוד את <span class="term">d[v]</span> ואת <span class="term">p[v]</span> בכל איטרציה.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">שלב 1 · אתחול</div>
+            <p><span class="term">d[D]=0</span>, לכל יתר הקודקודים <span class="term">d=∞, p=NULL</span>.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 2 · איטרציה I — עוברים על הקשתות לפי הסדר</div>
+            <p>הקודקוד היחיד עם <span class="term">d≠∞</span> בתחילת האיטרציה הוא <span class="term">D</span>. רק קשתות שמתחילות מ-<span class="term">D</span> יכולות להפעיל שיפור:</p>
+            <ul>
+              <li><span class="term">EF: 2</span> → <span class="term">d[E]=∞</span>, אין שיפור</li>
+              <li><span class="term">CE: −2</span> → <span class="term">d[C]=∞</span>, אין שיפור</li>
+              <li><span class="term">DC: 0</span> → <span class="term">0+0=0 &lt; ∞</span>, יש שיפור: <span class="term">d[C]=0, p[C]=D</span></li>
+              <li>שאר הקשתות מתחילות מקודקודים עם <span class="term">d=∞</span> ולא משפרות</li>
+            </ul>
+            <p>אחרי איטרציה I: רק <span class="term">d[C]=0</span> עודכן.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 3 · איטרציה II — שינויים בתוך אותה איטרציה</div>
+            <p><strong>שים לב:</strong> בתוך איטרציה אחת, אם קשת מוקדמת בסדר עדכנה את <span class="term">d[v]</span>, אז קשת מאוחרת יותר שיוצאת מ-<span class="term">v</span> יכולה <em>גם היא</em> להשתפר באותה איטרציה. נעקוב בקפדנות:</p>
+            <ul>
+              <li><span class="term">EF: 2</span> → עדיין <span class="term">d[E]=∞</span>, אין שיפור</li>
+              <li><span class="term">CE: −2</span> → <span class="term">0+(−2)=−2 &lt; ∞</span>, יש שיפור: <span class="term">d[E]=−2, p[E]=C</span> 🔔</li>
+              <li><span class="term">DC, BC</span>: אין שיפור</li>
+              <li><span class="term">EB: 2</span> → כעת <span class="term">d[E]=−2</span> (מהשלב הקודם!), אז <span class="term">−2+2=0 &lt; ∞</span>: <span class="term">d[B]=0, p[B]=E</span> 🔔</li>
+              <li><span class="term">AD, FD, FA</span>: אין שיפור</li>
+              <li><span class="term">EA: 5</span> → <span class="term">−2+5=3 &lt; ∞</span>: <span class="term">d[A]=3, p[A]=E</span> 🔔</li>
+              <li><span class="term">ED: 4</span> → <span class="term">−2+4=2 &gt; 0</span>, אין שיפור</li>
+            </ul>
+            <p>אחרי איטרציה II: <span class="term">d[E]=−2, d[B]=0, d[A]=3</span> — <strong>שלושה</strong> עדכונים באותה איטרציה.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 4 · איטרציה III</div>
+            <ul>
+              <li><span class="term">EF: 2</span> → <span class="term">−2+2=0 &lt; ∞</span>: <span class="term">d[F]=0, p[F]=E</span> 🔔</li>
+              <li>שאר הקשתות בודקות מצב יציב — אף שיפור</li>
+              <li>(<span class="term">AD</span>: <span class="term">3+(−2)=1 &gt; 0</span>, <span class="term">CE</span>: <span class="term">0+(−2)=−2</span> שווה, <span class="term">EB</span>: <span class="term">−2+2=0</span> שווה, וכו׳)</li>
+            </ul>
+            <p>אחרי איטרציה III: רק <span class="term">d[F]=0</span> עודכן.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 5 · איטרציה IV — בדיקת התכנסות</div>
+            <p>נעבור שוב על כל הקשתות — אף אחת לא משפרת. האלגוריתם <strong>התכנס</strong>.</p>
+          </div>
+
+          <p style="margin-top:18px;"><strong>טבלת סיכום:</strong></p>
+          <table>
+            <tr><th>איטרציה</th><th class="num">d[A]</th><th class="num">d[B]</th><th class="num">d[C]</th><th class="num">d[D]</th><th class="num">d[E]</th><th class="num">d[F]</th></tr>
+            <tr><td>אתחול</td><td class="num">∞</td><td class="num">∞</td><td class="num">∞</td><td class="num">0</td><td class="num">∞</td><td class="num">∞</td></tr>
+            <tr><td>I</td><td class="num">∞</td><td class="num">∞</td><td class="num updated">0</td><td class="num">0</td><td class="num">∞</td><td class="num">∞</td></tr>
+            <tr><td>II</td><td class="num updated">3</td><td class="num updated">0</td><td class="num">0</td><td class="num">0</td><td class="num updated">−2</td><td class="num">∞</td></tr>
+            <tr><td>III</td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">−2</td><td class="num updated">0</td></tr>
+            <tr><td>IV</td><td class="num highlight">3</td><td class="num highlight">0</td><td class="num highlight">0</td><td class="num highlight">0</td><td class="num highlight">−2</td><td class="num highlight">0</td></tr>
+          </table>
+
+          <div class="final-answer">
+            עץ המק״בים: <span class="term">p[C]=D, p[E]=C, p[A]=E, p[B]=E, p[F]=E</span>. ההתכנסות בפועל הייתה אחרי 3 איטרציות (IV רק אישררה). <strong>לקח מרכזי:</strong> בתוך איטרציה אחת, סדר הקשתות חשוב — שיפור מוקדם יכול להפעיל שיפורים נוספים באותה איטרציה דרך קשתות שמופיעות מאוחר יותר בסדר.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Exercise 3: Q4 from practice 4 - Linear SSP via BFS reduction -->
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 3 · practice4, שאלה 4 — אלגוריתם לינארי למשקלים {1,2}</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">algorithm design · reduction</span>
+          <p>נתון גרף מכוון <span class="term">G=(V,E,w)</span> שבו <strong>כל קשת בגרף שווה במשקלה ל-1 או 2 בלבד</strong> (כלומר <span class="term">w: E → {1,2}</span>), וקודקוד מוצא <span class="term">s</span>.</p>
+          <p>כתוב אלגוריתם <strong>לינארי</strong> בגודל הקלט שמוצא את המק״בים מ-<span class="term">s</span> לכל הקודקודים.</p>
+          <p><em>רמז:</em> אם נריץ Dijkstra נקבל <span class="term">O(m + n log n)</span> — לא מספיק טוב.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">שלב 1 · הרעיון</div>
+            <p>נעשה <strong>רדוקציה</strong> לבעיית מק״בים בגרף <em>ללא משקלים</em> (שעבורה BFS פותר ב-<span class="term">O(n+m)</span>). נחליף כל קשת במשקל 2 ב<em>מסלול</em> של שתי קשתות במשקל 1.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 2 · בניית הגרף G′</div>
+            <p>נגדיר גרף חדש <span class="term">G' = (V', E')</span>:</p>
+            <ul>
+              <li><span class="term">V' = V ∪ V_new</span>, כאשר לכל קשת <span class="term">(i,j)∈E</span> שמשקלה 2 נוסיף קודקוד ביניים <span class="term">v_{i,j}</span></li>
+              <li>בונים את <span class="term">E'</span> מ-<span class="term">E</span> באופן הבא:
+                <ul>
+                  <li>קשת <span class="term">(i,j)</span> במשקל <strong>1</strong> נכנסת ל-<span class="term">E'</span> כפי שהיא</li>
+                  <li>קשת <span class="term">(i,j)</span> במשקל <strong>2</strong> מוחלפת (לא מתווספת!) בזוג קשתות: <span class="term">(i, v_{i,j})</span> ו-<span class="term">(v_{i,j}, j)</span></li>
+                </ul>
+              </li>
+            </ul>
+            <p><strong>חשוב:</strong> ב-<span class="term">G'</span> כל הקשתות באותו משקל (1). זה מאפשר להריץ BFS עליו ולקבל מק״בים במונחי <em>מספר קשתות</em>, ששקול למשקל המקורי ב-G.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 3 · האלגוריתם</div>
+            <ol>
+              <li>בנה את <span class="term">G'</span> מ-<span class="term">G</span>.</li>
+              <li>הרץ BFS על <span class="term">G'</span> מ-<span class="term">s</span>. קבל מערכי <span class="term">d, p</span>.</li>
+              <li>בנה מערך פלט <span class="term">d'</span> עבור הקודקודים המקוריים בלבד: לכל <span class="term">v∈V</span>: <span class="term">d'[v] = d[v]</span>.</li>
+              <li>בנה <span class="term">p'</span>: אם <span class="term">p[j]∈V</span> אז <span class="term">p'[j]=p[j]</span>, אחרת (אם <span class="term">p[j]=v_{i,j}</span>) אז <span class="term">p'[j]=i</span>.</li>
+            </ol>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 4 · ניתוח יעילות</div>
+            <p>גודל הגרף החדש: <span class="term">|V'| ≤ |V| + |E|</span>, <span class="term">|E'| ≤ 2|E|</span>.</p>
+            <ul>
+              <li>בניית <span class="term">G'</span>: <span class="term">O(n+m)</span></li>
+              <li>BFS: <span class="term">O(|V'| + |E'|) = O(n+m)</span></li>
+              <li>בניית <span class="term">d', p'</span>: <span class="term">Θ(n)</span></li>
+            </ul>
+            <p><strong>סה״כ: <span class="term">O(n+m)</span> — לינארי, כנדרש.</strong></p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 5 · הוכחת נכונות (בקצרה)</div>
+            <p><strong>טענת עזר:</strong> לכל <span class="term">v∈V</span> מתקיים <span class="term">δ_{G'}(s,v) = δ_G(s,v)</span>.</p>
+            <ul>
+              <li><strong>כיוון אחד:</strong> כל מסלול ב-G מקביל למסלול ב-G' באותו אורך — קשת במשקל 2 הוחלפה במסלול שאורכו 2, קשת במשקל 1 נשארה.</li>
+              <li><strong>כיוון שני (בשלילה):</strong> אם קיים מסלול קצר יותר ב-G', צריך לבדוק שני מקרים: (א) המסלול עובר רק בקודקודי <span class="term">V</span> — אז אורכו ב-G' שווה למשקלו ב-G, סתירה. (ב) המסלול עובר ב-<span class="term">v_{i,j}</span> כלשהו — אז <span class="term">w(i,j)=2</span> ב-G, שווה לאורך תת-המסלול ב-G'. שוב סתירה.</li>
+            </ul>
+          </div>
+
+          <div class="final-answer">
+            הרדוקציה ל-BFS היא הטריק המרכזי. הוא עובד גם למשקלים <span class="term">{1,2,3,...,k}</span> עם <span class="term">k</span> קבוע — נחליף קשת במשקל <span class="term">k</span> במסלול באורך <span class="term">k</span>. הגרף נשאר לינארי בגודלו (תוספת של עד <span class="term">k·m</span> קודקודים).
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Exercise 4: Multiple choice - A* heuristic admissibility -->
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 4 · בחירה מרובה — קבילות יוריסטיקה ב-A*</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">multiple-choice · A* heuristics</span>
+          <p>נתון גרף ממושקל המדמה מפה דו-מימדית, וקודקוד יעד <span class="term">t</span>. עבור פונקציית שערוך <span class="term">h(v)</span>, איזה <em>מהבאות</em> בהכרח גורם ל-A* להחזיר תוצאה <strong>לא נכונה</strong>?</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+          <ul class="mc-list">
+            <li class="wrong"><span class="mc-marker"></span><div class="mc-text"><strong>א.</strong> <span class="term">h(v) = 0</span> לכל קודקוד <span class="term">v</span>.<span class="why">זה בסדר! כשהיוריסטיקה זהותית 0, A* מתנהג בדיוק כמו Dijkstra (העדיפות <span class="term">q[v] = d[v]+0 = d[v]</span>). שלושת התנאים מתקיימים טריוויאלית.</span></div></li>
+            <li class="correct"><span class="mc-marker"></span><div class="mc-text"><strong>ב.</strong> <span class="term">h(v) = 2 · Δ_E(v,t)</span> — פעמיים המרחק האוקלידי לקודקוד היעד.<span class="why">זאת הבעיה! היוריסטיקה <em>מגזימה</em> במרחק. תנאי 3 (חסם תחתון) נשבר: <span class="term">h(v) > δ(v,t)</span>. A* עלול לפסול מסלול אופטימלי כי הוא נראה "ארוך מדי" בהערכה המוגזמת.</span></div></li>
+            <li class="wrong"><span class="mc-marker"></span><div class="mc-text"><strong>ג.</strong> <span class="term">h(v) = Δ_E(v,t)</span> — המרחק האוקלידי.<span class="why">הסטנדרט. כל שלושת התנאים מתקיימים על מפה דו-מימדית — קו ישר הוא הקצר ביותר אפשרי, ולכן זה חסם תחתון נכון.</span></div></li>
+            <li class="wrong"><span class="mc-marker"></span><div class="mc-text"><strong>ד.</strong> <span class="term">h(v) = Δ_E(v,t)/2</span> — חצי מהמרחק האוקלידי.<span class="why">בסדר! כל היוריסטיקה <em>קטנה</em> מהמרחק האמיתי קבילה. היא תגרום ל-A* לסרוק יותר קודקודים מהמינימום, אבל התשובה תהיה נכונה.</span></div></li>
+          </ul>
+
+          <div class="final-answer">
+            <strong>תשובה: ב.</strong> מה שגורם לטעות הוא <em>הגזמה</em> בהערכה. תת-הערכה היא רק לא יעילה — היא לא פוסלת תוצאות נכונות.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 5 · practice4 שאלה 6 — גרף מנהטן</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">grid graph · metric comparison</span>
+          <p><strong>הגדרת גרף מנהטן:</strong> <span class="term">G = (V, E)</span> כאשר:</p>
+          <ul>
+            <li><span class="term">V = {(i, j) : i, j ∈ {1, ..., n}}</span> — סריג <span class="term">n × n</span></li>
+            <li>קשת בין <span class="term">(i,j)</span> ו-<span class="term">(i+1,j)</span> או בין <span class="term">(i,j)</span> ו-<span class="term">(i,j+1)</span> (כשהם בתוך הגרף)</li>
+          </ul>
+          <p>כלומר כל קודקוד מחובר לארבעה שכנים לכל היותר: ימין/שמאל/למעלה/למטה.</p>
+          <p>בהינתן זוג קודקודים <span class="term">(i₁, j₁), (i₂, j₂)</span> (לא בהכרח שכנים), חשב את:</p>
+          <ol>
+            <li><strong>המרחק האוקלידי</strong> <span class="term">Δ_E</span> ביניהם.</li>
+            <li><strong>המרחק בקשתות</strong> <span class="term">δ</span> ביניהם (כמו ב-BFS).</li>
+            <li><strong>חסמים</strong> (תחתון ועליון) על היחס <span class="term">δ / Δ_E</span>.</li>
+          </ol>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">שלב 1 · המרחק האוקלידי</div>
+            <p>נסמן <span class="term">a = |i₁ − i₂|, b = |j₁ − j₂|</span>.</p>
+            $$\Delta_E((i_1, j_1), (i_2, j_2)) = \sqrt{a^2 + b^2}$$
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 2 · המרחק בקשתות</div>
+            <p>בגרף מנהטן יש רק קשתות אופקיות ואנכיות, אז כל מסלול מורכב מצעדים בכיוון אחד או השני. מינימום של צעדים נדרשים:</p>
+            $$\delta((i_1, j_1), (i_2, j_2)) = a + b$$
+            <p>זה גם נקרא <strong>מרחק מנהטן</strong> או <span class="term">L₁</span> מטריקה.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 3 · חסם תחתון על היחס</div>
+            <p>נראה ש-<span class="term">(a+b) / √(a²+b²) ≥ 1</span>:</p>
+            $$\frac{a+b}{\sqrt{a^2+b^2}} \geq \frac{a+b}{\sqrt{(a+b)^2}} = \frac{a+b}{a+b} = 1$$
+            <p>השוויון מתקיים כש-<span class="term">a=0</span> או <span class="term">b=0</span> (תנועה רק בציר אחד).</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 4 · חסם עליון על היחס</div>
+            <p>נראה ש-<span class="term">(a+b) / √(a²+b²) ≤ √2</span>. נעלה בריבוע:</p>
+            $$\left(\frac{a+b}{\sqrt{a^2+b^2}}\right)^2 = \frac{(a+b)^2}{a^2+b^2} = \frac{a^2+2ab+b^2}{a^2+b^2} = 1 + \frac{2ab}{a^2+b^2}$$
+            <p>מאי-שוויון הממוצעים: <span class="term">2ab ≤ a²+b²</span> (שקול ל-<span class="term">(a-b)² ≥ 0</span>). לכן:</p>
+            $$1 + \frac{2ab}{a^2+b^2} \leq 1 + 1 = 2$$
+            <p>אז היחס בריבוע <span class="term">≤ 2</span>, ולכן היחס עצמו <span class="term">≤ √2</span>. השוויון כש-<span class="term">a = b</span> (זווית 45°).</p>
+          </div>
+
+          <div class="final-answer">
+            <span class="term">1 ≤ δ/Δ_E ≤ √2</span>. כיוון שהמרחק האוקלידי הוא תמיד <span class="term">≤</span> המרחק בקשתות, <strong><span class="term">Δ_E</span> היא יוריסטיקה קבילה ל-A* על גרף מנהטן</strong> — היא לעולם לא משערכת יתר. זה בדיוק המקרה שהאלגוריתם A* תוכנן עבורו במצגת.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל 6 · practice4 שאלה 7 — משפט A* כללי</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">A* · generalized correctness</span>
+          <p>כשניתחנו A* הנחנו שהגרף ממדל מפה דו-ממדית, כלומר <span class="term">w(u,v) = Δ_E(u,v)</span>.</p>
+          <p><strong>(א)</strong> הוכח שלכל פונקציית שערוך <span class="term">h: V × V → ℝ⁺</span> שמקיימת:</p>
+          <ol>
+            <li><strong>הערכת חסר:</strong> <span class="term">h(u, v) ≤ δ(u, v)</span> לכל זוג</li>
+            <li><strong>אי-שוויון המשולש:</strong> <span class="term">h(u, v) ≤ h(u, w) + h(w, v)</span></li>
+          </ol>
+          <p>אם נשתמש ב-<span class="term">h</span> במקום <span class="term">Δ_E</span> ב-A* (כלומר <span class="term">q[v] = d[v] + h(v, t)</span>), האלגוריתם עדיין יחזיר תשובה נכונה.</p>
+          <p><strong>(ב)</strong> איך להגדיר <span class="term">h</span> לאפליקציית ניווט עם פקקי תנועה?</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">סעיף א · האבחנה המרכזית בהוכחת A*</div>
+            <p>בהוכחת נכונות A* (במצגת) נשתמשנו באבחנה: אם <span class="term">vᵢ, vⱼ</span> שני קודקודים על מסלול קל ביותר מ-<span class="term">s</span> ל-<span class="term">t</span> כאשר <span class="term">i &lt; j</span>, אז:</p>
+            $$\delta(v_i, v_j) \geq h(v_i, t) - h(v_j, t)$$
+            <p>זה תנאי הכרחי לכך ש-A* יסרוק קודקודים בסדר ה"נכון" — לפי הקרבה למסלול האופטימלי.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף א · הוכחה ש-h מקיימת את האבחנה</div>
+            <p>נתחיל מאי-שוויון המשולש (תנאי 2):</p>
+            $$h(v_i, t) \leq h(v_i, v_j) + h(v_j, t)$$
+            <p>נעביר אגפים:</p>
+            $$h(v_i, t) - h(v_j, t) \leq h(v_i, v_j)$$
+            <p>מתנאי 1: <span class="term">h(vᵢ, vⱼ) ≤ δ(vᵢ, vⱼ)</span>. שילוב:</p>
+            $$h(v_i, t) - h(v_j, t) \leq h(v_i, v_j) \leq \delta(v_i, v_j)$$
+            <p>קיבלנו את האבחנה הדרושה, ולכן הוכחת נכונות A* תקפה גם עבור <span class="term">h</span> כללית. ∎</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף ב · יישום לאפליקציית ניווט</div>
+            <p><strong>הבעיה:</strong> רשת כבישים עם זמני נסיעה משתנים (פקקים). <span class="term">δ(v, t)</span> = זמן הנסיעה האמיתי הנוכחי (עם פקקים).</p>
+            <p><strong>הגדרת <span class="term">h</span>:</strong></p>
+            <p><span class="term">h(v, t)</span> = הזמן הנדרש לנסוע מ-<span class="term">v</span> ל-<span class="term">t</span> <em>בהנחה שאין פקקים</em>. מחושב פעם אחת <strong>offline</strong>: נריץ Dijkstra מכל קודקוד עם משקלים שהם זמני-נסיעה-ללא-פקקים.</p>
+
+            <p><strong>בדיקה שהתנאים מתקיימים:</strong></p>
+            <ol>
+              <li><strong>הערכת חסר:</strong> זמן ללא פקקים <span class="term">≤</span> זמן עם פקקים (פקקים רק מאריכים זמן). ✓</li>
+              <li><strong>אי-שוויון המשולש:</strong> זמני נסיעה ללא פקקים מקיימים את אי-שוויון המשולש כי הם מסלולים קלים ביותר בגרף עם משקלים קבועים. ✓</li>
+            </ol>
+
+            <p><strong>זמן ריצה:</strong> Dijkstra מכל קודקוד <span class="term">O(n · (m + n log n))</span> offline. שאילתת <span class="term">h(v, t)</span> בזמן ריצה: <span class="term">O(1)</span>.</p>
+          </div>
+
+          <div class="final-answer">
+            (א) A* עובד עם <em>כל</em> פונקציית שערוך שהיא הערכת חסר ומקיימת משולש. (ב) ניווט בפקקים — לחשב מראש את הזמנים ללא פקקים, ולהשתמש בהם כיוריסטיקה.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- =================== 7. סיכום למבחן + טעויות ================= -->
+  <!-- ============================================================== -->
+  <h2>מה לזכור למבחן</h2>
+
+  <div class="box summary">
+    <div class="box-head"><span class="icon">📌</span>שלוש שאלות שכמעט תמיד מופיעות</div>
+    <div class="box-body">
+      <ol>
+        <li><strong>הרצת Bellman-Ford על גרף נתון</strong> — בנו טבלת איטרציות עם <span class="term">d[v]</span> ו-<span class="term">p[v]</span> בכל איטרציה. סמנו תאים שעודכנו בצבע. ציירו את עץ המק״בים בסוף.</li>
+        <li><strong>הוכחה/הפרכה</strong> — נותנים טענה על נכונות אלגוריתם בתנאי מסוים (מעגלים שליליים, סדר קשתות, וכו׳). אם הטענה שגויה, צריך גרף הפרכה <em>קטן וקונקרטי</em>.</li>
+        <li><strong>תכנון אלגוריתם</strong> — נותנים תנאי מיוחד (משקלים בקבוצה קטנה, מבנה גרף ספציפי) ושואלים אלגוריתם יעיל. כמעט תמיד הפתרון הוא <em>רדוקציה</em> לבעיה אחרת (BFS, DAG-SP).</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="box warn">
+    <div class="box-head"><span class="icon">⚠</span>חמש הטעויות הקלאסיות</div>
+    <div class="box-body">
+      <ol>
+        <li><strong>להריץ Dijkstra עם משקל שלילי אחד.</strong> אפילו קשת שלילית בודדת שוברת את האלגוריתם. אם רואים מינוס באחת הקשתות — Bellman-Ford או DAG-SP.</li>
+        <li><strong>לבלבל בין יעילות ערימה בינארית לפיבונאצ׳י.</strong> בינארית: <span class="term">O(m log n)</span>. פיבונאצ׳י: <span class="term">O(m + n log n)</span>. ההבדל מהותי בגרפים צפופים.</li>
+        <li><strong>לשכוח שאחרי n−1 איטרציות, BF צריך עוד איטרציה</strong> כדי לזהות מעגלים שליליים.</li>
+        <li><strong>להגיד "h קבילה" בלי לבדוק את שלושת התנאים.</strong> במבחן צריך לכתוב את שלושתם במפורש: חסם תחתון, אפס ביעד, ואי-שוויון משולש.</li>
+        <li><strong>לחשוב ש-A* מהיר יותר אסימפטוטית.</strong> במקרה הגרוע הוא בדיוק כמו Dijkstra. ההאצה היא בפועל, לא בניתוח התיאורטי.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="keypoint">
+    <strong>חמדן אחד, ארבעה אלגוריתמים:</strong> כולם פורד בליבה. Bellman-Ford סורק עיוור (כל הקשתות בכל איטרציה). DAG-SP חכם (סדר טופולוגי). Dijkstra חמדני (תור קדימויות לפי <span class="term">d</span>). A* חמדני-מכוון (תור קדימויות לפי <span class="term">d+h</span>). זוהי ההיררכיה.
+  </div>
+
+</main>
+</div>
+</body>
+</html>

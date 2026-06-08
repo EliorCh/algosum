@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פרק 9 · מסלולים קלים ביותר ב׳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/styles/atom-one-dark.min.css">
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/highlight.min.js"></script>
+<script>
+  window.addEventListener('load', () => {
+    if (window.renderMathInElement) {
+      try { renderMathInElement(document.body, { delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\(',right:'\\)',display:false}], throwOnError: false, strict: false }); } catch(e){}
+    }
+    if (window.hljs) { try { document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el)); } catch(e){} }
+    document.body.classList.add('ready');
+  });
+</script>
+<style>
+  :root {
+    --bg: #fbf9f3; --bg-paper: #fffefa; --ink: #1c1917; --ink-soft: #44403c; --ink-mute: #78716c;
+    --rule: #e7e5e0; --rule-soft: #f1efe9;
+    --indigo-9: #312e81; --indigo-7: #4f46e5; --indigo-3: #c7d2fe; --indigo-1: #eef2ff;
+    --c-theory-h: #1d4ed8; --c-theory-bg: #eff6ff; --c-theory-edge: #bfdbfe;
+    --c-formula-h: #b45309; --c-formula-bg: #fef9e7; --c-formula-edge: #fcd34d;
+    --c-example-h: #047857; --c-example-bg: #ecfdf5; --c-example-edge: #a7f3d0;
+    --c-warn-h: #be123c; --c-warn-bg: #fff1f2; --c-warn-edge: #fecdd3;
+    --c-exercise-h: #6d28d9; --c-exercise-bg: #f5f3ff; --c-exercise-edge: #ddd6fe;
+    --c-summary-h: #334155; --c-summary-bg: #f1f5f9; --c-summary-edge: #cbd5e1;
+    --code-bg: #0f172a; --code-bg-2: #1e293b; --code-ink: #e2e8f0;
+    --shadow-sm: 0 1px 2px rgba(28,25,23,.04), 0 1px 3px rgba(28,25,23,.06);
+    --shadow: 0 4px 12px rgba(28,25,23,.05), 0 1px 3px rgba(28,25,23,.04);
+    --serif: 'Frank Ruhl Libre', Georgia, serif;
+    --sans: 'Assistant', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.75; font-size: 17px; -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 20% 0%, rgba(99,102,241,.035), transparent 40%), radial-gradient(circle at 80% 100%, rgba(245,158,11,.035), transparent 40%);
+    background-attachment: fixed; opacity: 0; transition: opacity .2s ease; }
+  body.ready { opacity: 1; }
+  .app { display: grid; grid-template-columns: 320px 1fr; min-height: 100vh; max-width: 1480px; margin: 0 auto; }
+  .sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%); color: #e0e7ff; padding: 32px 24px; border-left: 1px solid rgba(255,255,255,.06); }
+  .sidebar::-webkit-scrollbar { width: 6px; } .sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 3px; }
+  .brand { font-family: var(--serif); font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -.01em; line-height: 1.2; }
+  .brand a { color: #fff; text-decoration: none; } .brand a:hover { color: #fbbf24; }
+  .brand-sub { font-size: 13px; color: #c7d2fe; margin-bottom: 28px; font-weight: 500; }
+  .brand-meta { font-size: 11px; color: #a5b4fc; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .nav-label { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: #818cf8; font-weight: 700; margin: 24px 0 12px; padding-right: 8px; }
+  .nav-list { list-style: none; } .nav-list li { margin-bottom: 2px; }
+  .nav-list a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; color: #c7d2fe; text-decoration: none; border-radius: 8px; font-size: 14.5px; font-weight: 500; transition: all .15s ease; }
+  .nav-list a:hover { background: rgba(255,255,255,.06); color: #fff; }
+  .nav-list a.active { background: rgba(255,255,255,.1); color: #fff; box-shadow: inset 3px 0 0 #fbbf24; }
+  .nav-list a.pending { opacity: .5; }
+  .nav-num { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; background: rgba(255,255,255,.08); border-radius: 6px; font-size: 11px; font-weight: 700; font-family: var(--mono); }
+  .nav-list a.active .nav-num { background: #fbbf24; color: #1e1b4b; }
+  main { padding: 56px 64px 120px; max-width: 960px; }
+  .page-eyebrow { display: inline-block; font-size: 12px; font-weight: 700; color: var(--indigo-7); letter-spacing: .15em; text-transform: uppercase; background: var(--indigo-1); padding: 6px 12px; border-radius: 99px; margin-bottom: 16px; }
+  h1.page-title { font-family: var(--serif); font-size: 48px; font-weight: 700; line-height: 1.15; letter-spacing: -.02em; color: var(--ink); margin-bottom: 14px; }
+  .page-subtitle { font-size: 19px; color: var(--ink-soft); margin-bottom: 48px; font-weight: 400; line-height: 1.55; }
+  h2 { font-family: var(--serif); font-size: 32px; font-weight: 700; letter-spacing: -.015em; margin: 56px 0 20px; color: var(--ink); position: relative; padding-right: 20px; }
+  h2::before { content: ''; position: absolute; right: 0; top: 14px; bottom: 14px; width: 4px; background: var(--indigo-7); border-radius: 2px; }
+  h3 { font-family: var(--sans); font-size: 22px; font-weight: 700; margin: 32px 0 12px; color: var(--ink); letter-spacing: -.005em; }
+  h4 { font-size: 17px; font-weight: 700; margin: 18px 0 8px; color: var(--ink-soft); }
+  p { margin-bottom: 14px; color: var(--ink-soft); } p strong { color: var(--ink); font-weight: 700; }
+  ul, ol { margin: 12px 24px 18px; color: var(--ink-soft); } li { margin-bottom: 8px; }
+  .term { font-family: var(--mono); direction: ltr; display: inline-block; font-size: .88em; background: #f5f5f4; padding: 1px 8px; border-radius: 5px; color: #be185d; border: 1px solid #e7e5e4; vertical-align: baseline; unicode-bidi: isolate; }
+  .term.blue { color: var(--c-theory-h); background: var(--c-theory-bg); border-color: var(--c-theory-edge); }
+  .term.green { color: var(--c-example-h); background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .term.amber { color: var(--c-formula-h); background: var(--c-formula-bg); border-color: var(--c-formula-edge); }
+  .katex-display { margin: 18px 0 !important; direction: ltr !important; text-align: center !important; unicode-bidi: isolate; } .katex { direction: ltr !important; unicode-bidi: isolate; }
+  .box { border-radius: 14px; margin: 24px 0; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); background: var(--bg-paper); }
+  .box-head { display: flex; align-items: center; gap: 10px; padding: 14px 20px; font-weight: 700; font-size: 15px; border-bottom: 1px solid var(--rule); }
+  .box-head .icon { width: 28px; height: 28px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 16px; }
+  .box-body { padding: 18px 22px; }
+  .box.theory { border-color: var(--c-theory-edge); } .box.theory .box-head { background: var(--c-theory-bg); color: var(--c-theory-h); } .box.theory .box-head .icon { background: var(--c-theory-h); color: #fff; }
+  .box.formula { border-color: var(--c-formula-edge); background: var(--c-formula-bg); } .box.formula .box-head { background: transparent; color: var(--c-formula-h); border-bottom-color: rgba(180,83,9,.18); } .box.formula .box-head .icon { background: var(--c-formula-h); color: #fff; } .box.formula .box-body { background: var(--c-formula-bg); } .box.formula p { color: #78350f; }
+  .box.example { border-color: var(--c-example-edge); } .box.example .box-head { background: var(--c-example-bg); color: var(--c-example-h); } .box.example .box-head .icon { background: var(--c-example-h); color: #fff; }
+  .box.warn { border-color: var(--c-warn-edge); } .box.warn .box-head { background: var(--c-warn-bg); color: var(--c-warn-h); } .box.warn .box-head .icon { background: var(--c-warn-h); color: #fff; }
+  .box.exercise { border-color: var(--c-exercise-edge); } .box.exercise .box-head { background: var(--c-exercise-bg); color: var(--c-exercise-h); } .box.exercise .box-head .icon { background: var(--c-exercise-h); color: #fff; }
+  .box.summary { border-color: var(--c-summary-edge); } .box.summary .box-head { background: var(--c-summary-bg); color: var(--c-summary-h); } .box.summary .box-head .icon { background: var(--c-summary-h); color: #fff; }
+  pre { background: var(--code-bg) !important; border-radius: 0 0 12px 12px; padding: 18px 22px !important; margin: 0 0 16px 0; overflow-x: auto; direction: ltr; font-size: 14px; line-height: 1.7; box-shadow: var(--shadow); border: 1px solid var(--code-bg-2); border-top: none; }
+  pre code { font-family: var(--mono) !important; background: transparent !important; padding: 0 !important; border: none !important; color: var(--code-ink) !important; }
+  .code-label { display: flex; align-items: center; gap: 8px; background: var(--code-bg-2); color: #94a3b8; font-family: var(--mono); font-size: 12px; padding: 10px 16px; border-radius: 12px 12px 0 0; direction: ltr; border: 1px solid var(--code-bg-2); border-bottom: 1px solid #334155; margin-top: 18px; }
+  .code-label .dot { width: 8px; height: 8px; border-radius: 50%; background: #475569; }
+  .code-label .dot.red { background: #ef4444; } .code-label .dot.amber { background: #f59e0b; } .code-label .dot.green { background: #22c55e; }
+  .code-label .name { margin-right: auto; opacity: .9; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm); font-size: 15px; }
+  th, td { padding: 11px 14px; text-align: right; border-bottom: 1px solid var(--rule-soft); border-left: 1px solid var(--rule-soft); }
+  th { background: var(--c-summary-bg); font-weight: 700; color: var(--c-summary-h); }
+  tr:last-child td { border-bottom: none; }
+  td.num, th.num { font-family: var(--mono); direction: ltr; text-align: center; font-size: 14px; }
+  td.highlight { background: var(--c-formula-bg); font-weight: 700; color: var(--c-formula-h); }
+  td.updated { background: #dcfce7; font-weight: 700; color: #166534; }
+  .exercise-card { background: #fff; border-radius: 10px; margin: 14px 0; border: 1px solid var(--c-exercise-edge); overflow: hidden; }
+  .exercise-tag { display: inline-block; font-size: 11px; font-weight: 700; background: var(--c-exercise-h); color: #fff; padding: 3px 10px; border-radius: 99px; margin-bottom: 10px; font-family: var(--mono); letter-spacing: .05em; direction: ltr; }
+  .exercise-q { padding: 20px 24px; background: #fafaf9; border-bottom: 1px solid var(--rule-soft); }
+  .exercise-q p:last-child { margin-bottom: 0; }
+  .reveal-btn { display: block; width: 100%; background: var(--c-exercise-bg); border: none; border-top: 1px solid var(--c-exercise-edge); padding: 13px; font-family: var(--sans); font-size: 14px; font-weight: 700; color: var(--c-exercise-h); cursor: pointer; transition: background .15s ease; }
+  .reveal-btn:hover { background: #ede9fe; } .reveal-btn::before { content: '▼ '; font-size: 10px; margin-left: 6px; transition: transform .2s ease; }
+  .exercise-card.open .reveal-btn::before { content: '▲ '; }
+  .solution { padding: 22px 26px; background: var(--c-example-bg); border-top: 1px solid var(--c-example-edge); display: none; }
+  .exercise-card.open .solution { display: block; }
+  .solution .step { background: #fff; border-radius: 8px; padding: 14px 18px; margin: 12px 0; border-right: 3px solid var(--c-example-h); }
+  .solution .step-label { font-size: 11px; font-weight: 700; color: var(--c-example-h); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; font-family: var(--mono); }
+  .solution .final-answer { background: #fff; border: 2px solid var(--c-example-h); border-radius: 10px; padding: 14px 20px; margin-top: 16px; font-weight: 600; }
+  .solution .final-answer::before { content: '✓ '; color: var(--c-example-h); font-weight: 900; }
+  .lead { font-size: 19px; color: var(--ink-soft); border-right: 3px solid var(--indigo-7); padding-right: 20px; margin: 24px 0 32px; font-weight: 400; line-height: 1.6; }
+  .keypoint { background: linear-gradient(90deg, var(--c-formula-bg) 0%, transparent 100%); padding: 14px 18px; border-radius: 8px; margin: 16px 0; border-right: 3px solid var(--c-formula-h); }
+  .keypoint::before { content: '💡 '; font-size: 18px; margin-left: 4px; }
+  .figure { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 18px; margin: 18px 0; text-align: center; box-shadow: var(--shadow-sm); }
+  .figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .figure .cap { font-size: 13px; color: var(--ink-mute); margin-top: 12px; font-style: italic; }
+  .mc-list { list-style: none; margin: 12px 0; padding: 0; }
+  .mc-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; background: #fff; border: 1px solid var(--rule); border-radius: 8px; margin-bottom: 8px; transition: all .15s ease; }
+  .mc-list li .mc-marker { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--rule); flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--ink-mute); background: #fff; }
+  .mc-list li.correct { background: var(--c-example-bg); border-color: var(--c-example-edge); }
+  .mc-list li.correct .mc-marker { background: var(--c-example-h); color: #fff; border-color: var(--c-example-h); }
+  .mc-list li.correct .mc-marker::after { content: '✓'; }
+  .mc-list li.wrong { background: var(--c-warn-bg); border-color: var(--c-warn-edge); }
+  .mc-list li.wrong .mc-marker { background: var(--c-warn-h); color: #fff; border-color: var(--c-warn-h); }
+  .mc-list li.wrong .mc-marker::after { content: '✗'; }
+  .mc-list li .mc-text { flex: 1; line-height: 1.55; color: var(--ink-soft); }
+  .mc-list li .mc-text .why { display: block; margin-top: 6px; font-size: 13.5px; color: var(--ink-mute); font-style: italic; }
+  .algo-compare { background: #fff; border-radius: 12px; padding: 0; margin: 18px 0; box-shadow: var(--shadow-sm); border: 1px solid var(--rule); overflow: hidden; }
+  .algo-compare table { margin: 0; border-radius: 0; box-shadow: none; }
+  @media (max-width: 900px) { .app { grid-template-columns: 1fr; } .sidebar { position: static; height: auto; } main { padding: 32px 24px 80px; } h1.page-title { font-size: 36px; } h2 { font-size: 26px; } }
+</style>
+</head>
+<body>
+<div class="app">
+
+<aside class="sidebar">
+  <div class="brand"><a href="index.html">אלגוריתמים</a></div>
+  <div class="brand-sub">ד״ר אלעזר גולדנברג · הגב׳ שלומית אריאן</div>
+  <div class="brand-meta">MTA · קיץ 2026</div>
+
+  <div class="nav-label">יסודות</div>
+  <ul class="nav-list">
+    <li><a href="01-intro.html" class="active" class="pending"><span class="nav-num">1</span>מושג האלגוריתם</a></li>
+    <li><a href="02-numbers.html" class="pending"><span class="nav-num">2</span>ייצוג מספרים</a></li>
+  </ul>
+
+  <div class="nav-label">גרפים בסיסיים</div>
+  <ul class="nav-list">
+    <li><a href="03-graph-basics.html" class="pending"><span class="nav-num">3</span>מושגי יסוד</a></li>
+    <li><a href="04-toposort.html" class="pending"><span class="nav-num">4</span>מיון טופולוגי</a></li>
+  </ul>
+
+  <div class="nav-label">סריקות</div>
+  <ul class="nav-list">
+    <li><a href="05-dfs.html" class="pending"><span class="nav-num">5</span>DFS</a></li>
+    <li><a href="06-dfs-apps.html" class="pending"><span class="nav-num">6</span>יישומי DFS</a></li>
+    <li><a href="07-bfs.html" class="pending"><span class="nav-num">7</span>BFS</a></li>
+  </ul>
+
+  <div class="nav-label">מסלולים קלים ביותר</div>
+  <ul class="nav-list">
+    <li><a href="08-shortest-paths-1.html" class="pending"><span class="nav-num">8</span>מק״בים א׳</a></li>
+    <li><a href="09-shortest-paths-2.html"><span class="nav-num">9</span>מק״בים ב׳</a></li>
+  </ul>
+
+  <div class="nav-label">אופטימיזציה ורשתות</div>
+  <ul class="nav-list">
+    <li><a href="10-mst.html" class="pending"><span class="nav-num">10</span>עצים פורשים</a></li>
+    <li><a href="11-dp.html" class="pending"><span class="nav-num">11</span>תכנות דינמי</a></li>
+    <li><a href="12-flow.html" class="pending"><span class="nav-num">12</span>זרימה</a></li>
+  </ul>
+</aside>
+
+
+<main>
+<span class="page-eyebrow">פרק 1 · מושג האלגוריתם</span>
+  <h1 class="page-title">מה זה בעצם<br>אלגוריתם?</h1>
+  <p class="page-subtitle">הגדרה פורמלית של בעיה אלגוריתמית, הצעדים בפתרון בעיה, הוכחות נכונות, סיבוכיות זמן, רדוקציות, ושלוש פרדיגמות אלגוריתמיות.</p>
+
+  <p class="lead">
+    הפרק הראשון מניח את היסודות המושגיים של כל הקורס. הנקודות החשובות למבחן:
+    <strong>הבחנה בין בעיה אלגוריתמית לפתרון אלגוריתמי</strong>, מה זה
+    אומר ש<strong>אלגוריתם נכון</strong>, איך מנתחים <strong>סיבוכיות במקרה הגרוע</strong>,
+    ואיך משתמשים ב<strong>רדוקציה</strong> כדי לפתור בעיה חדשה דרך בעיה שכבר פתרנו.
+    שלוש הפרדיגמות (Divide &amp; Conquer, תכנות דינמי, חמדני) הן הבסיס לכל האלגוריתמים בקורס.
+  </p>
+
+  <!-- =============== 1. הבעיה האלגוריתמית =============== -->
+  <h2>הבעיה האלגוריתמית והפתרון</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>שתי הגדרות יסוד</div>
+    <div class="box-body">
+      <p><strong>בעיה אלגוריתמית</strong> — תיאור קומפקטי של:</p>
+      <ul>
+        <li><strong>קבוצת הקלטים האפשריים</strong> (לדוגמה: כל מערך של n מספרים שלמים)</li>
+        <li><strong>הגדרת הפלט הרצוי לכל קלט</strong> (לדוגמה: סידור מחדש כך שהמערך ממויין)</li>
+      </ul>
+      <p><strong>אלגוריתם</strong> — פתרון לבעיה אלגוריתמית: שיטה המספקת לכל קלט אפשרי את הפלט הרצוי עבורו.</p>
+    </div>
+  </div>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>דוגמה — מיון מספרים, פורמלי</div>
+    <div class="box-body">
+      <p><strong>קלט:</strong> מערך <span class="term">A</span> של <span class="term">n</span> מספרים <span class="term">A[1], ..., A[n]</span>, כאשר כל מספר מיוצג ע״י 256 ביטים.</p>
+      <p><strong>פלט:</strong> סידור מחדש של המערך באופן ממויין. פורמלית: תמורה</p>
+      $$\pi: \{1,...,n\} \to \{1,...,n\}$$
+      <p>עבורה מתקיים:</p>
+      $$A[\pi(i)] \leq A[\pi(i+1)] \quad \forall i$$
+      <p>כלומר נמצא סידור חדש של איברי המערך השומר על איברים אך מסדר אותם בסדר עולה.</p>
+    </div>
+  </div>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>אלגוריתם נכון מול לא נכון</div>
+    <div class="box-body">
+      <p><strong>אלגוריתם נכון:</strong> אלגוריתם שלכל קלט חוקי <em>עוצר</em> ומחזיר את הפלט הרצוי.</p>
+      <p><strong>אלגוריתם לא נכון:</strong> אלגוריתם שקיים קלט שעליו:</p>
+      <ul>
+        <li>האלגוריתם <em>אינו עוצר</em>, או</li>
+        <li>הוא עוצר אך מחזיר פלט שאינו הפלט הרצוי</li>
+      </ul>
+      <p><strong>הדרישה כפולה:</strong> עצירה + נכונות הפלט. לא מספיק שיחזיר את הפלט הנכון "בדרך כלל".</p>
+    </div>
+  </div>
+
+  <!-- =============== 2. הצעדים בפתרון בעיה =============== -->
+  <h2>חמשת הצעדים בפתרון בעיה אלגוריתמית</h2>
+
+  <div class="box summary">
+    <div class="box-head"><span class="icon">📌</span>סדר הפעולות הקלאסי</div>
+    <div class="box-body">
+      <ol>
+        <li><strong>ניתוח הבעיה והגדרת מודל מתמטי</strong> מופשט לייצוגה.</li>
+        <li><strong>מציאת אלגוריתם לפתרון:</strong>
+          <ul>
+            <li>תיאור עילי (מילולי) של הרעיון</li>
+            <li>בחירת מבני נתונים / טיפוסי נתונים מופשטים</li>
+            <li>תיאור מפורט (פסאודו-קוד)</li>
+          </ul>
+        </li>
+        <li><strong>הוכחת נכונות האלגוריתם.</strong></li>
+        <li><strong>ניתוח סיבוכיות זמן וזיכרון.</strong></li>
+        <li><strong>מימוש מלא</strong> (בשפת תכנות) ובדיקות מעשיות.</li>
+      </ol>
+      <p style="margin-top:14px;"><strong>במבחן תתבקש לרוב להציג את שלבים 2–4.</strong> שלב 1 בדרך כלל נתון בשאלה; שלב 5 רלוונטי לתרגילי תכנות בלבד.</p>
+    </div>
+  </div>
+
+  <div class="keypoint">
+    <strong>פסאודו-קוד</strong> — דומה לשפת תכנות אבל בשפה טבעית יותר. אפשר להתעלם מהגדרות טיפוסים, הקצאת זיכרון, ופרטים תחביריים. צריך להיות חד-משמעי כך שניתן ליישם בכל שפה.
+  </div>
+
+  <!-- =============== 3. ניתוח יעילות =============== -->
+  <h2>ניתוח יעילות אלגוריתם</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>מה אנחנו סופרים?</div>
+    <div class="box-body">
+      <p><strong>סיבוכיות זמן ריצה:</strong> ספירה של מספר הפעולות הבסיסיות, כפונקציה של <strong>גודל ייצוג הקלט</strong>.</p>
+      <p>לרוב מסתפקים בחסמים אסימפטוטיים: <span class="term">O</span> (חסם עליון), <span class="term">Ω</span> (חסם תחתון), <span class="term">Θ</span> (חסם הדוק).</p>
+      <p><strong>שלושת המקרים:</strong></p>
+      <ul>
+        <li><strong>המקרה הגרוע</strong> (Worst Case) — הזמן המקסימלי על קלט בגודל <span class="term">n</span></li>
+        <li><strong>המקרה הטוב</strong> (Best Case) — הזמן המינימלי</li>
+        <li><strong>המקרה הממוצע</strong> (Average Case) — תוחלת הזמן (דורש מודל סטטיסטי על הקלט)</li>
+      </ul>
+      <p>במבחן ובקורס <strong>לרוב מנתחים את המקרה הגרוע</strong>.</p>
+    </div>
+  </div>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>אלגוריתם פולינומיאלי מול לא-פולינומיאלי</div>
+    <div class="box-body">
+      <p>שני סוגים מרכזיים:</p>
+      <ul>
+        <li><strong>פולינומיאלי</strong> — זמן <span class="term">O(n^c)</span> עבור קבוע <span class="term">c</span> (לדוגמה: לינארי <span class="term">O(n)</span>, ריבועי <span class="term">O(n²)</span>, קוביעי <span class="term">O(n³)</span>)</li>
+        <li><strong>לא-פולינומיאלי</strong> — לרוב אקספוננציאלי (מעריכי), כמו <span class="term">O(2^n)</span> או <span class="term">O(n!)</span></li>
+      </ul>
+      <p><strong>אלגוריתם נחשב יעיל אם הוא פולינומיאלי</strong>, אחרת לא יעיל. הקפיצה ב-n=100: פולינומי <span class="term">100³ = 10^6</span>, אקספוננציאלי <span class="term">2^100 ≈ 10^30</span>.</p>
+    </div>
+  </div>
+
+  <!-- =============== 4. מיון בועות — דוגמה מלאה =============== -->
+  <h2>דוגמה מלאה: מיון בועות</h2>
+
+  <p>מיון בועות הוא דוגמה קלסית לכל החמישה צעדים. הרעיון: בכל איטרציה החיצונית, ה<em>איבר הגדול ביותר שטרם מיוננו</em> "מבעבע" למקומו הנכון בסוף.</p>
+
+  <div class="code-label">
+    <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+    <span class="name">BubbleSort.txt</span>
+  </div>
+<pre><code class="language-plaintext">BUBBLE-SORT(A[1..n]):
+    for i = n down to 2:
+        swapped = false
+        for j = 1 to i-1:
+            if A[j] > A[j+1]:
+                swap A[j], A[j+1]
+                swapped = true
+        if not swapped:
+            return     // המערך כבר ממויין
+</code></pre>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הוכחת נכונות — אינווריאנט הלולאה</div>
+    <div class="box-body">
+      <p><strong>טענת אינווריאנט:</strong> אחרי האיטרציה ה-<span class="term">i</span>-ית של הלולאה החיצונית, התאים <span class="term">A[i..n]</span> מכילים את <span class="term">n−i+1</span> האיברים <em>הגדולים ביותר</em> במערך, ממוינים בסדר עולה.</p>
+      <p><strong>הוכחה באינדוקציה על i (יורדת מ-n):</strong></p>
+      <ul>
+        <li><strong>בסיס (i=n):</strong> אחרי איטרציה אחת של הלולאה הפנימית, האיבר הגדול ביותר במערך נמצא ב-<span class="term">A[n]</span> כי כל השוואה משאירה את הגדול יותר מימין.</li>
+        <li><strong>צעד:</strong> מהנחת האינדוקציה, <span class="term">A[i+1..n]</span> מכילים את <span class="term">n−i</span> הגדולים, ממוינים. באיטרציה הנוכחית הלולאה הפנימית רצה על <span class="term">A[1..i]</span>, ומבעבעת את הגדול שבהם ל-<span class="term">A[i]</span>. כל איבר ב-<span class="term">A[i]</span> כעת ≥ כל איבר ב-<span class="term">A[1..i-1]</span> (כי הוא היה הגדול), וגם ≤ <span class="term">A[i+1]</span> (מהאינווריאנט הקודם). לכן <span class="term">A[i..n]</span> ממוינים. ∎</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box formula">
+    <div class="box-head"><span class="icon">📐</span>ניתוח זמני ריצה</div>
+    <div class="box-body">
+      <p>הלולאה הפנימית רצה <span class="term">i−1</span> פעמים באיטרציה <span class="term">i</span>. סך הכל:</p>
+      $$T(n) = (n-1) + (n-2) + \ldots + 1 = \frac{n(n-1)}{2} = O(n^2)$$
+      <ul>
+        <li><strong>מקרה גרוע</strong>: מערך ממויין בסדר יורד ← <span class="term">Θ(n²)</span> השוואות והחלפות</li>
+        <li><strong>מקרה טוב</strong>: מערך כבר ממויין ← איטרציה אחת ללא החלפות ← <span class="term">Θ(n)</span> (עצירה מוקדמת)</li>
+        <li><strong>מקום (זיכרון):</strong> <span class="term">O(1)</span> נוסף (in-place)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- =============== 5. רדוקציה =============== -->
+  <h2>רדוקציה — פתרון בעיה דרך בעיה אחרת</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הרעיון</div>
+    <div class="box-body">
+      <p>נניח שיש אלגוריתם <span class="term">A</span> לפתרון בעיה <span class="term">P</span>. בהינתן בעיה חדשה <span class="term">Q</span>:</p>
+      <ol>
+        <li><strong>תרגום קלט:</strong> נמיר כל קלט <span class="term">x</span> של <span class="term">Q</span> לקלט <span class="term">y</span> של <span class="term">P</span></li>
+        <li><strong>הפעלת A:</strong> נריץ את <span class="term">A</span> על <span class="term">y</span> ונקבל פלט <span class="term">A(y)</span></li>
+        <li><strong>תרגום פלט:</strong> נמיר את <span class="term">A(y)</span> לפלט <span class="term">Q(x)</span> הרצוי</li>
+      </ol>
+      <p>הרדוקציה חוסכת לנו לתכנן אלגוריתם חדש מאפס. תהליך התרגום צריך להיות יעיל — אחרת איבדנו את היתרון.</p>
+    </div>
+  </div>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>דוגמה: מציאת מינימום דרך מציאת מקסימום</div>
+    <div class="box-body">
+      <p><strong>בעיה P (פתורה):</strong> בהינתן מערך, מצא את ה<em>מקסימום</em>.</p>
+      <p><strong>בעיה Q (חדשה):</strong> בהינתן מערך, מצא את ה<em>מינימום</em>.</p>
+      <p><strong>הרדוקציה:</strong></p>
+      <ol>
+        <li>תרגום קלט: בהינתן מערך <span class="term">A=[a₁,...,aₙ]</span>, צור <span class="term">A'=[-a₁,...,-aₙ]</span></li>
+        <li>הפעל את אלגוריתם המקסימום: <span class="term">m = max(A')</span></li>
+        <li>תרגום פלט: החזר <span class="term">-m</span></li>
+      </ol>
+      <p>נכונות: המקסימום של <span class="term">A'</span> מתאים למינימום של <span class="term">A</span> (סימן הפוך). יעילות הרדוקציה: <span class="term">Θ(n)</span> לתרגום, אותה סיבוכיות כמו האלגוריתם המקורי בסדר גודל.</p>
+    </div>
+  </div>
+
+  <!-- =============== 6. פרדיגמה 1: הפרד ומשול =============== -->
+  <h2>פרדיגמה 1 — הפרד ומשול (Divide &amp; Conquer)</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>שלבי הפרד ומשול</div>
+    <div class="box-body">
+      <ol>
+        <li><strong>הפרד:</strong> חלק את הבעיה לתת-בעיות קטנות יותר מאותו סוג</li>
+        <li><strong>משול:</strong> פתור כל תת-בעיה באופן רקורסיבי</li>
+        <li><strong>צרף:</strong> אחד את הפתרונות החלקיים לפתרון של הבעיה המקורית</li>
+      </ol>
+      <p><strong>גישת Top-down</strong> — מתחילים מהבעיה הגדולה ושוברים אותה למטה.</p>
+      <p>ניתוח הזמן מתבצע באמצעות <strong>נוסחה רקורסיבית</strong>. דוגמה: אם בעיה בגודל <span class="term">n</span> מתפרקת ל-2 בעיות בגודל <span class="term">n/2</span> ועלות הצירוף היא <span class="term">f(n)</span>:</p>
+      $$T(n) = 2T(n/2) + f(n)$$
+    </div>
+  </div>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>דוגמה: MergeSort</div>
+    <div class="box-body">
+      <p><strong>אלגוריתם:</strong> אם גודל המערך > 1:</p>
+      <ol>
+        <li>מיין רקורסיבית את החצי השמאלי</li>
+        <li>מיין רקורסיבית את החצי הימני</li>
+        <li>מזג את שני החצאים הממוינים (Merge)</li>
+      </ol>
+      <p><strong>זמן ריצה:</strong> שתי קריאות רקורסיביות לחצי, פלוס Merge ב-<span class="term">Θ(n)</span>:</p>
+      $$T(n) = 2T(n/2) + \Theta(n)$$
+      <p>פתרון הנוסחה (משפט האב, או פתיחה ידנית):</p>
+      $$T(n) = \Theta(n \log n)$$
+    </div>
+  </div>
+
+  <!-- =============== 7. פרדיגמה 2: תכנות דינמי =============== -->
+  <h2>פרדיגמה 2 — תכנות דינמי (Dynamic Programming)</h2>
+
+  <p>תכנות דינמי הוא תיקון לבעיה של חישובים חוזרים ברקורסיה נאיבית. כשרקורסיה פותרת את אותן תת-בעיות שוב ושוב, DP <strong>שומר את התוצאות</strong> בטבלה כדי להימנע מחישוב כפול.</p>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>דוגמה קלסית: מספרי פיבונאצ׳י</div>
+    <div class="box-body">
+      <p><strong>הגדרה:</strong> <span class="term">a₁=1, a₂=1, aₙ=aₙ₋₁+aₙ₋₂</span>.</p>
+      <p><strong>פתרון נאיבי (רקורסיה):</strong></p>
+<pre style="margin:8px 0;"><code class="language-plaintext">FIB-RECURSIVE(n):
+    if n ≤ 2: return 1
+    return FIB-RECURSIVE(n-1) + FIB-RECURSIVE(n-2)
+</code></pre>
+      <p><strong>סיבוכיות:</strong></p>
+      $$T(n) = T(n-1) + T(n-2) + O(1) = \Theta(2^n)$$
+      <p><strong>הבעיה:</strong> בעץ הרקורסיה, אותו <span class="term">aₖ</span> מחושב <em>פעמים רבות</em>.</p>
+      <p><strong>פתרון ב-DP:</strong> נחשב את האיברים <em>על פי הסדר</em>, נשמור בטבלה:</p>
+<pre style="margin:8px 0;"><code class="language-plaintext">FIB-DP(n):
+    a[1] = a[2] = 1
+    for i = 3 to n:
+        a[i] = a[i-1] + a[i-2]
+    return a[n]
+</code></pre>
+      <p><strong>סיבוכיות:</strong> <span class="term">Θ(n)</span> זמן, <span class="term">Θ(n)</span> זיכרון (אפשר להוריד ל-<span class="term">O(1)</span> אם שומרים רק שני האחרונים).</p>
+    </div>
+  </div>
+
+  <div class="keypoint">
+    <strong>סימן של בעיה מתאימה ל-DP:</strong> כשהפתרון הנאיבי הוא רקורסיה שנקראת על אותם פרמטרים פעמיים או יותר (תת-בעיות חופפות). חשוב לזהות זאת — אחרת מבזבזים זמן.
+  </div>
+
+  <!-- =============== 7b. פרדיגמה 3 — חמדני =============== -->
+  <h2>פרדיגמה 3 — אלגוריתם חמדני (Greedy)</h2>
+
+  <div class="box theory">
+    <div class="box-head"><span class="icon">📘</span>הרעיון</div>
+    <div class="box-body">
+      <p>בכל שלב בוחרים את הפעולה ה<strong>"משתלמת ביותר" באופן מקומי</strong> ומקווים שאוסף השיפורים המקומיים יוביל לאופטימום גלובלי.</p>
+      <p><strong>הסכנה:</strong> לא תמיד אופטימום מקומי = אופטימום גלובלי. צריך הוכחה מיוחדת.</p>
+      <p><strong>איפה זה עובד בקורס:</strong> Dijkstra (מק״בים), Prim ו-Kruskal (עצים פורשים). שם יש משפט שמצדיק את הבחירה החמדנית.</p>
+    </div>
+  </div>
+
+  <div class="box example">
+    <div class="box-head"><span class="icon">💡</span>דוגמה: סכום במינימום מטבעות</div>
+    <div class="box-body">
+      <p><strong>הבעיה:</strong> נתון מספר טבעי <span class="term">N</span>. בידינו אוסף לא-מוגבל של מטבעות (לדוגמה <span class="term">{1, 2, 5, 10}</span>). פרוט את <span class="term">N</span> לכמה שפחות מטבעות.</p>
+
+      <p><strong>אלגוריתם חמדני נאיבי:</strong></p>
+      <pre style="margin-top:6px;margin-bottom:6px;"><code class="language-plaintext">while N &gt; 0:
+    בחר את המטבע המקסימלי שערכו ≤ N
+    הוסף אותו לפתרון
+    N = N - ערך_המטבע</code></pre>
+
+      <p><strong>למטבעות {1,2,5,10}:</strong> האלגוריתם עובד נכון. דוגמה: <span class="term">N=18</span> → 10+5+2+1 = 4 מטבעות (אופטימלי).</p>
+
+      <p><strong>אבל!</strong> תלוי קריטית בערכי המטבעות. עבור מטבעות <span class="term">{1, 4, 6}</span> ו-<span class="term">N=8</span>:</p>
+      <ul>
+        <li><strong>חמדני:</strong> 6 (נשאר 2) → 1 → 1 = 3 מטבעות</li>
+        <li><strong>אופטימלי:</strong> 4 + 4 = 2 מטבעות ✗ חמדני נכשל</li>
+      </ul>
+
+      <p><strong>הלקח:</strong> אלגוריתם חמדני <em>לא תמיד נכון</em>. חייב להוכיח שהמשפט המקומי מצדיק את הבחירה. אחרת — דוגמה נגדית אחת מספיקה כדי להפיל הכל.</p>
+    </div>
+  </div>
+
+  <div class="box warn">
+    <div class="box-head"><span class="icon">⚠</span>כשרואים שאלת "חמדני אופטימלי?"</div>
+    <div class="box-body">
+      <p>גישה: <strong>תמיד תחפש דוגמה נגדית קודם.</strong> אם אחרי דקה לא מצאת — אז כנראה כן עובד, ותתחיל להוכיח. אבל ההוכחה (משפט "החלפה" / exchange argument) קשה — לא להמציא בפעם הראשונה במבחן.</p>
+    </div>
+  </div>
+
+  <!-- =============== 8. תרגילים =============== -->
+  <h2>תרגילים מהפרקטיקה</h2>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל · practice5 שאלה 4 — מטבעות {1, d, d²} בהוכחת חמדני אופטימלי</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">greedy · exchange argument</span>
+          <p>לבנק מטבעות בערכים <span class="term">1, d, d²</span> (<span class="term">d</span> מספר טבעי קבוע). לקוח מבקש סכום <span class="term">x</span>. הוכח שאלגוריתם חמדני (בכל שלב המטבע הגדול ביותר ש-<span class="term">≤</span> שארית) נותן מינימום מטבעות.</p>
+          <p><strong>(א)</strong> דוגמה: <span class="term">d=5, x=62</span>. כמה מטבעות?</p>
+          <p><strong>(ב)</strong> נסח <em>למת בחירה חמדנית</em> והוכח אותה.</p>
+          <p><strong>(ג)</strong> הסק נכונות האלגוריתם מהלמה.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">סעיף א · דוגמה d=5, x=62</div>
+            <ul>
+              <li><span class="term">⌊62/25⌋ = 2</span> מטבעות 25, שארית <span class="term">62 − 50 = 12</span>.</li>
+              <li><span class="term">⌊12/5⌋ = 2</span> מטבעות 5, שארית <span class="term">12 − 10 = 2</span>.</li>
+              <li><span class="term">2</span> מטבעות 1.</li>
+            </ul>
+            <p>סה״כ <span class="term">2+2+2 = 6</span> מטבעות.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף ב · למת הבחירה החמדנית</div>
+            <p><strong>למה:</strong> בכל פתרון אופטימלי לסכום <span class="term">x</span> במטבעות <span class="term">{1, d, d²}</span>, מספר המטבעות מערך 1 הוא לכל היותר <span class="term">d−1</span>, ומספר המטבעות מערך <span class="term">d</span> הוא לכל היותר <span class="term">d−1</span>.</p>
+
+            <p><strong>הוכחה:</strong> נניח בשלילה שיש פתרון אופטימלי עם <span class="term">≥ d</span> מטבעות מערך 1. אז אפשר להחליף <span class="term">d</span> מטבעות 1 במטבע אחד מערך <span class="term">d</span> — אותו סכום, אבל <span class="term">d − 1 ≥ 1</span> פחות מטבעות. סתירה לאופטימליות.</p>
+            <p>באותו אופן: <span class="term">d</span> מטבעות מערך <span class="term">d</span> שווים למטבע אחד <span class="term">d²</span>. ∎</p>
+
+            <p><strong>מסקנה:</strong> בפתרון אופטימלי, הסכום שנובע ממטבעות 1 ו-<span class="term">d</span> הוא לכל היותר:</p>
+            $$(d-1) \cdot 1 + (d-1) \cdot d = (d-1)(d+1) = d^2 - 1 < d^2$$
+            <p>אז אם <span class="term">x ≥ d²</span>, חייבים להשתמש לפחות במטבע <span class="term">d²</span> אחד. בפרט מספר מטבעות <span class="term">d²</span> שווה ל-<span class="term">⌊x/d²⌋</span> (השארית פחות מ-<span class="term">d²</span>).</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סעיף ג · נכונות האלגוריתם</div>
+            <p>הראינו שכל פתרון אופטימלי חייב לקחת <span class="term">⌊x/d²⌋</span> מטבעות <span class="term">d²</span> (זאת בדיוק הבחירה החמדנית).</p>
+            <p>אחרי הבחירה, נשארנו עם תת-בעיה: סכום <span class="term">x' = x mod d²</span> במטבעות <span class="term">{1, d, d²}</span>. אבל <span class="term">x' &lt; d²</span>, אז שום מטבע <span class="term">d²</span> לא ייקח עוד.</p>
+
+            <p>לתת-הבעיה הזאת אנו מיישמים שוב את הלמה (על המטבעות <span class="term">{1, d}</span>): מספר מטבעות 1 לכל היותר <span class="term">d−1</span>, אז מספר מטבעות <span class="term">d</span> שווה ל-<span class="term">⌊x'/d⌋</span>. השארית נסגרת ב-<span class="term">x' mod d</span> מטבעות 1.</p>
+
+            <p>הבחירות החמדניות בכל השלבים מסכימות עם <em>כל</em> פתרון אופטימלי — אז הפתרון של האלגוריתם החמדני אופטימלי. ∎</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">סיבוכיות</div>
+            <p>3 פעולות חלוקה ושארית — <span class="term">O(1)</span> במונחי פעולות אריתמטיות. בגודל ייצוג הקלט: <span class="term">log x</span> ביטים, פעולת חילוק/שארית <span class="term">O(log x)</span>. סה״כ <span class="term">O(log x)</span>.</p>
+          </div>
+
+          <div class="final-answer">
+            <strong>הניגוד למטבעות {1,4,6}:</strong> שם חמדני נכשל כי 4+4=8 לא ניתן ע״י אלגוריתם חמדני שלוקח 6 קודם. כאן <span class="term">{1, d, d²}</span> עובד <em>בדיוק</em> כי <span class="term">d</span> מטבעות מערך נמוך תמיד שווים בדיוק למטבע אחד מערך גבוה — מה שמאפשר exchange argument.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box exercise">
+    <div class="box-head"><span class="icon">📝</span>תרגיל · practice1, שאלה 1 — אלגוריתם Merge</div>
+    <div class="box-body">
+
+      <div class="exercise-card">
+        <div class="exercise-q">
+          <span class="exercise-tag">algorithm + correctness proof</span>
+          <p><strong>א.</strong> כתוב אלגוריתם <span class="term">merge</span> שמקבל שני מערכים <em>ממוינים</em> <span class="term">A</span> ו-<span class="term">B</span> ומחזיר מערך ממויין יחיד המכיל את ערכי שני המערכים.</p>
+          <p><strong>ב.</strong> הוכח את נכונות האלגוריתם.</p>
+          <p><strong>ג.</strong> האם האלגוריתם עובד גם על מערכים <em>לא ממוינים</em>? אם כן — הוכח. אם לא — הסבר היכן ההוכחה הסתמכה על המיון.</p>
+        </div>
+        <button class="reveal-btn" onclick="this.parentElement.classList.toggle('open')">הצג פתרון</button>
+        <div class="solution">
+
+          <div class="step">
+            <div class="step-label">שלב 1 · האלגוריתם (סעיף א)</div>
+<pre style="margin:8px 0;"><code class="language-plaintext">MERGE(A, B):
+    i = j = k = 0
+    while i &lt; len(A) and j &lt; len(B):
+        if A[i] &lt; B[j]:
+            RES[k] = A[i]; i += 1
+        else:
+            RES[k] = B[j]; j += 1
+        k += 1
+    while i &lt; len(A):   // נשארו איברים ב-A
+        RES[k] = A[i]; i += 1; k += 1
+    while j &lt; len(B):   // נשארו איברים ב-B
+        RES[k] = B[j]; j += 1; k += 1
+    return RES
+</code></pre>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 2 · טענת הנכונות (סעיף ב)</div>
+            <p>אם <span class="term">A</span> ו-<span class="term">B</span> ממוינים, אז בסיום:</p>
+            <ol>
+              <li><span class="term">RES</span> מכיל את כל הערכים שהופיעו ב-<span class="term">A</span> וב-<span class="term">B</span>, כל ערך בדיוק פעם אחת.</li>
+              <li><span class="term">RES</span> ממויין בסדר עולה.</li>
+            </ol>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 3 · הוכחת חלק (1) — כל איבר נכתב</div>
+            <p>כל איבר ב-<span class="term">A</span> או ב-<span class="term">B</span> נכתב ל-<span class="term">RES</span> בדיוק <em>פעם אחת</em>. המצביעים <span class="term">i, j</span> מתחילים ב-0 וכל אחד מקודם רק לאחר כתיבה. בסיום כל לולאה (השלישית והרביעית), המצביעים עברו את גבולות המערכים. לכן כל איבר נכתב פעם אחת בלבד.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 4 · הוכחת חלק (2) — RES ממויין</div>
+            <p><strong>אינווריאנט הלולאה (הראשונה):</strong> בכל שלב, <span class="term">RES[0..k-1]</span> ממויין, וכל איבר בו ≤ <span class="term">A[i], B[j]</span>.</p>
+            <ul>
+              <li><strong>בסיס:</strong> בתחילת הלולאה <span class="term">k=0</span>, <span class="term">RES</span> ריק. טריוויאלי.</li>
+              <li><strong>צעד:</strong> בכל איטרציה נבחר <span class="term">min(A[i], B[j])</span> וכותבים אותו ל-<span class="term">RES[k]</span>. מהאינווריאנט: <span class="term">RES[k-1] ≤ min(A[i], B[j]) = RES[k]</span> — נשמר הסדר. אחרי הקידום, מההנחה ש-<span class="term">A, B</span> ממוינים, גם האיברים הבאים <em>גדולים שווה</em> לאיבר שנבחר. ✓</li>
+              <li><strong>שתי הלולאות הבאות</strong> כותבות איברים שנשארו ממערך <em>ממויין</em> אחד, ולפי האינווריאנט הקודם הם כולם ≥ כל מה שכבר ב-<span class="term">RES</span>. ✓</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="step-label">שלב 5 · סעיף ג — האם עובד על מערכים לא ממוינים?</div>
+            <p><strong>לא.</strong> ההוכחה השתמשה בהנחה ש-<span class="term">A, B</span> ממוינים בשלוש מקומות:</p>
+            <ul>
+              <li>בלולאה הראשונה: כשמקדמים <span class="term">i</span>, ההנחה היא ש-<span class="term">A[i+1] ≥ A[i] ≥ RES[k]</span>. ללא מיון, ייתכן ש-<span class="term">A[i+1] &lt; RES[k]</span>.</li>
+              <li>בלולאות הסיום: ההנחה היא שהאיברים שנשארו ממוינים — לא נכון בלי המיון.</li>
+            </ul>
+            <p><strong>דוגמה לכישלון:</strong> <span class="term">A=[3,1]</span>, <span class="term">B=[2]</span>. Merge ייתן <span class="term">[2,3,1]</span> או <span class="term">[3,1,2]</span> בהתאם להשוואות — לא ממויין.</p>
+          </div>
+
+          <div class="final-answer">
+            (א) האלגוריתם רץ ב-<span class="term">Θ(n+m)</span>. (ב) הוכחה דו-שלבית: שלמות (כל איבר נכתב פעם) + סדר (אינווריאנט הלולאה). (ג) לא עובד על קלט לא ממויין — ההוכחה התבססה במפורש על המיון.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =============== 9. סיכום למבחן =============== -->
+  <h2>מה לזכור למבחן</h2>
+
+  <div class="box summary">
+    <div class="box-head"><span class="icon">📌</span>צ׳קליסט מבחן</div>
+    <div class="box-body">
+      <ol>
+        <li><strong>הגדר את הבעיה במפורש</strong> — קלט, פלט, ומה היחס ביניהם. אל תקפוץ ישר לאלגוריתם.</li>
+        <li><strong>הוכחת נכונות = אינווריאנט לולאה</strong> בלולאות איטרטיביות, או <strong>אינדוקציה על עומק הרקורסיה</strong> ברקורסיה.</li>
+        <li><strong>סיבוכיות במקרה הגרוע</strong> בסימן <span class="term">O</span> או <span class="term">Θ</span>. ציין במפורש <em>על איזה קלט</em> המקרה הגרוע מתממש.</li>
+        <li><strong>רדוקציה</strong> — שלוש פעולות: תרגום קלט, הרצת אלגוריתם קיים, תרגום פלט. הכל יעיל.</li>
+        <li><strong>זיהוי פרדיגמה:</strong> תת-בעיות חופפות — סימן ל-DP. תת-בעיות זרות בגודל קטן יותר — סימן ל-Divide &amp; Conquer.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="box warn">
+    <div class="box-head"><span class="icon">⚠</span>טעויות נפוצות</div>
+    <div class="box-body">
+      <ol>
+        <li><strong>לכתוב פסאודו-קוד בלי להוכיח נכונות.</strong> כמעט תמיד מורידים ניקוד על זה.</li>
+        <li><strong>לטעון יעילות בלי לציין מודל קלט.</strong> "האלגוריתם רץ ב-O(n)" — מה זה n? מספר איברים? אורך ייצוג? הבדל קריטי.</li>
+        <li><strong>לחשוב שרקורסיה = יעילות.</strong> הפיבונאצ׳י הנאיבי הוא <span class="term">Θ(2^n)</span> — הרבה <em>פחות</em> יעיל מלולאה.</li>
+        <li><strong>להוכיח רק את אחד מהשניים:</strong> עצירה ונכונות. שניהם חייבים — לא די באחד.</li>
+      </ol>
+    </div>
+  </div>
+</main>
+</div>
+</body>
+</html>

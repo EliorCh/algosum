@@ -180,6 +180,55 @@
   <h1 class="page-title">תכנות דינמי</h1>
   <p class="page-subtitle">חמשת השלבים של DP, ושני יישומים קלאסיים: מקדמים בינומיים ובעיית התרמיל (knapsack).</p>
 
+  <div style="text-align:center; margin: 18px 0 8px;">
+    <svg viewBox="0 0 540 200" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;max-width:540px;">
+      <!-- Fibonacci recursion tree showing overlapping subproblems -->
+      <!-- Root: fib(5) -->
+      <circle cx="270" cy="25" r="18" fill="#fef9e7" stroke="#b45309" stroke-width="2.5"/>
+      <text x="270" y="30" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#b45309">f(5)</text>
+
+      <!-- Level 1: fib(4), fib(3) -->
+      <circle cx="180" cy="75" r="18" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+      <text x="180" y="80" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#1d4ed8">f(4)</text>
+      <circle cx="360" cy="75" r="18" fill="#ecfdf5" stroke="#047857" stroke-width="2"/>
+      <text x="360" y="80" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#047857">f(3)</text>
+
+      <!-- Level 2: fib(3), fib(2), fib(2), fib(1) -->
+      <circle cx="120" cy="125" r="16" fill="#ecfdf5" stroke="#047857" stroke-width="2"/>
+      <text x="120" y="130" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="#047857">f(3)</text>
+      <circle cx="220" cy="125" r="16" fill="#fff1f2" stroke="#be123c" stroke-width="2"/>
+      <text x="220" y="130" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="#be123c">f(2)</text>
+      <circle cx="320" cy="125" r="16" fill="#fff1f2" stroke="#be123c" stroke-width="2"/>
+      <text x="320" y="130" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="#be123c">f(2)</text>
+      <circle cx="400" cy="125" r="14" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+      <text x="400" y="129" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#475569">f(1)</text>
+
+      <!-- Level 3 (partial, just showing overlap) -->
+      <circle cx="80" cy="175" r="14" fill="#fff1f2" stroke="#be123c" stroke-width="2"/>
+      <text x="80" y="179" text-anchor="middle" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#be123c">f(2)</text>
+      <circle cx="160" cy="175" r="13" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+      <text x="160" y="179" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#475569">f(1)</text>
+
+      <!-- Edges -->
+      <line x1="258" y1="38" x2="192" y2="62" stroke="#94a3b8" stroke-width="1.5"/>
+      <line x1="282" y1="38" x2="348" y2="62" stroke="#94a3b8" stroke-width="1.5"/>
+      <line x1="170" y1="88" x2="128" y2="112" stroke="#94a3b8" stroke-width="1.5"/>
+      <line x1="190" y1="88" x2="212" y2="112" stroke="#94a3b8" stroke-width="1.5"/>
+      <line x1="350" y1="88" x2="328" y2="112" stroke="#94a3b8" stroke-width="1.5"/>
+      <line x1="370" y1="88" x2="394" y2="112" stroke="#94a3b8" stroke-width="1.5"/>
+      <line x1="112" y1="138" x2="86" y2="163" stroke="#94a3b8" stroke-width="1.5"/>
+      <line x1="128" y1="138" x2="156" y2="163" stroke="#94a3b8" stroke-width="1.5"/>
+
+      <!-- Labels for overlapping nodes -->
+      <text x="60" y="40" text-anchor="middle" font-family="Assistant" font-size="10" fill="#be123c" font-weight="700">f(2) מחושב 3 פעמים</text>
+      <text x="60" y="55" text-anchor="middle" font-family="Assistant" font-size="10" fill="#047857" font-weight="700">f(3) מחושב 2 פעמים</text>
+
+      <text x="480" y="40" text-anchor="middle" font-family="Assistant" font-size="10" fill="#475569">DP פותר כל תת-</text>
+      <text x="480" y="55" text-anchor="middle" font-family="Assistant" font-size="10" fill="#475569">בעיה פעם אחת</text>
+      <text x="480" y="70" text-anchor="middle" font-family="Assistant" font-size="10" fill="#475569" font-weight="700">O(n) במקום O(2ⁿ)</text>
+    </svg>
+  </div>
+
   <p class="lead">
     תכנות דינמי הוא <strong>שיטה</strong>, לא אלגוריתם. כשבעיה ניתנת לפירוק לתתי-בעיות שמתחפפות, DP בונה את הפתרון מהקטן לגדול תוך שמירת תוצאות ביניים בטבלה.
     <strong>שני סימנים שבעיה מתאימה ל-DP:</strong> (1) מבנה אופטימלי — פתרון אופטימלי לבעיה מורכב מפתרונות אופטימליים לתת-בעיות; (2) תת-בעיות חופפות — אותה תת-בעיה נפתרת שוב ושוב.

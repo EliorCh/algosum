@@ -180,6 +180,55 @@
   <h1 class="page-title">חיפוש לעומק<br>· DFS ·</h1>
   <p class="page-subtitle">האלגוריתם הראשון מבין שני אלגוריתמי הסריקה. תזמוני גילוי וסיום, סיווג קשתות, ועצי DFS.</p>
 
+  <div style="text-align:center; margin: 18px 0 8px;">
+    <svg viewBox="0 0 480 140" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;max-width:480px;">
+      <defs>
+        <marker id="arrow-hero5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#1d4ed8"/>
+        </marker>
+      </defs>
+      <!-- DFS Tree visualization with edge colors showing classifications -->
+      <!-- Root -->
+      <circle cx="240" cy="25" r="18" fill="#fef9e7" stroke="#b45309" stroke-width="2.5"/>
+      <text x="240" y="30" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#b45309">a</text>
+
+      <!-- Children -->
+      <circle cx="140" cy="80" r="16" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+      <text x="140" y="85" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="700">b</text>
+      <circle cx="340" cy="80" r="16" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+      <text x="340" y="85" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="700">d</text>
+
+      <circle cx="90" cy="120" r="14" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+      <text x="90" y="124" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700">c</text>
+      <circle cx="190" cy="120" r="14" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+      <text x="190" y="124" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700">e</text>
+      <circle cx="290" cy="120" r="14" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+      <text x="290" y="124" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700">f</text>
+      <circle cx="390" cy="120" r="14" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+      <text x="390" y="124" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700">g</text>
+
+      <!-- Tree edges (blue solid) -->
+      <line x1="228" y1="38" x2="152" y2="68" stroke="#1d4ed8" stroke-width="2.5"/>
+      <line x1="252" y1="38" x2="328" y2="68" stroke="#1d4ed8" stroke-width="2.5"/>
+      <line x1="130" y1="93" x2="98" y2="109" stroke="#1d4ed8" stroke-width="2.5"/>
+      <line x1="150" y1="93" x2="182" y2="109" stroke="#1d4ed8" stroke-width="2.5"/>
+      <line x1="330" y1="93" x2="298" y2="109" stroke="#1d4ed8" stroke-width="2.5"/>
+      <line x1="350" y1="93" x2="382" y2="109" stroke="#1d4ed8" stroke-width="2.5"/>
+
+      <!-- Back edge (red dashed) -->
+      <path d="M 188 116 Q 165 95 142 80" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,3" fill="none" marker-end="url(#arrow-hero5)"/>
+      <text x="200" y="93" font-family="JetBrains Mono" font-size="9" fill="#dc2626" font-weight="700">B</text>
+
+      <!-- Cross edge (purple dashed) -->
+      <line x1="304" y1="120" x2="376" y2="120" stroke="#9333ea" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arrow-hero5)"/>
+      <text x="338" y="115" font-family="JetBrains Mono" font-size="9" fill="#9333ea" font-weight="700">C</text>
+
+      <text x="60" y="30" font-family="Assistant" font-size="10" fill="#1d4ed8" font-weight="700">— Tree</text>
+      <text x="60" y="45" font-family="Assistant" font-size="10" fill="#dc2626" font-weight="700">- - Back</text>
+      <text x="60" y="60" font-family="Assistant" font-size="10" fill="#9333ea" font-weight="700">- - Cross</text>
+    </svg>
+  </div>
+
   <p class="lead">
     DFS הוא אלגוריתם שמטייל בגרף לפי כלל פשוט: <strong>לך כל עוד יש לאן ללכת, ורק כשנתקעת — חזור צעד אחורה.</strong>
     המבנה הזה יוצר <em>עץ DFS</em>, שני מספרים על כל קודקוד (זמן גילוי וזמן סיום), ומאפשר ליישם בעיות מורכבות כמו זיהוי מעגלים ורכיבי קשירות חזקה (פרק 6).
